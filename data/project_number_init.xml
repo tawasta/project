@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<openerp>
+  <data noupdate="1">
+  
+  		<!-- This becomes the first project number -->
+         <record id="1" model="project.settings">
+            <field name="next_number">10001</field>
+        </record>
+  
+    	<!-- Initialize project numbers for all existing projects upon module installation -->
+    	<function model="project.project" name="_init_project_numbers"/>
+  </data>
+</openerp>
