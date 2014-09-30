@@ -37,7 +37,7 @@ class Project(osv.Model):
             super(Project, self).write(cr, uid, [res], write_vals, context)
         return res
     
-    def _get_claim_number(self, cr, uid, context=None):
+    def _get_project_number(self, cr, uid, context=None):
         settings_model  = self.pool.get('project.settings')   
         
         project_number = settings_model.browse(cr, SUPERUSER_ID, [1])[0].next_number
