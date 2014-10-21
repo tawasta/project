@@ -25,7 +25,7 @@ class Project(osv.Model):
         
         return True 
 
-    ''' When a claim is created, assign it a new claim number '''
+    ''' When a project is created, assign it a new project number '''
     def create(self, cr, uid, vals, context=None):
         
         if not context:
@@ -37,7 +37,7 @@ class Project(osv.Model):
             super(Project, self).write(cr, uid, [res], write_vals, context)
         return res
     
-    def _get_claim_number(self, cr, uid, context=None):
+    def _get_project_number(self, cr, uid, context=None):
         settings_model  = self.pool.get('project.settings')   
         
         project_number = settings_model.browse(cr, SUPERUSER_ID, [1])[0].next_number
@@ -46,6 +46,11 @@ class Project(osv.Model):
         settings_model.write(cr, SUPERUSER_ID, [1], {'next_number': project_number+1 })
         
         return project_number
+    
+    def copy(self, cr, uid, id, default=None, context=None):
+        write_vals = {'project_number': self._get_project_number(cr,uid) }
+        
+        return super(Project, self).copy(cr, uid, id, write_vals, context=context)
     
     _columns = {
         'project_number': fields.char('Project number'),
