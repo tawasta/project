@@ -30,6 +30,9 @@ Project number field & generator
         'view/project_form.xml',
         'view/project_tree.xml',
         'view/project_kanban.xml',
+        'view/task_form.xml',
+        'view/task_tree.xml',
+        'view/task_kanban.xml',
         'data/project_number_init.xml',
     ],
 }

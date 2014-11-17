@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    	<!-- Form  view -->
+        <record id="project_task_form_task_number" model="ir.ui.view">
+            <field name="name">project.task.form.task.number</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_form2"/>
+            <field name="arch" type="xml">
+            	
+            	<field name='user_id' position='before'>
+           			<field name='task_number' readonly='1'/>
+           			<newline/>
+            	</field>
+				
+			</field>
+		</record>
+    </data>
+</openerp>
