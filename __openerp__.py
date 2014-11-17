@@ -15,16 +15,16 @@
 {
     'name': 'Project number generator',
     'category': 'Project',
-    'version': '0.1',
+    'version': '0.2',
     'author': 'Vizucom Oy',
     'website': 'http://www.vizucom.com',
     'depends': ['project'],
     'description': """
 Project number field & generator
 =========================================
-* Retroactively generates project numbers for all projects
+* Retroactively generates project and tas numbers for all projects and tasks
 * Starts from 10001, can be customized in data XML file
-* Keeps track of assigned numbers internally, and gives a new one each time a new project is created
+* Keeps track of assigned numbers internally, and gives a new one each time a new project or task is created
 """,
     'data': [
         'view/project_form.xml',

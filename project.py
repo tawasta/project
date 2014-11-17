@@ -15,13 +15,13 @@ class Project(osv.Model):
         
         settings_model = self.pool.get('project.settings')
         
-        project_number = settings_model.browse(cr, SUPERUSER_ID, [1], context)[0].next_number
+        project_number = settings_model.browse(cr, SUPERUSER_ID, [1], context)[0].next_project_number
         for match in self.browse(cr, SUPERUSER_ID, matches, context):
             self.write(cr, SUPERUSER_ID, [match.id], {'project_number': project_number }, context)
             project_number += 1
 
         ''' Update the highest number in the settings '''
-        settings_model.write(cr, SUPERUSER_ID, [1], {'next_number': project_number }, context)
+        settings_model.write(cr, SUPERUSER_ID, [1], {'next_project_number': project_number }, context)
         
         return True 
 
@@ -40,10 +40,10 @@ class Project(osv.Model):
     def _get_project_number(self, cr, uid, context=None):
         settings_model  = self.pool.get('project.settings')   
         
-        project_number = settings_model.browse(cr, SUPERUSER_ID, [1])[0].next_number
+        project_number = settings_model.browse(cr, SUPERUSER_ID, [1])[0].next_project_number
         
         ''' Bump number in settings by one '''
-        settings_model.write(cr, SUPERUSER_ID, [1], {'next_number': project_number+1 })
+        settings_model.write(cr, SUPERUSER_ID, [1], {'next_project_number': project_number+1 })
         
         return project_number
     
