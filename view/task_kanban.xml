@@ -9,7 +9,7 @@
             <field name="arch" type="xml">
 				
 				<xpath expr="//field[@name='name']" position='after'>
-					<field name='task_number' />
+					<field name='task_number' invisible="1"/>
 				</xpath>
 				
 				<xpath expr="//templates/t/div/div[2]/div[1]/b" position='before'>
