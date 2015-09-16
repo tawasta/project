@@ -12,7 +12,7 @@ class ProjectTask(models.Model):
         unless the task is already canceled '''
 
         stage = self.stage_id
-        stage_cancel = self.env['project.task.type'].search([('name', 'ilike', 'cancel')])
+        stage_cancel = self.env['project.task.type'].with_context(lang='en_US').search([('name', 'ilike', 'cancel')])
         
         if stage == stage_cancel:
             super(ProjectTask, self).unlink()
