@@ -21,7 +21,7 @@
 {
     'name': 'Project Data Integrity',
     'category': 'Project',
-    'version': '8.0.0.1.0',
+    'version': '8.0.0.2.0',
     'author': 'Oy Tawasta Technologies Ltd.',
     'website': 'http://www.tawasta.fi',
     'depends': [
