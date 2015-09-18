@@ -3,12 +3,9 @@
 <openerp>
 	<data>
 
-		<menuitem name="Project reports" 
-			id="menu_project_reports"  
-			parent="base.menu_main_pm" 
-			sequence="80">
-		</menuitem>
+		<menuitem name="Reports" id="menu_project_reports_view" parent="base.menu_main_pm" />
 
+		<menuitem action="project.action_view_task" id="menu_action_view_task" parent="menu_project_reports_view" sequence="5"/>
 
 	</data>
 </openerp>
