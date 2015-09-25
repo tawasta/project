@@ -10,7 +10,7 @@
             <field name="name">project.report.graph</field>
             <field name="model">project.report</field>
             <field name="arch" type="xml">
-                <graph string="Project Analysis" type="pivot" stacked="False">
+                <graph string="Project Analysis" type="pivot">
                      <field name="name" type="row"/>
                      <field name="current_cost" type="measure"/>
                      <field name="estimated_cost" type="measure"/>
@@ -24,13 +24,14 @@
 			<field name="priority" eval="20" />
 			<field name="model">project.report</field>
 			<field name="arch" type="xml">
-				<search string="Project Analysis" >
+				<search string="Project Cost Analysis" >
 					<field name="name"/>
 					<field name="avg_price"/>
 					<field name="current_cost"/>
 					<field name="estimated_cost"/>
-					<filter string="Project costs" name="project_costs" context="{'group_by':['name'], 'measures':['current_cost','estimated_cost']}"/>
-					<filter string="Advanced price details" name="price_details" context="{'group_by':['name'], 'measures':['avg_price','effective_hours','current_cost','planned_hours','estimated_cost']}"/>
+					<filter string="Advanced price details" name="price_details" context="{'measures':['avg_price','effective_hours','current_cost','planned_hours','estimated_cost']}"/>
+					<filter string="Project costs" name="project_costs" context="{'measures':['current_cost','estimated_cost']}"/>
+					<filter string="Ongoing Projects" name="ongoing_projects" domain="[('effective_hours', '&gt;', '0')]" context="{ 'measures':['current_cost','estimated_cost']}"/>	
 				
 					<group expand="1" string="Group By">
 						<filter string="Project" name="project" context="{'group_by':'name'}"/>
@@ -42,12 +43,12 @@
 
 
 		<record id="action_project_report_tree" model="ir.actions.act_window">
-			<field name="name">Project analysis</field>
+			<field name="name">Project Cost Analysis</field>
 			<field name="res_model">project.report</field>
 			<field name="view_type">form</field>
 			<field name="view_mode">graph</field>
 			<field name="search_view_id" ref="view_project_report_search"/>
-			<field name="context">{'group_by_no_leaf':1,'group_by':[]}</field>
+			<field name="context">{'group_by_no_leaf':1,'group_by':[], 'search_default_project_costs':1}</field>
 			<field name="help">This report allows you to analyse the performance and costs of your projects.</field>
 		</record>
 
