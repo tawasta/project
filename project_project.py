@@ -6,5 +6,5 @@ class ProjectProject(models.Model):
 
 	_inherit = 'project.project'
 
-	avg_price = fields.Float(default=10.5)
+	avg_price = fields.Float("Average price", default=10.5)
 
