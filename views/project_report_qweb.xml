@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<report 
+			id="project_report_action"
+			string="Project report"
+			model="project.project"
+			report_type="qweb-html"
+			name="project_reports.project_report_template"
+		/>
+
+		<template id="project_report_template">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="report.external_layout">
+                    <div class="page">
+                    	<div class="row">
+                    		<div class="col-xs-12">
+                    			<h1>Project report</h1>
+                        		<h2><span t-field="o.name" /></h2>
+                        	</div>
+                   		</div>
+                   		<div class="row">
+                   			<div class="col-xs-8">
+                   				Created by: <span t-field="o.create_uid"/>
+                   			</div>
+                   			<div class="col-xs-4">
+                   				Created at: <span t-field="o.create_date"/>
+                   			</div>
+                   		</div>
+                   		<hr></hr>
+                   		<div class="row">
+                   			<div class="col-xs-8">
+                   				<b>Project state:</b>
+                   			</div>
+                   			<div class="col-xs-4">
+                   				<span t-field="o.state"/>
+                   			</div>
+                   		</div>
+                   		<br></br>
+                   		<div class="row">
+                   			<div class="col-xs-8">
+                   				<b>Average price per hour:</b>
+                   			</div>
+                   			<div class="col-xs-4">
+                   				<span t-field="o.avg_price"/>
+                   			</div>
+                   		</div>
+                   		<br></br>
+                   		<div class="row">
+                   			<div class="col-xs-8">
+                   				<b>Effective hours:</b>
+                   			</div>
+                   			<div class="col-xs-4">
+                   				<span t-field="o.effective_hours"/>
+                   			</div>
+                   		</div>
+                   		<br></br>
+                   		<div class="row">
+                   			<div class="col-xs-8">
+                   				<b>Current cost:</b>
+                   			</div>
+                   			<div class="col-xs-4">
+                   				<span t-field="o.current_cost"/>
+                   			</div>
+                   		</div>
+                   		<br></br>
+                   		<div class="row">
+                   			<div class="col-xs-8">
+                   				<b>Planned hours:</b>
+                   			</div>
+                   			<div class="col-xs-4">
+                   				<span t-field="o.planned_hours"/>
+                   			</div>
+                   		</div>
+                   		<br></br>
+                   		<div class="row">
+                   			<div class="col-xs-8">
+                   				<b>Estimated cost of project:</b>
+                   			</div>
+                   			<div class="col-xs-4">
+                   				<span t-field="o.estimated_cost"/>
+                   			</div>
+                   		</div>
+                   		<br></br>
+                    </div>
+
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+
+
+
+
+        <!-- <template id="project_report_doc">
+        	<t t-call="report.external_layout">
+        		<div class="page">
+        			<div class="row">
+        				<div class="col-xs-12">
+        					<h2><span t-field="o.name" /></h2>
+        				</div>
+        			</div>
+        			<div class="row">
+        				<div class="col-xs-8">
+        					Created by: <span t-field="o.user_id"/>
+        				</div>
+        				<div class="col-xs-4">
+        					Deadline: <span t-field="o.date_deadline" />
+        				</div>
+        			</div>
+        		</div>
+        	</t>
+        </template> -->
+	</data>
+</openerp>
