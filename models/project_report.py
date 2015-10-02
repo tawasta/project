@@ -14,7 +14,7 @@ class project_report(models.Model):
 	estimated_cost = fields.Float('Estimated cost of project', readonly=True)
 	current_cost = fields.Float('Current cost of project', readonly=True)
 	project_state = fields.Selection([('open', 'In Progress'),('cancelled', 'Cancelled'),('close', 'Closed')],'Status', readonly=True)
-	travelling_expenses = fields.Float('Travelling expenses', readonly=True)
+	expenses = fields.Float('Expenses', readonly=True)
 
 	def _select(self):
 		select_str = "SELECT "
@@ -26,7 +26,7 @@ class project_report(models.Model):
 		select_str += "(avg_price*planned_hours) as estimated_cost,"
 		select_str += "(avg_price*effective_hours) as current_cost,"
 		select_str += "p.state as project_state,"
-		select_str += "(h.unit_amount*h.unit_quantity) as travelling_expenses"	
+		select_str += "(h.unit_amount*h.unit_quantity) as expenses"	
 		
 		return select_str
 
@@ -53,8 +53,8 @@ class project_report(models.Model):
 		group_by_str += "current_cost,"
 		group_by_str += "project_state,"
 		group_by_str += "h.unit_amount,"
-		group_by_str += "h.unit_quantity,"
-		group_by_str += "travelling_expenses"
+		group_by_str += "h.unit_quantity"
+		# group_by_str += "expenses"
 		return group_by_str
 
 				

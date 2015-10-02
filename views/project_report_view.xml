@@ -29,7 +29,7 @@
 					<field name="avg_price"/>
 					<field name="current_cost"/>
 					<field name="estimated_cost"/>
-					<filter string="Advanced price details" name="price_details" context="{'measures':['avg_price','effective_hours','current_cost','planned_hours','estimated_cost']}"/>
+					<filter string="Advanced price details" name="price_details" context="{'measures':['avg_price','expenses','effective_hours','current_cost','planned_hours','estimated_cost']}"/>
 					<filter string="Project costs" name="project_costs" context="{'measures':['current_cost','estimated_cost']}"/>
 				
 					<group expand="1" string="Group By">
