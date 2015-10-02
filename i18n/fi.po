@@ -1,0 +1,163 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-02 05:40+0000\n"
+"PO-Revision-Date: 2015-10-02 08:45+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.7.5\n"
+
+#. module: project_reports
+#: view:project.report:project_reports.view_project_report_search
+msgid "Advanced price details"
+msgstr "Tarkemmat hintatiedot"
+
+#. module: project_reports
+#: field:project.project,avg_price:0
+msgid "Average price"
+msgstr "Keskimääräinen tuntihinta"
+
+#. module: project_reports
+#: view:website:project_reports.project_report_template
+msgid "Average price per hour:"
+msgstr "Keskimääräinen tuntihinta"
+
+#. module: project_reports
+#: selection:project.report,project_state:0
+msgid "Cancelled"
+msgstr "Peruutettu"
+
+#. module: project_reports
+#: selection:project.report,project_state:0
+msgid "Closed"
+msgstr "Suljettu"
+
+#. module: project_reports
+#: view:website:project_reports.project_report_template
+msgid "Created at:"
+msgstr "Luotu"
+
+#. module: project_reports
+#: view:website:project_reports.project_report_template
+msgid "Created by:"
+msgstr "Luonut"
+
+#. module: project_reports
+#: field:project.report,current_cost:0
+msgid "Current cost of project"
+msgstr "Projektin tämänhetkiset kustannukset"
+
+#. module: project_reports
+#: view:website:project_reports.project_report_template
+msgid "Current cost:"
+msgstr "Tämänhetkiset kustannukset"
+
+#. module: project_reports
+#: field:project.report,effective_hours:0
+msgid "Effective hours"
+msgstr "Käytetty aika"
+
+#. module: project_reports
+#: view:website:project_reports.project_report_template
+msgid "Effective hours:"
+msgstr "Käytetty aika:"
+
+#. module: project_reports
+#: field:project.report,estimated_cost:0
+msgid "Estimated cost of project"
+msgstr "Projektin arvioidut kustannukset"
+
+#. module: project_reports
+#: view:website:project_reports.project_report_template
+msgid "Estimated cost of project:"
+msgstr "Projektin arvioidut kustannukset:"
+
+#. module: project_reports
+#: view:project.report:project_reports.view_project_report_search
+msgid "Group By"
+msgstr "Ryhmittele"
+
+#. module: project_reports
+#: selection:project.report,project_state:0
+msgid "In Progress"
+msgstr "Käynnissä"
+
+#. module: project_reports
+#: field:project.report,planned_hours:0
+msgid "Planned hours"
+msgstr "Suunniteltu työmäärä tunneissa"
+
+#. module: project_reports
+#: view:website:project_reports.project_report_template
+msgid "Planned hours:"
+msgstr "Suunniteltu työmäärä tunneissa:"
+
+#. module: project_reports
+#: model:ir.model,name:project_reports.model_project_project
+#: view:project.report:project_reports.view_project_report_search
+msgid "Project"
+msgstr "Projekti"
+
+#. module: project_reports
+#: view:project.report:project_reports.view_project_report_graph
+msgid "Project Analysis"
+msgstr "Projektianalyysi"
+
+#. module: project_reports
+#: model:ir.actions.act_window,name:project_reports.action_project_report_tree
+#: model:ir.ui.menu,name:project_reports.menu_project_report_search
+#: view:project.report:project_reports.view_project_report_search
+msgid "Project Cost Analysis"
+msgstr "Projektianalyysi"
+
+#. module: project_reports
+#: view:project.report:project_reports.view_project_report_search
+msgid "Project costs"
+msgstr "Projektin kustannukset"
+
+#. module: project_reports
+#: model:ir.actions.report.xml,name:project_reports.project_report_action
+#: view:website:project_reports.project_report_template
+msgid "Project report"
+msgstr "Projektin raportti"
+
+#. module: project_reports
+#: view:website:project_reports.project_report_template
+msgid "Project state:"
+msgstr "Projektin tila:"
+
+#. module: project_reports
+#: model:ir.ui.menu,name:project_reports.menu_project_reports_view
+msgid "Reports"
+msgstr "Raportit"
+
+#. module: project_reports
+#: view:project.report:project_reports.view_project_report_search
+msgid "State"
+msgstr "Tila"
+
+#. module: project_reports
+#: field:project.report,project_state:0
+msgid "Status"
+msgstr "Tila"
+
+#. module: project_reports
+#: model:ir.model,name:project_reports.model_project_report
+#: model:ir.model,name:project_reports.model_report_project_task_user
+msgid "Tasks by user and project"
+msgstr "Tehtävät käyttäjien ja projektien mukaan"
+
+#. module: project_reports
+#: model:ir.actions.act_window,help:project_reports.action_project_report_tree
+msgid "This report allows you to analyse the performance and costs of your projects."
+msgstr "Tämä raportti mahdollistaa projektien etenemisen ja kustannustesten analysoimiseen."
