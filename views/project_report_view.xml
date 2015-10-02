@@ -29,10 +29,8 @@
 					<field name="avg_price"/>
 					<field name="current_cost"/>
 					<field name="estimated_cost"/>
-					<!-- <field name="project_state" /> -->
 					<filter string="Advanced price details" name="price_details" context="{'measures':['avg_price','effective_hours','current_cost','planned_hours','estimated_cost']}"/>
 					<filter string="Project costs" name="project_costs" context="{'measures':['current_cost','estimated_cost']}"/>
-<!-- 					<filter string="Ongoing Projects" name="ongoing_projects" domain="[('effective_hours', '&gt;', '0')]" context="{ 'measures':['current_cost','estimated_cost']}"/>	 -->
 				
 					<group expand="1" string="Group By">
 						<filter string="Project" name="project" context="{'group_by':'name'}"/>
@@ -56,6 +54,6 @@
 
 		<menuitem action="action_project_report_tree" id="menu_project_report_search" parent="menu_project_reports_view" sequence="5"/>
 
-
+		
 	</data>
 </openerp>

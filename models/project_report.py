@@ -13,7 +13,6 @@ class project_report(models.Model):
 	avg_price = fields.Float('Average price per hour',default=10.5)
 	estimated_cost = fields.Float('Estimated cost of project', readonly=True)
 	current_cost = fields.Float('Current cost of project', readonly=True)
-	#project_state = fields.Char('Projects state', readonly=True)
 	project_state = fields.Selection([('open', 'In Progress'),('cancelled', 'Cancelled'),('close', 'Closed')],'Status', readonly=True)
 
 	def _select(self):
