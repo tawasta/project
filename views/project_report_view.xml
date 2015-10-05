@@ -29,10 +29,13 @@
 					<field name="avg_price"/>
 					<field name="current_cost"/>
 					<field name="estimated_cost"/>
-					<field name="expenses"/>
-					<filter string="Advanced price details" name="price_details" context="{'measures':['avg_price','expenses','effective_hours','current_cost','planned_hours','estimated_cost']}"/>
-					<filter string="Project costs" name="project_costs" context="{'measures':['current_cost','estimated_cost']}"/>
-				
+					<field name="expenses"/>				
+					<filter string="Project costs" name="project_costs" context="
+						{'measures':['current_cost','estimated_cost']}"/>
+					<filter string="Project costs with expenses" name="project_costs_with_expenses" context="
+						{'measures':['expenses','avg_price','effective_hours','planned_hours','current_cost_overall','estimated_cost_overall']}"/>
+					<filter string="Advanced price details" name="price_details" context="
+						{'measures':['expenses','avg_price','effective_hours','current_cost','current_cost_overall','planned_hours','estimated_cost','estimated_cost_overall']}"/>
 					<group expand="1" string="Group By">
 						<filter string="Project" name="project" context="{'group_by':'name'}"/>
 						<filter string="State" name="project_state" context="{'group_by':['project_state'],'measures':''}"/>

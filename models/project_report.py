@@ -33,7 +33,8 @@ class project_report(models.Model):
 		select_str += "(avg_price*p.effective_hours + COALESCE (h.unit_amount*h.unit_quantity,0)) as current_cost_overall,"
 		select_str += "(avg_price*p.planned_hours + COALESCE (h.unit_amount*h.unit_quantity,0)) as estimated_cost_overall,"
 		select_str += "count(t.project_id) as tasks"
-		
+
+
 		return select_str
 
 	def _from(self):
@@ -43,7 +44,7 @@ class project_report(models.Model):
 		from_str += "ON p.analytic_account_id = a.id "
 		from_str += "LEFT JOIN hr_expense_line h "
 		from_str += "ON a.id = h.analytic_account "
-		from_str += "INNER JOIN project_task t "
+		from_str += "LEFT JOIN project_task t "
 		from_str += "ON p.id = t.project_id"
 
 		
