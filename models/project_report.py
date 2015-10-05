@@ -2,7 +2,7 @@
 
 from openerp import fields, models, tools
 
-class project_report(models.Model):
+class ProjectReport(models.Model):
 	_name = "project.report" 
 	_description = "Reports about projects"
 	_auto = False
@@ -18,6 +18,7 @@ class project_report(models.Model):
 	tasks = fields.Integer('Tasks', readonly=True)
 	current_cost_overall = fields.Float('Overall current cost', readonly=True)
 	estimated_cost_overall = fields.Float('Overall estimated cost', readonly=True)
+	hourly_wage = fields.Float('Hourly wage')
 
 	def _select(self):
 		select_str = "SELECT "
@@ -32,7 +33,8 @@ class project_report(models.Model):
 		select_str += "COALESCE(h.unit_amount*h.unit_quantity,0) as expenses,"		
 		select_str += "(avg_price*p.effective_hours + COALESCE (h.unit_amount*h.unit_quantity,0)) as current_cost_overall,"
 		select_str += "(avg_price*p.planned_hours + COALESCE (h.unit_amount*h.unit_quantity,0)) as estimated_cost_overall,"
-		select_str += "count(t.project_id) as tasks"
+		select_str += "count(t.project_id) as tasks,"
+		select_str += "COALESCE(hourly_wage,avg_price) as hourly_wage"
 
 
 		return select_str
@@ -45,7 +47,9 @@ class project_report(models.Model):
 		from_str += "LEFT JOIN hr_expense_line h "
 		from_str += "ON a.id = h.analytic_account "
 		from_str += "LEFT JOIN project_task t "
-		from_str += "ON p.id = t.project_id"
+		from_str += "ON p.id = t.project_id "
+		from_str += "LEFT JOIN hr_employee e "
+		from_str += "ON t.write_uid = e.id"
 
 		
 		return from_str
@@ -63,7 +67,8 @@ class project_report(models.Model):
 		group_by_str += "current_cost,"
 		group_by_str += "project_state,"
 		group_by_str += "h.unit_amount,"
-		group_by_str += "h.unit_quantity"
+		group_by_str += "h.unit_quantity,"
+		group_by_str += "hourly_wage"
 
 		return group_by_str
 
