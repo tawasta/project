@@ -7,7 +7,7 @@ Module for presenting reports of projectmodule.
     """,
     
     'author': 'Aleksi Savijoki',
-    'depends': ['project', 'web_graph_improved', 'hr'],
+    'depends': ['project', 'web_graph_improved', 'hr', 'analytic_contract_hr_expense'],
     'version': '1.0',
     'data': [ 
     	'views/project_project_view.xml', 

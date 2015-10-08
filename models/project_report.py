@@ -18,8 +18,8 @@ class ProjectReport(models.Model):
 	tasks = fields.Integer('Tasks', readonly=True)
 	current_cost_overall = fields.Float('Overall current cost', readonly=True)
 	estimated_cost_overall = fields.Float('Overall estimated cost', readonly=True)
-	hourly_wage = fields.Float('Hourly wage')
-	user_cost = fields.Float('Costs from employy hourly wage', readonly=True)
+	# hourly_wage = fields.Float('Hourly wage')
+	# user_cost = fields.Float('Costs from employy hourly wage', readonly=True)
 
 	def _select(self):
 		select_str = "SELECT "
@@ -34,9 +34,9 @@ class ProjectReport(models.Model):
 		select_str += "COALESCE(h.unit_amount*h.unit_quantity,0) as expenses,"		
 		select_str += "(avg_price*p.effective_hours + COALESCE (h.unit_amount*h.unit_quantity,0)) as current_cost_overall,"
 		select_str += "(avg_price*p.planned_hours + COALESCE (h.unit_amount*h.unit_quantity,0)) as estimated_cost_overall,"
-		select_str += "count(t.project_id) as tasks,"
-		select_str += "COALESCE(hourly_wage,avg_price) as hourly_wage,"
-		select_str += "sum(w.hours*hourly_wage) as user_cost"
+		select_str += "count(t.project_id) as tasks"
+		# select_str += "COALESCE(hourly_wage,avg_price) as hourly_wage"
+		# select_str += "sum(w.hours*hourly_wage) as user_cost"
 
 		return select_str
 
@@ -69,8 +69,8 @@ class ProjectReport(models.Model):
 		group_by_str += "current_cost,"
 		group_by_str += "project_state,"
 		group_by_str += "h.unit_amount,"
-		group_by_str += "h.unit_quantity,"
-		group_by_str += "hourly_wage"
+		group_by_str += "h.unit_quantity"
+		# group_by_str += "hourly_wage"
 
 		return group_by_str
 
