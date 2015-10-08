@@ -1,0 +1,31 @@
+Project reports
+==================
+
+Module that gives dynamic reports of projects
+
+Installation
+============
+
+Modules that are required:
+
+* project (https://www.odoo.com/apps/modules/online/project/)
+* web_graph_improved (https://www.odoo.com/apps/modules/8.0/web_graph_improved/)
+* hr (https://www.odoo.com/apps/modules/online/hr/)
+
+
+Features
+========
+
+* Adds a dynamic report for projects
+* Makes it easier to observe project costs (both current and estimated)
+* Takes project expenses into account, which are declared in hr->expenses
+* Employee hourly wage can be determined in hr->employee->personal information->hourly wage, which is used to count project costs. Not yet working as intended (multiple workers on task).
+
+
+Need fixing
+===========
+
+* Hourly wage fields value comes as the sum of hourly wages of users in project
+* Average price field isn't needed after hourly wage starts working as inteded. 
+* There are two different fields (current_cost and current_cost_overall), overall has the expenses included, other doesn't. One of them could be removed, unless felt necessary to have both fields. 
+* Fields current_cost + current_cost_overall and estimated fields are both calculated with avg_price at the moment. When hourly wages is correct, avg_price should be replaced with hourly_wage.
