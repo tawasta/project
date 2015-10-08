@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-10-02 05:40+0000\n"
-"PO-Revision-Date: 2015-10-02 08:45+0200\n"
+"POT-Creation-Date: 2015-10-08 07:10+0000\n"
+"PO-Revision-Date: 2015-10-08 10:22+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -28,6 +28,11 @@ msgid "Average price"
 msgstr "Keskimääräinen tuntihinta"
 
 #. module: project_reports
+#: field:project.report,avg_price:0
+msgid "Average price per hour"
+msgstr "Keskimääräinen tuntuhinta"
+
+#. module: project_reports
 #: view:website:project_reports.project_report_template
 msgid "Average price per hour:"
 msgstr "Keskimääräinen tuntihinta"
@@ -41,6 +46,11 @@ msgstr "Peruutettu"
 #: selection:project.report,project_state:0
 msgid "Closed"
 msgstr "Suljettu"
+
+#. module: project_reports
+#: field:project.report,user_cost:0
+msgid "Costs from employy hourly wage"
+msgstr "Kustannukset henkilön tuntihinnasta"
 
 #. module: project_reports
 #: view:website:project_reports.project_report_template
@@ -73,6 +83,11 @@ msgid "Effective hours:"
 msgstr "Käytetty aika:"
 
 #. module: project_reports
+#: model:ir.model,name:project_reports.model_hr_employee
+msgid "Employee"
+msgstr "Työntekijä"
+
+#. module: project_reports
 #: field:project.report,estimated_cost:0
 msgid "Estimated cost of project"
 msgstr "Projektin arvioidut kustannukset"
@@ -83,14 +98,44 @@ msgid "Estimated cost of project:"
 msgstr "Projektin arvioidut kustannukset:"
 
 #. module: project_reports
+#: field:project.report,expenses:0
+msgid "Expenses"
+msgstr "Kulut"
+
+#. module: project_reports
 #: view:project.report:project_reports.view_project_report_search
 msgid "Group By"
 msgstr "Ryhmittele"
 
 #. module: project_reports
+#: field:hr.employee,hourly_wage:0 field:project.report,hourly_wage:0
+msgid "Hourly wage"
+msgstr "Tuntihinta"
+
+#. module: project_reports
+#: field:project.report,id:0
+msgid "ID"
+msgstr "Tunniste"
+
+#. module: project_reports
 #: selection:project.report,project_state:0
 msgid "In Progress"
 msgstr "Käynnissä"
+
+#. module: project_reports
+#: field:project.report,name:0
+msgid "Name of project"
+msgstr "Projektin nimi"
+
+#. module: project_reports
+#: field:project.report,current_cost_overall:0
+msgid "Overall current cost"
+msgstr "Tämänhetkiset kustannukset yhteensä"
+
+#. module: project_reports
+#: field:project.report,estimated_cost_overall:0
+msgid "Overall estimated cost"
+msgstr "Arvioidut kustannukset yhteensä"
 
 #. module: project_reports
 #: field:project.report,planned_hours:0
@@ -126,6 +171,11 @@ msgid "Project costs"
 msgstr "Projektin kustannukset"
 
 #. module: project_reports
+#: view:project.report:project_reports.view_project_report_search
+msgid "Project costs with expenses"
+msgstr "Projektin kustannukset kuluineen"
+
+#. module: project_reports
 #: model:ir.actions.report.xml,name:project_reports.project_report_action
 #: view:website:project_reports.project_report_template
 msgid "Project report"
@@ -142,6 +192,11 @@ msgid "Reports"
 msgstr "Raportit"
 
 #. module: project_reports
+#: model:ir.model,name:project_reports.model_project_report
+msgid "Reports about projects"
+msgstr "Raportteja projekteista"
+
+#. module: project_reports
 #: view:project.report:project_reports.view_project_report_search
 msgid "State"
 msgstr "Tila"
@@ -152,10 +207,9 @@ msgid "Status"
 msgstr "Tila"
 
 #. module: project_reports
-#: model:ir.model,name:project_reports.model_project_report
-#: model:ir.model,name:project_reports.model_report_project_task_user
-msgid "Tasks by user and project"
-msgstr "Tehtävät käyttäjien ja projektien mukaan"
+#: field:project.report,tasks:0
+msgid "Tasks"
+msgstr "Tehtävät"
 
 #. module: project_reports
 #: model:ir.actions.act_window,help:project_reports.action_project_report_tree
