@@ -39,6 +39,7 @@
 					<group expand="1" string="Group By">
 						<filter string="Project" name="project" context="{'group_by':'name'}"/>
 						<filter string="State" name="project_state" context="{'group_by':['project_state'],'measures':''}"/>
+					
 					</group>
 				</search>
 			</field>

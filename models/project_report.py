@@ -19,6 +19,7 @@ class ProjectReport(models.Model):
 	current_cost_overall = fields.Float('Overall current cost', readonly=True)
 	estimated_cost_overall = fields.Float('Overall estimated cost', readonly=True)
 	hourly_wage = fields.Float('Hourly wage')
+	user_cost = fields.Float('Costs from employy hourly wage', readonly=True)
 
 	def _select(self):
 		select_str = "SELECT "
@@ -34,8 +35,8 @@ class ProjectReport(models.Model):
 		select_str += "(avg_price*p.effective_hours + COALESCE (h.unit_amount*h.unit_quantity,0)) as current_cost_overall,"
 		select_str += "(avg_price*p.planned_hours + COALESCE (h.unit_amount*h.unit_quantity,0)) as estimated_cost_overall,"
 		select_str += "count(t.project_id) as tasks,"
-		select_str += "COALESCE(hourly_wage,avg_price) as hourly_wage"
-
+		select_str += "COALESCE(hourly_wage,avg_price) as hourly_wage,"
+		select_str += "sum(w.hours*hourly_wage) as user_cost"
 
 		return select_str
 
@@ -49,9 +50,10 @@ class ProjectReport(models.Model):
 		from_str += "LEFT JOIN project_task t "
 		from_str += "ON p.id = t.project_id "
 		from_str += "LEFT JOIN hr_employee e "
-		from_str += "ON t.write_uid = e.id"
+		from_str += "ON t.write_uid = e.id " 
+		from_str += "LEFT JOIN project_task_work w "
+		from_str += "ON t.id = w.task_id"
 
-		
 		return from_str
 
 
