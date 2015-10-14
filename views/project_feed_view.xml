@@ -9,6 +9,10 @@
 			<field name="arch" type="xml">			
 				<page string="Project Stages" position="after">
 					<page string="Project Feed">
+						<group string="Description">
+							<p> In the following "Project Feed"-section all the events that have been done in the current project's tasks are listed. The list is ordered by write date, which mean that lastly updated events are on top of the list. The section contains all the tasks regardless of task's state.
+							</p>
+						</group>
 						<group string="Project Feed">
 							<field name="task_work" string="Task lines" nolabel="1"/>
 						</group>
