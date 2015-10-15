@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_event_feed
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-15 08:03+0000\n"
+"PO-Revision-Date: 2015-10-15 11:13+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.7.5\n"
+"Language: fi\n"
+
+#. module: project_event_feed
+#: view:project.project:project_event_feed.edit_project
+msgid "Description"
+msgstr "Kuvaus"
+
+#. module: project_event_feed
+#: view:project.project:project_event_feed.edit_project
+msgid "In the following \"Project Feed\"-section all the events that have been done in the current project's tasks are listed. The list is ordered by write date, which mean that lastly updated events are on top of the list. The section contains all the tasks regardless of task's state."
+msgstr "Seuraavassa osassa \"Projektin tapahtumat\" esitetään kaikki tämän projektin tehtävien tapahtumat. Tapahtumat esitetään kronologisessa järjestyksessä viimeksi muokatusta alkaen. Kaikki tapahtumat on otettu huomioon riippumatta tehtävän tilasta."
+
+#. module: project_event_feed
+#: model:ir.model,name:project_event_feed.model_project_project
+msgid "Project"
+msgstr "Projekti"
+
+#. module: project_event_feed
+#: view:project.project:project_event_feed.edit_project
+msgid "Project Feed"
+msgstr "Projektin tapahtumat"
+
+#. module: project_event_feed
+#: view:project.project:project_event_feed.edit_project
+msgid "Project Stages"
+msgstr "Projektivaiheet"
+
+#. module: project_event_feed
+#: view:project.project:project_event_feed.edit_project
+msgid "Task lines"
+msgstr "Tapahtumat"
+
+#. module: project_event_feed
+#: view:project.task.work:project_event_feed.view_task_work_tree
+msgid "Tasks"
+msgstr "Tehtävät"
