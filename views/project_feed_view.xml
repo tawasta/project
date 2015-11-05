@@ -29,11 +29,11 @@
 			<field name="priority" eval="20"/>
             <field name="model">project.task.work</field>
             <field name="arch" type="xml">
-            	<tree string="Tasks" editable="bottom">
+            	<tree string="Tasks">
             		<field name="task_id"/>
             		<field name="date"/>	
             		<field name="name"/>
-            		<field name="hours"/>
+            		<field name="hours" widget="float_time"/>
             		<field name="user_id"/>     		
             	</tree>
             </field>
