@@ -1,12 +1,27 @@
 # -*- coding: utf-8 -*-
 
+# 1. Standard library imports:
+
+# 2. Known third party imports:
+
+# 3. Odoo imports (openerp):
 from openerp import fields, models, tools
 
+# 4. Imports from Odoo modules:
+
+# 5. Local imports in the relative form:
+
+# 6. Unknown third party imports:
+
+
 class ProjectReport(models.Model):
+
+	# 1. Private attributes
 	_name = "project.report" 
 	_description = "Reports about projects"
 	_auto = False
- 
+ 	
+ 	# 2. Fields declaration
 	name = fields.Char('Name of project', readonly=True)
 	planned_hours = fields.Float('Planned hours', readonly=True)
 	effective_hours = fields.Float('Effective hours', readonly=True)
@@ -21,6 +36,7 @@ class ProjectReport(models.Model):
 	# hourly_wage = fields.Float('Hourly wage')
 	# user_cost = fields.Float('Costs from employy hourly wage', readonly=True)
 
+	# 3. Default methods
 	def _select(self):
 		select_str = "SELECT "
 		select_str += "min(p.id) as id,"
@@ -86,3 +102,14 @@ class ProjectReport(models.Model):
 				)""" % (self._table, self._select(),
                     	self._from(), self._group_by()))
 
+
+	# 4. Compute and search fields, in the same order that fields declaration
+
+    # 5. Constraints and onchanges
+
+    # 6. CRUD methods
+
+    # 7. Action methods
+
+    # 8. Business methods
+    
