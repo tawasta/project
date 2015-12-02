@@ -2,6 +2,7 @@
 <openerp>
 	<data>
 
+		<!-- Time_float widgets for project kanban view -->
 		<record id="view_project_kanban_inherited" model="ir.ui.view">
 			<field name="name">project.project.kanban.inherited</field>
 			<field name="model">project.project</field>
@@ -23,7 +24,7 @@
 			</field>
 		</record>
 
-
+		<!-- Time_float widgets for task kanban view -->
 		<record id="view_task_kanban_inherited" model="ir.ui.view">
 			<field name="name">view.task.kanban.inherited</field>
 			<field name="model">project.task</field>
@@ -40,5 +41,17 @@
 				</xpath>
 			</field>
 		</record>
+
+
+		<record id="view_task_project_user_search" model="ir.ui.view">
+			<field name="name">report.project.task.user.search</field>
+            <field name="model">report.project.task.user</field>
+            <field name="inherit_id" ref="project.view_task_project_user_search"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//filter[@string='Assignation Month']" position="after">
+            		<filter string="Kokeilu" context="{'group_by':'date_last_stage_update:month'}"/>
+            	</xpath>
+            </field>
+        </record>
 	</data>
 </openerp>
