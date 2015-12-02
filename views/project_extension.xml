@@ -42,7 +42,7 @@
 			</field>
 		</record>
 
-
+		<!-- Filter for Task Analysis -->
 		<record id="view_task_project_user_search" model="ir.ui.view">
 			<field name="name">report.project.task.user.search</field>
             <field name="model">report.project.task.user</field>
@@ -51,6 +51,24 @@
             	<xpath expr="//filter[@string='Assignation Month']" position="after">
             		<filter string="Kokeilu" context="{'group_by':'date_last_stage_update:month'}"/>
             	</xpath>
+            </field>
+        </record>
+
+
+        <!-- Form view -->
+        <record id="project_project_form_inherit" model="ir.ui.view">
+            <field name="name">project.project.form.inherit</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+            	<field name='name' position='after'>
+            		<field name="priority" widget="priority"/>
+            	</field>
+
+            	<field name='planned_hours' position='after'>
+            		<field name='total_hours' widget="float_time"
+            				groups="project.group_time_work_estimation_tasks"/>
+            	</field>
             </field>
         </record>
 	</data>

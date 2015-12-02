@@ -17,6 +17,17 @@ class ProjectExtension(models.Model):
     
     # 1. Private attributes
     _inherit = 'project.project'
+    _order = "priority DESC, sequence DESC, create_date DESC"
+    
+    priority = fields.Selection([
+        ('0', 'Low'),
+        ('1', 'Normal'),
+        ('2', 'High')
+        ],
+        'Priority',
+        select=True,
+        default="1",
+    )
 
     # 2. Fields declaration
 
