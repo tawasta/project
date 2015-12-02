@@ -32,4 +32,7 @@
     'depends': [
         'project'
     ],
+    'data': [
+        'views/project_extension.xml'
+    ]
 }
