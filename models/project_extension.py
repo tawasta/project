@@ -22,6 +22,7 @@ class ProjectExtension(models.Model):
     # 2. Fields declaration
 
     real_total = fields.Float(string="Estimation accuracy",help="Difference between planned hours and time spent", compute='compute_real_total')
+    real_planned = fields.Float(string="Planned Hours", compute='compute_real_planned')
 
     priority = fields.Selection([
         ('0', 'Low'),
@@ -32,7 +33,6 @@ class ProjectExtension(models.Model):
         select=True,
         default="1",
     )
-
 
     # 3. Default methods
 
@@ -53,6 +53,15 @@ class ProjectExtension(models.Model):
 
         self.real_total = total
 
+    def compute_real_planned(self):
+
+        planned = 0.0
+        tasks = self.env['project.task'].search([('id',
+            'in', self.tasks.ids)], order='write_date DESC')
+        for task in tasks:
+            planned += task.planned_hours
+
+        self.real_planned = planned
     # 5. Constraints and onchanges
 
     # 6. CRUD methods
