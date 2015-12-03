@@ -30,7 +30,8 @@
     'application': False,
     'installable': True,
     'depends': [
-        'project'
+        'project',
+        'project_timesheet'
     ],
     'data': [
         'views/project_extension.xml'
