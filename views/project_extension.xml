@@ -49,7 +49,7 @@
             <field name="priority" eval="200"/>
             <field name="arch" type="xml">
             	<xpath expr="//filter[@string='Assignation Month']" position="after">
-            		<filter string="Kokeilu" context="{'group_by':'date_last_stage_update:month'}"/>
+            		<filter string="Kokeilu" context="{'group_by':'task_date'}"/>
             	</xpath>
             </field>
         </record>
