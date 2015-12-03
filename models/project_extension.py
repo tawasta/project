@@ -21,8 +21,9 @@ class ProjectExtension(models.Model):
     
     # 2. Fields declaration
 
-    real_total = fields.Float(string="Estimation accuracy",help="Difference between planned hours and time spent", compute='compute_real_total')
-    real_planned = fields.Float(string="Planned Hours", compute='compute_real_planned')
+    real_total = fields.Float(string="Estimation accuracy",help="Difference between Planned Hours and Time Spent", compute='compute_real_total')
+    real_planned = fields.Float(string="Real Planned Hours", compute='compute_real_planned')
+    real_effective = fields.Float(string="Real Effective Hours", compute='compute_real_effective')
 
     priority = fields.Selection([
         ('0', 'Low'),
@@ -41,8 +42,8 @@ class ProjectExtension(models.Model):
     @api.one
     def compute_real_total(self):
 
-        effective = self.effective_hours
-        planned = self.planned_hours
+        effective = self.real_effective
+        planned = self.real_planned
         remaining = planned - effective
         total = 0.0
         if remaining < 0:
@@ -53,6 +54,8 @@ class ProjectExtension(models.Model):
 
         self.real_total = total
 
+    @api.depends('tasks.planned_hours')
+    @api.one
     def compute_real_planned(self):
 
         planned = 0.0
@@ -60,8 +63,18 @@ class ProjectExtension(models.Model):
             'in', self.tasks.ids)], order='write_date DESC')
         for task in tasks:
             planned += task.planned_hours
-
         self.real_planned = planned
+
+    @api.depends('tasks.effective_hours')
+    @api.one
+    def compute_real_effective(self):
+
+        effective = 0.0
+        tasks = self.env['project.task'].search([('id',
+            'in', self.tasks.ids)], order='write_date DESC')
+        for task in tasks:
+            effective += task.effective_hours
+        self.real_effective = effective
     # 5. Constraints and onchanges
 
     # 6. CRUD methods

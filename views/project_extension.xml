@@ -13,7 +13,7 @@
 					<div class="oe_kanban_footer_left">
 						<span groups="project.group_time_work_estimation_tasks">
 							<span class="oe_e">R</span>
-							<field name="effective_hours" widget="float_time"/>/<field name="planned_hours" widget="float_time"/> <field name="company_uom_id"/>
+							<field name="real_effective" widget="float_time"/>/<field name="real_planned" widget="float_time"/> <field name="company_uom_id"/>
 						</span>
 						<span t-if="record.date.raw_value">
 							<span class="oe_e">N</span>
@@ -42,11 +42,11 @@
 			</field>
 		</record>
 
-		<!-- Filter for Task Analysis -->
-		<record id="view_task_project_user_search" model="ir.ui.view">
-			<field name="name">report.project.task.user.search</field>
-            <field name="model">report.project.task.user</field>
-            <field name="inherit_id" ref="project.view_task_project_user_search"/>
+        <record id="view_task_search_form_inherited" model="ir.ui.view">
+			<field name="name">project.task.search.form.inherited</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_search_form"/>
+            <field name="priority" eval="200"/>
             <field name="arch" type="xml">
             	<xpath expr="//filter[@string='Assignation Month']" position="after">
             		<filter string="Kokeilu" context="{'group_by':'date_last_stage_update:month'}"/>
@@ -68,6 +68,9 @@
             	<field name='planned_hours' position='replace'>
             		<field name="real_planned" widget="float_time"/>
             		<field name="real_total" widget="float_time" />
+            	</field>
+            	<field name="effective_hours" position="replace">
+            		<field name="real_effective" widget="float_time"/>
             	</field>
             </field>
         </record>
