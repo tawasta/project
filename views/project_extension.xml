@@ -66,8 +66,7 @@
             	</field>
 
             	<field name='planned_hours' position='after'>
-            		<field name='total_hours' widget="float_time"
-            				groups="project.group_time_work_estimation_tasks"/>
+            		<field name="real_total" widget="float_time" />
             	</field>
             </field>
         </record>
