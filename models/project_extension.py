@@ -21,7 +21,7 @@ class ProjectExtension(models.Model):
     
     # 2. Fields declaration
 
-    real_total = fields.Float(string="Estimation accuracy",help="Difference between Planned Hours and Time Spent", compute='compute_real_total')
+    accuracy = fields.Float(string="Estimation accuracy",help="Difference between Planned Hours and Time Spent", compute='compute_accuracy')
     real_planned = fields.Float(string="Real Planned Hours", compute='compute_real_planned')
     real_effective = fields.Float(string="Real Effective Hours", compute='compute_real_effective')
 
@@ -40,7 +40,7 @@ class ProjectExtension(models.Model):
     # 4. Compute and search fields, in the same order that fields declaration
     
     @api.one
-    def compute_real_total(self):
+    def compute_accuracy(self):
 
         effective = self.real_effective
         planned = self.real_planned
@@ -52,7 +52,7 @@ class ProjectExtension(models.Model):
         else:
             total = remaining
 
-        self.real_total = total
+        self.accuracy = total
 
     @api.depends('tasks.planned_hours')
     @api.one
