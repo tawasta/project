@@ -5,7 +5,7 @@
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from openerp import api, fields, models
+from openerp import api, fields, models, _
 
 # 4. Imports from Odoo modules:
 
@@ -21,9 +21,9 @@ class ProjectExtension(models.Model):
     
     # 2. Fields declaration
 
-    accuracy = fields.Float(string="Estimation accuracy",help="Difference between Planned Hours and Time Spent", compute='compute_accuracy')
-    real_planned = fields.Float(string="Real Planned Hours", compute='compute_real_planned')
-    real_effective = fields.Float(string="Real Effective Hours", compute='compute_real_effective')
+    accuracy = fields.Float(_("Estimation accuracy"),help="Difference between Planned Hours and Time Spent", compute='compute_accuracy')
+    real_planned = fields.Float(_("Planned Hours"), compute='compute_real_planned')
+    real_effective = fields.Float(_("Effective Hours"), compute='compute_real_effective')
 
     priority = fields.Selection([
         ('0', 'Low'),
@@ -42,17 +42,7 @@ class ProjectExtension(models.Model):
     @api.one
     def compute_accuracy(self):
 
-        effective = self.real_effective
-        planned = self.real_planned
-        remaining = planned - effective
-        total = 0.0
-        if remaining < 0:
-
-            total = abs(remaining)
-        else:
-            total = remaining
-
-        self.accuracy = total
+        self.accuracy = self.real_planned - self.real_effective
 
     @api.depends('tasks.planned_hours')
     @api.one
