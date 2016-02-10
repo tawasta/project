@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record id="view_project_project_filter_inherit" model="ir.ui.view">
+			<field name="name">project.project.select.inherit</field>
+			<field name="model">project.project</field>
+			<field name="inherit_id" ref="project.view_project_project_filter" />
+			<field name="arch" type="xml">
+				<field name="name" position="after">
+
+					<field name="project_type" />
+				</field>
+				<filter name="Parent" position="after">
+					<filter name="start_date" string="Start Month" context="{'group_by':'date_start:month'}"/>
+					<filter name="end_date" string="End Month" context="{'group_by':'date:month'}"/>
+					<filter name="project_team" string="Project Team" context="{'group_by':'team_id'}"/>
+				</filter>
+			</field>
+		</record> 
+
+	</data>
+</openerp>
