@@ -8,11 +8,20 @@
 			<field name="inherit_id" ref="project.view_task_search_form" />
 			<field name="arch" type="xml">
 				
+				<!-- Add fields and filters -->
 				<field name="stage_id" position="after">
+					<field name="date_start"/>
+					<field name="hour_type"/>
+					<field name="project_id"/>
 					<filter string="Open Tasks" domain="[('stage_id.fold', '=', False)]"/>
 					<separator/>
 				</field>
 
+				<!-- Add custom group by's -->
+				<filter string="Assignation Month" position="after">
+					<filter name="assign_week" context="{'group_by':'date_start:week'}" help="Assignation week"/>
+					<filter name="hour_types" context="{'group_by':'hour_type'}" help="Hour Types"/>
+				</filter>
 			</field>
 		</record> 
 
