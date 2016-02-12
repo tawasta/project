@@ -32,7 +32,6 @@
     'depends': [
         'project',
         'project_timesheet',
-        'project_team',
         'report'
     ],
     'data': [
