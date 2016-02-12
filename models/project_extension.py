@@ -93,6 +93,13 @@ class ProjectTask(models.Model):
         project = self.env['project.project'].search([('id', '=', project_id)])
         return project.date_start or False
 
-    date_start = fields.Datetime(string='Starting date', default=_get_default_date_start)
+    # Default value to date_end from project
+    @api.model
+    def _get_default_date_end(self):
+        project_id = self._get_default_project_id()
+        project = self.env['project.project'].search([('id', '=', project_id)])
+        return project.date or False
 
+    date_start = fields.Datetime(default=_get_default_date_start)
+    date_end = fields.Datetime(default=_get_default_date_end)
    
