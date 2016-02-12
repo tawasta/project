@@ -12,6 +12,7 @@ from openerp import api, fields, models, _
 # 5. Local imports in the relative form:
 
 # 6. Unknown third party imports:
+from datetime import datetime
 
 class ProjectExtension(models.Model):
     
@@ -79,3 +80,19 @@ class ProjectExtension(models.Model):
     # 7. Action methods
 
     # 8. Business methods
+
+class ProjectTask(models.Model):
+    
+    _inherit = 'project.task'
+
+    # Default value to date_start from project
+    @api.model
+    def _get_default_date_start(self):
+
+        project_id = self._get_default_project_id()
+        project = self.env['project.project'].search([('id', '=', project_id)])
+        return project.date_start or False
+
+    date_start = fields.Datetime(string='Starting date', default=_get_default_date_start)
+
+   
