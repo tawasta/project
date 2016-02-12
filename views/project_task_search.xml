@@ -19,8 +19,8 @@
 
 				<!-- Add custom group by's -->
 				<filter string="Assignation Month" position="after">
-					<filter name="assign_week" context="{'group_by':'date_start:week'}" help="Assignation week"/>
-					<filter name="hour_types" context="{'group_by':'hour_type'}" help="Hour Types"/>
+					<filter name="assign_week" string="Assignation week" context="{'group_by':'date_start:week'}"/>
+					<filter name="hour_types" string="Hour Types" context="{'group_by':'hour_type'}"/>
 				</filter>
 			</field>
 		</record> 
