@@ -22,7 +22,7 @@
 {
     'name': 'Project Extensions',
     'summary': 'Changes to Project app',
-    'version': '8.0.0.2.3',
+    'version': '8.0.0.2.4',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -38,6 +38,8 @@
         'views/project_form.xml',
         'views/project_tree.xml',
         'views/project_kanban.xml',
-        'views/project_search.xml'
+        'views/project_search.xml',
+        'views/project_task_form.xml',
+        'views/project_task_search.xml'
     ]
 }

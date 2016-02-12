@@ -85,6 +85,7 @@ class ProjectTask(models.Model):
     
     _inherit = 'project.task'
 
+    # Default methods declared before fields, so using lambdas ins't needed.
     # Default value to date_start from project
     @api.model
     def _get_default_date_start(self):
@@ -102,4 +103,9 @@ class ProjectTask(models.Model):
 
     date_start = fields.Datetime(default=_get_default_date_start)
     date_end = fields.Datetime(default=_get_default_date_end)
-   
+    
+    hour_type = fields.Selection([('fixed', 'Fixed'), 
+        ('time_based', 'Time Based'), 
+        ('product_development', 'Product Development'),
+        ('internal', 'Internal')], 
+        string='Hour type', help='Define hour type for task.')
