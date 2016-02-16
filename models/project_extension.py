@@ -22,9 +22,9 @@ class ProjectExtension(models.Model):
     
     # 2. Fields declaration
 
-    accuracy = fields.Float(_("Estimation accuracy"), help="Difference between Planned Hours and Time Spent", compute='compute_accuracy')
-    real_planned = fields.Float(_("Planned Hours"), help="Sum of planned hours of all tasks related to this project and its child projects.", compute='compute_real_planned')
-    real_effective = fields.Float(_("Effective Hours"), help="Sum of spent hours of all tasks related to this project and its child projects.", compute='compute_real_effective')
+    accuracy = fields.Float(_("Estimation accuracy"), help="Difference between Planned Hours and Time Spent", compute='compute_accuracy', translate=True)
+    real_planned = fields.Float(_("Planned Hours"), help="Sum of planned hours of all tasks related to this project and its child projects.", compute='compute_real_planned', translate=True)
+    real_effective = fields.Float(_("Effective Hours"), help="Sum of spent hours of all tasks related to this project and its child projects.", compute='compute_real_effective', translate=True)
 
     priority = fields.Selection([
         ('0', 'Low'),
