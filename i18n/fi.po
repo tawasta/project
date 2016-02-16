@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-16 11:14+0000\n"
-"PO-Revision-Date: 2016-02-16 13:30+0200\n"
+"POT-Creation-Date: 2016-02-16 11:45+0000\n"
+"PO-Revision-Date: 2016-02-16 13:47+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -52,7 +52,7 @@ msgstr "Tuntiarvion tarkkuus"
 #. module: project_extension
 #: selection:project.task,hour_type:0
 msgid "Fixed"
-msgstr "Pysyvä"
+msgstr "Kiinteä"
 
 #. module: project_extension
 #: selection:project.project,priority:0
@@ -108,7 +108,7 @@ msgstr "Prioriteetti"
 #. module: project_extension
 #: selection:project.task,hour_type:0
 msgid "Product Development"
-msgstr "Tuotteen Kehittäminen"
+msgstr "Tuotekehitys"
 
 #. module: project_extension
 #: model:ir.model,name:project_extension.model_project_project
@@ -132,5 +132,5 @@ msgstr "Tehtävä"
 
 #. module: project_extension
 #: selection:project.task,hour_type:0
-msgid "Time Based"
-msgstr "Aikaan sidottu"
+msgid "Time-Based"
+msgstr "Tuntiperusteinen"

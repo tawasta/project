@@ -110,7 +110,7 @@ class ProjectTask(models.Model):
     date_end = fields.Datetime(default=_get_default_date_end)
     
     hour_type = fields.Selection([('fixed', 'Fixed'), 
-        ('time_based', 'Time Based'), 
+        ('time_based', 'Time-Based'), 
         ('product_development', 'Product Development'),
         ('internal', 'Internal')], 
         string='Hour type', help='Define hour type for task.')
