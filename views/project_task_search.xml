@@ -12,7 +12,7 @@
 				<field name="stage_id" position="after">
 					<field name="date_start"/>
 					<field name="hour_type"/>
-					<filter string="Open Tasks" domain="[('stage_id.fold', '=', False)]"/>
+					<filter string="Open Tasks" domain="[('stage_id.fold', '!=', True)]"/>
 					<separator/>
 				</field>
 
