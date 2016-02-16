@@ -12,7 +12,7 @@ from openerp import api, fields, models, _
 # 5. Local imports in the relative form:
 
 # 6. Unknown third party imports:
-from datetime import datetime
+
 
 class ProjectExtension(models.Model):
     
