@@ -42,6 +42,11 @@ class ProjectExtension(models.Model):
     )
 
     # 3. Default methods
+    @api.model
+    def default_get(self, fields):
+        res = super(ProjectExtension, self).default_get(fields)
+        res['parent_id'] = False
+        return res
 
     # 4. Compute and search fields, in the same order that fields declaration
     
