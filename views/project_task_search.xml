@@ -12,7 +12,6 @@
 				<field name="stage_id" position="after">
 					<field name="date_start"/>
 					<field name="hour_type"/>
-					<field name="project_id"/>
 					<filter string="Open Tasks" domain="[('stage_id.fold', '=', False)]"/>
 					<separator/>
 				</field>
