@@ -6,12 +6,13 @@
 Project Field Customizations
 ============================
 
-This module was written to extend the functionality of projects. This module  creates new fields accuracy, real_planned and real_effective that count estimation accuracy between planned and effective hours as accuracy, planned and effective hours despite the fact if the task is in folded state in kanban. This module aswell adds priority-field to projects. In addition to that this module changes float-widgets to time-widgets in projects' and tasks' kanban views. 
+This module was written to extend the functionality of projects. 
 
-	* New fields for planned and effective (if task moves to folded state, hours stay visible)
-	* Estimation accuracy, which calculates substraction between planned and effective hours
-	* Float_time-widgets to kanban-view 
-	* Begining and end dates to tasks is inherited from project
+Features
+--------
+	* Hour_type field for tasks
+	* Project_type-field for projects
+	* Task report customizations
 
 
 Installation

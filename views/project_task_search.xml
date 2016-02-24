@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record id="view_task_search_form_inherit" model="ir.ui.view">
+			<field name="name">project.task.search.form.inherit</field>
+			<field name="model">project.task</field>
+			<field name="inherit_id" ref="project.view_task_search_form" />
+			<field name="arch" type="xml">
+				
+				<!-- Add fields and filters -->
+				<field name="stage_id" position="after">
+					<field name="hour_type"/>
+				</field>
+
+				<!-- Add custom group by's -->
+				<filter string="Assignation Month" position="after">
+					<filter name="hour_types" string="Hour Types" context="{'group_by':'hour_type'}"/>
+				</filter>
+			</field>
+		</record> 
+	</data>
+</openerp>
