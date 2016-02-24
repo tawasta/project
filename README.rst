@@ -9,10 +9,11 @@ Project Field Customizations
 This module was written to extend the functionality of projects. 
 
 Features
+--------
 
-	* Hour_type field for tasks
-	* Project_type-field for projects
-	* Task report customizations
+	* **Hour_type field for tasks**
+	* **Project_type-field for projects**
+	* **Task report customizations**
 
 
 Installation
