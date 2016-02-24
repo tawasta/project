@@ -19,7 +19,7 @@
 							<span class="oe_e">N</span>
 							<field name="date"/>
 						</span>
-						<field name="project_type"/>
+<!-- 						<field name="project_type"/> -->
 					</div>
 				</xpath>
 			</field>

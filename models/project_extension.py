@@ -35,11 +35,6 @@ class ProjectExtension(models.Model):
         select=True,
         default="1",
     )
-    project_type = fields.Many2many(
-        "project.category",
-        "project_category_rel",
-        string="Project type"
-    )
 
     # 3. Default methods
     @api.model
@@ -109,8 +104,3 @@ class ProjectTask(models.Model):
     date_start = fields.Datetime(default=_get_default_date_start)
     date_end = fields.Datetime(default=_get_default_date_end)
     
-    hour_type = fields.Selection([('fixed', 'Fixed'), 
-        ('time_based', 'Time-Based'), 
-        ('product_development', 'Product Development'),
-        ('internal', 'Internal')], 
-        string='Hour type', help='Define hour type for task.')
