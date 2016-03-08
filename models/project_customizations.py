@@ -18,13 +18,13 @@ class ProjectCustomizations(models.Model):
     
     # 1. Private attributes
     _inherit = 'project.project'
-    print "meni2"
+
     # 2. Fields declaration
-    project_type = fields.Many2many(
-        "project.category",
-        "project_category_rel",
+    project_type = fields.Many2one(
+        "project.type",
         string="Project type"
     )
+
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
@@ -46,3 +46,9 @@ class ProjectTask(models.Model):
         ('product_development', 'Product Development'),
         ('internal', 'Internal')], 
         string='Hour type', help='Define hour type for task.')
+
+class ProjectType(models.Model):
+
+    _name = 'project.type'
+
+    name = fields.Char(string='Name', required='True', translate=True)

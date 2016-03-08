@@ -1,1 +1,1 @@
-import project_customizations, task_report, hr_timesheet_sheet
+import project_customizations, hr_timesheet_sheet

@@ -10,7 +10,7 @@
             <field name="arch" type="xml">
 
                 <field name="user_id" position="before">
-                    <field name="project_type" widget="many2many_tags"/>
+                    <field name="project_type"/>
                     <newline/>
                 </field>
             </field>

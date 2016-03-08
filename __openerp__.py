@@ -22,7 +22,7 @@
 {
     'name': 'Project Customizations',
     'summary': 'Changes to Project app',
-    'version': '8.0.0.1.2',
+    'version': '8.0.0.1.3',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -39,6 +39,6 @@
         'views/project_search.xml',
         'views/project_task_form.xml',
         'views/project_task_search.xml',
-        'views/task_report_view.xml'
+        'views/project_type.xml'
     ]
 }

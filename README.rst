@@ -13,9 +13,11 @@ Features
 
 * **Hour_type field for tasks**
 
-* **Project_type-field for projects**
+* **Project_type-field for projects, menuitem for project types**
 
 * **Task report customizations**
+
+* **Timesheets are preapproved**
 
 
 Installation
