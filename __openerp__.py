@@ -22,7 +22,7 @@
 {
     'name': 'Project Customizations',
     'summary': 'Changes to Project app',
-    'version': '8.0.0.1.3',
+    'version': '8.0.0.1.4',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -34,6 +34,7 @@
         'hr_timesheet_sheet'
     ],
     'data': [
+        'security/ir.model.access.csv',
         'views/project_form.xml',
         'views/project_tree.xml',
         'views/project_search.xml',
