@@ -20,9 +20,9 @@
 ##############################################################################
 
 {
-    'name': 'Project Extensions',
+    'name': 'Project Customizations',
     'summary': 'Changes to Project app',
-    'version': '8.0.0.1.1',
+    'version': '8.0.0.1.2',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -31,8 +31,14 @@
     'installable': True,
     'depends': [
         'project',
+        'hr_timesheet_sheet'
     ],
     'data': [
-        
+        'views/project_form.xml',
+        'views/project_tree.xml',
+        'views/project_search.xml',
+        'views/project_task_form.xml',
+        'views/project_task_search.xml',
+        'views/task_report_view.xml'
     ]
 }

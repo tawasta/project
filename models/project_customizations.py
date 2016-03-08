@@ -18,7 +18,7 @@ class ProjectCustomizations(models.Model):
     
     # 1. Private attributes
     _inherit = 'project.project'
-    
+    print "meni2"
     # 2. Fields declaration
     project_type = fields.Many2many(
         "project.category",
