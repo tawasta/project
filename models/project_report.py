@@ -59,8 +59,7 @@ class ProjectReport(models.Model):
 
 	def _group_by(self):
 
-		group_by_str = " GROUP BY "
-		group_by_str += "p.id,"
+		group_by_str = "p.id,"
 		group_by_str += "a.name,"
 		group_by_str += "p.planned_hours,"
 		group_by_str += "p.effective_hours,"
@@ -82,7 +81,7 @@ class ProjectReport(models.Model):
 			CREATE or REPLACE VIEW %s as (
 				%s
 				FROM %s
-				%s
+				GROUP BY %s
 				)""" % (self._table, self._select(),
                     	self._from(), self._group_by()))
 

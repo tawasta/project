@@ -21,6 +21,8 @@ Features
 * Takes project expenses into account, which are declared in hr->expenses
 * Employee hourly wage can be determined in hr->employee->personal information->hourly wage, which is used to count project costs. Not yet working as intended (multiple workers on task).
 
+* Redefines report for tasks
+* Extends task reports by adding hour_type, skills and task_type fields
 
 Need fixing
 ===========
@@ -29,3 +31,37 @@ Need fixing
 * Average price field isn't needed after hourly wage starts working as inteded. 
 * There are two different fields (current_cost and current_cost_overall), overall has the expenses included, other doesn't. One of them could be removed, unless felt necessary to have both fields. 
 * Fields current_cost + current_cost_overall and estimated fields are both calculated with avg_price at the moment. When hourly wages is correct, avg_price should be replaced with hourly_wage.
+
+Installation
+============
+
+Install the module form Settings->Local Modules
+
+Configuration
+=============
+\-
+
+Usage
+=====
+\-
+
+Known issues / Roadmap
+======================
+\-
+
+Credits
+=======
+
+Contributors
+------------
+
+* Aleksi Savijoki <aleksi.savijoki@tawasta.fi>
+
+Maintainer
+----------
+
+.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
+   :alt: Oy Tawasta OS Technologies Ltd.
+   :target: http://tawasta.fi/
+
+This module is maintained by Oy Tawasta OS Technologies Ltd..
