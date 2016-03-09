@@ -16,7 +16,7 @@ Features
 
 * **Float_time-widgets to kanban-view**
 
-* **Begining and end dates to tasks is inherited from project**
+* **Begining and end dates to tasks are inherited from project**
 
 * **Open tasks filter**
 
