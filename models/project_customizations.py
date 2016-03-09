@@ -22,7 +22,8 @@ class ProjectCustomizations(models.Model):
     # 2. Fields declaration
     project_type = fields.Many2one(
         "project.type",
-        string="Project type"
+        string="Project type",
+        help="Defines project's type."
     )
 
     # 3. Default methods
@@ -43,15 +44,19 @@ class ProjectTask(models.Model):
 
     task_type = fields.Many2one(
         "task.type",
-        string="Task Type"
+        string="Task Type",
+        help="Define task's type."
     )
 
-    hour_type = fields.Selection([('fixed', 'Fixed'), 
+    hour_type = fields.Selection([
+        ('fixed', 'Fixed'), 
         ('time_based', 'Time-Based'), 
         ('product_development', 'Product Development'),
         ('internal', 'Internal'),
         ('support', 'Support')], 
-        string='Hour type', help='Define hour type for task.')
+        string="Hour type", 
+        help="Defines hour type for task."
+    )
 
     skills = fields.Many2one(
         "hr.skill",
