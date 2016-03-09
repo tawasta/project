@@ -21,6 +21,8 @@ Features
 
 * **Timesheets are preapproved**
 
+* **Customized group by's and kanban views to include the new fields**
+
 * **Task report customizations**
 
 

@@ -49,7 +49,8 @@ class ProjectTask(models.Model):
     hour_type = fields.Selection([('fixed', 'Fixed'), 
         ('time_based', 'Time-Based'), 
         ('product_development', 'Product Development'),
-        ('internal', 'Internal')], 
+        ('internal', 'Internal'),
+        ('support', 'Support')], 
         string='Hour type', help='Define hour type for task.')
 
     skills = fields.Many2one(

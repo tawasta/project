@@ -10,7 +10,7 @@
 			<field name="priority" eval="200"/>
 			<field name="arch" type="xml">
 				
-				<xpath expr="//div/span[@title='Remaining hours']" position="after">
+				<xpath expr="//div/field[@name='categ_ids']" position="after">
 					<t t-if="record.task_type.raw_value">
 						<br></br>
 						<span t-if="record.task_type.raw_value">

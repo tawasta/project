@@ -16,13 +16,16 @@
 							<span class="oe_e">R</span>
 							<field name="real_effective" widget="float_time"/>/<field name="real_planned" widget="float_time"/> <field name="company_uom_id"/>
 						</span>
-						<span t-if="record.project_type.raw_value"> 
-							<field name="project_type"/>
-						</span>
 						<span t-if="record.date.raw_value">
 							<span class="oe_e">N</span>
 							<field name="date"/>
 						</span>
+						<t t-if="record.project_type.raw_value">
+							<br></br><br></br>
+							<span> 
+								<field name="project_type"/>
+							</span>
+						</t>
 					</div>
 				</xpath>
 			</field>

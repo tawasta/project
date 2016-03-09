@@ -10,13 +10,19 @@
 				
 				<!-- Add fields and filters -->
 				<field name="stage_id" position="after">
+					<field name="task_type"/>
 					<field name="hour_type"/>
+					<field name="skills"/>
 				</field>
 
 				<!-- Add custom group by's -->
-				<filter string="Assignation Month" position="after">
-					<filter name="hour_types" string="Hour Types" context="{'group_by':'hour_type'}"/>
-				</filter>
+				<group string="Group By" position="after">
+					<group expand="1" string="Task Types">
+						<filter name="task_types" string="Task Types" context="{'group_by':'task_type'}"/>
+						<filter name="hour_types" string="Hour Types" context="{'group_by':'hour_type'}"/>
+						<filter name="skills" string="Skills" context="{'group_by':'skills'}"/>
+					</group>
+				</group>
 			</field>
 		</record> 
 	</data>
