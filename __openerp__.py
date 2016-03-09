@@ -20,14 +20,14 @@
 ##############################################################################
 
 {
-    'name': 'Report-module',
+    'name': 'Project Reports',
     'description': """
 
-Module for presenting reports of projectmodule.
+Module for presenting reports of project-module.
 
     """,
-    'version': '8.0.1.0.0',
-    'category': 'Project',
+    'version': '8.0.0.1.1',
+    'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
@@ -42,7 +42,8 @@ Module for presenting reports of projectmodule.
     	'views/project_report_view.xml',
     	'views/project_report_qweb.xml',
         'views/hr_employee_view.xml',
-    	'security/ir.model.access.csv'
+    	'security/ir.model.access.csv',
+        'views/project_task_report.xml'
     ],
     'installable': True,
     'auto-install': False,
