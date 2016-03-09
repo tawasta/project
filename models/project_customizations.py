@@ -41,14 +41,30 @@ class ProjectTask(models.Model):
     
     _inherit = 'project.task'
 
+    task_type = fields.Many2one(
+        "task.type",
+        string="Task Type"
+    )
+
     hour_type = fields.Selection([('fixed', 'Fixed'), 
         ('time_based', 'Time-Based'), 
         ('product_development', 'Product Development'),
         ('internal', 'Internal')], 
         string='Hour type', help='Define hour type for task.')
 
+    skills = fields.Many2one(
+        "hr.skill",
+        string="Required skills"
+    )
+
 class ProjectType(models.Model):
 
     _name = 'project.type'
 
-    name = fields.Char(string='Name', required='True', translate=True)
+    name = fields.Char(string='Name', required=True, translate=True)
+
+class TaskType(models.Model):
+
+    _name = 'task.type'
+
+    name = fields.Char(string='Name', required=True, translate=True)

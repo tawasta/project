@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<!-- Task type, hour type and skills to kanban-view -->
+		<record id="view_task_kanban_inherited" model="ir.ui.view">
+			<field name="name">view.task.kanban.inherited</field>
+			<field name="model">project.task</field>
+			<field name="inherit_id" ref="project_extension.view_task_kanban_inherited"/>
+			<field name="priority" eval="200"/>
+			<field name="arch" type="xml">
+				
+				<xpath expr="//div/span[@title='Remaining hours']" position="after">
+					<t t-if="record.task_type.raw_value">
+						<br></br>
+						<span t-if="record.task_type.raw_value">
+							<field name="task_type"/>
+						</span>
+					</t>
+					<t t-if="record.hour_type.raw_value">
+						<br></br>
+						<span> 
+							<field name="hour_type"/>
+						</span>
+					</t>
+					<t t-if="record.skills.raw_value">
+						<br></br>
+						<span> 
+							<field name="skills"/>
+						</span>
+					</t>
+				</xpath>
+
+				<!-- Hide project.category categ_ids field -->
+				<xpath expr="//div/field[@name='categ_ids']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+
+			</field>
+		</record>
+
+	</data>
+</openerp>

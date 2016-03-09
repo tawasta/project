@@ -6,18 +6,22 @@
 Project Field Customizations
 ============================
 
-This module was written to extend the functionality of projects. 
+This module was written to extend the functionality of project_extension. 
 
 Features
 --------
 
 * **Hour_type field for tasks**
 
+* **Task_type field for tasks, menuitem for task_types**
+
+* **Skills field for tasks, skills are managed under HR (OCA-module hr_skills)**
+
 * **Project_type-field for projects, menuitem for project types**
 
-* **Task report customizations**
-
 * **Timesheets are preapproved**
+
+* **Task report customizations**
 
 
 Installation

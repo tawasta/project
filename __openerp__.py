@@ -22,7 +22,7 @@
 {
     'name': 'Project Customizations',
     'summary': 'Changes to Project app',
-    'version': '8.0.0.1.4',
+    'version': '8.0.0.1.5',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -30,8 +30,9 @@
     'application': False,
     'installable': True,
     'depends': [
-        'project',
-        'hr_timesheet_sheet'
+        'project_extension',
+        'hr_timesheet_sheet',
+        'hr_skill'
     ],
     'data': [
         'security/ir.model.access.csv',
@@ -40,6 +41,9 @@
         'views/project_search.xml',
         'views/project_task_form.xml',
         'views/project_task_search.xml',
-        'views/project_type.xml'
+        'views/project_type.xml',
+        'views/project_task_type.xml',
+        'views/project_kanban.xml',
+        'views/project_task_kanban.xml'
     ]
 }
