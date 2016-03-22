@@ -63,6 +63,8 @@ class ProjectFeed(models.Model):
 				'user_id': message.create_uid.id,
 				'project_id': self.id
 			})
+
+		self.event_lines = self.event_lines.sorted(key=lambda event: event.date, reverse=True)
 		
 	# 5. Constraints and onchanges
 
