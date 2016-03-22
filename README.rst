@@ -8,6 +8,16 @@ Project's tasks feed
 
 This module was written to extend the functionality of project module to keep track what has happened in projects tasks.
 
+Features
+--------
+
+* Adds a new tab to project's form view called Project Feed
+* Tracks project's tasks' task_works and messages and gathers them to project
+* Events are represented in Project Feed-section from newest to oldest
+* Project_event_feed-table is cleared every time computed function is called (removing duplicates)
+* Feed shows the task, short description, time used, date and creator fields
+* In message events, time used is considered zero
+
 Installation
 ============
 

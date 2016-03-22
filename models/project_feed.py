@@ -34,6 +34,7 @@ class ProjectFeed(models.Model):
 	@api.multi
 	def compute_event_lines(self):
 
+		# Clear duplicates of table
 		self._cr.execute('truncate table project_event_line')
 
 		# Get the project_task_works and order them DESC by write_date
@@ -73,7 +74,8 @@ class ProjectFeed(models.Model):
     # 7. Action methods
 
     # 8. Business methods
-    
+   
+# Transient model to represent project's feed
 class ProjectEvent(models.TransientModel):
 
 	_name = 'project.event.line'
