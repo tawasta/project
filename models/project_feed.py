@@ -14,14 +14,14 @@ from openerp import api, fields, models
 # 6. Unknown third party imports:
 
 
-class ProjectFeed(models.Model):
+class ProjectFeed(models.TransientModel):
 
 	# 1. Private attributes
 	_inherit = 'project.project'
 
 	# 2. Fields declaration
 	task_work = fields.One2many(
-		'project.task.work',
+		'account.analytic.line',
 		'task_id',
 		string='Work lines',
 		compute='compute_task_lines'
@@ -34,7 +34,7 @@ class ProjectFeed(models.Model):
 	def compute_task_lines(self):
 
 		# Get the project_task_works and order them DESC by write_date
-		self.task_work = self.env['project.task.work'].search([('task_id',
+		self.task_work = self.env['account.analytic.line'].search([('task_id',
 			'in', self.tasks.ids)], order='write_date DESC')
 
 	# 5. Constraints and onchanges

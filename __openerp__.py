@@ -26,13 +26,15 @@
         Module for project events feed.
 
     """,
-    'version': '8.0.1.0.0',
+    'version': '8.0.0.1.1',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'depends': [
         'project', 
-        'link_many2one_clickable'],
+        'link_many2one_clickable',
+        'hr_timesheet_task'
+    ],
     'data': [
         'views/project_feed_view.xml'
     ],

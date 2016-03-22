@@ -25,15 +25,15 @@
 		</record>	
 
 		<record id="view_task_work_tree" model="ir.ui.view">
-			<field name="name">project.task.work.tree</field>
+			<field name="name">project.task.tree</field>
 			<field name="priority" eval="20"/>
-            <field name="model">project.task.work</field>
+            <field name="model">account.analytic.line</field>
             <field name="arch" type="xml">
             	<tree string="Tasks">
             		<field name="task_id"/>
-            		<field name="date"/>	
             		<field name="name"/>
-            		<field name="hours" widget="float_time"/>
+            		<field name="unit_amount" widget="float_time"/>
+            		<field name="write_date" />
             		<field name="user_id"/>     		
             	</tree>
             </field>
