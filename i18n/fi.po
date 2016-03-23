@@ -6,19 +6,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-02-16 11:45+0000\n"
-"PO-Revision-Date: 2016-02-16 13:47+0200\n"
+"POT-Creation-Date: 2016-03-23 08:19+0000\n"
+"PO-Revision-Date: 2016-03-23 10:20+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
-"Language: Finnish\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: fi_FI\n"
+"X-Generator: Poedit 1.7.5\n"
 
 #. module: project_extension
 #: view:project.task:project_extension.view_task_search_form_inherit
-#: view:report.project.task.user:project_extension.view_task_project_user_search_inherit
 msgid "Assignation Month"
 msgstr "Toimeksiantokuukausi"
 
@@ -26,11 +26,6 @@ msgstr "Toimeksiantokuukausi"
 #: view:project.task:project_extension.view_task_search_form_inherit
 msgid "Assignation week"
 msgstr "Toimeksiantoviikko"
-
-#. module: project_extension
-#: help:project.task,hour_type:0
-msgid "Define hour type for task."
-msgstr "Määrittele tehtävän tuntityyppi."
 
 #. module: project_extension
 #: code:addons/project_extension/models/project_extension.py:27
@@ -44,35 +39,9 @@ msgid "End Month"
 msgstr "Lopetuskuukausi"
 
 #. module: project_extension
-#: code:addons/project_extension/models/project_extension.py:25
-#, python-format
-msgid "Estimation accuracy"
-msgstr "Tuntiarvion tarkkuus"
-
-#. module: project_extension
-#: selection:project.task,hour_type:0
-msgid "Fixed"
-msgstr "Kiinteä"
-
-#. module: project_extension
 #: selection:project.project,priority:0
 msgid "High"
 msgstr "Korkea"
-
-#. module: project_extension
-#: view:project.task:project_extension.view_task_search_form_inherit
-msgid "Hour Types"
-msgstr "Tuntityypit"
-
-#. module: project_extension
-#: field:project.task,hour_type:0
-msgid "Hour type"
-msgstr "Tuntityyppi"
-
-#. module: project_extension
-#: selection:project.task,hour_type:0
-msgid "Internal"
-msgstr "Sisäinen"
 
 #. module: project_extension
 #: selection:project.project,priority:0
@@ -90,11 +59,6 @@ msgid "Open Tasks"
 msgstr "Avoimet Tehtävät"
 
 #. module: project_extension
-#: view:report.project.task.user:project_extension.view_task_project_user_search_inherit
-msgid "Partner"
-msgstr "Kumppani"
-
-#. module: project_extension
 #: code:addons/project_extension/models/project_extension.py:26
 #, python-format
 msgid "Planned Hours"
@@ -106,19 +70,9 @@ msgid "Priority"
 msgstr "Prioriteetti"
 
 #. module: project_extension
-#: selection:project.task,hour_type:0
-msgid "Product Development"
-msgstr "Tuotekehitys"
-
-#. module: project_extension
 #: model:ir.model,name:project_extension.model_project_project
 msgid "Project"
 msgstr "Projekti"
-
-#. module: project_extension
-#: field:project.project,project_type:0
-msgid "Project type"
-msgstr "Projektityyppi"
 
 #. module: project_extension
 #: view:project.project:project_extension.view_project_project_filter_inherit
@@ -131,6 +85,7 @@ msgid "Task"
 msgstr "Tehtävä"
 
 #. module: project_extension
-#: selection:project.task,hour_type:0
-msgid "Time-Based"
-msgstr "Tuntiperusteinen"
+#: code:addons/project_extension/models/project_extension.py:25
+#, python-format
+msgid "Time left / Overtime"
+msgstr "Jäljellä / Ylitunnit"
