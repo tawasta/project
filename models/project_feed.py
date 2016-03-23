@@ -3,16 +3,15 @@
 # 1. Standard library imports:
 
 # 2. Known third party imports:
-
+import re
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models, tools
-
+from openerp.addons.mail.mail_message import MLStripper
 # 4. Imports from Odoo modules:
 
 # 5. Local imports in the relative form:
 
 # 6. Unknown third party imports:
-
 
 class ProjectFeed(models.Model):
 
@@ -56,9 +55,18 @@ class ProjectFeed(models.Model):
 			})
 
 		for message in messages:
+
+			if message.subject:
+				info = message.subject
+			else:
+				info = message.subtype_id.name
+				if re.search("[:]([^<]+)", message.body):
+					extra = re.search("[:]([^<]+)", message.body)
+					info += extra.group()
+
 			self.event_lines += self.event_lines.create({
 				'task_id': message.res_id,
-				'name': message.subtype_id.name,
+				'name': info,
 				'unit_amount': 0,
 				'date': message.write_date,
 				'user_id': message.create_uid.id,
