@@ -103,4 +103,25 @@ class ProjectTask(models.Model):
 
     date_start = fields.Datetime(default=_get_default_date_start)
     date_end = fields.Datetime(default=_get_default_date_end)
-    
+
+
+    @api.one
+    def write(self, vals):
+
+        msgbody = ""
+        msgsubject = ""
+
+        if 'description' in vals:
+            msgbody = _("Task's description changed.")
+            msgsubject = _("Description changed")
+        elif self.date_deadline and 'date_deadline' in vals:
+            msgbody = _("Task's deadline changed from %s to %s.") % (self.date_deadline, vals['date_deadline'])
+            msgsubject = _("Deadline changed")
+
+        # TODO: Fix this, messy solution
+        if 'description' in vals or self.date_deadline and 'date_deadline' in vals:
+
+            msg_id = self.message_post(subject=msgsubject, body=msgbody, type="notification")
+            self.env['mail.message'].browse(msg_id).write({'subtype_id': 1})
+        
+        return super(ProjectTask, self).write(vals)
