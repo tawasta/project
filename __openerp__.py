@@ -38,10 +38,10 @@ Module for presenting reports of project-module.
         'project_customizations'
     ],
     'data': [ 
-    	'views/project_project_view.xml', 
-    	'views/project_report_view.xml',
-    	'views/project_report_qweb.xml',
-        'views/hr_employee_view.xml',
+    	# 'views/project_project_view.xml', 
+    	# 'views/project_report_view.xml',
+    	# 'views/project_report_qweb.xml',
+     #    'views/hr_employee_view.xml',
     	'security/ir.model.access.csv',
         'views/project_task_report.xml'
     ],
