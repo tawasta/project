@@ -18,8 +18,6 @@ class ProjectFeed(models.Model):
 	# 1. Private attributes
 	_inherit = 'project.project'
 
-
-
 	event_lines = fields.One2many(
 		'project.event.line',
 		'project_id',
@@ -56,13 +54,21 @@ class ProjectFeed(models.Model):
 
 		for message in messages:
 
+			# If message has subject, set is as infotext
 			if message.subject:
 				info = message.subject
 			else:
 				info = message.subtype_id.name
-				if re.search("[:]([^<]+)", message.body):
+				subtype_id = self.env['mail.message.subtype'].sudo().with_context(lang=
+					False).search([('res_model', '=', 'project.task'), ('name', '=', 'Task Assigned')])
+
+				# Find from message.body the assigned to and stage changed
+				if len(re.findall("[:]([^<]+)", message.body)) == 1:
 					extra = re.search("[:]([^<]+)", message.body)
 					info += extra.group()
+				elif len(re.findall("[:]([^<]+)", message.body)) == 6 and subtype_id and message.parent_id:
+					extra = re.findall("[:]([^<]+)", message.body)
+					info += ": " + extra[1]
 
 			self.event_lines += self.event_lines.create({
 				'task_id': message.res_id,
