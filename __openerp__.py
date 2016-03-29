@@ -34,7 +34,8 @@ Module for presenting reports of project-module.
     'depends': [ 
         'web_graph_improved', 
         'hr', 
-        'analytic_contract_hr_expense'
+        'analytic_contract_hr_expense',
+        'project_task_report'
     ],
     'data': [ 
     	'views/project_project_view.xml', 

@@ -54,7 +54,7 @@
 		</record>
 
 
-		<menuitem action="action_project_report_tree" id="menu_project_report_search" parent="menu_project_reports_view" sequence="5"/>
+		<menuitem action="action_project_report_tree" id="menu_project_report_search" parent="project_task_report.menu_project_reports_view" sequence="5"/>
 
 		
 	</data>
