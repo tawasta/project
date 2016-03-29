@@ -26,22 +26,22 @@
 Module for presenting reports of project-module.
 
     """,
-    'version': '8.0.0.1.1',
+    'version': '8.0.0.2.0',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
-    'depends': [
-        'project', 
+    'depends': [ 
         'web_graph_improved', 
         'hr', 
-        'analytic_contract_hr_expense'
+        'analytic_contract_hr_expense',
+        'project_customizations'
     ],
     'data': [ 
-    	'views/project_project_view.xml', 
-    	'views/project_report_view.xml',
-    	'views/project_report_qweb.xml',
-        'views/hr_employee_view.xml',
+    	# 'views/project_project_view.xml', 
+    	# 'views/project_report_view.xml',
+    	# 'views/project_report_qweb.xml',
+        # 'views/hr_employee_view.xml',
     	'security/ir.model.access.csv',
         'views/project_task_report.xml'
     ],
