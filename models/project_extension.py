@@ -25,7 +25,6 @@ class ProjectExtension(models.Model):
     accuracy = fields.Float(_("Time left / Overtime"), help="Difference between Planned Hours and Time Spent", compute='compute_accuracy', translate=True)
     real_planned = fields.Float(_("Planned Hours"), help="Sum of planned hours of all tasks related to this project and its child projects.", compute='compute_real_planned', translate=True)
     real_effective = fields.Float(_("Effective Hours"), help="Sum of spent hours of all tasks related to this project and its child projects.", compute='compute_real_effective', translate=True)
-
     priority = fields.Selection([
         ('0', 'Low'),
         ('1', 'Normal'),
@@ -35,6 +34,7 @@ class ProjectExtension(models.Model):
         select=True,
         default="1",
     )
+    description = fields.Text(_('Description'))
 
     # 3. Default methods
     @api.model

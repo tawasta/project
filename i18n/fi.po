@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-29 08:41+0000\n"
-"PO-Revision-Date: 2016-03-29 11:44+0200\n"
+"POT-Creation-Date: 2016-03-29 12:08+0000\n"
+"PO-Revision-Date: 2016-03-29 15:09+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: fi_FI\n"
 "X-Generator: Poedit 1.7.5\n"
+
+#. module: project_extension
+#: view:project.project:project_extension.edit_project_inherit
+msgid "Add a description..."
+msgstr "Lisää kuvaus..."
 
 #. module: project_extension
 #: view:project.task:project_extension.view_task_search_form_inherit
@@ -32,6 +37,13 @@ msgstr "Toimeksiantoviikko"
 #, python-format
 msgid "Deadline changed"
 msgstr "Määräaika muuttunut"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:37
+#: view:project.project:project_extension.edit_project_inherit
+#, python-format
+msgid "Description"
+msgstr "Kuvaus"
 
 #. module: project_extension
 #: code:addons/project_extension/models/project_extension.py:143
@@ -113,6 +125,11 @@ msgstr "Tehtävän määräaika muuttunut %s → %s."
 #, python-format
 msgid "Task's description changed."
 msgstr "Tehtävän kuvaus muuttunut."
+
+#. module: project_extension
+#: view:project.project:project_extension.edit_project_inherit
+msgid "Team"
+msgstr "Tiimi"
 
 #. module: project_extension
 #: code:addons/project_extension/models/project_extension.py:25
