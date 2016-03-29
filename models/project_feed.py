@@ -58,7 +58,7 @@ class ProjectFeed(models.Model):
 			if message.subject:
 				info = message.subject
 			else:
-				info = message.subtype_id.name
+				info = message.subtype_id.name or ""
 				subtype_id = self.env['mail.message.subtype'].sudo().with_context(lang=
 					False).search([('res_model', '=', 'project.task'), ('name', '=', 'Task Assigned')])
 
