@@ -9,7 +9,7 @@
 			<field name="arch" type="xml">
 				
 				<field name="planned_hours" position="before">
-					<field name="avg_price" widget="float_number"/>
+					<!-- <field name="avg_price" widget="float_number"/> -->
 				</field>
             </field>
         </record>	

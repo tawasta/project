@@ -6,7 +6,7 @@
 
 # 3. Odoo imports (openerp):
 from openerp import fields, models, tools
-
+from openerp import _
 # 4. Imports from Odoo modules:
 
 # 5. Local imports in the relative form:
@@ -22,17 +22,17 @@ class ProjectReport(models.Model):
 	_auto = False
  	
  	# 2. Fields declaration
-	name = fields.Char('Name of project', readonly=True)
-	planned_hours = fields.Float('Planned hours', readonly=True)
-	effective_hours = fields.Float('Effective hours', readonly=True)
-	avg_price = fields.Float('Average price per hour',default=10.5)
-	estimated_cost = fields.Float('Estimated cost of project', readonly=True)
-	current_cost = fields.Float('Current cost of project', readonly=True)
-	project_state = fields.Selection([('open', 'In Progress'),('cancelled', 'Cancelled'),('close', 'Closed')],'Status', readonly=True)
-	expenses = fields.Float('Expenses', default=0.0,readonly=True)
-	tasks = fields.Integer('Tasks', readonly=True)
-	current_cost_overall = fields.Float('Overall current cost', readonly=True)
-	estimated_cost_overall = fields.Float('Overall estimated cost', readonly=True)
+	name = fields.Char(_('Name of project'), readonly=True)
+	planned_hours = fields.Float(_('Planned hours'), readonly=True)
+	effective_hours = fields.Float(_('Effective hours'), readonly=True)
+	avg_price = fields.Float(_('Average price per hour'), default=0.0)
+	estimated_cost = fields.Float(_('Estimated cost of project'), readonly=True)
+	current_cost = fields.Float(_('Current cost of project'), readonly=True)
+	project_state = fields.Selection([('open', 'In Progress'),('cancelled', 'Cancelled'),('close', 'Closed')],_('Status'), readonly=True)
+	expenses = fields.Float(_('Expenses'), default=0.0,readonly=True)
+	tasks = fields.Integer(_('Tasks'), readonly=True)
+	current_cost_overall = fields.Float(_('Overall current cost'), readonly=True)
+	estimated_cost_overall = fields.Float(_('Overall estimated cost'), readonly=True)
 	# hourly_wage = fields.Float('Hourly wage')
 	# user_cost = fields.Float('Costs from employy hourly wage', readonly=True)
 

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-09 13:24+0000\n"
-"PO-Revision-Date: 2016-03-09 15:25+0200\n"
+"POT-Creation-Date: 2016-03-29 09:29+0000\n"
+"PO-Revision-Date: 2016-03-29 12:32+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -28,9 +28,26 @@ msgid "Assignation Month"
 msgstr "Toimeksiantokuukausi"
 
 #. module: project_reports
+#: code:addons/project_reports/models/project_report.py:28
+#: field:project.report,avg_price:0
+#, python-format
+msgid "Average price per hour"
+msgstr "Keskituntihinta"
+
+#. module: project_reports
 #: view:website:project_reports.project_report_template
 msgid "Average price per hour:"
 msgstr "Keskimääräinen tuntihinta"
+
+#. module: project_reports
+#: selection:project.report,project_state:0
+msgid "Cancelled"
+msgstr "Peruutettu"
+
+#. module: project_reports
+#: selection:project.report,project_state:0
+msgid "Closed"
+msgstr "Suljettu"
 
 #. module: project_reports
 #: view:report.project.task.user:project_reports.view_task_project_user_search_inherit
@@ -48,6 +65,13 @@ msgid "Created by:"
 msgstr "Luonut"
 
 #. module: project_reports
+#: code:addons/project_reports/models/project_report.py:30
+#: field:project.report,current_cost:0
+#, python-format
+msgid "Current cost of project"
+msgstr "Projektin tämänhetkiset kustannukset"
+
+#. module: project_reports
 #: view:website:project_reports.project_report_template
 msgid "Current cost:"
 msgstr "Tämänhetkiset kustannukset"
@@ -63,6 +87,13 @@ msgid "Defines task's type."
 msgstr "Määrittelee tehtävätyypin."
 
 #. module: project_reports
+#: code:addons/project_reports/models/project_report.py:27
+#: field:project.report,effective_hours:0
+#, python-format
+msgid "Effective hours"
+msgstr "Käytetyt tunnit"
+
+#. module: project_reports
 #: view:website:project_reports.project_report_template
 msgid "Effective hours:"
 msgstr "Käytetty aika:"
@@ -73,9 +104,23 @@ msgid "Employee"
 msgstr "Työntekijä"
 
 #. module: project_reports
+#: code:addons/project_reports/models/project_report.py:29
+#: field:project.report,estimated_cost:0
+#, python-format
+msgid "Estimated cost of project"
+msgstr "Projektin arvioidut kustannukset"
+
+#. module: project_reports
 #: view:website:project_reports.project_report_template
 msgid "Estimated cost of project:"
 msgstr "Projektin arvioidut kustannukset:"
+
+#. module: project_reports
+#: code:addons/project_reports/models/project_report.py:32
+#: field:project.report,expenses:0
+#, python-format
+msgid "Expenses"
+msgstr "Kustannukset"
 
 #. module: project_reports
 #: view:project.report:project_reports.view_project_report_search
@@ -89,9 +134,47 @@ msgid "Hour Types"
 msgstr "Tuntityypit"
 
 #. module: project_reports
+#: field:project.report,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: project_reports
+#: selection:project.report,project_state:0
+msgid "In Progress"
+msgstr "Käynnissä"
+
+#. module: project_reports
+#: code:addons/project_reports/models/project_report.py:25
+#: field:project.report,name:0
+#, python-format
+msgid "Name of project"
+msgstr "Projektin nimi"
+
+#. module: project_reports
+#: code:addons/project_reports/models/project_report.py:34
+#: field:project.report,current_cost_overall:0
+#, python-format
+msgid "Overall current cost"
+msgstr "Tämänhetkiset kustannukset kaikkineen"
+
+#. module: project_reports
+#: code:addons/project_reports/models/project_report.py:35
+#: field:project.report,estimated_cost_overall:0
+#, python-format
+msgid "Overall estimated cost"
+msgstr "Arvioidut kustannukset kaikkineen"
+
+#. module: project_reports
 #: view:report.project.task.user:project_reports.view_task_project_user_search_inherit
 msgid "Partner"
 msgstr "Kumppani"
+
+#. module: project_reports
+#: code:addons/project_reports/models/project_report.py:26
+#: field:project.report,planned_hours:0
+#, python-format
+msgid "Planned hours"
+msgstr "Suunnitellut tunnit"
 
 #. module: project_reports
 #: view:website:project_reports.project_report_template
@@ -163,6 +246,13 @@ msgid "State"
 msgstr "Tila"
 
 #. module: project_reports
+#: code:addons/project_reports/models/project_report.py:31
+#: field:project.report,project_state:0
+#, python-format
+msgid "Status"
+msgstr "Tila"
+
+#. module: project_reports
 #: field:report.project.task.user,task_type:0
 msgid "Task Type"
 msgstr "Tehtävätyyppi"
@@ -171,6 +261,18 @@ msgstr "Tehtävätyyppi"
 #: view:report.project.task.user:project_reports.view_task_project_user_search_inherit
 msgid "Task Types"
 msgstr "Tehtävätyypit"
+
+#. module: project_reports
+#: code:addons/project_reports/models/project_report.py:33
+#: field:project.report,tasks:0
+#, python-format
+msgid "Tasks"
+msgstr "Tehtävät"
+
+#. module: project_reports
+#: model:ir.ui.menu,name:project_reports.menu_project_task_user_tree
+msgid "Tasks Analysis"
+msgstr "Tehtäväanalyysi"
 
 #. module: project_reports
 #: model:ir.model,name:project_reports.model_report_project_task_user

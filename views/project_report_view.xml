@@ -3,9 +3,6 @@
 <openerp>
 	<data>
 
-		<menuitem name="Reports" id="menu_project_reports_view" parent="base.menu_main_pm" />
-
-
 		<record id="view_project_report_graph" model="ir.ui.view">
             <field name="name">project.report.graph</field>
             <field name="model">project.report</field>
