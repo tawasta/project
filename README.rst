@@ -34,9 +34,6 @@ Features
 * Takes project expenses into account, which are declared in hr->expenses
 * Employee hourly wage can be determined in hr->employee->personal information->hourly wage, which is used to count project costs. Not yet working as intended (multiple workers on task).
 
-* Redefines report for tasks
-* Extends task reports by adding hour_type, skills and task_type fields
-
 Need fixing
 ===========
 
