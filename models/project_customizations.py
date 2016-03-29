@@ -68,9 +68,40 @@ class ProjectType(models.Model):
     _name = 'project.type'
 
     name = fields.Char(string='Name', required=True, translate=True)
+    parent_id = fields.Many2one('project.type', string='Parent', ondelete='cascade')
+    child_ids = fields.One2many('project.type', 'parent_id', string='Children')
+
+
+    @api.multi
+    def name_get(self):
+        res = []
+        for record in self:
+            names = []
+            current = record
+            while current:
+                names.append(current.name)
+                current = current.parent_id
+            res.append((record.id, ' / '.join(reversed(names))))
+        return res
+
 
 class TaskType(models.Model):
 
     _name = 'task.type'
 
     name = fields.Char(string='Name', required=True, translate=True)
+    parent_id = fields.Many2one('task.type', string='Parent', ondelete='cascade')
+    child_ids = fields.One2many('task.type', 'parent_id', string='Children')
+
+
+    @api.multi
+    def name_get(self):
+        res = []
+        for record in self:
+            names = []
+            current = record
+            while current:
+                names.append(current.name)
+                current = current.parent_id
+            res.append((record.id, ' / '.join(reversed(names))))
+        return res

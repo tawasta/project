@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
 	<data>
+		
+		<record id="view_task_type_tree" model="ir.ui.view">
+			<field name="name">task.type.tree</field>
+			<field name="model">task.type</field>
+			<field name="field_parent">child_ids</field>
+			<field name="arch" type="xml">
+				<tree string="Task Types">
+					<field name="display_name" string="Name"/>
+				</tree>
+			</field>
+		</record>
+
 		<!-- Task types -->
 		<record id="task_type_action" model="ir.actions.act_window">
 			<field name="name">Task Types</field>
 			<field name="res_model">task.type</field>
 			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
 			<field name="help" type="html">
 				<p class="oe_view_nocontent_create">
 					Click to add a new tag.
 				</p>
+			</field>
+		</record>
+
+		<record id="view_task_type_form" model="ir.ui.view">
+			<field name="name">task.type.form</field>
+			<field name="model">task.type</field>
+			<field name="arch" type="xml">
+				<form string="Task Types">
+					<group>
+						<field name="name"/>
+						<field name="parent_id"/>
+					</group>
+					<field name="child_ids" string="Name">
+						<tree string="Child Task Types">
+							<field name="name"/>
+						</tree>
+					</field>
+				</form>
 			</field>
 		</record>
 

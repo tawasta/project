@@ -23,6 +23,8 @@ Features
 
 * **Customized group by's and kanban views to include the new fields**
 
+* **Company can be set as a parent for task/project types**
+
 Installation
 ============
 
