@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<menuitem name="Reports" id="menu_project_reports_view" parent="base.menu_main_pm" />
+
+		<menuitem action="project.action_project_task_user_tree" id="menu_project_task_user_tree" parent="menu_project_reports_view" sequence="5"/>
+	</data>
+</openerp>
