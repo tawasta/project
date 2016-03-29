@@ -8,7 +8,7 @@
 from openerp import api, fields, models, _
 
 # 4. Imports from Odoo modules:
-
+from openerp.exceptions import Warning
 # 5. Local imports in the relative form:
 
 # 6. Unknown third party imports:
@@ -78,8 +78,35 @@ class ProjectExtension(models.Model):
     # 6. CRUD methods
 
     # 7. Action methods
+    @api.multi
+    def set_done(self):
+        
+        if not self.validate_project():
+            return False  
+        
+        else:
+            return super(ProjectExtension, self).set_done()
 
     # 8. Business methods
+    def validate_project(self):
+        result = False
+        msg = False
+
+        unclosed_tasks = self.env['project.task'].search_count([('id',
+            'in', self.tasks.ids), ('stage_id.fold', '=', False)])
+
+        if unclosed_tasks:
+            msg = _("Project still has unclosed tasks!")
+        
+        else:
+            result = True
+
+        if msg:
+            raise Warning(msg)
+
+        return result
+
+
 
 class ProjectTask(models.Model):
     

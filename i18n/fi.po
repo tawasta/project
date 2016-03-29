@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-23 08:19+0000\n"
-"PO-Revision-Date: 2016-03-23 10:20+0200\n"
+"POT-Creation-Date: 2016-03-29 08:41+0000\n"
+"PO-Revision-Date: 2016-03-29 11:44+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -26,6 +26,18 @@ msgstr "Toimeksiantokuukausi"
 #: view:project.task:project_extension.view_task_search_form_inherit
 msgid "Assignation week"
 msgstr "Toimeksiantoviikko"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:146
+#, python-format
+msgid "Deadline changed"
+msgstr "Määräaika muuttunut"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:143
+#, python-format
+msgid "Description changed"
+msgstr "Kuvaus muuttunut"
 
 #. module: project_extension
 #: code:addons/project_extension/models/project_extension.py:27
@@ -75,6 +87,12 @@ msgid "Project"
 msgstr "Projekti"
 
 #. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:99
+#, python-format
+msgid "Project still has unclosed tasks!"
+msgstr "Projektilla on avoimia tehtäviä!"
+
+#. module: project_extension
 #: view:project.project:project_extension.view_project_project_filter_inherit
 msgid "Start Month"
 msgstr "Aloituskuukausi"
@@ -83,6 +101,18 @@ msgstr "Aloituskuukausi"
 #: model:ir.model,name:project_extension.model_project_task
 msgid "Task"
 msgstr "Tehtävä"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:145
+#, python-format
+msgid "Task's deadline changed from %s to %s."
+msgstr "Tehtävän määräaika muuttunut %s → %s."
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:142
+#, python-format
+msgid "Task's description changed."
+msgstr "Tehtävän kuvaus muuttunut."
 
 #. module: project_extension
 #: code:addons/project_extension/models/project_extension.py:25
