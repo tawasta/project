@@ -40,6 +40,7 @@ Task notes and project button.
         'views/task_form.xml',
         'views/task_note.xml',
         'views/res_partner.xml',
+        'views/project.xml',
         'security/ir.model.access.csv'
     ],
     'installable': True,
