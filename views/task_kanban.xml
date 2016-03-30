@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+    	<!-- Kanban view -->
+       	<record id="view_task_kanban_inherited" model="ir.ui.view">
+            <field name="name">view.task.kanban.inherited</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_kanban"/>
+            <field name="arch" type="xml">
+				
+				<xpath expr="//field[@name='name']" position='after'>
+					<field name='partner_id' invisible="1"/>
+				</xpath>
+				
+                <xpath expr="//templates/t/div/div[2]/div[1]/b" position='before'>
+                    <p style="color: #009ACD; font-size: 0.9em; margin-top: 0;"><field name='partner_id'/></p>
+                </xpath>
+
+            </field>
+      	</record>
+    </data>
+</openerp>

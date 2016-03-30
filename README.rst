@@ -21,12 +21,18 @@ Configuration
 Usage
 =====
 
+You can use this module by going to partner form and pressing project button, go to projects and use My procects/My tasks/Project Templates. Also the kanban views have been modified.
 
 
 Features
 ========
 
-* 
+* Adds a smartbutton to partner, where you can check partner's projects
+* New menuitems My tasks, My projects and Project templates
+* Adds partner to project kanban view and tasks kanban view
+* Adds company to projects form view
+* Adds notes to projects and tasks
+
 
 Credits
 =======
