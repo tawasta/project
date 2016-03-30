@@ -10,12 +10,14 @@
 				<page string="Project Stages" position="after">
 					<page string="Project Feed">
 						<group string="Description">
-							<p> In the following "Project Feed"-section all the events that have been done in the current project's tasks are listed. The list is ordered by write date, which mean that lastly updated events are on top of the list. The section contains all the tasks regardless of task's state. "Project Feed"-section consists of messages inside project's tasks (discussions, stage change, assigned to, reviewed by,...) and task's works. When the event is the former type, they are considered to be instant (thus no time used value).
-
+							<p> In the following "Project Feed"-section all the events that have been done in the current project's tasks are listed. The list is ordered by write date, which mean that lastly updated events are on top of the list. The section contains all the tasks regardless of task's state. 
+							</p>
+							<newline/>
+							<p>"Project Feed"-section consists of messages inside project's tasks (discussions, stage change, assigned to, reviewed by,...) and task's works. When the event is the former type, they are considered to be instant (thus no time used or remaining time values). If the events line is colored red, it means that the time has passed over the planned hours for task.
 							</p>
 						</group>
 						<group string="Project Feed">
-							<field name="event_lines" string="Project events" nolabel="1" 
+							<field name="event_lines" string="Project events" nolabel="1" readonly="True"
 								context="{
 										'tree_view_ref': 'project_event_feed.view_project_event_tree'
 								}"/>
@@ -30,10 +32,11 @@
 			<field name="priority" eval="20"/>
             <field name="model">project.event.line</field>
             <field name="arch" type="xml">
-            	<tree string="Tasks">
+            	<tree string="Tasks" colors="red:time_left&lt;0">
             		<field name="task_id"/>
             		<field name="name"/>
             		<field name="unit_amount" widget="float_time" sum="Total time"/>
+            		<field name="time_left" widget="float_time"/>
             		<field name="date" />
             		<field name="user_id"/>     		
             	</tree>

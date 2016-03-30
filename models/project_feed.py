@@ -5,7 +5,7 @@
 # 2. Known third party imports:
 import re
 # 3. Odoo imports (openerp):
-from openerp import api, fields, models, tools
+from openerp import api, fields, models, tools, _
 from openerp.addons.mail.mail_message import MLStripper
 # 4. Imports from Odoo modules:
 
@@ -41,12 +41,17 @@ class ProjectFeed(models.Model):
 		# Get tasks messages and order them DESC by write_date
 		messages = self.env['mail.message'].search([('res_id',
 			'in', self.tasks.ids),('model','=','project.task')], order='write_date DESC')
+		time_used = 0.0
+		for work in reversed(task_works):
+			
+			info = _("Added hours: ") + work.name	
+			time_used += work.unit_amount
 
-		for work in task_works:
 			self.event_lines += self.event_lines.create({
 				'task_id': work.task_id.id,
-				'name': work.name,
+				'name': info,
 				'unit_amount': work.unit_amount,
+				'time_left': work.task_id.planned_hours - time_used,
 				'date': work.write_date,
 				'user_id': work.user_id.id,
 				'project_id': self.id
@@ -58,7 +63,7 @@ class ProjectFeed(models.Model):
 			if message.subject:
 				info = message.subject
 			else:
-				info = message.subtype_id.name or ""
+				info = message.subtype_id.name or _("Task Continued")
 				subtype_id = self.env['mail.message.subtype'].sudo().with_context(lang=
 					False).search([('res_model', '=', 'project.task'), ('name', '=', 'Task Assigned')])
 
@@ -74,6 +79,7 @@ class ProjectFeed(models.Model):
 				'task_id': message.res_id,
 				'name': info,
 				'unit_amount': 0,
+				'time_left': 0,
 				'date': message.write_date,
 				'user_id': message.create_uid.id,
 				'project_id': self.id
@@ -97,6 +103,7 @@ class ProjectEvent(models.TransientModel):
 	task_id = fields.Many2one('project.task', string='Task')
 	name = fields.Char(string='Event description')
 	unit_amount = fields.Float(string='Time used')
+	time_left = fields.Float(string='Time remaining')
 	user_id = fields.Many2one('res.users',string='Done by')
 	project_id = fields.Many2one('project.project', string='Project')
 	date = fields.Datetime(string='Date')
