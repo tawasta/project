@@ -26,7 +26,7 @@
 Task notes and project button.
 
     """,
-    'version': '8.0.0.1.1',
+    'version': '8.0.0.1.2',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -41,6 +41,7 @@ Task notes and project button.
         'views/task_note.xml',
         'views/res_partner.xml',
         'views/project.xml',
+        'views/project_kanban.xml',
         'security/ir.model.access.csv'
     ],
     'installable': True,

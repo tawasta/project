@@ -8,6 +8,11 @@
             <field name="inherit_id" ref="project.edit_project"/>
             <field name="arch" type="xml">
 
+                <field name='user_id' position='after'>
+                    <newline />
+                    <field name='company_id' />
+                </field>
+                
                 <page string='Team' position='before'>
                     <page string='Description'>
                         <field name='description' placeholder='Add a description...' />
