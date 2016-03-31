@@ -54,7 +54,7 @@
 				</xpath>
 
 				<xpath expr="//templates/t/div/div[2]/h4" position='after'>
-					<p class="text-center" style="color: #009ACD; font-size: 0.9em; margin-top: 0;"><field name='partner_id'/></p>
+					<p class="text-center" style="border-top: 1px solid #000; color: #009ACD; font-size: 0.9em; padding-top: 0.5em;"><field name='partner_id'/></p>
 				</xpath>
 
                 <xpath expr="//div[@class='oe_dropdown_toggle oe_dropdown_kanban']" position='attributes'>
