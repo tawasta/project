@@ -7,14 +7,15 @@
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models
 
+
 # 4. Imports from Odoo modules:
 
 # 5. Local imports in the relative form:
 
 # 6. Unknown third party imports:
 
+
 class ProjectTask(models.Model):
-    
     # 1. Private attributes
     _inherit = 'project.task'
 
@@ -36,10 +37,9 @@ class ProjectTask(models.Model):
     # 7. Action methods
 
     # 8. Business methods
-    
+
 
 class TaskNote(models.Model):
-    
     # 1. Private attributes
     _name = 'project.task.note'
 
@@ -62,4 +62,3 @@ class TaskNote(models.Model):
     # 7. Action methods
 
     # 8. Business methods
-    

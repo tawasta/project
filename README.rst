@@ -26,12 +26,8 @@ You can use this module by going to partner form and pressing project button, go
 
 Features
 ========
-
-* Adds a smartbutton to partner, where you can check partner's projects
-* New menuitems My tasks, My projects and Project templates
-* Adds partner to project kanban view and tasks kanban view
-* Adds company to projects form view
-* Adds notes to projects and tasks
+* Adds notes to projects
+* Adds notes to tasks
 
 
 Credits
@@ -41,6 +37,7 @@ Contributors
 ------------
 
 * Aleksi Savijoki <aleksi.savijoki@tawasta.fi>
+* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 
 Maintainer
 ----------

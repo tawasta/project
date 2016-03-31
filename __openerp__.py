@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Author: 
+#    Author: Oy Tawasta OS Technologies Ltd.
 #    Copyright 2015 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -26,7 +26,7 @@
 Task notes and project button.
 
     """,
-    'version': '8.0.0.1.3',
+    'version': '8.0.0.2.0',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -39,10 +39,6 @@ Task notes and project button.
         'views/project_note.xml',
         'views/task_form.xml',
         'views/task_note.xml',
-        'views/res_partner.xml',
-        'views/project.xml',
-        'views/project_kanban.xml',
-        'views/task_kanban.xml',
         'security/ir.model.access.csv'
     ],
     'installable': True,
