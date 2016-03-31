@@ -39,8 +39,8 @@
         'views/project_tree.xml',
         'views/project_kanban.xml',
         'views/project_search.xml',
-        'views/project_task_search.xml'
-        'views/res_partner.xml'
-        'views/task_kanban.xml'
+        'views/project_task_search.xml',
+        'views/res_partner.xml',
+        'views/task_kanban.xml',
     ]
 }
