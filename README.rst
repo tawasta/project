@@ -27,6 +27,14 @@ Features
 
 * **Group projects by start month and end month**
 
+* **Adds a smart button to partner, where you can check partner's projects**
+
+* **New menu items My tasks, My projects and Project templates**
+
+* **Adds partner to project kanban view and tasks kanban view**
+
+* **Adds company to projects form view**
+
 Installation
 ============
 
@@ -51,6 +59,7 @@ Contributors
 ------------
 
 * Aleksi Savijoki <aleksi.savijoki@tawasta.fi>
+* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 
 Maintainer
 ----------

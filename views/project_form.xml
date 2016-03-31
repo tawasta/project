@@ -8,6 +8,11 @@
             <field name="model">project.project</field>
             <field name="inherit_id" ref="project.edit_project"/>
             <field name="arch" type="xml">
+                <field name='user_id' position='after'>
+                    <newline />
+                    <field name='company_id' />
+                </field>
+
             	<field name='name' position='after'>
             		<field name="priority" widget="priority"/>
             	</field>
