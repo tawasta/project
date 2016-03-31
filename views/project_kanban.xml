@@ -42,5 +42,36 @@
 			</field>
 		</record>
 
+    	<!-- Project kanban view additions -->
+       	<record id="project_project_kanban_inherit" model="ir.ui.view">
+            <field name="name">project.project.kanban.inherit</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project_kanban"/>
+            <field name="arch" type="xml">
+
+				<xpath expr="//field[@name='user_id']" position='before'>
+					<field name='partner_id' />
+				</xpath>
+
+				<xpath expr="//templates/t/div/div[2]/h4" position='after'>
+					<p class="text-center" style="color: #009ACD; font-size: 0.9em; margin-top: 0;"><field name='partner_id'/></p>
+				</xpath>
+
+                <xpath expr="//div[@class='oe_dropdown_toggle oe_dropdown_kanban']" position='attributes'>
+                    <attribute name="style">padding-left:0;padding-right:0;</attribute>
+                </xpath>
+
+                <xpath expr="//templates/t/div/div[2]/h4" position='replace'>
+                    <!-- If we would like to use the copmany logo in the kanban view
+                    <img t-att-src="kanban_image('res.company', 'logo_web', record.company.raw_value)" height='128'/> -->
+                    <newline/>
+                    <h4 class="text-center">
+                        <strong class="text-center"><field name='name'/></strong>
+                    </h4>
+                </xpath>
+
+            </field>
+      	</record>
+
 	</data>
 </openerp>
