@@ -1,1 +1,2 @@
 import project_extension
+import res_partner
