@@ -1,1 +1,2 @@
-import project, task, res_partner
+import project
+import task

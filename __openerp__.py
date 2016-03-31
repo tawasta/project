@@ -21,7 +21,7 @@
 
 {
     'name': 'Project Notes',
-    'version': '8.0.0.2.0',
+    'version': '8.0.0.2.1',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
