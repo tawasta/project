@@ -20,12 +20,7 @@
 ##############################################################################
 
 {
-    'name': 'Project Modifications',
-    'description': """
-
-Task notes and project button.
-
-    """,
+    'name': 'Project Notes',
     'version': '8.0.0.2.0',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',

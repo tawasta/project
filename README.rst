@@ -6,7 +6,7 @@
 Project Modifications
 =====================
 
-Adds project notes and project button
+Adds project and task notes
 
 Installation
 ============
@@ -20,9 +20,7 @@ Configuration
 
 Usage
 =====
-
-You can use this module by going to partner form and pressing project button, go to projects and use My procects/My tasks/Project Templates. Also the kanban views have been modified.
-
+You can add notes to tasks and projects
 
 Features
 ========
