@@ -7,6 +7,7 @@
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models
 
+
 # 4. Imports from Odoo modules:
 
 # 5. Local imports in the relative form:
@@ -14,8 +15,7 @@ from openerp import api, fields, models
 # 6. Unknown third party imports:
 
 
-class ProjectCustomizations(models.Model):
-    
+class ProjectProject(models.Model):
     # 1. Private attributes
     _inherit = 'project.project'
 
@@ -38,8 +38,8 @@ class ProjectCustomizations(models.Model):
 
     # 8. Business methods
 
+
 class ProjectTask(models.Model):
-    
     _inherit = 'project.task'
 
     task_type = fields.Many2one(
@@ -49,12 +49,12 @@ class ProjectTask(models.Model):
     )
 
     hour_type = fields.Selection([
-        ('fixed', 'Fixed'), 
-        ('time_based', 'Time-Based'), 
+        ('fixed', 'Fixed'),
+        ('time_based', 'Time-Based'),
         ('product_development', 'Product Development'),
         ('internal', 'Internal'),
-        ('support', 'Support')], 
-        string="Hour type", 
+        ('support', 'Support')],
+        string="Hour type",
         help="Defines hour type for task."
     )
 
@@ -63,14 +63,13 @@ class ProjectTask(models.Model):
         string="Required skills"
     )
 
-class ProjectType(models.Model):
 
+class ProjectType(models.Model):
     _name = 'project.type'
 
     name = fields.Char(string='Name', required=True, translate=True)
     parent_id = fields.Many2one('project.type', string='Parent', ondelete='cascade')
     child_ids = fields.One2many('project.type', 'parent_id', string='Children')
-
 
     @api.multi
     def name_get(self):
@@ -86,13 +85,11 @@ class ProjectType(models.Model):
 
 
 class TaskType(models.Model):
-
     _name = 'task.type'
 
     name = fields.Char(string='Name', required=True, translate=True)
     parent_id = fields.Many2one('task.type', string='Parent', ondelete='cascade')
     child_ids = fields.One2many('task.type', 'parent_id', string='Children')
-
 
     @api.multi
     def name_get(self):

@@ -7,16 +7,18 @@
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models
 
+
 # 4. Imports from Odoo modules:
 
 # 5. Local imports in the relative form:
 
 # 6. Unknown third party imports:
 
+
 class HrTimesheetSheet(models.Model):
-    
     # 1. Private attributes
     _inherit = 'hr_timesheet_sheet.sheet'
+
     # 2. Fields declaration
 
     # 3. Default methods
@@ -30,10 +32,9 @@ class HrTimesheetSheet(models.Model):
     # 7. Action methods
     @api.one
     def button_confirm(self):
-
         res = super(HrTimesheetSheet, self).button_confirm()
         if res:
             self.signal_workflow('done')
         return res
+
     # 8. Business methods
-    
