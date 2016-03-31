@@ -46,7 +46,9 @@ Configuration
 
 Usage
 =====
-\-
+You can get to partner-spesific projects from partner form by pressing projects-button.
+Projects have new menuitems for My procects/My tasks/Project Templates.
+Kanban views have been modified.
 
 Known issues / Roadmap
 ======================
