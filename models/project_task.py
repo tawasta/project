@@ -22,6 +22,11 @@ class ProjectTask(models.Model):
     # 2. Fields declaration
 
     # 3. Default methods
+    @api.model
+    def default_get(self, fields):
+        res = super(ProjectTask, self).default_get(fields)
+        res['planned_hours'] = 0
+        return res
 
     # Default methods declared before fields, so using lambdas isn't needed.
     # Default value to date_start from project
