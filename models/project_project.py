@@ -15,13 +15,12 @@ from openerp.exceptions import Warning
 # 6. Unknown third party imports:
 
 
-class ProjectExtension(models.Model):
+class ProjectProject(models.Model):
     # 1. Private attributes
     _inherit = 'project.project'
     _order = "priority DESC, sequence DESC, create_date DESC"
 
     # 2. Fields declaration
-
     accuracy = fields.Float(
         _("Time left / Overtime"),
         help="Difference between Planned Hours and Time Spent",
@@ -51,7 +50,7 @@ class ProjectExtension(models.Model):
     # 3. Default methods
     @api.model
     def default_get(self, fields):
-        res = super(ProjectExtension, self).default_get(fields)
+        res = super(ProjectProject, self).default_get(fields)
         res['parent_id'] = False
         return res
 
@@ -99,7 +98,7 @@ class ProjectExtension(models.Model):
             return False
 
         else:
-            return super(ProjectExtension, self).set_done()
+            return super(ProjectProject, self).set_done()
 
     # 8. Business methods
     def validate_project(self):
@@ -120,46 +119,3 @@ class ProjectExtension(models.Model):
             raise Warning(msg)
 
         return result
-
-
-class ProjectTask(models.Model):
-    _inherit = 'project.task'
-
-    # Default methods declared before fields, so using lambdas ins't needed.
-    # Default value to date_start from project
-    @api.model
-    def _get_default_date_start(self):
-
-        project_id = self._get_default_project_id()
-        project = self.env['project.project'].search([('id', '=', project_id)])
-        return project.date_start or False
-
-    # Default value to date_end from project
-    @api.model
-    def _get_default_date_end(self):
-        project_id = self._get_default_project_id()
-        project = self.env['project.project'].search([('id', '=', project_id)])
-        return project.date or False
-
-    date_start = fields.Datetime(default=_get_default_date_start)
-    date_end = fields.Datetime(default=_get_default_date_end)
-
-    @api.one
-    def write(self, vals):
-
-        msgbody = ""
-        msgsubject = ""
-
-        if 'description' in vals:
-            msgbody = _("Task's description changed.")
-            msgsubject = _("Description changed")
-        elif self.date_deadline and 'date_deadline' in vals:
-            msgbody = _("Task's deadline changed from %s to %s.") % (self.date_deadline, vals['date_deadline'])
-            msgsubject = _("Deadline changed")
-
-        # TODO: Fix this, messy solution
-        if 'description' in vals or self.date_deadline and 'date_deadline' in vals:
-            msg_id = self.message_post(subject=msgsubject, body=msgbody, type="notification")
-            self.env['mail.message'].browse(msg_id).write({'subtype_id': 1})
-
-        return super(ProjectTask, self).write(vals)

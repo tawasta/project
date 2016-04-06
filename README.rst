@@ -13,11 +13,11 @@ Features
 
 * **New fields for planned and effective (if task moves to folded state, hours stay visible)**
 
-* **Estimation accuracy, which calculates substraction between planned and effective hours**
+* **Estimation accuracy, which calculates subtraction between planned and effective hours**
 
 * **Float_time-widgets to kanban-view**
 
-* **Begining and end dates to tasks are inherited from project**
+* **Beginning and end dates to tasks are inherited from project**
 
 * **Open tasks filter**
 
@@ -34,6 +34,8 @@ Features
 * **Adds partner to project kanban view and tasks kanban view**
 
 * **Adds company to projects form view**
+
+* **Adds default values for project and task
 
 Installation
 ============
