@@ -1,0 +1,181 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_extension
+# Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-01 08:29+0000\n"
+"PO-Revision-Date: 2016-04-01 11:31+0300\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>\n"
+"Language-Team: Finnish <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#. module: project_extension
+#: view:project.project:project_extension.edit_project_inherit
+msgid "Add a description..."
+msgstr "Lisää kuvaus..."
+
+#. module: project_extension
+#: view:project.task:project_extension.view_task_search_form_inherit
+msgid "Assignation Month"
+msgstr "Toimeksiantokuukausi"
+
+#. module: project_extension
+#: view:project.task:project_extension.view_task_search_form_inherit
+msgid "Assignation week"
+msgstr "Toimeksiantoviikko"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:158
+#, python-format
+msgid "Deadline changed"
+msgstr "Määräaika muuttunut"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:49
+#: view:project.project:project_extension.edit_project_inherit
+#: field:project.project,description:0
+#, python-format
+msgid "Description"
+msgstr "Kuvaus"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:155
+#, python-format
+msgid "Description changed"
+msgstr "Kuvaus muuttunut"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:36
+#, python-format
+msgid "Effective Hours"
+msgstr "Käytetyt tunnit"
+
+#. module: project_extension
+#: view:project.project:project_extension.view_project_project_filter_inherit
+msgid "End Month"
+msgstr "Lopetuskuukausi"
+
+#. module: project_extension
+#: selection:project.project,priority:0
+msgid "High"
+msgstr "Korkea"
+
+#. module: project_extension
+#: selection:project.project,priority:0
+msgid "Low"
+msgstr "Matala"
+
+#. module: project_extension
+#: model:ir.actions.act_window,name:project_extension.action_view_my_project
+#: model:ir.ui.menu,name:project_extension.menu_action_view_my_project
+msgid "My projects"
+msgstr "Omat projektit"
+
+#. module: project_extension
+#: model:ir.actions.act_window,name:project_extension.action_view_my_task
+#: model:ir.ui.menu,name:project_extension.menu_action_view_my_task
+msgid "My tasks"
+msgstr "Omat tehtävät"
+
+#. module: project_extension
+#: selection:project.project,priority:0
+msgid "Normal"
+msgstr "Normaali"
+
+#. module: project_extension
+#: view:project.task:project_extension.view_task_search_form_inherit
+msgid "Open Tasks"
+msgstr "Avoimet Tehtävät"
+
+#. module: project_extension
+#: model:ir.model,name:project_extension.model_res_partner
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:31
+#, python-format
+msgid "Planned Hours"
+msgstr "Suunnitellut tunnit"
+
+#. module: project_extension
+#: field:project.project,priority:0
+msgid "Priority"
+msgstr "Prioriteetti"
+
+#. module: project_extension
+#: model:ir.model,name:project_extension.model_project_project
+msgid "Project"
+msgstr "Projekti"
+
+#. module: project_extension
+#: model:ir.actions.act_window,name:project_extension.action_view_project_templates
+msgid "Project Templates"
+msgstr "Projektimallit"
+
+#. module: project_extension
+#: field:project.project,note_ids:0
+msgid "Project notes"
+msgstr "Projektin muistiinpanot"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:114
+#, python-format
+msgid "Project still has unclosed tasks!"
+msgstr "Projektilla on avoimia tehtäviä!"
+
+#. module: project_extension
+#: view:res.partner:project_extension.view_partner_form_inherited
+msgid "Projects"
+msgstr "Projektit"
+
+#. module: project_extension
+#: view:project.project:project_extension.view_project_project_filter_inherit
+msgid "Start Month"
+msgstr "Aloituskuukausi"
+
+#. module: project_extension
+#: model:ir.model,name:project_extension.model_project_task
+msgid "Task"
+msgstr "Tehtävä"
+
+#. module: project_extension
+#: field:project.task,note_ids:0
+msgid "Task notes"
+msgstr "Tehtävän muistiinpanot"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:157
+#, python-format
+msgid "Task's deadline changed from %s to %s."
+msgstr "Tehtävän määräaika muuttunut %s → %s."
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:154
+#, python-format
+msgid "Task's description changed."
+msgstr "Tehtävän kuvaus muuttunut."
+
+#. module: project_extension
+#: view:project.project:project_extension.edit_project_inherit
+msgid "Team"
+msgstr "Tiimi"
+
+#. module: project_extension
+#: code:addons/project_extension/models/project_extension.py:26
+#, python-format
+msgid "Time left / Overtime"
+msgstr "Jäljellä / Ylitunnit"
+
+#. module: project_extension
+#: view:project.project:project_extension.project_project_kanban_inherit
+msgid "padding-left:0;padding-right:0;"
+msgstr "padding-left:0;padding-right:0;"

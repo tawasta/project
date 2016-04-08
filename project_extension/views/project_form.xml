@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+        <!-- Projects' form view modifications-->
+        <record id="edit_project_inherit" model="ir.ui.view">
+            <field name="name">project.project.form.inherit</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <field name='user_id' position='after'>
+                    <newline />
+                    <field name='company_id' />
+                </field>
+
+            	<field name='name' position='after'>
+            		<field name="priority" widget="priority"/>
+            	</field>
+
+            	<field name='planned_hours' position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+
+                <field name="planned_hours" position="after">
+            		<field name="real_planned" widget="float_time"/>
+            		<field name="accuracy" widget="float_time" />
+            	</field>
+
+                <field name='effective_hours' position='attributes'>
+                    <attribute name="invisible">1</attribute>
+                </field>
+
+            	<field name="effective_hours" position="after">
+            		<field name="real_effective" widget="float_time"/>
+            	</field>
+
+                <page string='Team' position='before'>
+                    <page string='Description'>
+                        <field name='description' placeholder='Add a description...' />
+                    </page>
+                </page>
+            </field>
+        </record>
+	</data>
+</openerp>
