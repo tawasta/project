@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="1">
+		<!-- This becomes the first task number -->
+		<record id="1" model="project.settings">
+		   <field name="next_task_number">10001</field>
+		</record>
+  
+   	    <!-- Initialize task numbers for all existing tasks upon module installation -->
+   	    <function model="project.task" name="_init_task_numbers"/>
+    </data>
+</openerp>

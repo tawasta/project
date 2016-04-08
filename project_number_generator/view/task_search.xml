@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!-- Filters view -->
+        <record id="project.view_task_extended_filter" model="ir.ui.view">
+            <field name="name">project.task.extended.filter</field>
+            <field name="model">project.task</field>
+            <field name="inherit_id" ref="project.view_task_search_form"/>
+            <field name="arch" type="xml">
+                <field name='name' position='replace'>
+                    <field name="name" string="Task" filter_domain="['|', ('name','ilike',self), ('task_number', 'ilike', self)]" help="Task name or number"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>
