@@ -1,0 +1,191 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_customizations
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-31 10:01+0000\n"
+"PO-Revision-Date: 2016-03-31 13:03+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.7.5\n"
+
+#. module: project_customizations
+#: model:ir.actions.act_window,help:project_customizations.project_type_action
+#: model:ir.actions.act_window,help:project_customizations.task_type_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click to add a new tag.</p>\n"
+"\t\t\t"
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Klikkaa luodaksesi uuden tagin.</p>\n"
+"\t\t\t"
+
+#. module: project_customizations
+#: view:project.type:project_customizations.view_project_type_form
+msgid "Child Project Types"
+msgstr "Alatason projektityypit"
+
+#. module: project_customizations
+#: view:task.type:project_customizations.view_task_type_form
+msgid "Child Task Types"
+msgstr "Alatason projektityypit"
+
+#. module: project_customizations
+#: field:project.type,child_ids:0 field:task.type,child_ids:0
+msgid "Children"
+msgstr "Alatasot"
+
+#. module: project_customizations
+#: field:project.type,create_uid:0 field:task.type,create_uid:0
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: project_customizations
+#: field:project.type,create_date:0 field:task.type,create_date:0
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: project_customizations
+#: help:project.task,task_type:0
+msgid "Define task's type."
+msgstr "Määritä tehtävätyyppi"
+
+#. module: project_customizations
+#: help:project.task,hour_type:0
+msgid "Defines hour type for task."
+msgstr "Määrittää tuntityypin tehtävälle."
+
+#. module: project_customizations
+#: help:project.project,project_type:0
+msgid "Defines project's type."
+msgstr "Määrittää projektityypin projektille."
+
+#. module: project_customizations
+#: selection:project.task,hour_type:0
+msgid "Fixed"
+msgstr "Kiinteä"
+
+#. module: project_customizations
+#: view:project.task:project_customizations.view_task_search_form_inherit
+msgid "Group By"
+msgstr "Ryhmittele"
+
+#. module: project_customizations
+#: view:project.task:project_customizations.view_task_search_form_inherit
+msgid "Hour Types"
+msgstr "Tuntityypit"
+
+#. module: project_customizations
+#: field:project.task,hour_type:0
+msgid "Hour type"
+msgstr "Tuntityyppi"
+
+#. module: project_customizations
+#: field:project.type,id:0 field:task.type,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: project_customizations
+#: selection:project.task,hour_type:0
+msgid "Internal"
+msgstr "Sisäinen"
+
+#. module: project_customizations
+#: field:project.type,write_uid:0 field:task.type,write_uid:0
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: project_customizations
+#: field:project.type,write_date:0 field:task.type,write_date:0
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: project_customizations
+#: view:project.type:project_customizations.view_project_type_form
+#: view:project.type:project_customizations.view_project_type_tree
+#: field:project.type,name:0
+#: view:task.type:project_customizations.view_task_type_form
+#: view:task.type:project_customizations.view_task_type_tree
+#: field:task.type,name:0
+msgid "Name"
+msgstr "Nimi"
+
+#. module: project_customizations
+#: field:project.type,parent_id:0 field:task.type,parent_id:0
+msgid "Parent"
+msgstr "Ylätaso"
+
+#. module: project_customizations
+#: selection:project.task,hour_type:0
+msgid "Product Development"
+msgstr "Tuotekehitys"
+
+#. module: project_customizations
+#: model:ir.model,name:project_customizations.model_project_project
+msgid "Project"
+msgstr "Projekti"
+
+#. module: project_customizations
+#: model:ir.actions.act_window,name:project_customizations.project_type_action
+#: model:ir.ui.menu,name:project_customizations.menu_project_type
+#: view:project.type:project_customizations.view_project_type_form
+#: view:project.type:project_customizations.view_project_type_tree
+msgid "Project Types"
+msgstr "Projektityypit"
+
+#. module: project_customizations
+#: view:project.project:project_customizations.view_project_project_filter_inherit
+#: field:project.project,project_type:0
+msgid "Project type"
+msgstr "Projektityyppi"
+
+#. module: project_customizations
+#: field:project.task,skills:0
+msgid "Required skills"
+msgstr "Kompetenssi"
+
+#. module: project_customizations
+#: view:project.task:project_customizations.view_task_search_form_inherit
+msgid "Skills"
+msgstr "Kompetenssi"
+
+#. module: project_customizations
+#: selection:project.task,hour_type:0
+msgid "Support"
+msgstr "Tuki"
+
+#. module: project_customizations
+#: model:ir.model,name:project_customizations.model_project_task
+msgid "Task"
+msgstr "Tehtävä"
+
+#. module: project_customizations
+#: field:project.task,task_type:0
+msgid "Task Type"
+msgstr "Tehtävätyyppi"
+
+#. module: project_customizations
+#: model:ir.actions.act_window,name:project_customizations.task_type_action
+#: model:ir.ui.menu,name:project_customizations.menu_task_type
+#: view:project.task:project_customizations.view_task_search_form_inherit
+#: view:task.type:project_customizations.view_task_type_form
+#: view:task.type:project_customizations.view_task_type_tree
+msgid "Task Types"
+msgstr "Tehtävätyypit"
+
+#. module: project_customizations
+#: selection:project.task,hour_type:0
+msgid "Time-Based"
+msgstr "Tuntiperusteinen"
+
+#. module: project_customizations
+#: model:ir.model,name:project_customizations.model_hr_timesheet_sheet_sheet
+msgid "Timesheet"
+msgstr "Tuntikortti"
