@@ -13,6 +13,7 @@ from openerp import api, fields, models, tools, _
 
 # 6. Unknown third party imports:
 
+
 # Transient model to represent project's feed
 class ProjectEventLine(models.TransientModel):
     # 1. Private attributes
