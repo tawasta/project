@@ -36,9 +36,10 @@ class ProjectFeed(models.Model):
         # Clear duplicates of table
         self._cr.execute('truncate table project_event_line')
 
-        # Get the project_task_works and order them DESC by write_date
+        # Get the project_task_works and order them ASC by write_date
+        # Secondary order by with id DESC is for multiple records done with one save
         task_works = self.env['account.analytic.line'].search(
-            [('task_id', 'in', self.tasks.ids)], order='write_date DESC'
+            [('task_id', 'in', self.tasks.ids)], order='write_date ASC, id DESC'
         )
 
         # Get tasks messages and order them DESC by write_date
@@ -46,7 +47,7 @@ class ProjectFeed(models.Model):
             [('res_id', 'in', self.tasks.ids), ('model', '=', 'project.task')], order='write_date DESC')
 
         time_used = 0.0
-        for work in reversed(task_works):
+        for work in task_works:
             info = _("Added hours: ") + work.name
             time_used += work.unit_amount
 

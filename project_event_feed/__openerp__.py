@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Author: 
+#    Author: Oy Tawasta OS Technologies Ltd.
 #    Copyright 2015 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -26,7 +26,7 @@
         Module for project events feed.
 
     """,
-    'version': '8.0.0.1.6',
+    'version': '8.0.0.1.7',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
