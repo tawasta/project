@@ -19,6 +19,7 @@ class ProjectFeed(models.Model):
     # 1. Private attributes
     _inherit = 'project.project'
 
+    # 2. Fields declaration
     event_lines = fields.One2many(
         'project.event.line',
         'project_id',
@@ -98,16 +99,3 @@ class ProjectFeed(models.Model):
     # 7. Action methods
 
     # 8. Business methods
-
-
-# Transient model to represent project's feed
-class ProjectEvent(models.TransientModel):
-    _name = 'project.event.line'
-
-    task_id = fields.Many2one('project.task', string='Task')
-    name = fields.Char(string='Event description')
-    unit_amount = fields.Float(string='Time used')
-    time_left = fields.Float(string='Time remaining')
-    user_id = fields.Many2one('res.users', string='Done by')
-    project_id = fields.Many2one('project.project', string='Project')
-    date = fields.Datetime(string='Date')

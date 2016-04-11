@@ -1,1 +1,2 @@
-from . import project_feed
+import project_feed
+import project_event_line
