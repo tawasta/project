@@ -9,9 +9,9 @@
 			<field name="arch" type="xml">
 				
 				<field name="categ_ids" position="after">
-					<field name="task_type" options='{"no_open": True, "no_create": True}'/>
-					<field name="hour_type" options='{"no_open": True, "no_create": True}'/>
-					<field name="skills" options='{"no_open": True, "no_create": True}'/>
+					<field name="task_type" options='{"no_open": true, "no_create": true}'/>
+					<field name="hour_type" options='{"no_open": true, "no_create": true}'/>
+					<field name="skills" options='{"no_open": true, "no_create": true}'/>
 				</field>
 
 				<!-- Hide project categories -->
