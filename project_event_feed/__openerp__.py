@@ -26,7 +26,7 @@
         Module for project events feed.
 
     """,
-    'version': '8.0.0.1.8',
+    'version': '8.0.0.2.0',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',

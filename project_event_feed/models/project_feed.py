@@ -36,36 +36,37 @@ class ProjectFeed(models.Model):
         # Clear duplicates of table
         self._cr.execute('truncate table project_event_line')
 
-        # Get the project_task_works and order them ASC by write_date
-        # Secondary order by with id DESC is for multiple records done with one save
+        # Get the project_task_works and order them ASC by create_date
+        # Secondary order by with id ASC is for multiple records done with one save
         task_works = self.env['account.analytic.line'].search(
-            [('task_id', 'in', self.tasks.ids)], order='date ASC')
+            [('task_id', 'in', self.tasks.ids)], order='write_date ASC, create_date ASC, id ASC')
 
         # Get tasks messages and order them DESC by write_date
         messages = self.env['mail.message'].search(
-            [('res_id', 'in', self.tasks.ids), ('model', '=', 'project.task')], order='date ASC, id DESC')
+            [('res_id', 'in', self.tasks.ids), ('model', '=', 'project.task')], order='write_date ASC, create_date ASC, id DESC')
 
-        time_used = 0.0
-        order_sec = 0
+        # Initialize time_used for every task, task id used as key
+        time_used = {}
+
+        for task in self.tasks:
+            time_used[task.id] = 0.0
+
         for work in task_works:
 
-            order_sec += 1
             info = _("Added hours: ") + work.name
-            time_used += work.unit_amount
+            time_used[work.task_id.id] += work.unit_amount
 
             self.event_lines += self.event_lines.create({
                 'task_id': work.task_id.id,
                 'name': info,
                 'unit_amount': work.unit_amount,
-                'time_left': work.task_id.planned_hours - time_used,
-                'date': fields.Datetime.from_string(work.date) + timedelta(seconds=order_sec),
+                'time_left': work.task_id.planned_hours - time_used[work.task_id.id],
+                'date': work.write_date,
                 'user_id': work.user_id.id,
                 'project_id': self.id
             })
 
         for message in messages:
-
-            message_date = fields.Datetime.from_string(message.date).date()
 
             # If message has subject, set is as infotext
             if message.subject:
@@ -90,7 +91,7 @@ class ProjectFeed(models.Model):
                 'name': info,
                 'unit_amount': 0,
                 'time_left': 0,
-                'date': message_date,
+                'date': message.write_date,
                 'user_id': message.create_uid.id,
                 'project_id': self.id
             })
