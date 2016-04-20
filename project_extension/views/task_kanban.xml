@@ -16,6 +16,14 @@
                     <p style="color: #009ACD; font-size: 0.9em; margin-top: 0;"><field name='partner_id'/></p>
                 </xpath>
 
+                <xpath expr="//span[@title='Remaining hours']" position="replace">
+                    <span groups="project.group_time_work_estimation_tasks" title="Remaining hours">
+                        <span class="oe_e">N</span>
+                        <field name="remaining_hours" widget="float_time"/>
+                    </span>
+                    
+                </xpath>
+
             </field>
       	</record>
     </data>
