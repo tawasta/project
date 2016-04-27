@@ -3,4 +3,4 @@ access_project_type_user,project.project_type_user,model_project_type,project.gr
 access_project_type_manager,project.project_type_manager,model_project_type,base.group_erp_manager,1,1,1,1
 access_task_type_user,project.task_type_user,model_task_type,project.group_project_user,1,0,0,0
 access_task_type_manager,project.task_type_manager,model_task_type,base.group_erp_manager,1,1,1,1
-access_hr_skill_employee,hr.skill,model_hr_skill,base.group_user,1,0,0,0
+access_hr_skill_employee,hr.skill,hr_skill.model_hr_skill,base.group_user,1,0,0,0
