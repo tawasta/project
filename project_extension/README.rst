@@ -35,7 +35,7 @@ Features
 
 * **Adds company to projects form view**
 
-* **Adds default values for project and task
+* **Adds default values for project and task**
 
 Installation
 ============
