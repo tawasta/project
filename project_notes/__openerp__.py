@@ -21,7 +21,7 @@
 
 {
     'name': 'Project Notes',
-    'version': '8.0.0.2.1',
+    'version': '8.0.0.2.2',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -32,6 +32,7 @@
     'data': [
         'views/project_form.xml',
         'views/project_note.xml',
+        'views/project_note_menu.xml',
         'views/task_form.xml',
         'views/task_note.xml',
         'security/ir.model.access.csv'

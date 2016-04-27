@@ -1,139 +1,101 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* project_modifications
+# 	* project_notes
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-30 12:07+0000\n"
-"PO-Revision-Date: 2016-03-30 15:08+0200\n"
+"POT-Creation-Date: 2016-04-27 08:03+0000\n"
+"PO-Revision-Date: 2016-04-27 11:03+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: fi_FI\n"
-"X-Generator: Poedit 1.7.5\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
-#. module: project_modifications
-#: view:project.project:project_modifications.project_project_form_inherit
+#. module: project_notes
+#: view:project.project:project_notes.project_project_form_inherit
 msgid "Add a description..."
 msgstr "Lisää kuvaus..."
 
-#. module: project_modifications
-#: field:project.project.note,create_uid:0
-#: field:project.task.note,create_uid:0
-msgid "Created by"
-msgstr "Luonut"
-
-#. module: project_modifications
-#: field:project.project.note,create_date:0
-#: field:project.task.note,create_date:0
-msgid "Created on"
-msgstr "Luotu"
-
-#. module: project_modifications
-#: view:project.project:project_modifications.project_project_form_inherit
+#. module: project_notes
+#: view:project.project:project_notes.project_project_form_inherit
+#: field:project.project,description:0
 msgid "Description"
 msgstr "Kuvaus"
 
-#. module: project_modifications
+#. module: project_notes
+#: field:project.project.note,display_name:0
+#: field:project.task.note,display_name:0
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: project_notes
 #: field:project.task.note,done:0
 msgid "Done"
 msgstr "Valmis"
 
-#. module: project_modifications
-#: field:project.project.note,id:0 field:project.task.note,id:0
-msgid "ID"
-msgstr "ID"
-
-#. module: project_modifications
+#. module: project_notes
 #: help:project.task.note,done:0
 msgid "Informative tag for the note. Has no functionality"
-msgstr "Informatiivinen tägi muistiinpanolle. Ei sisällä toiminnallisuutta"
+msgstr "Informatiivinen tunniste muistiinpanolle. Ei sisällä toiminnallisuutta"
 
-#. module: project_modifications
-#: field:project.project.note,write_uid:0 field:project.task.note,write_uid:0
-msgid "Last Updated by"
-msgstr "Viimeksi päivittänyt"
+#. module: project_notes
+#: field:project.project.note,__last_update:0
+#: field:project.task.note,__last_update:0
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
 
-#. module: project_modifications
-#: field:project.project.note,write_date:0
-#: field:project.task.note,write_date:0
-msgid "Last Updated on"
-msgstr "Viimeksi päivitetty"
-
-#. module: project_modifications
-#: model:ir.actions.act_window,name:project_modifications.action_view_my_project
-#: model:ir.ui.menu,name:project_modifications.menu_action_view_my_project
-msgid "My projects"
-msgstr "Omat projektit"
-
-#. module: project_modifications
-#: model:ir.actions.act_window,name:project_modifications.action_view_my_task
-#: model:ir.ui.menu,name:project_modifications.menu_action_view_my_task
-msgid "My tasks"
-msgstr "Omat tehtävät"
-
-#. module: project_modifications
+#. module: project_notes
 #: field:project.project.note,note:0 field:project.task.note,note:0
 msgid "Note"
 msgstr "Muistiinpano"
 
-#. module: project_modifications
-#: model:ir.model,name:project_modifications.model_res_partner
-msgid "Partner"
-msgstr "Kumppani"
+#. module: project_notes
+#: model:ir.ui.menu,name:project_notes.project_notes
+msgid "Notes"
+msgstr "Muistiinpanot"
 
-#. module: project_modifications
-#: model:ir.model,name:project_modifications.model_project_project
+#. module: project_notes
+#: model:ir.model,name:project_notes.model_project_project
 #: field:project.project.note,project_id:0
 msgid "Project"
 msgstr "Projekti"
 
-#. module: project_modifications
-#: model:ir.actions.act_window,name:project_modifications.action_view_project_templates
-msgid "Project Templates"
-msgstr "Projektimallit"
-
-#. module: project_modifications
+#. module: project_notes
+#: model:ir.actions.act_window,name:project_notes.action_project_notes
+#: model:ir.ui.menu,name:project_notes.menu_project_note
 #: field:project.project,note_ids:0
-#: view:project.project.note:project_modifications.project_project_note_form
-#: view:project.project.note:project_modifications.project_project_note_tree
+#: view:project.project.note:project_notes.project_project_note_form
+#: view:project.project.note:project_notes.project_project_note_tree
 msgid "Project notes"
 msgstr "Projektin muistiinpanot"
 
-#. module: project_modifications
-#: view:res.partner:project_modifications.view_partner_form_inherited
-msgid "Projects"
-msgstr "Projektit"
-
-#. module: project_modifications
-#: model:ir.model,name:project_modifications.model_project_task
+#. module: project_notes
+#: model:ir.model,name:project_notes.model_project_task
 #: field:project.task.note,task_id:0
 msgid "Task"
 msgstr "Tehtävä"
 
-#. module: project_modifications
+#. module: project_notes
+#: model:ir.actions.act_window,name:project_notes.action_task_notes
+#: model:ir.ui.menu,name:project_notes.menu_task_note
 #: field:project.task,note_ids:0
-#: view:project.task.note:project_modifications.project_task_note_form
-#: view:project.task.note:project_modifications.project_task_note_tree
+#: view:project.task.note:project_notes.project_task_note_form
+#: view:project.task.note:project_notes.project_task_note_tree
 msgid "Task notes"
 msgstr "Tehtävän muistiinpanot"
 
-#. module: project_modifications
-#: view:project.project:project_modifications.project_project_form_inherit
+#. module: project_notes
+#: view:project.project:project_notes.project_project_form_inherit
 msgid "Team"
 msgstr "Tiimi"
 
-#. module: project_modifications
+#. module: project_notes
 #: field:project.project.note,name:0 field:project.task.note,name:0
 msgid "Title"
 msgstr "Otsikko"
-
-#. module: project_modifications
-#: view:project.project:project_modifications.project_project_kanban_inherit
-msgid "padding-left:0;padding-right:0;"
-msgstr "padding-left:0;padding-right:0;"
