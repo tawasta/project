@@ -66,6 +66,7 @@ class ProjectTask(models.Model):
 
 class ProjectType(models.Model):
     _name = 'project.type'
+    _order = 'name'
 
     name = fields.Char(string='Name', required=True, translate=True)
     parent_id = fields.Many2one('project.type', string='Parent', ondelete='cascade')
@@ -86,6 +87,7 @@ class ProjectType(models.Model):
 
 class TaskType(models.Model):
     _name = 'task.type'
+    _order = 'name'
 
     name = fields.Char(string='Name', required=True, translate=True)
     parent_id = fields.Many2one('task.type', string='Parent', ondelete='cascade')
