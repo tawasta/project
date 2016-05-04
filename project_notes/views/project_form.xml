@@ -8,13 +8,10 @@
             <field name="inherit_id" ref="project.edit_project"/>
             <field name="arch" type="xml">
 
-                <page string='Team' position='before'>
-                    <page string='Description'>
-                        <field name='description' placeholder='Add a description...' />
-                        <label for='note_ids' />
-                        <field name='note_ids' />
-                    </page>
-                </page>
+                <xpath expr="//page[1]" position='inside'>
+                    <label for='note_ids' />
+                    <field name='note_ids' />
+                </xpath>
 
             </field>
         </record>
