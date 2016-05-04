@@ -33,12 +33,6 @@
             	<field name="effective_hours" position="after">
             		<field name="real_effective" widget="float_time"/>
             	</field>
-
-                <page string='Team' position='before'>
-                    <page string='Description'>
-                        <field name='description' placeholder='Add a description...' />
-                    </page>
-                </page>
             </field>
         </record>
 	</data>
