@@ -89,6 +89,14 @@ class ProjectProject(models.Model):
     # 5. Constraints and onchanges
 
     # 6. CRUD methods
+    @api.multi
+    def write(self, values):
+        if 'partner_id' in values:
+            for task in self.task_ids:
+                if not task.partner_id:
+                    task.partner_id = values['partner_id']
+
+        return super(ProjectProject, self).write(values)
 
     # 7. Action methods
     @api.multi
