@@ -28,30 +28,21 @@ class ResPartner(models.Model):
     # 4. Compute and search fields, in the same order that fields declaration
     @api.multi
     def compute_project_count(self):
-
-        project_count = 0
-
         for partner in self:
             child_ids = partner._get_recursive_child_ids(partner)
+            all_ids = child_ids + [partner.id]
 
-            for child in child_ids:
-                project_count += partner.env['project.project'].search_count([('partner_id', '=', child)])
+            project_count = partner.env['project.project'].search_count([('partner_id', 'in', all_ids)])
 
-            project_count += partner.env['project.project'].search_count([('partner_id', '=', partner.id)])
             partner.project_count = project_count
 
     @api.multi
     def compute_task_count(self):
-
-        task_count = 0
-
         for partner in self:
             child_ids = partner._get_recursive_child_ids(partner)
+            all_ids = child_ids + [partner.id]
 
-            for child in child_ids:
-                task_count += partner.env['project.task'].search_count([('partner_id', '=', child)])
-
-            task_count += partner.env['project.task'].search_count([('partner_id', '=', partner.id)])
+            task_count = partner.env['project.task'].search_count([('partner_id', 'in', all_ids)])
             partner.task_count = task_count
 
 
