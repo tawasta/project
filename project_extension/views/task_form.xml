@@ -6,9 +6,15 @@
             <field name="model">project.task</field>
             <field name="inherit_id" ref="project.view_task_form2"/>
             <field name="arch" type="xml">
+
                 <field name="work_ids" position="before">
                     <label for="work_ids" />
                 </field>
+
+                <field name="user_id" position="before">
+                    <field name="partner_id" />
+                </field>
+
             </field>
         </record>
     </data>
