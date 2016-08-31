@@ -36,7 +36,7 @@
 
                 <page string='Team' position='before'>
                     <page string='Description'>
-                        <field name='description' placeholder='Add a description...' />
+                        <field name='description' placeholder='Add a description...' widget="bootstrap_markdown" />
                     </page>
                 </page>
             </field>
