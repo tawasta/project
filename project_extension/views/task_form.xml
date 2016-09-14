@@ -11,6 +11,8 @@
                     <label for="work_ids" />
                 </field>
 
+                <field name="partner_id" position="replace" />
+
                 <field name="user_id" position="before">
                     <field name="partner_id" />
                 </field>
