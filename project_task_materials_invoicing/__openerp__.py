@@ -22,7 +22,7 @@
 {
     'name': 'Project Task Materials Invoicing',
     'summary': 'Add project task materials to invoices created from tasks',
-    'version': '8.0.0.1.0',
+    'version': '8.0.0.2.0',
     'category': 'Project',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -35,9 +35,11 @@
     },
     'depends': [
         'account',
+        'hr_timesheet_invoice',
         'project_task_materials',
     ],
     'data': [
+        'views/project_task_form.xml',
     ],
     'demo': [
     ],
