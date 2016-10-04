@@ -8,8 +8,8 @@
 			<field name="inherit_id" ref="project_task_materials_stock.view_project_task_form_materials_stock" />
 			<field name="arch" type="xml">
 
-                <xpath expr="//field[@name='material_ids']/tree/field[@name='product_id']" position="attributes">
-                    <attribute name="domain"></attribute>
+                <xpath expr="//field[@name='material_ids']/tree" position="inside">
+                    <field name="partner" />
                 </xpath>
 
 			</field>
