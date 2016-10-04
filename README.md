@@ -15,4 +15,5 @@ Available addons
 [project_number_generator](project_number_generator/) | Project number generator
 [project_reports](project_reports/) | Project Reports
 [project_task_materials_invoicing](project_task_materials_invoicing/) | Add project task materials to invoices created from tasks
+[project_task_materials_stock_service](project_task_materials_stock_service/) | Use services as task materials
 [project_task_report](project_task_report/) | Project Task Reports
