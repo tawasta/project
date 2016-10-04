@@ -14,10 +14,10 @@ from openerp import api, fields, models
 # 6. Unknown third party imports:
 
 
-class ProjectTask(models.Model):
+class ProjectTaskMaterials(models.Model):
     
     # 1. Private attributes
-    _inherit = 'project.task'
+    _inherit = 'project.task.materials'
 
     # 2. Fields declaration
 
@@ -32,3 +32,13 @@ class ProjectTask(models.Model):
     # 7. Action methods
 
     # 8. Business methods
+    @api.multi
+    def create_stock_move(self):
+        for line in self:
+            # Don't make stock moves for services
+            if line.product_id.type == 'service':
+                continue
+
+            move_id = self.env['stock.move'].create(
+                line._prepare_stock_move())
+            line.stock_move_id = move_id.id

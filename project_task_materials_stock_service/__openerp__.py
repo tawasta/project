@@ -22,7 +22,7 @@
 {
     'name': 'Task materials service',
     'summary': 'Use services as task materials',
-    'version': '8.0.0.2.0',
+    'version': '8.0.0.3.0',
     'category': 'Project',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -37,7 +37,7 @@
         'project_task_materials_stock',
     ],
     'data': [
-        'views/project_project.xml',
+        'views/project_task_form.xml',
     ],
     'demo': [
     ],
