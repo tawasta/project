@@ -2,18 +2,19 @@
 <openerp>
 	<data>
 
-		<record id="view_project_task_form_materials_stock" model="ir.ui.view">
-			<field name="name">view.project.task.form.materials.stock</field>
+		<record id="view_project_task_form_materials" model="ir.ui.view">
+			<field name="name">view.project.task.form.materials</field>
 			<field name="model">project.task</field>
-			<field name="inherit_id" ref="project_task_materials_stock.view_project_task_form_materials_stock" />
+			<field name="inherit_id" ref="project_task_materials.view_project_task_form_materials" />
 			<field name="arch" type="xml">
 
-                <xpath expr="//field[@name='material_ids']/tree" position="inside">
+				<xpath expr="//field[@name='material_ids']/tree" position="inside">
                     <field name="partner" />
+                    <field name="create_date" widget="date" readonly="1" />
                 </xpath>
 
 			</field>
-		</record> 
+		</record>
 
 	</data>
 </openerp>

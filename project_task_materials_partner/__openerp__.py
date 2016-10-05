@@ -22,7 +22,7 @@
 {
     'name': 'Task materials partner',
     'summary': 'Mark partner to task materials',
-    'version': '8.0.0.2.0',
+    'version': '8.0.0.2.1',
     'category': 'Project',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
