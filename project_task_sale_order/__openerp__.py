@@ -20,9 +20,9 @@
 ##############################################################################
 
 {
-    'name': 'Sale order rows on tasks',
+    'name': 'Sale order lines on tasks',
     'summary': 'Allow modifying sale order lines on tasks',
-    'version': '8.0.0.1.0',
+    'version': '8.0.0.2.0',
     'category': 'Project',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -38,6 +38,7 @@
     ],
     'data': [
         'views/project_task_form.xml',
+        'views/sale_order_form.xml',
     ],
     'demo': [
     ],

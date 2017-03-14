@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record id="view_sale_service_inherit_form2" model="ir.ui.view">
+			<field name="name">view_task_form2_sale_order_lines</field>
+			<field name="model">project.task</field>
+			<field name="inherit_id" ref="sale_service.view_sale_service_inherit_form2" />
+			<field name="arch" type="xml">
+
+				<field name="sale_line_id" position="before">
+					<field name="sale_order" />
+				</field>
+
+				<notebook position="after">
+					<group col="1">
+						<field name="sale_order_lines" context="{'default_order_id': sale_order}">
+							<tree editable="top">
+								<field name="order_id" invisible="1"/>
+								<field name="product_id" domain="{[('sale_ok', '=', True)]}"/>
+								<field name="name" invisible="1"/>
+								<field name="product_uom_qty" />
+								<field name="price_unit" />
+								<field name="price_subtotal" />
+								<field name="state" invisible="1" />
+							</tree>
+						</field>
+					</group>
+				</notebook>
+
+			</field>
+		</record>
+
+	</data>
+</openerp>

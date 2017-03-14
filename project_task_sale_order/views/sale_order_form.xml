@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record id="view_order_form" model="ir.ui.view">
+			<field name="name">view_order_form_tasks</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_form" />
+			<field name="arch" type="xml">
+
+				<notebook position="inside">
+					<page string="Tasks">
+						<field name="tasks"/>
+					</page>
+				</notebook>
+
+			</field>
+		</record>
+
+	</data>
+</openerp>
