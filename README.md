@@ -18,3 +18,4 @@ Available addons
 [project_task_materials_partner](project_task_materials_partner/) | Mark partner to task materials
 [project_task_materials_stock_service](project_task_materials_stock_service/) | Use services as task materials
 [project_task_report](project_task_report/) | Project Task Reports
+[project_task_sale_order](project_task_sale_order/) | Allow modifying sale order lines on tasks
