@@ -22,7 +22,7 @@
 {
     'name': 'Sale order lines on tasks',
     'summary': 'Allow modifying sale order lines on tasks',
-    'version': '8.0.0.3.0',
+    'version': '8.0.0.3.1',
     'category': 'Project',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
