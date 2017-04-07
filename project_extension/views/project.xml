@@ -3,12 +3,21 @@
     <data>
     
 		<!--  Actions -->    
-        <record id="action_view_my_project" model="ir.actions.act_window">
+        <record id="action_view_projects_owned" model="ir.actions.act_window">
+            <field name="name">Owned projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form,gantt</field>
+            <field name="domain">[('user_id', '=', uid)]</field>
+            <field name="context">{'search_default_member': 0, 'search_default_manager': 0, 'search_default_Current': 1}</field>
+        </record>
+
+        <record id="action_view_projects_my" model="ir.actions.act_window">
             <field name="name">My projects</field>
             <field name="res_model">project.project</field>
             <field name="view_type">form</field>
             <field name="view_mode">kanban,tree,form,gantt</field>
-            <field name="domain">['|',('user_id', '=', uid),('members', '=', uid)]</field>
+            <field name="domain">['|', ('members', '=', uid), ('message_follower_ids', '=', uid)]</field>
             <field name="context">{'search_default_member': 0, 'search_default_manager': 0, 'search_default_Current': 1}</field>
         </record>
         
@@ -20,25 +29,42 @@
             <field name="context">{'search_default_member': 0, 'search_default_manager': 0, 'search_default_Template': 1}</field>
         </record>
         
-        <record id="action_view_my_task" model="ir.actions.act_window">
+        <record id="action_view_tasks_owned" model="ir.actions.act_window">
+            <field name="name">Owned tasks</field>
+            <field name="res_model">project.task</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form,calendar,gantt,graph</field>
+            <field name="domain">[('project_id.state','=','open'), '|', ('user_id', '=', uid), ('reviewer_id', '=', uid)]</field>
+            <field name="context">{'search_default_mytasks': 0}</field>
+        </record>
+
+        <record id="action_view_tasks_my" model="ir.actions.act_window">
             <field name="name">My tasks</field>
             <field name="res_model">project.task</field>
             <field name="view_type">form</field>
             <field name="view_mode">kanban,tree,form,calendar,gantt,graph</field>
-            <field name="domain">[('user_id', '=', uid), ('project_id.state',"=","open")]</field>
+            <field name="domain">[('message_follower_ids', '=', uid), ('project_id.state','=','open')]</field>
             <field name="context">{'search_default_mytasks': 0}</field>
         </record>
     	
     	<!-- Menuitems -->    	
-    	<menuitem action="action_view_my_project" id="menu_action_view_my_project" 
-            parent="project.menu_project_management" sequence="1"/>
-    	<menuitem action="action_view_my_task" id="menu_action_view_my_task" 
-            parent="project.menu_project_management" sequence="2"/>
+    	<menuitem action="action_view_projects_owned" id="menu_action_view_projects_owned"
+            parent="project.menu_project_management" sequence="1" />
+
+    	<menuitem action="action_view_tasks_owned" id="menu_action_view_tasks_owned"
+            parent="project.menu_project_management" sequence="2" />
+
+        <menuitem action="action_view_projects_my" id="menu_action_view_projects_my"
+            parent="project.menu_project_management" sequence="3" />
+
+    	<menuitem action="action_view_tasks_my" id="menu_action_view_tasks_my"
+            parent="project.menu_project_management" sequence="4" />
+
     	<menuitem action="project.open_view_project_all" id="project.menu_projects" 
-            name="Projects" parent="project.menu_project_management" sequence="3"/>
+            name="Projects" parent="project.menu_project_management" sequence="5" />
     	
     	<menuitem action="action_view_project_templates" id="project.menu_templates" 
-            name="Project templates" parent="project.menu_project_management" sequence="10"/>
+            name="Project templates" parent="project.menu_project_management" sequence="6"/>
     
     </data>
 </openerp>
