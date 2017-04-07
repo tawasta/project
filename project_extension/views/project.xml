@@ -47,17 +47,17 @@
             <field name="context">{'search_default_mytasks': 0}</field>
         </record>
     	
-    	<!-- Menuitems -->    	
-    	<menuitem action="action_view_projects_owned" id="menu_action_view_projects_owned"
+    	<!-- Menuitems -->
+        <menuitem action="action_view_projects_my" id="menu_action_view_projects_my"
             parent="project.menu_project_management" sequence="1" />
 
-    	<menuitem action="action_view_tasks_owned" id="menu_action_view_tasks_owned"
+    	<menuitem action="action_view_tasks_my" id="menu_action_view_tasks_my"
             parent="project.menu_project_management" sequence="2" />
 
-        <menuitem action="action_view_projects_my" id="menu_action_view_projects_my"
+    	<menuitem action="action_view_projects_owned" id="menu_action_view_projects_owned"
             parent="project.menu_project_management" sequence="3" />
 
-    	<menuitem action="action_view_tasks_my" id="menu_action_view_tasks_my"
+    	<menuitem action="action_view_tasks_owned" id="menu_action_view_tasks_owned"
             parent="project.menu_project_management" sequence="4" />
 
     	<menuitem action="project.open_view_project_all" id="project.menu_projects" 
