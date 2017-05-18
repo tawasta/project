@@ -2,16 +2,13 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-======================
-Project Data Integrity
-======================
+===============
+Project Numbers
+===============
 
-Overrides project and task deleting, and closes them instead.
-
-Features
-========
-* Cancels a project instead of deleting
-* Cancels a task instead of deleting
+* Retroactively generates project and tas numbers for all projects and tasks
+* Starts from 10001, can be customized in data XML file
+* Keeps track of assigned numbers internally, and gives a new one each time a new project or task is created
 
 Installation
 ============
@@ -25,6 +22,10 @@ Configuration
 
 Usage
 =====
+\-
+
+Features
+========
 \-
 
 Credits

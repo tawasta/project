@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Author: 
+#    Author: Oy Tawasta OS Technologies Ltd.
 #    Copyright 2015 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -21,24 +21,25 @@
 
 {
     'name': 'Project Task Reports',
-    'description': """
-
-Redefines Task analysis.
-
-    """,
-    'version': '8.0.0.1.0',
-    'category': 'Project Management',
-    'website': 'http://www.tawasta.fi',
+    'summary': 'Redefines Task analysis',
+    'version': '8.0.1.0.0',
+    'category': 'Project',
+    'website': 'https://github.com/Tawasta/project',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
-    'depends': [ 
+    'application': False,
+    'installable': True,
+    'external_dependencies': {
+        'python': [],
+        'bin': [],
+    },
+    'depends': [
+        'project',
         'report',
-        'project'
     ],
     'data': [
-        'views/project_task_report.xml' 
+        'views/project_task_report.xml'
     ],
-    'installable': True,
-    'auto-install': False,
-    
+    'demo': [
+    ],
 }

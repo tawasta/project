@@ -21,13 +21,10 @@
 
 {
     'name': 'Project feed',
-    'description': """
-
-        Module for project events feed.
-
-    """,
-    'version': '8.0.0.2.2',
-    'website': 'http://www.tawasta.fi',
+    'summary': 'Extends the functionality of project module to keep track what has happened in projects tasks',
+    'version': '8.0.1.0.0',
+    'category': 'Project Management',
+    'website': 'https://github.com/Tawasta/project',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'depends': [

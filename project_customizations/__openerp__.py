@@ -22,9 +22,9 @@
 {
     'name': 'Project Customizations',
     'summary': 'Changes to Project app',
-    'version': '8.0.0.2.5',
+    'version': '8.0.1.0.0',
     'category': 'Project Management',
-    'website': 'http://www.tawasta.fi',
+    'website': 'https://github.com/Tawasta/project',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,

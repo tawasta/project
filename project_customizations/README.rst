@@ -19,7 +19,7 @@ Features
 
 * **Project_type-field for projects, menuitem for project types**
 
-* **Timesheets are preapproved**
+* **Manager timesheets are auto-approved**
 
 * **Customized group by's and kanban views to include the new fields**
 

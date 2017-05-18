@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=====================
-Project Modifications
-=====================
+=============
+Project Notes
+=============
 
 Adds project and task notes
 
@@ -34,7 +34,6 @@ Credits
 Contributors
 ------------
 
-* Aleksi Savijoki <aleksi.savijoki@tawasta.fi>
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 
 Maintainer

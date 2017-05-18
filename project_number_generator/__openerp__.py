@@ -14,18 +14,15 @@
 ##############################################################################
 {
     'name': 'Project number generator',
-    'category': 'Project',
-    'version': '0.2',
+    'summary': 'Adds notes for project and task. DEPRECATED',
+    'version': '8.0.1.0.0',
+    'category': 'Project Management',
+    'website': 'https://github.com/Tawasta/project',
     'author': 'Vizucom Oy',
-    'website': 'http://www.vizucom.com',
-    'depends': ['project'],
-    'description': """
-Project number field & generator
-=========================================
-* Retroactively generates project and tas numbers for all projects and tasks
-* Starts from 10001, can be customized in data XML file
-* Keeps track of assigned numbers internally, and gives a new one each time a new project or task is created
-""",
+    'license': 'AGPL-3',
+    'depends': [
+        'project'
+    ],
     'data': [
         'view/project_form.xml',
         'view/project_tree.xml',
@@ -38,4 +35,7 @@ Project number field & generator
         'data/project_number_init.xml',
         'data/task_number_init.xml',
     ],
+    'installable': False,
+    'auto-install': False,
+
 }

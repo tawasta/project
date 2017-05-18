@@ -22,7 +22,7 @@
 {
     'name': 'Sale order contracts on tasks',
     'summary': 'Show sale order contracts on tasks',
-    'version': '8.0.0.2.0',
+    'version': '8.0.1.0.0',
     'category': 'Project',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

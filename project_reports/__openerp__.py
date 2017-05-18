@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Author: 
+#    Author: Oy Tawasta OS Technologies Ltd.
 #    Copyright 2015 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -21,14 +21,10 @@
 
 {
     'name': 'Project Reports',
-    'description': """
-
-Module for presenting reports of project-module.
-
-    """,
-    'version': '8.0.0.3.0',
+    'summary': 'Module that gives dynamic reports of projects',
+    'version': '8.0.1.0.0',
     'category': 'Project Management',
-    'website': 'http://www.tawasta.fi',
+    'website': 'https://github.com/Tawasta/project',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'depends': [ 
@@ -38,13 +34,12 @@ Module for presenting reports of project-module.
         'project_task_report'
     ],
     'data': [ 
-    	'views/project_project_view.xml', 
-    	'views/project_report_view.xml',
-    	'views/project_report_qweb.xml',
+        'views/project_project_view.xml',
+        'views/project_report_view.xml',
+        'views/project_report_qweb.xml',
         'views/hr_employee_view.xml',
-    	'security/ir.model.access.csv'
+        'security/ir.model.access.csv'
     ],
     'installable': True,
     'auto-install': False,
-    
 }

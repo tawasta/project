@@ -6,7 +6,7 @@
 Project's tasks feed
 ====================
 
-This module was written to extend the functionality of project module to keep track what has happened in projects tasks.
+Extends the functionality of project module to keep track what has happened in projects tasks
 
 Features
 --------
