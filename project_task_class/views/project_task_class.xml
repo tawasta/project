@@ -2,9 +2,9 @@
 <openerp>
 	<data>
 		
-		<record id="view_task_type_tree" model="ir.ui.view">
-			<field name="name">task.type.tree</field>
-			<field name="model">task.type</field>
+		<record id="view_project_task_class_tree" model="ir.ui.view">
+			<field name="name">project.task.class.tree</field>
+			<field name="model">project.task.class</field>
 			<field name="field_parent">child_ids</field>
 			<field name="arch" type="xml">
 				<tree string="Task Types">
@@ -14,9 +14,9 @@
 		</record>
 
 		<!-- Task types -->
-		<record id="task_type_action" model="ir.actions.act_window">
+		<record id="project_task_class_action" model="ir.actions.act_window">
 			<field name="name">Task Types</field>
-			<field name="res_model">task.type</field>
+			<field name="res_model">project.task.class</field>
 			<field name="view_type">form</field>
 			<field name="view_mode">tree,form</field>
 			<field name="help" type="html">
@@ -24,15 +24,16 @@
 			</field>
 		</record>
 
-		<record id="view_task_type_form" model="ir.ui.view">
-			<field name="name">task.type.form</field>
-			<field name="model">task.type</field>
+		<record id="view_project_task_class_form" model="ir.ui.view">
+			<field name="name">project.task.class.form</field>
+			<field name="model">project.task.class</field>
 			<field name="arch" type="xml">
 				<form string="Task Types">
 					<group>
 						<field name="name"/>
 						<field name="parent_id"/>
 					</group>
+					<label for="child_ids" />
 					<field name="child_ids" string="Name">
 						<tree string="Child Task Types">
 							<field name="name"/>
@@ -42,7 +43,7 @@
 			</field>
 		</record>
 
-		<menuitem id="menu_task_type" name="Task Types" action="task_type_action" parent="base.menu_definitions" groups="base.group_no_one"/>
+		<menuitem id="menu_project_task_class" name="Task Classes" action="project_task_class_action" parent="base.menu_definitions" groups="base.group_no_one"/>
 
 	</data>
 </openerp>

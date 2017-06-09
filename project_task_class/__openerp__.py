@@ -20,9 +20,9 @@
 ##############################################################################
 
 {
-    'name': 'Project Customizations',
-    'summary': 'Changes to Project app',
-    'version': '8.0.1.0.0',
+    'name': 'Project and task types and skills',
+    'summary': 'Adds types for tasks and projects and skills for tasks',
+    'version': '8.0.1.1.0',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -30,20 +30,22 @@
     'application': False,
     'installable': True,
     'depends': [
-        'project_extension',
-        'hr_timesheet_sheet',
         'hr_skill',
+        'hr_timesheet_sheet',
     ],
     'data': [
         'security/ir.model.access.csv',
+
         'views/project_form.xml',
-        'views/project_tree.xml',
-        'views/project_search.xml',
-        'views/project_task_form.xml',
-        'views/project_task_search.xml',
-        'views/project_type.xml',
-        'views/project_task_type.xml',
         'views/project_kanban.xml',
-        'views/project_task_kanban.xml'
+        'views/project_search.xml',
+
+        'views/project_task_class.xml',
+        'views/project_task_form.xml',
+        'views/project_task_kanban.xml',
+        'views/project_task_search.xml',
+
+        'views/project_tree.xml',
+        'views/project_type.xml',
     ]
 }

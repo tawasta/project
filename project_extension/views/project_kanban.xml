@@ -19,6 +19,12 @@
 							<span class="oe_e">N</span>
 							<field name="date"/>
 						</span>
+						<t t-if="record.project_type.raw_value">
+							<br></br><br></br>
+							<span>
+								<field name="project_type"/>
+							</span>
+						</t>
 					</div>
 				</xpath>
 			</field>

@@ -15,11 +15,16 @@ from openerp import api, fields, models
 # 6. Unknown third party imports:
 
 
-class HrTimesheetSheet(models.Model):
+class TaskReport(models.Model):
     # 1. Private attributes
-    _inherit = 'hr_timesheet_sheet.sheet'
+    _inherit = 'report.project.task.user'
 
     # 2. Fields declaration
+    hour_type = fields.Many2one(
+        comodel_name='project.task',
+        string='Hour Type',
+        readonly=True,
+    )
 
     # 3. Default methods
 
@@ -30,11 +35,5 @@ class HrTimesheetSheet(models.Model):
     # 6. CRUD methods
 
     # 7. Action methods
-    @api.one
-    def button_confirm(self):
-        res = super(HrTimesheetSheet, self).button_confirm()
-        if res:
-            self.signal_workflow('done')
-        return res
 
     # 8. Business methods

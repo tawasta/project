@@ -15,12 +15,16 @@ from openerp import api, fields, models
 # 6. Unknown third party imports:
 
 
-class TaskReport(models.Model):
+class ProjectProject(models.Model):
     # 1. Private attributes
-    _inherit = 'report.project.task.user'
+    _inherit = 'project.project'
 
     # 2. Fields declaration
-    hour_type = fields.Many2one('project.task', string="Hour Type", readonly=True)
+    project_type = fields.Many2one(
+        comodel_name='project.type',
+        string='Project type',
+        help='Defines project type.',
+    )
 
     # 3. Default methods
 
@@ -33,3 +37,4 @@ class TaskReport(models.Model):
     # 7. Action methods
 
     # 8. Business methods
+
