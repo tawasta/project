@@ -7,12 +7,12 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[project_data_integrity](project_data_integrity/) | 10.0.1.0.0 | Overrides project and task deleting, and archives them instead
 
 Unported addons
 ----------------
 **Addon** | **Version** | **Summary**
 --- | --- | ---
-[project_data_integrity](project_data_integrity/) | 8.0.1.0.0 (unported) | Overrides project and task deleting, and closes them instead
 [project_event_feed](project_event_feed/) | 8.0.1.0.0 (unported) | Extends the functionality of project module to keep track what has happened in projects tasks
 [project_extension](project_extension/) | 8.0.1.1.0 (unported) | Changes to Project app
 [project_notes](project_notes/) | 8.0.1.0.0 (unported) | Adds notes for project and task 
