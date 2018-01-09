@@ -1,17 +1,21 @@
 # -*- coding: utf-8 -*-
-from openerp import models, api
+from odoo import models, api
+from odoo import SUPERUSER_ID
 
 
 class ProjectProject(models.Model):
 
     _inherit = 'project.project'
 
-    @api.one
+    @api.multi
     def unlink(self):
-        ''' Deactivates the project instead of deleting,
-        unless the project is already deactivated '''
+        # Deactivates the project instead of deleting
+        # Admin can delete archived projects
 
         if self.active:
+            # Archive an active record
             self.active = False
-        else:
+
+        elif self.env.user_id == SUPERUSER_ID:
+            # If superuser, delete the record
             super(ProjectProject, self).unlink()

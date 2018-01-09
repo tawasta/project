@@ -21,14 +21,14 @@
 
 {
     'name': 'Project Data Integrity',
-    'summary': 'Overrides project and task deleting, and closes them instead',
-    'version': '8.0.1.0.0',
+    'summary': 'Overrides project and task deleting, and archives them instead',
+    'version': '10.0.1.0.0',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
-    'installable': False,
+    'installable': True,
     'depends': [
         'project',
     ],

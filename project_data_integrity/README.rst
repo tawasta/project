@@ -6,12 +6,12 @@
 Project Data Integrity
 ======================
 
-Overrides project and task deleting, and closes them instead.
+Overrides project and task deleting, and archives them instead.
 
 Features
 ========
-* Cancels a project instead of deleting
-* Cancels a task instead of deleting
+* Archives a project instead of deleting
+* Archives a task instead of deleting
 
 Installation
 ============

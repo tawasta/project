@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-from openerp import models, api
+from odoo import models, api
+from odoo import SUPERUSER_ID
 
 
 class ProjectTask(models.Model):
@@ -8,13 +9,13 @@ class ProjectTask(models.Model):
 
     @api.one
     def unlink(self):
-        ''' Cancels the task instead of deleting,
-        unless the task is already canceled '''
+        # Deactivates the project instead of deleting
+        # Admin can delete archived projects
 
-        stage = self.stage_id
-        stage_cancel = self.env['project.task.type'].with_context(lang='en_US').search([('name', 'ilike', 'cancel')])
-        
-        if stage == stage_cancel:
+        if self.active:
+            # Archive an active record
+            self.active = False
+
+        elif self.env.user_id == SUPERUSER_ID:
+            # If superuser, delete the record
             super(ProjectTask, self).unlink()
-        else:
-            self.stage_id = stage_cancel
