@@ -32,7 +32,7 @@
     'external_dependencies': {
         'python': [],
         'bin': [],
-    },    
+    },
     'depends': [
         'project',
     ],
