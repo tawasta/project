@@ -6,7 +6,7 @@
 Project Data Integrity
 ======================
 
-Overrides project and task deleting, and archives them instead.
+Override project and task deleting, and archives them instead.
 
 Features
 ========
@@ -43,4 +43,3 @@ Maintainer
    :target: http://tawasta.fi/
 
 This module is maintained by Oy Tawasta OS Technologies Ltd.
-

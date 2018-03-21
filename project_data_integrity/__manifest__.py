@@ -21,7 +21,7 @@
 
 {
     'name': 'Project Data Integrity',
-    'summary': 'Overrides project and task deleting, and archives them instead',
+    'summary': 'Override project and task deleting, and archives them instead',
     'version': '10.0.1.0.0',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',
