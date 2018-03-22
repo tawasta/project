@@ -10,7 +10,7 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [account_analytic_tasks_enabled_by_default](account_analytic_tasks_enabled_by_default/) | 10.0.1.0.0 | When creating a new AA, tasks are enabled by default
-[project_data_integrity](project_data_integrity/) | 10.0.1.0.0 | Overrides project and task deleting, and archives them instead
+[project_data_integrity](project_data_integrity/) | 10.0.1.0.0 | Override project and task deleting, and archives them instead
 
 
 Unported addons
