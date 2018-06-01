@@ -10,6 +10,7 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [account_analytic_tasks_enabled_by_default](account_analytic_tasks_enabled_by_default/) | 10.0.1.0.0 | When creating a new AA, tasks are enabled by default
+[project_calendar_date_start_to_end](project_calendar_date_start_to_end/) | 10.0.1.0.0 | Changes the default calendar dates to support a range
 [project_data_integrity](project_data_integrity/) | 10.0.1.0.0 | Override project and task deleting, and archives them instead
 
 
