@@ -19,7 +19,7 @@ class ProjectProject(models.Model):
 
         IrSequence = self.env['ir.sequence']
         sequence = IrSequence.next_by_code('project.project')
-        self.name = '%s/%s' % (sequence, self.name)
+        self.name = '%s %s' % (sequence, self.name)
         self.code_generated = True
 
         return {
