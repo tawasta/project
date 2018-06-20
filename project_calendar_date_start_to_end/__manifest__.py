@@ -27,7 +27,7 @@
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
-    'depends': [ 
+    'depends': [
         'project'
     ],
     'data': [
