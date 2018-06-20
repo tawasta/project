@@ -12,10 +12,11 @@ class ProjectProject(models.Model):
         # Deactivates the project instead of deleting
         # Admin can delete archived projects
 
-        if self.active:
-            # Archive an active record
-            self.active = False
+        for record in self:
+            if record.active:
+                # Archive an active record
+                record.active = False
 
-        elif self.env.user_id == SUPERUSER_ID:
-            # If superuser, delete the record
-            super(ProjectProject, self).unlink()
+            elif record.env.user_id == SUPERUSER_ID:
+                # If superuser, delete the record
+                super(ProjectProject, record).unlink()
