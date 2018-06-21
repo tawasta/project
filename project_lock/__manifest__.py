@@ -22,7 +22,7 @@
 {
     'name': 'Project locking (templates)',
     'summary': 'Adds a possibility to lock project editing',
-    'version': '10.0.1.0.1',
+    'version': '10.0.1.0.2',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',
     'author': 'Oy Tawasta Technologies Ltd.',

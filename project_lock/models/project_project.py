@@ -15,7 +15,7 @@ class ProjectProject(models.Model):
 
     @api.multi
     def write(self, vals):
-        if not vals.get('locked'):
+        if 'locked' not in vals:
             self.check_locked()
 
         return super(ProjectProject, self).write(vals)
