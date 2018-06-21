@@ -27,9 +27,6 @@ class ProjectProject(models.Model):
         return super(ProjectProject, self).unlink()
 
     def check_locked(self):
-        print "here"
-        print self
-        print self.locked
         if self.locked:
             # Helper to prevent redundant code and errors
             msg = _("Project '%s' is locked." % self.name)
