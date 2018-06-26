@@ -8,8 +8,6 @@ class ProjectTask(models.Model):
 
     @api.model
     def create(self, vals):
-        print self
-        print "create %s" % vals
         if self._context.get('default_project_id'):
             self.check_locked(self._context.get('default_project_id'))
 
@@ -17,8 +15,6 @@ class ProjectTask(models.Model):
 
     @api.multi
     def write(self, vals):
-        print self
-        print "write %s" % vals
         # Allow modifying followers and project_id
         if not (len(vals) == 1
                 and ('message_follower_ids' in vals or 'project_id' in vals)):
@@ -34,8 +30,6 @@ class ProjectTask(models.Model):
 
     def check_locked(self, project_id=False):
         for record in self:
-            print record.project_id
-            print record.project_id.name
             if project_id:
                 project = record.env['project.project'].browse([project_id])
             else:
