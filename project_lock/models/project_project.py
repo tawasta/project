@@ -11,6 +11,7 @@ class ProjectProject(models.Model):
         string='Locked',
         help="Project is locked." +
              "It can't be edited, and it's tasks cant be edited.",
+        copy=False,
     )
 
     @api.multi

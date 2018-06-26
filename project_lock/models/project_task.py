@@ -26,11 +26,12 @@ class ProjectTask(models.Model):
         return super(ProjectTask, self).unlink()
 
     def check_locked(self, project_id=False):
-        if project_id:
-            project = self.env['project.project'].browse([project_id])
-        else:
-            project = self.project_id
+        for record in self:
+            if project_id:
+                project = record.env['project.project'].browse([project_id])
+            else:
+                project = record.project_id
 
-        project.check_locked()
+            project.check_locked()
 
         return
