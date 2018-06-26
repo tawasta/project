@@ -22,7 +22,7 @@
 {
     'name': 'Add a sequence for project by pressing a button',
     'summary': 'Add a sequence for project by pressing a button',
-    'version': '10.0.1.0.1',
+    'version': '10.0.1.1.0',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',
     'author': 'Oy Tawasta Technologies Ltd.',

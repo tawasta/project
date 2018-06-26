@@ -11,6 +11,7 @@ class ProjectProject(models.Model):
         help='Helper for sequence generator',
         default=False,
         readonly=True,
+        copy=False,
     )
 
     @api.multi
