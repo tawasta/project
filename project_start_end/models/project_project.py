@@ -16,6 +16,9 @@ class ProjectProject(models.Model):
 
     @api.model
     def create(self, values):
+        # Set this on create instead of field default, so it will not
+        # preset existing empty start dates on install
+
         if not values.get('date_start'):
             values['date_start'] = fields.Date.today()
 
