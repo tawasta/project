@@ -6,7 +6,10 @@
 Project start and end dates
 ===========================
 
-Shows project start and end date in form view
+Shows project start and end date in form view.
+
+* On project create sets start date
+* On project archive sets end date
 
 
 Configuration

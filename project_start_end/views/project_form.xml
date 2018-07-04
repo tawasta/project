@@ -6,10 +6,12 @@
         <field name="inherit_id" ref="project.edit_project"/>
         <field name="arch" type="xml">
 
-            <field name="partner_id" position="after">
-                <field name="date_start" />
-                <field name="date" string="End date"/>
-            </field>
+            <page name="settings" position="inside">
+                <group col="4" name="project-dates">
+                    <field name="date_start" />
+                    <field name="date" string="End date"/>
+                </group>
+            </page>
 
         </field>
     </record>
