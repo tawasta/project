@@ -1,24 +1,23 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* project_start_end
+#	* project_start_end
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-04 12:51+0000\n"
-"PO-Revision-Date: 2018-07-04 15:51+0300\n"
+"POT-Creation-Date: 2018-08-29 10:08+0000\n"
+"PO-Revision-Date: 2018-08-29 10:08+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"Language: fi\n"
-"X-Generator: Poedit 1.8.7.1\n"
 
 #. module: project_start_end
 #: model:ir.ui.view,arch_db:project_start_end.edit_project
+#: model:ir.ui.view,arch_db:project_start_end.project_project_view_tree
 msgid "End date"
 msgstr "Päättymispäivä"
 
