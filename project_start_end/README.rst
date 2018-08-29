@@ -6,7 +6,7 @@
 Project start and end dates
 ===========================
 
-Shows project start and end date in form view.
+Shows project start and end date in form and tree views.
 
 * On project create sets start date
 * On project archive sets end date
@@ -32,6 +32,7 @@ Contributors
 ------------
 
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
+* Timo Talvitie <timo.talvitie@tawasta.fi>
 
 Maintainer
 ----------

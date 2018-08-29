@@ -21,8 +21,8 @@
 
 {
     'name': 'Project start and end dates',
-    'summary': 'Shows project start and end date in form view',
-    'version': '10.0.1.0.0',
+    'summary': 'Shows project start and end date in form and tree views',
+    'version': '10.0.1.0.1',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
