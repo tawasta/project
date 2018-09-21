@@ -1,0 +1,1 @@
+account-invoice-reporting https://github.com/oca/account-invoice-reporting
