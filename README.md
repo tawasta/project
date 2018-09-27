@@ -10,8 +10,17 @@ Available addons
 addon | version | summary
 --- | --- | ---
 [account_analytic_tasks_enabled_by_default](account_analytic_tasks_enabled_by_default/) | 10.0.1.0.0 | When creating a new AA, tasks are enabled by default
+[project_analytic_account_auto_close](project_analytic_account_auto_close/) | 10.0.1.0.0 | Auto-close analytic account when closing project
+[project_analytic_account_menuitem](project_analytic_account_menuitem/) | 10.0.1.0.0 | Adds a link pointing to the analytic account list
+[project_analytic_tags](project_analytic_tags/) | 10.0.1.0.0 | Show analytic tags on projects
 [project_calendar_date_start_to_end](project_calendar_date_start_to_end/) | 10.0.1.0.0 | Changes the default calendar dates to support a range
-[project_data_integrity](project_data_integrity/) | 10.0.1.0.0 | Override project and task deleting, and archives them instead
+[project_calendar_view](project_calendar_view/) | 10.0.1.0.1 | Calendar view for projects
+[project_data_integrity](project_data_integrity/) | 10.0.1.1.0 | Override project and task deleting, and archives them instead
+[project_lock](project_lock/) | 10.0.1.1.0 | Adds a possibility to lock project editing
+[project_menu_account_invoice_line_report](project_menu_account_invoice_line_report/) | 10.0.1.0.0 | Adds the invoice lines report also to project reporting menu
+[project_project_menuitem](project_project_menuitem/) | 10.0.1.0.0 | Menuitem for projects
+[project_sequence_generator](project_sequence_generator/) | 10.0.1.1.0 | Add a sequence for project by pressing a button
+[project_start_end](project_start_end/) | 10.0.1.0.1 | Shows project start and end date in form and tree views
 
 
 Unported addons
