@@ -1,1 +1,1 @@
-import models
+import project_notes.models
