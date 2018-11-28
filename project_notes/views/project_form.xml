@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
     <data>
-    	<!-- Form view -->
+        <!-- Form view -->
         <record id="project_project_form_inherit" model="ir.ui.view">
             <field name="name">project.project.form.inherit</field>
             <field name="model">project.project</field>
@@ -17,3 +17,4 @@
         </record>
     </data>
 </openerp>
+
