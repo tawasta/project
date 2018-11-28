@@ -1,2 +1,2 @@
-import project
-import task
+import project_notes.models.project
+import project_notes.models.task
