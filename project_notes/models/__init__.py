@@ -1,2 +1,1 @@
-import project
-import task
+from . import project, task
