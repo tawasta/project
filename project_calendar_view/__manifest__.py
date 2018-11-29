@@ -31,11 +31,9 @@
     'installable': True,
     'depends': [
         'project_start_end',
-        # 'web_widget_color',
     ],
     'data': [
         'data/ir_actions_act_window.xml',
         'views/project_calendar.xml',
-        # 'views/project_form.xml',
     ],
 }
