@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<openerp>
-	<data>
+<odoo>
 
-		<record id="action_project_notes" model="ir.actions.act_window">
+    <record id="action_project_notes" model="ir.actions.act_window">
             <field name="name">Project notes</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">project.project.note</field>
@@ -18,10 +17,9 @@
             <field name="view_mode">tree,form</field>
         </record>
 
-        <menuitem id="project_notes" name="Notes" parent="base.menu_definitions" sequence="30" groups="project.group_project_manager" />
+        <menuitem id="project_notes" name="Notes" parent="project.menu_project_config" sequence="30" groups="project.group_project_manager" />
 
-		<menuitem action="action_project_notes" id="menu_project_note" parent="project_notes" sequence="10" groups="project.group_project_manager"/>
-		<menuitem action="action_task_notes" id="menu_task_note" parent="project_notes" sequence="20" groups="project.group_project_manager"/>
+        <menuitem action="action_project_notes" id="menu_project_note" parent="project_notes" sequence="10" groups="project.group_project_manager"/>
+        <menuitem action="action_task_notes" id="menu_task_note" parent="project_notes" sequence="20" groups="project.group_project_manager"/>
 
-	</data>
-</openerp>
+</odoo>
