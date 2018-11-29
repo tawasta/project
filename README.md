@@ -18,6 +18,7 @@ addon | version | summary
 [project_data_integrity](project_data_integrity/) | 10.0.1.1.0 | Override project and task deleting, and archives them instead
 [project_lock](project_lock/) | 10.0.1.1.0 | Adds a possibility to lock project editing
 [project_menu_account_invoice_line_report](project_menu_account_invoice_line_report/) | 10.0.1.0.0 | Adds the invoice lines report also to project reporting menu
+[project_notes](project_notes/) | 10.0.1.0.0 | Adds notes for project and task
 [project_project_menuitem](project_project_menuitem/) | 10.0.1.0.0 | Menuitem for projects
 [project_sequence_generator](project_sequence_generator/) | 10.0.1.1.0 | Add a sequence for project by pressing a button
 [project_start_end](project_start_end/) | 10.0.1.0.1 | Shows project start and end date in form and tree views
@@ -29,7 +30,6 @@ addon | version | summary
 --- | --- | ---
 [project_event_feed](project_event_feed/) | 8.0.1.0.0 (unported) | Extends the functionality of project module to keep track what has happened in projects tasks
 [project_extension](project_extension/) | 8.0.1.1.0 (unported) | Changes to Project app
-[project_notes](project_notes/) | 8.0.1.0.0 (unported) | Adds notes for project and task
 [project_reports](project_reports/) | 8.0.1.0.0 (unported) | Module that gives dynamic reports of projects
 [project_task_class](project_task_class/) | 8.0.1.1.0 (unported) | Adds types for tasks and projects and skills for tasks
 [project_task_materials_date](project_task_materials_date/) | 8.0.1.0.0 (unported) | Mark date to task materials
