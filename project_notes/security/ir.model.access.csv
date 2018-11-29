@@ -5,3 +5,4 @@
 "project.access_project_task","project.task","project.model_project_task","project.group_project_user",1,1,1,0
 "project.access_project_project_note","project.project.note","model_project_project_note","project.group_project_user",1,1,1,0
 "project.access_project_task_note","project.task.note","model_project_task_note","project.group_project_user",1,1,1,0
+
