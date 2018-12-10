@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-	<!-- Time_float widgets for project kanban view -->
-	<record id="view_project_kanban" model="ir.ui.view">
-		<field name="name">project.project.kanban.type</field>
-		<field name="model">project.project</field>
-		<field name="inherit_id" ref="project.view_project_kanban" />
-		<field name="priority" eval="200"/>
-		<field name="arch" type="xml">
+    <!-- Time_float widgets for project kanban view -->
+    <record id="view_project_kanban" model="ir.ui.view">
+        <field name="name">project.project.kanban.type</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban" />
+        <field name="priority" eval="200"/>
+        <field name="arch" type="xml">
 
-			<field name="name" position="after">
-				<field name="project_type" />
-			</field>
+            <field name="name" position="after">
+                <field name="project_type" />
+            </field>
 
-		</field>
-	</record>
+        </field>
+    </record>
 </odoo>

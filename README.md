@@ -22,6 +22,7 @@ addon | version | summary
 [project_project_menuitem](project_project_menuitem/) | 10.0.1.0.0 | Menuitem for projects
 [project_sequence_generator](project_sequence_generator/) | 10.0.1.1.0 | Add a sequence for project by pressing a button
 [project_start_end](project_start_end/) | 10.0.1.0.1 | Shows project start and end date in form and tree views
+[project_task_class](project_task_class/) | 10.0.1.0.0 | Adds types for tasks and projects and skills for tasks
 
 
 Unported addons
@@ -31,7 +32,6 @@ addon | version | summary
 [project_event_feed](project_event_feed/) | 8.0.1.0.0 (unported) | Extends the functionality of project module to keep track what has happened in projects tasks
 [project_extension](project_extension/) | 8.0.1.1.0 (unported) | Changes to Project app
 [project_reports](project_reports/) | 8.0.1.0.0 (unported) | Module that gives dynamic reports of projects
-[project_task_class](project_task_class/) | 8.0.1.1.0 (unported) | Adds types for tasks and projects and skills for tasks
 [project_task_materials_date](project_task_materials_date/) | 8.0.1.0.0 (unported) | Mark date to task materials
 [project_task_materials_partner](project_task_materials_partner/) | 8.0.1.0.0 (unported) | Mark partner to task materials
 [project_task_materials_stock_service](project_task_materials_stock_service/) | 8.0.1.0.0 (unported) | Use services as task materials
