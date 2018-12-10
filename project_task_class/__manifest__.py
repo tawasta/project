@@ -22,13 +22,13 @@
 {
     'name': 'Project and task types and skills',
     'summary': 'Adds types for tasks and projects and skills for tasks',
-    'version': '8.0.1.1.0',
+    'version': '10.0.1.0.0',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
-    'installable': False,
+    'installable': True,
     'depends': [
         'hr_skill',
         'hr_timesheet_sheet',

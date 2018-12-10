@@ -41,6 +41,7 @@ Credits
 Contributors
 ------------
 
+* Valtteri Lattu <valtteri.lattu@tawasta.fi>
 * Aleksi Savijoki <aleksi.savijoki@tawasta.fi>
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 

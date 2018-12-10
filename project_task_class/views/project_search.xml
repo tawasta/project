@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<openerp>
-	<data>
+<odoo>
+	<record id="view_project_project_filter_inherit" model="ir.ui.view">
+		<field name="name">project.project.select.inherit</field>
+		<field name="model">project.project</field>
+		<field name="inherit_id" ref="project.view_project_project_filter"/>
+		<field name="arch" type="xml">
 
-		<record id="view_project_project_filter_inherit" model="ir.ui.view">
-			<field name="name">project.project.select.inherit</field>
-			<field name="model">project.project</field>
-			<field name="inherit_id" ref="project_extension.view_project_project_filter_inherit" />
-			<field name="arch" type="xml">
-
-				<filter name="end_date" position="after">
-					<filter name="Types" string="Project type" context="{'group_by':'project_type'}"/>
-				</filter>
-				
+			<field name="partner_id" position="after">
+				<filter name="Types" string="Project type" context="{'group_by':'project_type'}"/>
 			</field>
-		</record> 
-
-	</data>
-</openerp>
+				
+		</field>
+	</record> 
+</odoo>

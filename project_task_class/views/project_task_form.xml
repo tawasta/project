@@ -1,26 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<openerp>
-	<data>
-
-		<record id="view_task_form2_inherit" model="ir.ui.view">
-			<field name="name">project.task.form.inherit</field>
-			<field name="model">project.task</field>
-			<field name="inherit_id" ref="project.view_task_form2" />
-			<field name="arch" type="xml">
+<odoo>
+	<record id="view_task_form2_inherit" model="ir.ui.view">
+		<field name="name">project.task.form.inherit</field>
+		<field name="model">project.task</field>
+		<field name="inherit_id" ref="project.view_task_form2" />
+		<field name="arch" type="xml">
 				
-				<field name="categ_ids" position="after">
-					<field name="task_type" options='{"no_open": true, "no_create": true}'/>
-					<field name="hour_type" options='{"no_open": true, "no_create": true}'/>
-					<field name="skills" options='{"no_open": true, "no_create": true}'/>
-				</field>
-
-				<!-- Hide project categories -->
-				<field name="categ_ids" position="attributes">
-					<attribute name="invisible">1</attribute>
-				</field>
-
+			<field name="tag_ids" position="after">
+				<field name="task_type" options='{"no_open": true, "no_create": true}'/>
+				<field name="hour_type" options='{"no_open": true, "no_create": true}'/>
+				<field name="skills" options='{"no_open": true, "no_create": true}'/>
 			</field>
-		</record> 
 
-	</data>
-</openerp>
+			<!-- Hide project categories -->
+			<field name="tag_ids" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+
+		</field>
+	</record> 
+</odoo>
