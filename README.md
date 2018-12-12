@@ -18,6 +18,7 @@ addon | version | summary
 [project_data_integrity](project_data_integrity/) | 10.0.1.1.0 | Override project and task deleting, and archives them instead
 [project_lock](project_lock/) | 10.0.1.1.0 | Adds a possibility to lock project editing
 [project_menu_account_invoice_line_report](project_menu_account_invoice_line_report/) | 10.0.1.0.0 | Adds the invoice lines report also to project reporting menu
+[project_my_projects_menu](project_my_projects_menu/) | 10.0.1.0.0 | Add my projects menu item
 [project_notes](project_notes/) | 10.0.1.0.0 | Adds notes for project and task
 [project_project_menuitem](project_project_menuitem/) | 10.0.1.0.0 | Menuitem for projects
 [project_sequence_generator](project_sequence_generator/) | 10.0.1.1.0 | Add a sequence for project by pressing a button
