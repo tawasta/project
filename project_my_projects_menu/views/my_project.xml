@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Action -->
+        <record id="action_view_projects_my" model="ir.actions.act_window">
+            <field name="name">My projects</field>
+            <field name="res_model">project.project</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form,gantt</field>
+            <field name="domain">['|', ('favorite_user_ids', 'in', uid), ('message_follower_ids', '=', uid)]</field>
+            <field name="context">{'search_default_member': 0, 'search_default_manager': 0, 'search_default_Current': 1}</field>
+        </record>
+
+        <!-- Menuitem -->
+        <menuitem action="action_view_projects_my" id="menu_action_view_projects_my"
+parent="project.menu_project_management" sequence="1" />
+
+    </data>
+</odoo>
