@@ -1,4 +1,6 @@
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Build Status](https://travis-ci.org/Tawasta/project.svg?branch=10.0)](https://travis-ci.org/Tawasta/project)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a2142373c7854475851ae0a8421f9bda)](https://www.codacy.com/app/Tawasta/project?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Tawasta/project&amp;utm_campaign=Badge_Grade)
 
 Project management
 ==================
