@@ -13,9 +13,9 @@ class ProcurementOrder(models.Model):
 
         add_description = ""
 
-        if hasattr(self.env['sale.order'], 'description'):
-            if self.sale_line_id.order_id.description:
-                add_description = " / " + self.sale_line_id.order_id.description
+        if hasattr(self.env['sale.order'], 'description') and \
+                self.sale_line_id.order_id.description:
+            add_description = " / " + self.sale_line_id.order_id.description
 
         res.name = '%s: %s / %s%s' % \
                    (self.origin or '',
