@@ -1,1 +1,2 @@
 account-invoice-reporting https://github.com/oca/account-invoice-reporting
+hr https://github.com/oca/hr
