@@ -22,7 +22,7 @@
 {
     'name': 'Add Sale Delivery Address and Sale Description to Task Name',
     'summary': 'Adds sale delivery address and sale description to task name',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'Project',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

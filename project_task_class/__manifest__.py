@@ -22,7 +22,7 @@
 {
     'name': 'Project and task types and skills',
     'summary': 'Adds types for tasks and projects and skills for tasks',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',
     'author': 'Oy Tawasta Technologies Ltd.',

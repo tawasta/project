@@ -23,7 +23,7 @@
     'name': 'Calendar view for projects',
     'summary': 'Calendar view for projects',
     'category': 'Project',
-    'version': '10.0.1.0.1',
+    'version': '1.0.1',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',

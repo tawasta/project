@@ -22,7 +22,7 @@
 {
     'name': 'Project calendar date from start to end',
     'summary': 'Changes the default calendar dates to support a range',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'Project Management',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

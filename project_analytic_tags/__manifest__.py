@@ -22,7 +22,7 @@
 {
     'name': 'Show analytic tags on projects',
     'summary': 'Show analytic tags on projects',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',
     'author': 'Oy Tawasta Technologies Ltd.',
