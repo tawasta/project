@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_project_issue_filter" model="ir.ui.view">
+        <field name="name">project.issue.search.view.class</field>
+        <field name="model">project.issue</field>
+        <field name="inherit_id" ref="project_issue.view_project_issue_filter" />
+        <field name="arch" type="xml">
+                
+            <!-- Add fields and filters -->
+            <field name="stage_id" position="after">
+                <field name="class_id"/>
+            </field>
+
+            <!-- Add custom group by's -->
+            <!-- <group string="Group By" position="after"> -->
+                <filter name="group_message_last_post" position="after">
+                <filter name="issue_class" string="Class" context="{'group_by':'class_id'}"/>
+            </filter>
+            <!-- </group> -->
+        </field>
+    </record> 
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="project_issue_form_view" model="ir.ui.view">
+        <field name="name">project.issue.form.view.class</field>
+        <field name="model">project.issue</field>
+        <field name="inherit_id" ref="project_issue.project_issue_form_view" />
+        <field name="arch" type="xml">
+                
+            <field name="tag_ids" position="after">
+                <field name="class_id" options='{"no_open": true, "no_create": true}'/>
+            </field>
+
+            <!-- Hide project categories -->
+            <field name="tag_ids" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+
+        </field>
+    </record> 
+</odoo>
