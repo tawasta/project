@@ -9,7 +9,7 @@
                 <attribute name="default_order">id desc</attribute>
             </tree>
             <field name="name" position="before">
-                <field name="id" string="#"/>
+                <field name="id"/>
                 <field name="create_date"/>
             </field>
         </field>
