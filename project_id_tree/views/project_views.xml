@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_project" model="ir.ui.view">
+        <field name="name">project.project.tree</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project"/>
+        <field name="arch" type="xml">
+            <tree position="attributes">
+                <attribute name="default_order">id desc</attribute>
+            </tree>
+            <field name="name" position="before">
+                <field name="id" string="#"/>
+                <field name="create_date"/>
+            </field>
+        </field>
+    </record>
+</odoo>
