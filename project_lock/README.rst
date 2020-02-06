@@ -2,17 +2,16 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===========================
-Project locking (templates)
-===========================
+=====================================
+Project and stage locking (templates)
+=====================================
 
-Adds a possibility to lock project editing
+Adds a possibility to lock project and stage editing.
 
 Installation
 ============
 
-
-Install the module form Settings->Local Modules
+Install the module from Settings->Local Modules
 
 Configuration
 =============
@@ -20,7 +19,7 @@ Configuration
 
 Usage
 =====
-\-
+Install this module from Apps.
 
 Credits
 =======
@@ -29,6 +28,7 @@ Contributors
 ------------
 
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------

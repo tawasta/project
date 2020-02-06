@@ -21,7 +21,7 @@
 
 {
     'name': 'Project locking (templates)',
-    'summary': 'Adds a possibility to lock project editing',
+    'summary': 'Adds a possibility to lock project and stage editing',
     'version': '10.0.1.1.0',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',

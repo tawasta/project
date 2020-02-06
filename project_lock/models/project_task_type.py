@@ -61,7 +61,7 @@ class ProjectTaskType(models.Model):
 
     def check_stage_locked(self):
         if self.locked:
-            msg = _("Stage '%s' is locked." % self.name)
+            msg = _("Stage '%s' is locked.") % self.name
             msg += _("\nEdited changes are not going to be saved without "
                      "unlocking selected stage.")
             msg += _("\nPlease unlock the stage before editing.")

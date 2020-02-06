@@ -30,7 +30,7 @@ class ProjectProject(models.Model):
     def check_locked(self):
         if self.locked:
             # Helper to prevent redundant code and errors
-            msg = _("Project '%s' is locked." % self.name)
+            msg = _("Project '%s' is locked.") % self.name
             msg += "\n"
             msg += _("Please unlock the project before editing.")
             raise UserError(msg)
