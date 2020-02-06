@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-20 10:58+0000\n"
-"PO-Revision-Date: 2018-06-20 13:59+0300\n"
+"POT-Creation-Date: 2020-02-06 10:39+0000\n"
+"PO-Revision-Date: 2020-02-06 12:40+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,15 +15,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "Language: fi\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.0.6\n"
+
+#. module: project_lock
+#: code:addons/project_lock/models/project_task_type.py:65
+#, python-format
+msgid ""
+"\n"
+"Edited changes are not going to be saved without unlocking selected stage."
+msgstr ""
+"\n"
+"Muokkaukset eivät tallennu ennen vaiheen lukituksen poistamista."
+
+#. module: project_lock
+#: code:addons/project_lock/models/project_task_type.py:80
+#, python-format
+msgid ""
+"\n"
+"Modifying or deleting this stage will affect those projects also."
+msgstr ""
+"\n"
+"Vaiheen muokkaaminen tai poistaminen vaikuttaa myös näihin projekteihin."
+
+#. module: project_lock
+#: code:addons/project_lock/models/project_task_type.py:67
+#, python-format
+msgid ""
+"\n"
+"Please unlock the stage before editing."
+msgstr ""
+"\n"
+"Ole hyvä ja poista vaiheen lukitus ennen muokkaamista."
 
 #. module: project_lock
 #: model:ir.model.fields,field_description:project_lock.field_project_project_locked
+#: model:ir.model.fields,field_description:project_lock.field_project_task_type_locked
 msgid "Locked"
 msgstr "Lukittu"
 
 #. module: project_lock
-#: code:addons/project_lock/models/project_project.py:36
+#: code:addons/project_lock/models/project_project.py:35
 #, python-format
 msgid "Please unlock the project before editing."
 msgstr "Ole hyvä ja poista projektin lukitus ennen muokkaamista."
@@ -34,7 +65,7 @@ msgid "Project"
 msgstr "Projektit"
 
 #. module: project_lock
-#: code:addons/project_lock/models/project_project.py:34
+#: code:addons/project_lock/models/project_project.py:33
 #, python-format
 msgid "Project '%s' is locked."
 msgstr "Projekti '%s' on lukittu."
@@ -45,6 +76,23 @@ msgid "Project is locked.It can't be edited, and it's tasks cant be edited."
 msgstr "Projekti on lukittu. Sitä tai sen tehtäviä ei voi muokata."
 
 #. module: project_lock
+#: code:addons/project_lock/models/project_task_type.py:64
+#, python-format
+msgid "Stage '%s' is locked."
+msgstr "Vaihe '%s' on lukittu."
+
+#. module: project_lock
+#: code:addons/project_lock/models/project_task_type.py:79
+#, python-format
+msgid "Stage is linked to %s projects."
+msgstr "%s kpl projekteja sisältää tämän vaiheen."
+
+#. module: project_lock
+#: model:ir.model.fields,help:project_lock.field_project_task_type_locked
+msgid "Stage is locked.It can't be edited."
+msgstr "Vaihe on lukittu. Sitä ei voi muokata."
+
+#. module: project_lock
 #: model:ir.model,name:project_lock.model_project_task
 msgid "Task"
 msgstr "Tehtävä"
@@ -53,3 +101,9 @@ msgstr "Tehtävä"
 #: model:ir.model,name:project_lock.model_project_task_type
 msgid "Task Stage"
 msgstr "Tehtävän vaihe"
+
+#. module: project_lock
+#: code:addons/project_lock/models/project_task_type.py:76
+#, python-format
+msgid "Warning for stage: %s"
+msgstr "Varoitus vaiheelle: %s"

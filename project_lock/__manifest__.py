@@ -34,5 +34,6 @@
     ],
     'data': [
         'views/project_project.xml',
+        'views/project_task_type.xml',
     ]
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="task_type_edit" model="ir.ui.view">
+        <field name="name">project.task.type.locked</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='mail_template_id']" position="before">
+                <field name="locked" groups="project.group_project_manager"/>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
