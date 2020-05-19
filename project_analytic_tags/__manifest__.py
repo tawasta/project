@@ -28,9 +28,7 @@
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
-    'depends': [
-        'project',
-    ],
+    'depends': ['project', 'project_tag'],
     'data': [
         'views/project_project.xml',
     ]
