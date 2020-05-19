@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -22,10 +21,10 @@
 {
     'name': 'Project locking (templates)',
     'summary': 'Adds a possibility to lock project editing',
-    'version': '1.1.0',
+    'version': '12.0.1.0.0',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',
-    'author': 'Oy Tawasta Technologies Ltd.',
+    'author': 'Tawasta',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
