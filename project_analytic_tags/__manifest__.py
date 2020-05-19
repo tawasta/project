@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -22,16 +21,14 @@
 {
     'name': 'Show analytic tags on projects',
     'summary': 'Show analytic tags on projects',
-    'version': '1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',
-    'author': 'Oy Tawasta Technologies Ltd.',
+    'author': 'Tawasta',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
-    'depends': [
-        'project',
-    ],
+    'depends': ['project', 'project_tag'],
     'data': [
         'views/project_project.xml',
     ]
