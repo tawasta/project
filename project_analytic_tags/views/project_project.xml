@@ -8,7 +8,7 @@
         <field name="arch" type="xml">
 
             <field name="partner_id" position="after">
-                <field name="tag_ids" widget="many2many_tags" />
+                <field name="analytic_tag_ids" widget="many2many_tags" />
             </field>
 
         </field>
