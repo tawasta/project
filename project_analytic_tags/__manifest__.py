@@ -28,7 +28,7 @@
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
-    'depends': ['project'],
+    'depends': ['project', "analytic"],
     'data': [
         'views/project_project.xml',
     ]
