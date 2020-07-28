@@ -17,9 +17,10 @@ from odoo import api, fields, models
 class ProjectTaskClass(models.Model):
     # 1. Private attributes
     _name = 'project.task.class'
-    _order = 'name'
+    _order = 'sequence, name'
 
     # 2. Fields declaration
+    sequence = fields.Integer()
     name = fields.Char(
         string='Name',
         required=True,
