@@ -6,6 +6,7 @@
         <field name="field_parent">child_ids</field>
         <field name="arch" type="xml">
             <tree string="Task Types">
+                <field name="sequence" widget="handle" />
                 <field name="display_name" string="Name"/>
             </tree>
         </field>
