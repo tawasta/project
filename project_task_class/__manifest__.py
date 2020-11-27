@@ -32,6 +32,7 @@
     'depends': [
         'hr_skill',
         'hr_timesheet_sheet',
+        'project_category',
     ],
     'data': [
         'security/ir.model.access.csv',
