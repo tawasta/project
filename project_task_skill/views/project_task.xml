@@ -8,12 +8,7 @@
 
             <field name="user_id" position="before">
                 <field name="skill_id" />
-                <field name="employee_id" />
                 <field name="employee_skill_ids" widget="many2many_tags" />
-            </field>
-
-            <field name="user_id" position="attributes">
-                <attribute name="invisible">1</attribute>
             </field>
 
         </field>
