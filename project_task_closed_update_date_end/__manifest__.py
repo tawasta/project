@@ -21,7 +21,7 @@
 {
     "name": "Update task end date when moving task to closed stage",
     "summary": "Task end date is updated when task is moved to a ended stage",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Project Management",
     "website": "https://github.com/Tawasta/project",
     "author": "Tawasta",
