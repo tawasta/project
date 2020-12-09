@@ -2,31 +2,15 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=============
-Project Notes
-=============
+==========================
+HR Skills on project tasks
+==========================
 
-Adds project and task notes
-
-Installation
-============
-
-
-Install the module form Settings->Local Modules
+Allow defining required skills for task
 
 Configuration
 =============
 \-
-
-Usage
-=====
-You can add notes to tasks and projects
-
-Features
-========
-* Adds notes to projects
-* Adds notes to tasks
-
 
 Credits
 =======
@@ -40,9 +24,9 @@ Contributors
 Maintainer
 ----------
 
-.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
+.. image:: https://tawasta.fi/templates/tawastrap/images/logo.png
    :alt: Oy Tawasta OS Technologies Ltd.
-   :target: http://tawasta.fi/
+   :target: https://tawasta.fi/
 
 This module is maintained by Oy Tawasta OS Technologies Ltd.
 
