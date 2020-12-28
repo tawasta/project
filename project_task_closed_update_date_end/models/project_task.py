@@ -11,14 +11,14 @@ class ProjectTask(models.Model):
         if vals.get("stage_id"):
             vals.update(self.update_date_end(vals["stage_id"]))
 
-        return super().create(vals)
+        return super(ProjectTask, self).create(vals)
 
     @api.multi
     def write(self, vals):
         if vals.get("stage_id"):
             vals.update(self.update_date_end(vals["stage_id"]))
 
-        return super().write(vals)
+        return super(ProjectTask, self).write(vals)
 
     def update_date_end(self, stage_id):
         project_task_type = self.env["project.task.type"].browse(stage_id)
