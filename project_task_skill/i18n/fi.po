@@ -25,12 +25,12 @@ msgstr "Työntekijä"
 #: model:ir.model.fields,field_description:project_task_skill.field_hr_employee__skill_ids
 #: model:ir.model.fields,field_description:project_task_skill.field_project_task__employee_skill_ids
 msgid "Employee skills"
-msgstr ""
+msgstr "Työntekijän taidot"
 
 #. module: project_task_skill
 #: model:ir.model.fields,field_description:project_task_skill.field_project_task__skill_id
-msgid "Skill"
-msgstr "Taito"
+msgid "Required skill"
+msgstr "Vaadittu taito"
 
 #. module: project_task_skill
 #: model:ir.model,name:project_task_skill.model_project_task
