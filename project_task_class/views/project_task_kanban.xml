@@ -7,23 +7,17 @@
         <field name="inherit_id" ref="project.view_task_kanban"/>
         <field name="priority" eval="200"/>
         <field name="arch" type="xml">
-                
+
             <xpath expr="//div[@class='text-muted']" position="after">
-                <t t-if="record.task_type.raw_value">
-                    <br></br>
-                    <span t-if="record.task_type.raw_value">
-                        <field name="task_type"/>
-                    </span>
-                </t>
                 <t t-if="record.hour_type.raw_value">
                     <br></br>
-                    <span> 
+                    <span>
                         <field name="hour_type"/>
                     </span>
                 </t>
                 <t t-if="record.skills.raw_value">
                     <br></br>
-                    <span> 
+                    <span>
                         <field name="skills"/>
                     </span>
                 </t>

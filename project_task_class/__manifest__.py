@@ -22,10 +22,10 @@
 {
     'name': 'Project and task types and skills',
     'summary': 'Adds types for tasks and projects and skills for tasks',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.1.0',
     'category': 'Project Management',
     'website': 'https://github.com/Tawasta/project',
-    'author': 'Oy Tawasta Technologies Ltd.',
+    'author': 'Tawasta',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
@@ -37,16 +37,10 @@
     'data': [
         'security/ir.model.access.csv',
 
-        'views/project_form.xml',
-        'views/project_kanban.xml',
-        'views/project_search.xml',
-
         'views/project_task_class.xml',
         'views/project_task_form.xml',
         'views/project_task_kanban.xml',
         'views/project_task_search.xml',
 
-        'views/project_tree.xml',
-        'views/project_type.xml',
     ]
 }

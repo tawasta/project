@@ -5,11 +5,9 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_form2" />
         <field name="arch" type="xml">
-                
+
             <field name="tag_ids" position="after">
-                <field name="task_type" options='{"no_open": true, "no_create": true}'/>
                 <field name="hour_type" options='{"no_open": true, "no_create": true}'/>
-                <field name="skills" options='{"no_open": true, "no_create": true}'/>
             </field>
 
             <!-- Hide project categories -->
@@ -18,5 +16,5 @@
             </field>
 
         </field>
-    </record> 
+    </record>
 </odoo>
