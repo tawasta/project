@@ -6,7 +6,7 @@ from odoo import models
 class ProjectTask(models.Model):
     _inherit = "project.task"
 
-    skill_id = fields.Many2one(string="Skill", comodel_name="hr.skill")
+    skill_id = fields.Many2one(string="Required skill", comodel_name="hr.skill")
 
     employee_skill_ids = fields.Many2many(
         comodel_name="hr.skill",
