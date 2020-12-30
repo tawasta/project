@@ -11,7 +11,7 @@ class ProjectTask(models.Model):
     employee_skill_ids = fields.Many2many(
         comodel_name="hr.skill",
         string="Employee skills",
-        related="employee_id.skill_ids",
+        compute="_compute_employee_skill_ids",
     )
 
     @api.onchange("skill_id")
@@ -21,3 +21,9 @@ class ProjectTask(models.Model):
             domain.append(("skill_ids", "=", self.skill_id.id))
 
         return {"domain": {"employee_id": domain}}
+
+    def _compute_employee_skill_ids(self):
+        for record in self:
+            if not record.employee_id:
+                continue
+            record.employee_skill_ids = record.employee_id.skill_ids
