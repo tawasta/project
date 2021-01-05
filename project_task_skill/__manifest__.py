@@ -21,7 +21,7 @@
 {
     "name": "HR Skills on project tasks",
     "summary": "Allow defining required skills for task",
-    "version": "12.0.1.1.0",
+    "version": "12.0.1.1.1",
     "category": "Project Management",
     "website": "https://github.com/Tawasta/project",
     "author": "Tawasta",

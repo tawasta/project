@@ -8,7 +8,7 @@
 
             <field name="user_id" position="before">
                 <field name="skill_id" />
-                <field name="employee_skill_ids" widget="many2many_tags" />
+                <!--<field name="employee_skill_ids" widget="many2many_tags" />-->
             </field>
 
         </field>

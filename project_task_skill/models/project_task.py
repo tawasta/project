@@ -20,6 +20,8 @@ class ProjectTask(models.Model):
         if self.skill_id:
             domain.append(("skill_ids", "=", self.skill_id.id))
 
+        return
+
         return {"domain": {"employee_id": domain}}
 
     def _compute_employee_skill_ids(self):
