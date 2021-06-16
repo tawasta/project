@@ -1,57 +1,75 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* project_notes
+#	* project_notes
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-27 08:03+0000\n"
-"PO-Revision-Date: 2016-04-27 11:03+0300\n"
+"POT-Creation-Date: 2021-06-16 07:19+0000\n"
+"PO-Revision-Date: 2021-06-16 07:19+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"Language: fi\n"
-"X-Generator: Poedit 1.8.7.1\n"
 
 #. module: project_notes
-#: view:project.project:project_notes.project_project_form_inherit
-msgid "Add a description..."
-msgstr "Lisää kuvaus..."
+#: model:ir.model.fields,field_description:project_notes.field_project_project_note__create_uid
+#: model:ir.model.fields,field_description:project_notes.field_project_task_note__create_uid
+msgid "Created by"
+msgstr "Luonut"
 
 #. module: project_notes
-#: view:project.project:project_notes.project_project_form_inherit
-#: field:project.project,description:0
-msgid "Description"
-msgstr "Kuvaus"
+#: model:ir.model.fields,field_description:project_notes.field_project_project_note__create_date
+#: model:ir.model.fields,field_description:project_notes.field_project_task_note__create_date
+msgid "Created on"
+msgstr "Luotu"
 
 #. module: project_notes
-#: field:project.project.note,display_name:0
-#: field:project.task.note,display_name:0
+#: model:ir.model.fields,field_description:project_notes.field_project_project_note__display_name
+#: model:ir.model.fields,field_description:project_notes.field_project_task_note__display_name
 msgid "Display Name"
 msgstr "Näyttönimi"
 
 #. module: project_notes
-#: field:project.task.note,done:0
+#: model:ir.model.fields,field_description:project_notes.field_project_task_note__done
 msgid "Done"
 msgstr "Valmis"
 
 #. module: project_notes
-#: help:project.task.note,done:0
-msgid "Informative tag for the note. Has no functionality"
-msgstr "Informatiivinen tunniste muistiinpanolle. Ei sisällä toiminnallisuutta"
+#: model:ir.model.fields,field_description:project_notes.field_project_project_note__id
+#: model:ir.model.fields,field_description:project_notes.field_project_task_note__id
+msgid "ID"
+msgstr "Tunniste (ID)"
 
 #. module: project_notes
-#: field:project.project.note,__last_update:0
-#: field:project.task.note,__last_update:0
+#: model:ir.model.fields,help:project_notes.field_project_task_note__done
+msgid "Informative tag for the note. Has no functionality"
+msgstr "Informatiivinen tunniste. Ei sisällä tominnallisuutta"
+
+#. module: project_notes
+#: model:ir.model.fields,field_description:project_notes.field_project_project_note____last_update
+#: model:ir.model.fields,field_description:project_notes.field_project_task_note____last_update
 msgid "Last Modified on"
 msgstr "Viimeksi muokattu"
 
 #. module: project_notes
-#: field:project.project.note,note:0 field:project.task.note,note:0
+#: model:ir.model.fields,field_description:project_notes.field_project_project_note__write_uid
+#: model:ir.model.fields,field_description:project_notes.field_project_task_note__write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: project_notes
+#: model:ir.model.fields,field_description:project_notes.field_project_project_note__write_date
+#: model:ir.model.fields,field_description:project_notes.field_project_task_note__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: project_notes
+#: model:ir.model.fields,field_description:project_notes.field_project_project_note__note
+#: model:ir.model.fields,field_description:project_notes.field_project_task_note__note
 msgid "Note"
 msgstr "Muistiinpano"
 
@@ -62,40 +80,47 @@ msgstr "Muistiinpanot"
 
 #. module: project_notes
 #: model:ir.model,name:project_notes.model_project_project
-#: field:project.project.note,project_id:0
+#: model:ir.model.fields,field_description:project_notes.field_project_project_note__project_id
 msgid "Project"
-msgstr "Projekti"
+msgstr "Projektit"
 
 #. module: project_notes
 #: model:ir.actions.act_window,name:project_notes.action_project_notes
+#: model:ir.model.fields,field_description:project_notes.field_project_project__note_ids
 #: model:ir.ui.menu,name:project_notes.menu_project_note
-#: field:project.project,note_ids:0
-#: view:project.project.note:project_notes.project_project_note_form
-#: view:project.project.note:project_notes.project_project_note_tree
+#: model_terms:ir.ui.view,arch_db:project_notes.project_project_note_form
+#: model_terms:ir.ui.view,arch_db:project_notes.project_project_note_tree
 msgid "Project notes"
 msgstr "Projektin muistiinpanot"
 
 #. module: project_notes
 #: model:ir.model,name:project_notes.model_project_task
-#: field:project.task.note,task_id:0
+#: model:ir.model.fields,field_description:project_notes.field_project_task_note__task_id
 msgid "Task"
 msgstr "Tehtävä"
 
 #. module: project_notes
 #: model:ir.actions.act_window,name:project_notes.action_task_notes
+#: model:ir.model.fields,field_description:project_notes.field_project_task__note_ids
 #: model:ir.ui.menu,name:project_notes.menu_task_note
-#: field:project.task,note_ids:0
-#: view:project.task.note:project_notes.project_task_note_form
-#: view:project.task.note:project_notes.project_task_note_tree
+#: model_terms:ir.ui.view,arch_db:project_notes.project_task_note_form
+#: model_terms:ir.ui.view,arch_db:project_notes.project_task_note_tree
 msgid "Task notes"
 msgstr "Tehtävän muistiinpanot"
 
 #. module: project_notes
-#: view:project.project:project_notes.project_project_form_inherit
-msgid "Team"
-msgstr "Tiimi"
+#: model:ir.model.fields,field_description:project_notes.field_project_project_note__name
+#: model:ir.model.fields,field_description:project_notes.field_project_task_note__name
+msgid "Title"
+msgstr "Titteli"
 
 #. module: project_notes
-#: field:project.project.note,name:0 field:project.task.note,name:0
-msgid "Title"
-msgstr "Otsikko"
+#: model:ir.model,name:project_notes.model_project_project_note
+msgid "project.project.note"
+msgstr "project.project.note"
+
+#. module: project_notes
+#: model:ir.model,name:project_notes.model_project_task_note
+msgid "project.task.note"
+msgstr "project.task.note"
+
