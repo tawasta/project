@@ -20,24 +20,22 @@
 ##############################################################################
 
 {
-    'name': 'Project Notes',
-    'summary': 'Adds notes for project and task ',
-    'version': '1.0.0',
-    'category': 'Project Management',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'depends': [
-        'project'
+    "name": "Project Notes",
+    "summary": "Adds notes for project and task",
+    "version": "12.0.1.0.0",
+    "category": "Project Management",
+    "website": "https://tawasta.fi",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "depends": ["project"],
+    "data": [
+        "views/project_form.xml",
+        "views/project_note.xml",
+        "views/project_note_menu.xml",
+        "views/task_form.xml",
+        "views/task_note.xml",
+        "security/ir.model.access.csv",
     ],
-    'data': [
-        'views/project_form.xml',
-        'views/project_note.xml',
-        'views/project_note_menu.xml',
-        'views/task_form.xml',
-        'views/task_note.xml',
-        'security/ir.model.access.csv'
-    ],
-    'installable': True,
-    'auto-install': False,
+    "installable": True,
+    "auto-install": False,
 }

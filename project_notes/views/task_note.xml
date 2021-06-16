@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<openerp>
-    <data>
-         <!-- Note form view -->
-        <record id="project_task_note_form" model="ir.ui.view">
-            <field name="name">project.task.note.form</field>
-            <field name="model">project.task.note</field>
-            <field name="arch" type="xml">
-                <form string='Task notes'>
+<odoo>
+     <!-- Note form view -->
+    <record id="project_task_note_form" model="ir.ui.view">
+        <field name="name">project.task.note.form</field>
+        <field name="model">project.task.note</field>
+        <field name="arch" type="xml">
+            <form string='Task notes'>
+                <sheet>
                     <group>
                         <field name='name' />
                         <field name='note' />
@@ -15,24 +14,23 @@
                         <field name='create_uid' readonly='1' />
                         <field name='done' />
                     </group>
-                </form>
-            </field>
-        </record>
-    
-        <!-- Note tree view -->
-        <record id="project_task_note_tree" model="ir.ui.view">
-            <field name="name">project.task.note.tree</field>
-            <field name="model">project.task.note</field>
-            <field name="arch" type="xml">
-                <tree string='Task notes' editable="top/bottom">
-                    <field name='name' />
-                    <field name='note' />
-                    <field name='create_date' readonly='1' invisible="1" />
-                    <field name='create_uid' readonly='1' />
-                    <field name='done' />
-                </tree>
-            </field>
-        </record>
-        
-    </data>
-</openerp>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Note tree view -->
+    <record id="project_task_note_tree" model="ir.ui.view">
+        <field name="name">project.task.note.tree</field>
+        <field name="model">project.task.note</field>
+        <field name="arch" type="xml">
+            <tree string='Task notes' editable="top">
+                <field name='name' />
+                <field name='note' />
+                <field name='create_date' readonly='1' invisible="1" />
+                <field name='create_uid' readonly='1' />
+                <field name='done' widget="boolean_toggle" />
+            </tree>
+        </field>
+    </record>
+</odoo>
