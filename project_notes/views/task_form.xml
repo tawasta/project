@@ -1,25 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<openerp>
-    <data>
-    
-        <record id="view_task_form_inherited" model="ir.ui.view">
-            <field name="name">project.task.inherited</field>
-            <field name="model">project.task</field>
-            <field name="inherit_id" ref="project.view_task_form2"/>
-            <field name="arch" type="xml">
-                
-                <field name='project_id' position='attributes'>
-                    <attribute name='required'>1</attribute>
-                </field>
-                
-                <field name='description' position='after'>
-                    <label for='note_ids' />
-                    <field name='note_ids' />
-                </field>
-                
-            </field>
-        </record>
-    
-    </data>
-</openerp>
+<odoo>
 
+    <record id="view_task_form_inherited" model="ir.ui.view">
+        <field name="name">project.task.inherited</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+
+            <field name='project_id' position='attributes'>
+                <attribute name='required'>1</attribute>
+            </field>
+
+            <field name='description' position='after'>
+                <label for='note_ids' />
+                <field name='note_ids' />
+            </field>
+
+        </field>
+    </record>
+
+</odoo>
