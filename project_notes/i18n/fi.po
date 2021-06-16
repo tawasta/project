@@ -112,7 +112,7 @@ msgstr "Tehtävän muistiinpanot"
 #: model:ir.model.fields,field_description:project_notes.field_project_project_note__name
 #: model:ir.model.fields,field_description:project_notes.field_project_task_note__name
 msgid "Title"
-msgstr "Titteli"
+msgstr "Otsikko"
 
 #. module: project_notes
 #: model:ir.model,name:project_notes.model_project_project_note
