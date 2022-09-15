@@ -1,0 +1,130 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_task_opportunity
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20220425\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-07-20 13:59+0000\n"
+"PO-Revision-Date: 2022-07-20 13:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_task_opportunity
+#: model_terms:ir.ui.view,arch_db:project_task_opportunity.task_to_opportunity_view_form
+msgid "Cancel"
+msgstr "Peru"
+
+#. module: project_task_opportunity
+#: model:ir.actions.act_window,name:project_task_opportunity.act_task_to_opportunity
+#: model_terms:ir.ui.view,arch_db:project_task_opportunity.task_to_opportunity_view_form
+msgid "Create an Opportunity"
+msgstr "Luo mahdollisuus"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_task_to_opportunity__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_task_to_opportunity__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_task_to_opportunity__description
+msgid "Description"
+msgstr "Kuvaus"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_crm_lead__display_name
+#: model:ir.model.fields,field_description:project_task_opportunity.field_project_task__display_name
+#: model:ir.model.fields,field_description:project_task_opportunity.field_task_to_opportunity__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_crm_lead__id
+#: model:ir.model.fields,field_description:project_task_opportunity.field_project_task__id
+#: model:ir.model.fields,field_description:project_task_opportunity.field_task_to_opportunity__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_crm_lead____last_update
+#: model:ir.model.fields,field_description:project_task_opportunity.field_project_task____last_update
+#: model:ir.model.fields,field_description:project_task_opportunity.field_task_to_opportunity____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_task_to_opportunity__write_uid
+msgid "Last Updated by"
+msgstr "Päivittänyt"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_task_to_opportunity__write_date
+msgid "Last Updated on"
+msgstr "Päivitetty"
+
+#. module: project_task_opportunity
+#: model:ir.model,name:project_task_opportunity.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Liidi/mahdollisuus"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_task_to_opportunity__name
+msgid "Name"
+msgstr "Nimi"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_project_task__lead_ids
+msgid "Opportunities"
+msgstr "Mahdollisuudet"
+
+#. module: project_task_opportunity
+#: code:addons/project_task_opportunity/wizards/task_to_opportunity.py:0
+#, python-format
+msgid "Opportunity created"
+msgstr "Mahdollisuus luotu"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,help:project_task_opportunity.field_task_to_opportunity__description
+msgid "Opportunity's description in plain text"
+msgstr "Mahdollisuuden kuvaus ilman muotoiluja"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,help:project_task_opportunity.field_task_to_opportunity__name
+msgid "Opportunity's name"
+msgstr "Mahdollisuuden nimi"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_task_to_opportunity__partner_id
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,help:project_task_opportunity.field_task_to_opportunity__partner_id
+msgid "Related partner to this opportunity"
+msgstr "Tähän mahdollisuuteen liittyvä kumppani"
+
+#. module: project_task_opportunity
+#: model:ir.model.fields,field_description:project_task_opportunity.field_task_to_opportunity__user_id
+msgid "Salesperson"
+msgstr "Myyjä"
+
+#. module: project_task_opportunity
+#: model:ir.model,name:project_task_opportunity.model_project_task
+#: model:ir.model.fields,field_description:project_task_opportunity.field_crm_lead__task_id
+msgid "Task"
+msgstr "Tehtävä"
+
+#. module: project_task_opportunity
+#: model:ir.model,name:project_task_opportunity.model_task_to_opportunity
+msgid "task.to.opportunity"
+msgstr "task.to.opportunity"
