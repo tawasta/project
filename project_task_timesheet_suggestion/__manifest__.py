@@ -28,6 +28,7 @@
     "license": "AGPL-3",
     "depends": [
         "project",
+        "hr_timesheet",
     ],
     "data": ["views/project_task.xml"],
     "demo": [],
