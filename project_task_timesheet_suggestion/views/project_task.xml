@@ -6,8 +6,8 @@
         <field name="inherit_id" ref="hr_timesheet.view_task_form2_inherited" />
         <field name="arch" type="xml">
             <field name="project_id" position="after">
-                <field name="timesheet_suggested_message" invisible="0" />
-                <field name="timesheet_suggested_duration" invisible="0" />
+                <field name="timesheet_suggested_message" invisible="1" />
+                <field name="timesheet_suggested_duration" invisible="1" />
             </field>
             <field name="timesheet_ids" position="attributes">
                 <attribute name="context">{
