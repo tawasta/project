@@ -22,7 +22,7 @@
     "version": "14.0.1.0.0",
     "category": "Project Management",
     "summary": "Improved project milestone views",
-    "website": "https://gitlab.com/tawasta/odoo",
+    "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
