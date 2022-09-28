@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="view_task_enhancement_milestone_tree_improvement">
+        <field name="name">project.task.enhancement.milestone.tree.improvement</field>
+        <field name="model">project.task</field>
+        <field
+            name="inherit_id"
+            ref="project_milestone.view_task_enhancement_milestone_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="milestone_id" position="attributes">
+                <attribute name="invisible" />
+                <attribute name="optional">show</attribute>
+            </field>
+        </field>
+    </record>
+    <record
+        model="ir.ui.view"
+        id="view_task_enhancement_search_milestone_form_improvement"
+    >
+        <field
+            name="name"
+        >project.task.enhancement.milestone.search.form.improvement</field>
+        <field name="model">project.task</field>
+        <field
+            name="inherit_id"
+            ref="project_milestone.view_task_enhancement_search_milestone_form"
+        />
+        <field name="arch" type="xml">
+            <field name="stage_id" position="after">
+                <field name="milestone_id" />
+            </field>
+        </field>
+    </record>
+</odoo>

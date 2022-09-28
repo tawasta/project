@@ -11,6 +11,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [project_kanban_disable_quick_create](project_kanban_disable_quick_create/) | 14.0.1.0.0 |  | Disable quick create from task kanban
+[project_milestone_view_improvements](project_milestone_view_improvements/) | 14.0.1.0.0 |  | Improved project milestone views
 [project_task_auto_assign](project_task_auto_assign/) | 14.0.1.0.0 |  | Assign unassigned task when stage is changed
 [project_task_billing_enabled](project_task_billing_enabled/) | 14.0.1.0.0 |  | Billing enabled boolean field for project task
 [project_task_opportunity](project_task_opportunity/) | 14.0.1.0.0 |  | Create an opportunity from a task
