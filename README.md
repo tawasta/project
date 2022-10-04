@@ -15,6 +15,7 @@ addon | version | maintainers | summary
 [project_task_auto_assign](project_task_auto_assign/) | 14.0.1.0.0 |  | Assign unassigned task when stage is changed
 [project_task_billing_enabled](project_task_billing_enabled/) | 14.0.1.0.0 |  | Billing enabled boolean field for project task
 [project_task_opportunity](project_task_opportunity/) | 14.0.1.0.0 |  | Create an opportunity from a task
+[project_task_planned_hours_to_header](project_task_planned_hours_to_header/) | 14.0.1.0.0 |  | Move planned hours to project task header
 [project_task_timesheet_suggestion](project_task_timesheet_suggestion/) | 14.0.1.0.1 |  | Suggest a timesheet description based on the task
 
 [//]: # (end addons)
