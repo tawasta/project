@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_task_form2_notes" model="ir.ui.view">
+        <field name="name">project.task.form.notes</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <field name="description" position="after">
+                <label for="task_note_ids" class="col-form-label">Task Notes</label>
+                <field name="task_note_ids">
+                    <tree string="Task Notes" editable="bottom">
+                        <field name="title" />
+                        <field name="description" />
+                        <field name="user_id" />
+                        <field name="done" />
+                    </tree>
+                </field>
+            </field>
+        </field>
+    </record>
+</odoo>
