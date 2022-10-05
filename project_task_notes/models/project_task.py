@@ -61,7 +61,7 @@ class ProjectTaskNote(models.Model):
 
     # 2. Fields declaration
     title = fields.Char(required=True)
-    description = fields.Char()
+    description = fields.Html()
     done = fields.Boolean()
     user_id = fields.Many2one(
         "res.users",
