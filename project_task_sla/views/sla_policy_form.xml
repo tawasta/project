@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!-- SLA Policy Form View -->
+    <record model="ir.ui.view" id="sla_policy_form_view">
+        <field name="name">sla.policy.form.view</field>
+        <field name="model">sla.policy</field>
+        <field name="arch" type="xml">
+            <form string="SLA Policy">
+                <div class="oe_button_box" name="button_box">
+
+                </div>
+                <header>
+
+                </header>
+                <sheet string="Form">
+                    <div class="oe_title">
+                        <div class="oe_edit_only">
+                            <label for="name" />
+                        </div>
+                        <h1>
+                            <field name="name" required="1" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group id="left-panel">
+                            <field name="sequence" />
+                        </group>
+                        <group id="right-panel">
+                        </group>
+                    </group>
+
+                    <label for="description" />
+                    <field name="description" nolabel="1" />
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

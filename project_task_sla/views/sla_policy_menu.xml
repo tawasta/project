@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!-- SLA Policy Actions and Menu items -->
+
+    <record id="open_view_sla_policy_config" model="ir.actions.act_window">
+        <field name="name">SLA Policies</field>
+        <field name="res_model">sla.policy</field>
+        <field name="domain">[]</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{}</field>
+    </record>
+
+    <menuitem action="open_view_sla_policy_config" id="menu_sla_policy_config" name="SLA Policies" parent="project.menu_project_config" sequence="12"/>
+</odoo>

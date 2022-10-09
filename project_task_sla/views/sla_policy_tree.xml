@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!-- SLA Policy Tree View -->
+    <record model="ir.ui.view" id="sla_policy_tree_view">
+        <field name="name">sla.policy.tree.view</field>
+        <field name="model">sla.policy</field>
+        <field name="arch" type="xml">
+            <tree string="SLA Policy">
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="description" optional="show" />
+            </tree>
+        </field>
+    </record>
+</odoo>
