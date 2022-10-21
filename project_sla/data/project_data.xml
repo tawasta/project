@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="sla_critical" model="project.sla">
+        <field name="name">SLA 1 (Critical)</field>
+        <field name="code">1</field>
+        <field name="color">1</field>
+    </record>
+    <record id="sla_average" model="project.sla">
+        <field name="name">SLA 2 (Average)</field>
+        <field name="code">2</field>
+        <field name="color">2</field>
+    </record>
+    <record id="sla_low" model="project.sla">
+        <field name="name">SLA 3 (Low)</field>
+        <field name="code">3</field>
+        <field name="color">3</field>
+    </record>
+    <record id="sla_development" model="project.sla">
+        <field name="name">SLA 4 (Development)</field>
+        <field name="code">4</field>
+        <field name="color">10</field>
+    </record>
+</odoo>
