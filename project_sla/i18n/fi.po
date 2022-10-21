@@ -123,7 +123,7 @@ msgstr "Palvelutasosopimukset"
 msgid ""
 "Service-level agreements are a great way to define your tasks service level."
 msgstr ""
-"Palvelutasosopimukset ovat loistava tapa määritellä tehtävien palvelutaso."
+"Palvelutasosopimukset ovat loistava tapa määritellä tehtäviesi palvelutaso."
 
 #. module: project_sla
 #: model:ir.model,name:project_sla.model_project_task
