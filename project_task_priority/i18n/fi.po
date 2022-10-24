@@ -1,0 +1,68 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_task_priority
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20221005\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-24 14:17+0000\n"
+"PO-Revision-Date: 2022-10-24 14:17+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_task_priority
+#: model:ir.model.fields,field_description:project_task_priority.field_project_task__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: project_task_priority
+#: model:ir.model.fields,field_description:project_task_priority.field_project_task__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: project_task_priority
+#: model:ir.model.fields.selection,name:project_task_priority.selection__project_task__priority__3
+msgid "Immediate"
+msgstr "Välitön"
+
+#. module: project_task_priority
+#: model:ir.model.fields,field_description:project_task_priority.field_project_task____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: project_task_priority
+#: model:ir.model.fields,field_description:project_task_priority.field_project_task__priority
+msgid "Priority"
+msgstr "Prioriteetti"
+
+#. module: project_task_priority
+#: model:ir.model,name:project_task_priority.model_project_task
+msgid "Task"
+msgstr "Tehtävä"
+
+#. module: project_task_priority
+#: model:ir.model.fields,help:project_task_priority.field_project_task__priority
+msgid ""
+"Task priority is calculated from task scope and service-level agreement."
+msgstr ""
+"Tehtävän prioriteetti lasketaan tehtävän laajuudesta ja palvelutasosopimuksesta."
+
+#. module: project_task_priority
+#: model:ir.model.fields.selection,name:project_task_priority.selection__project_task__priority__0
+msgid "Unspecified"
+msgstr "Määrittelemättä"
+
+#. module: project_task_priority
+#: model:ir.model.fields.selection,name:project_task_priority.selection__project_task__priority__1
+msgid "Urgent"
+msgstr "Kiireellinen"
+
+#. module: project_task_priority
+#: model:ir.model.fields.selection,name:project_task_priority.selection__project_task__priority__2
+msgid "Very Urgent"
+msgstr "Erittäin kiireellinen"

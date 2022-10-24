@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+    <record id="scope_to_be_defined" model="project.scope">
+        <field name="name">To be defined</field>
+        <field name="value">1</field>
+        <field name="color">9</field>
+    </record>
+    <record id="scope_difficult" model="project.scope">
+        <field name="name">Difficult</field>
+        <field name="value">2</field>
+        <field name="color">1</field>
+    </record>
+    <record id="scope_medium" model="project.scope">
+        <field name="name">Medium</field>
+        <field name="value">3</field>
+        <field name="color">3</field>
+    </record>
+    <record id="scop_easy" model="project.scope">
+        <field name="name">Easy</field>
+        <field name="value">4</field>
+        <field name="color">10</field>
+    </record>
+</odoo>
