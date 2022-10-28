@@ -1,0 +1,49 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_project_task_commercial_partner
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20221025\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-28 15:56+0000\n"
+"PO-Revision-Date: 2022-10-28 15:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_project_task_commercial_partner
+#: model:ir.model.fields,field_description:partner_project_task_commercial_partner.field_project_task__commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Kaupallinen yksikkö"
+
+#. module: partner_project_task_commercial_partner
+#: model:ir.model,name:partner_project_task_commercial_partner.model_res_partner
+msgid "Contact"
+msgstr "Kontakti"
+
+#. module: partner_project_task_commercial_partner
+#: model:ir.model.fields,field_description:partner_project_task_commercial_partner.field_project_task__display_name
+#: model:ir.model.fields,field_description:partner_project_task_commercial_partner.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: partner_project_task_commercial_partner
+#: model:ir.model.fields,field_description:partner_project_task_commercial_partner.field_project_task__id
+#: model:ir.model.fields,field_description:partner_project_task_commercial_partner.field_res_partner__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: partner_project_task_commercial_partner
+#: model:ir.model.fields,field_description:partner_project_task_commercial_partner.field_project_task____last_update
+#: model:ir.model.fields,field_description:partner_project_task_commercial_partner.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: partner_project_task_commercial_partner
+#: model:ir.model,name:partner_project_task_commercial_partner.model_project_task
+msgid "Task"
+msgstr "Tehtävä"
