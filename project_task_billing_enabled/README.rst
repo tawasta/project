@@ -6,6 +6,8 @@
 Project Task Billing Enabled
 ============================
 * Adds billing enabled boolean field for project task
+* Adds order number for project task
+* Adds invoicing date for project task
 
 Configuration
 =============
@@ -26,6 +28,7 @@ Contributors
 ------------
 
 * Miika Nissi <miika.nissi@tawasta.fi>
+* Aleksi Savijoki <aleksi.savijoki@tawasta.fi>
 
 Maintainer
 ----------

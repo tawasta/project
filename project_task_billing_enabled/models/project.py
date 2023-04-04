@@ -40,6 +40,14 @@ class Task(models.Model):
     billing_enabled = fields.Boolean(
         "Billing", help="Enable this field if task is billable."
     )
+    sale_order_ref = fields.Char(
+        string="Sale order ref",
+        help="Sale order reference this task is related to",
+    )
+    invoice_date = fields.Date(
+        string="Invoice date",
+        help="Date this task was invoiced from customer",
+    )
 
     # 3. Default methods
 

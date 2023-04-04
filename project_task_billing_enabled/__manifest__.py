@@ -19,7 +19,7 @@
 ##############################################################################
 {
     "name": "Project Task Billing Enabled",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "category": "Project",
     "summary": "Billing enabled boolean field for project task",
     "website": "https://gitlab.com/tawasta/odoo/project",
