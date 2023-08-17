@@ -23,9 +23,11 @@ class ProjectTask(models.Model):
         Compute suggested message to timesheet record
         """
         for rec in self:
-            partner_name = rec.commercial_partner_id.name or ""
-            msg = "{}, {}: ".format(rec.display_name, partner_name)
-            rec.timesheet_suggested_message = msg
+            # Automated "task name, partner name" is disabled as obsolete
+            # partner_name = rec.commercial_partner_id.name or ""
+            # msg = "{}, {}: ".format(rec.display_name, partner_name)
+            # rec.timesheet_suggested_message = msg
+            rec.timesheet_suggested_message = False
 
     def _compute_timesheet_suggested_duration(self):
         """
