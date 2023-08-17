@@ -21,7 +21,7 @@
 {
     "name": "Task timesheet suggestion",
     "summary": "Suggest a timesheet description based on the task",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "category": "Project",
     "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",

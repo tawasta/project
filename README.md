@@ -21,6 +21,6 @@ addon | version | maintainers | summary
 [project_task_priority](project_task_priority/) | 14.0.1.0.0 |  | Compute project task priorities based on scope and SLA
 [project_task_scope](project_task_scope/) | 14.0.1.0.0 |  | Define scopes on project tasks
 [project_task_sla](project_task_sla/) | 14.0.1.0.0 |  | Define SLA levels on project tasks
-[project_task_timesheet_suggestion](project_task_timesheet_suggestion/) | 14.0.1.0.1 |  | Suggest a timesheet description based on the task
+[project_task_timesheet_suggestion](project_task_timesheet_suggestion/) | 14.0.1.0.2 |  | Suggest a timesheet description based on the task
 
 [//]: # (end addons)
