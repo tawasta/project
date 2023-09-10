@@ -14,6 +14,7 @@ addon | version | maintainers | summary
 [project_kanban_disable_quick_create](project_kanban_disable_quick_create/) | 14.0.1.0.0 |  | Disable quick create from task kanban
 [project_milestone_view_improvements](project_milestone_view_improvements/) | 14.0.1.0.0 |  | Improved project milestone views
 [project_task_auto_assign](project_task_auto_assign/) | 14.0.1.0.0 |  | Assign unassigned task when stage is changed
+[project_task_auto_color](project_task_auto_color/) | 14.0.1.0.0 |  | Set task colors automatically, base on rules
 [project_task_billing_enabled](project_task_billing_enabled/) | 14.0.1.1.0 |  | Billing enabled boolean field for project task
 [project_task_notes](project_task_notes/) | 14.0.1.0.1 |  | Add Task Notes to project task
 [project_task_opportunity](project_task_opportunity/) | 14.0.1.0.0 |  | Create an opportunity from a task
