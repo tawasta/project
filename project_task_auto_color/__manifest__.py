@@ -21,7 +21,7 @@
 {
     "name": "Automatic color coding for project tasks",
     "summary": "Set task colors automatically, based on rules",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "category": "Project",
     "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",
@@ -29,7 +29,10 @@
     "depends": [
         "project",
     ],
-    "data": ["views/project_project.xml"],
+    "data": [
+        "data/ir_cron.xml",
+        "views/project_project.xml",
+    ],
     "demo": [],
     "application": False,
     "installable": True,

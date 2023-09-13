@@ -13,6 +13,53 @@
                     class=""
                 />
             </xpath>
+
+            <xpath expr="//div[@name='options_active']" position="inside">
+                <div>
+                    <field name="task_autocolor" class="oe_inline" />
+                    <label for="task_autocolor" />
+                </div>
+            </xpath>
+
+            <xpath expr="//page[@name='settings']" position="after">
+                <page
+                    name="task_autocolor"
+                    string="Task colors"
+                    attrs="{'invisible':[('task_autocolor','=', False)]}"
+                >
+                    <group>
+                        <group>
+                            <field name="task_autocolor_days_fresh" />
+                            <field
+                                name="task_autocolor_color_fresh"
+                                widget="color_picker"
+                            />
+
+                            <field name="task_autocolor_days_recent" />
+                            <field
+                                name="task_autocolor_color_recent"
+                                widget="color_picker"
+                            />
+
+                            <field name="task_autocolor_days_aged" />
+                            <field
+                                name="task_autocolor_color_aged"
+                                widget="color_picker"
+                            />
+
+                            <field
+                                name="task_autocolor_color_stale"
+                                widget="color_picker"
+                            />
+                        </group>
+
+                        <group>
+
+                        </group>
+                    </group>
+
+                </page>
+            </xpath>
         </field>
     </record>
 </odoo>

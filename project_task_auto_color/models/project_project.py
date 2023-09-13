@@ -5,30 +5,40 @@ class Project(models.Model):
 
     _inherit = "project.project"
 
+    def action_cron_compute_task_colors(self):
+        projects = self.search([("task_autocolor", "=", True)])
+        projects.action_compute_task_colors()
+
     def action_compute_task_colors(self):
         for record in self:
-            record._compute_task_colors()
+            if record.task_autocolor:
+                record.task_ids._compute_task_color()
 
-    def _compute_task_colors(self):
-        self.ensure_one()
-        for task in self.task_ids:
-            if not task.message_ids:
-                # There shouldn't really be any cases where task has no messages,
-                # but check it just in case
-                continue
-            latest_message = task.message_ids[0]
-            latest_message_age = fields.Datetime.now() - latest_message.date
-            latest_message_age_days = latest_message_age.days
+    task_autocolor = fields.Boolean(
+        "Auto-color tasks",
+        help="Set automatic colors for tasks, based on rules",
+        default=False,
+    )
 
-            if latest_message_age_days <= 1:
-                # Freshly updated tasks
-                task.color = 10
-            elif latest_message_age_days <= 7:
-                # Tasks updated in the last week
-                task.color = 3
-            elif latest_message_age_days <= 14:
-                # Tasks updated in the last two weeks
-                task.color = 2
-            else:
-                # Task hasn't been updated in two weeks
-                task.color = 1
+    task_autocolor_color_fresh = fields.Integer(
+        "Color for freshly updated tasks", default=10
+    )
+    task_autocolor_days_fresh = fields.Integer(
+        "Max days to consider a task fresh", default=1
+    )
+
+    task_autocolor_color_recent = fields.Integer(
+        "Color for recently updated tasks", default=3
+    )
+    task_autocolor_days_recent = fields.Integer(
+        "Max days to consider a task recent", default=7
+    )
+
+    task_autocolor_color_aged = fields.Integer(string="Color for aged tasks", default=2)
+    task_autocolor_days_aged = fields.Integer(
+        "Max days to consider a task recent", default=14
+    )
+
+    task_autocolor_color_stale = fields.Integer(
+        string="Color for stale tasks", default=1
+    )
