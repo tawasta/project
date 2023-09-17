@@ -5,15 +5,6 @@
         <field name="model">project.project</field>
         <field name="inherit_id" ref="project.edit_project" />
         <field name="arch" type="xml">
-            <xpath expr="//header" position="inside">
-                <button
-                    name="action_compute_task_colors"
-                    string="Autocolor tasks"
-                    type="object"
-                    class=""
-                />
-            </xpath>
-
             <xpath expr="//div[@name='options_active']" position="inside">
                 <div>
                     <field name="task_autocolor" class="oe_inline" />
@@ -54,7 +45,12 @@
                         </group>
 
                         <group>
-
+                            <button
+                                name="action_compute_task_colors"
+                                string="Autocolor tasks"
+                                type="object"
+                                class="oe_highlight"
+                            />
                         </group>
                     </group>
 
