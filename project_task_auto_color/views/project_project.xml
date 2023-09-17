@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form.auto.color</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='options_active']" position="inside">
+                <div>
+                    <field name="task_autocolor" class="oe_inline" />
+                    <label for="task_autocolor" />
+                </div>
+            </xpath>
+
+            <xpath expr="//page[@name='settings']" position="after">
+                <page
+                    name="task_autocolor"
+                    string="Task colors"
+                    attrs="{'invisible':[('task_autocolor','=', False)]}"
+                >
+                    <group>
+                        <group>
+                            <field name="task_autocolor_days_fresh" />
+                            <field
+                                name="task_autocolor_color_fresh"
+                                widget="color_picker"
+                            />
+
+                            <field name="task_autocolor_days_recent" />
+                            <field
+                                name="task_autocolor_color_recent"
+                                widget="color_picker"
+                            />
+
+                            <field name="task_autocolor_days_aged" />
+                            <field
+                                name="task_autocolor_color_aged"
+                                widget="color_picker"
+                            />
+
+                            <field
+                                name="task_autocolor_color_stale"
+                                widget="color_picker"
+                            />
+                        </group>
+
+                        <group>
+                            <button
+                                name="action_compute_task_colors"
+                                string="Autocolor tasks"
+                                type="object"
+                                class="oe_highlight"
+                            />
+                        </group>
+                    </group>
+
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
