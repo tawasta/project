@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="project_project_view_form_simplified" model="ir.ui.view">
+        <field name="name">project.project.sequence.view.form.simplified</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+        <field name="arch" type="xml">
+
+            <field name="name" position="after">
+                <div class="">
+                    <field name="code_generated" invisible="1" />
+                </div>
+                <div>
+                    <button name="action_sequence_to_name"
+                            type="object"
+                            string="Generate code"
+                            class="oe_highlight oe_edit_only"
+                            attrs="{'invisible': ['|',('code_generated', '=', True),('name', '=', False)]}"
+                    />
+                </div>
+            </field>
+
+        </field>
+    </record>
+
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form.sequence</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+
+            <field name="name" position="after">
+                <div class="">
+                    <field name="code_generated" invisible="1" />
+                </div>
+                <div>
+                    <button name="action_sequence_to_name"
+                            type="object"
+                            string="Generate code"
+                            class="oe_highlight oe_edit_only"
+                            attrs="{'invisible': ['|',('code_generated', '=', True),('name', '=', False)]}"
+                    />
+                </div>
+            </field>
+
+        </field>
+    </record>
+
+</odoo>

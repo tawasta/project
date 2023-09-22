@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2023 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,21 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Automatic color coding for project tasks",
-    "summary": "Set task colors automatically, based on rules",
-    "version": "14.0.1.1.1",
-    "category": "Project",
-    "website": "https://gitlab.com/tawasta/odoo/project",
-    "author": "Tawasta",
-    "license": "AGPL-3",
-    "depends": [
-        "project",
-    ],
-    "data": [
-        "data/ir_cron.xml",
-        "views/project_project.xml",
-    ],
-    "demo": [],
-    "application": False,
-    "installable": True,
+    'name': 'Show analytic tags on projects',
+    'summary': 'Show analytic tags on projects',
+    'version': '14.0.1.0.0',
+    'category': 'Project Management',
+    'website': 'https://github.com/Tawasta/project',
+    'author': 'Tawasta',
+    'license': 'AGPL-3',
+    'application': False,
+    'installable': True,
+    'depends': ['project', "analytic"],
+    'data': [
+        'views/project_project.xml',
+    ]
 }

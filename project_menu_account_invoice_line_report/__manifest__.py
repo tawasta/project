@@ -1,7 +1,8 @@
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2023 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,21 +20,21 @@
 ##############################################################################
 
 {
-    "name": "Automatic color coding for project tasks",
-    "summary": "Set task colors automatically, based on rules",
-    "version": "14.0.1.1.1",
-    "category": "Project",
-    "website": "https://gitlab.com/tawasta/odoo/project",
-    "author": "Tawasta",
-    "license": "AGPL-3",
-    "depends": [
-        "project",
+    'name': 'Invoice Lines Report in Project Menu',
+    'summary': 'Adds the invoice lines report also to project reporting menu',
+    'category': 'Project',
+    'version': '14.0.0.0.0',
+    'website': 'http://www.tawasta.fi',
+    'author': 'Oy Tawasta Technologies Ltd.',
+    'license': 'AGPL-3',
+    'application': False,
+    'installable': True,
+    'depends': [
+        'account_invoice_line_report',
+        'project',
     ],
-    "data": [
-        "data/ir_cron.xml",
-        "views/project_project.xml",
+    'data': [
+        'security/ir.model.access.csv',
+        'views/project_menu.xml',
     ],
-    "demo": [],
-    "application": False,
-    "installable": True,
 }
