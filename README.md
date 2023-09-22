@@ -11,6 +11,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [partner_project_task_commercial_partner](partner_project_task_commercial_partner/) | 14.0.1.0.0 |  | Add commercial partner to tasks
+[project_analytic_account_auto_close](project_analytic_account_auto_close/) | 14.0.0.1.0 |  | Auto-close analytic account when closing project
 [project_kanban_disable_quick_create](project_kanban_disable_quick_create/) | 14.0.1.0.0 |  | Disable quick create from task kanban
 [project_milestone_view_improvements](project_milestone_view_improvements/) | 14.0.1.0.0 |  | Improved project milestone views
 [project_task_auto_assign](project_task_auto_assign/) | 14.0.1.0.0 |  | Assign unassigned task when stage is changed
