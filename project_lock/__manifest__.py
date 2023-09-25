@@ -19,19 +19,19 @@
 ##############################################################################
 
 {
-    'name': 'Project locking (templates)',
-    'summary': 'Adds a possibility to lock project editing',
-    'version': '14.0.1.0.0',
-    'category': 'Project Management',
-    'website': 'https://github.com/Tawasta/project',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'project',
+    "name": "Project locking (templates)",
+    "summary": "Adds a possibility to lock project editing",
+    "version": "14.0.1.0.0",
+    "category": "Project Management",
+    "website": "https://gitlab.com/tawasta/odoo/project",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "project",
     ],
-    'data': [
-        'views/project_project.xml',
-    ]
+    "data": [
+        "views/project_project.xml",
+    ],
 }

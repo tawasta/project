@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="project.view_task_form2" />
         <field name="arch" type="xml">
             <field name="tag_ids" position="after">
-                <field name="show_in_portal"/>
+                <field name="show_in_portal" />
             </field>
         </field>
     </record>

@@ -1,14 +1,14 @@
-from odoo import models, api
+from odoo import api, models
 
 
 class ProjectTaskType(models.Model):
 
-    _inherit = 'project.task.type'
+    _inherit = "project.task.type"
 
     @api.model
     def create(self, vals):
-        if self._context.get('default_project_id'):
-            self.check_locked(self._context.get('default_project_id'))
+        if self._context.get("default_project_id"):
+            self.check_locked(self._context.get("default_project_id"))
 
         return super(ProjectTaskType, self).create(vals)
 
@@ -21,7 +21,7 @@ class ProjectTaskType(models.Model):
 
     def check_locked(self, project_id=False):
         if project_id:
-            project_ids = self.env['project.project'].browse([project_id])
+            project_ids = self.env["project.project"].browse([project_id])
         else:
             project_ids = self.project_ids
 

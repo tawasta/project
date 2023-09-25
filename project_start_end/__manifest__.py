@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,19 +19,16 @@
 ##############################################################################
 
 {
-    'name': 'Project start and end dates',
-    'summary': 'Shows project start and end date in form and tree views',
-    'version': '14.0.1.0.0',
-    'category': 'Project Management',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'depends': [
-        'project'
+    "name": "Project start and end dates",
+    "summary": "Shows project start and end date in form and tree views",
+    "version": "14.0.1.0.0",
+    "category": "Project Management",
+    "website": "https://gitlab.com/tawasta/odoo/project",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "depends": ["project"],
+    "data": [
+        "views/project_form.xml",
     ],
-    'data': [
-        'views/project_form.xml',
-    ],
-    'installable': True,
-
+    "installable": True,
 }

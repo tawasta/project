@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,19 +19,19 @@
 ##############################################################################
 
 {
-    'name': 'Access Analytic Accounts from Project Menu',
-    'summary': "Adds a link pointing to the analytic account list",
-    'category': 'Project',
-    'version': '14.0.0.0.0',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'sale',
+    "name": "Access Analytic Accounts from Project Menu",
+    "summary": "Adds a link pointing to the analytic account list",
+    "category": "Project",
+    "version": "14.0.1.0.0",
+    "website": "https://gitlab.com/tawasta/odoo/project",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "sale",
     ],
-    'data': [
-        'views/account_analytic_account.xml',
+    "data": [
+        "views/account_analytic_account.xml",
     ],
 }

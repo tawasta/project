@@ -28,6 +28,8 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["project",],
+    "depends": [
+        "project",
+    ],
     "data": ["views/project.xml", "views/task.xml"],
 }

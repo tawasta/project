@@ -1,21 +1,22 @@
-from odoo import models, api
+from odoo import api, models
 
 
 class ProjectTask(models.Model):
 
-    _inherit = 'project.task'
+    _inherit = "project.task"
 
     @api.model
     def create(self, vals):
-        if self._context.get('default_project_id'):
-            self.check_locked(self._context.get('default_project_id'))
+        if self._context.get("default_project_id"):
+            self.check_locked(self._context.get("default_project_id"))
 
         return super(ProjectTask, self).create(vals)
 
     def write(self, vals):
         # Allow modifying followers and project_id
-        if not (len(vals) == 1
-                and ('message_follower_ids' in vals or 'project_id' in vals)):
+        if not (
+            len(vals) == 1 and ("message_follower_ids" in vals or "project_id" in vals)
+        ):
             self.check_locked()
 
         return super(ProjectTask, self).write(vals)
@@ -28,7 +29,7 @@ class ProjectTask(models.Model):
     def check_locked(self, project_id=False):
         for record in self:
             if project_id:
-                project = record.env['project.project'].browse([project_id])
+                project = record.env["project.project"].browse([project_id])
             else:
                 project = record.project_id
 

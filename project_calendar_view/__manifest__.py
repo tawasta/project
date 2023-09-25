@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,20 +19,20 @@
 ##############################################################################
 
 {
-    'name': 'Calendar view for projects',
-    'summary': 'Calendar view for projects',
-    'category': 'Project',
-    'version': '14.0.1.0.0',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'project_start_end',
+    "name": "Calendar view for projects",
+    "summary": "Calendar view for projects",
+    "category": "Project",
+    "version": "14.0.1.0.0",
+    "website": "https://gitlab.com/tawasta/odoo/project",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "project_start_end",
     ],
-    'data': [
-        'data/ir_actions_act_window.xml',
-        'views/project_calendar.xml',
+    "data": [
+        "data/ir_actions_act_window.xml",
+        "views/project_calendar.xml",
     ],
 }

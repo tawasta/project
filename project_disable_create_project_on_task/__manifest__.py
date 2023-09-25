@@ -23,7 +23,7 @@
     "summary": "Can't create a new project from task.",
     "version": "14.0.1.0.0",
     "category": "Project",
-    "website": "https://gitlab.com/tawasta/odoo/project4",
+    "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

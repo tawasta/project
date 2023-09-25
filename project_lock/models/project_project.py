@@ -1,20 +1,20 @@
-from odoo import models, api, fields, _
+from odoo import _, fields, models
 from odoo.exceptions import UserError
 
 
 class ProjectProject(models.Model):
 
-    _inherit = 'project.project'
+    _inherit = "project.project"
 
     locked = fields.Boolean(
-        string='Locked',
-        help="Project is locked." +
-             "It can't be edited, and it's tasks cant be edited.",
+        string="Locked",
+        help="Project is locked."
+        + "It can't be edited, and it's tasks cant be edited.",
         copy=False,
     )
 
     def write(self, vals):
-        if 'locked' not in vals:
+        if "locked" not in vals:
             self.check_locked()
 
         return super(ProjectProject, self).write(vals)

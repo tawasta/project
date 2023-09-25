@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,21 +19,21 @@
 ##############################################################################
 
 {
-    'name': 'Invoice Lines Report in Project Menu',
-    'summary': 'Adds the invoice lines report also to project reporting menu',
-    'category': 'Project',
-    'version': '14.0.0.0.0',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'account_invoice_line_report',
-        'project',
+    "name": "Invoice Lines Report in Project Menu",
+    "summary": "Adds the invoice lines report also to project reporting menu",
+    "category": "Project",
+    "version": "14.0.0.0.0",
+    "website": "https://gitlab.com/tawasta/odoo/project",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "account_invoice_line_report",
+        "project",
     ],
-    'data': [
-        'security/ir.model.access.csv',
-        'views/project_menu.xml',
+    "data": [
+        "security/ir.model.access.csv",
+        "views/project_menu.xml",
     ],
 }

@@ -19,17 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Show analytic tags on projects',
-    'summary': 'Show analytic tags on projects',
-    'version': '14.0.1.0.0',
-    'category': 'Project Management',
-    'website': 'https://github.com/Tawasta/project',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': ['project', "analytic"],
-    'data': [
-        'views/project_project.xml',
-    ]
+    "name": "Show analytic tags on projects",
+    "summary": "Show analytic tags on projects",
+    "version": "14.0.1.0.0",
+    "category": "Project Management",
+    "website": "https://gitlab.com/tawasta/odoo/project",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["project", "analytic"],
+    "data": [
+        "views/project_project.xml",
+    ],
 }
