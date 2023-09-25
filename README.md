@@ -15,6 +15,7 @@ addon | version | maintainers | summary
 [project_analytic_tags](project_analytic_tags/) | 14.0.1.0.0 |  | Show analytic tags on projects
 [project_calendar_view](project_calendar_view/) | 14.0.1.0.0 |  | Calendar view for projects
 [project_disable_create_project_on_task](project_disable_create_project_on_task/) | 14.0.1.0.0 |  | Can't create a new project from task.
+[project_analytic_account_auto_close](project_analytic_account_auto_close/) | 14.0.0.1.0 |  | Auto-close analytic account when closing project
 [project_kanban_disable_quick_create](project_kanban_disable_quick_create/) | 14.0.1.0.0 |  | Disable quick create from task kanban
 [project_lock](project_lock/) | 14.0.1.0.0 |  | Adds a possibility to lock project editing
 [project_menu_account_invoice_line_report](project_menu_account_invoice_line_report/) | 14.0.0.0.0 |  | Adds the invoice lines report also to project reporting menu
