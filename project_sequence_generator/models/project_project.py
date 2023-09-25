@@ -1,14 +1,13 @@
-# -*- coding: utf-8 -*-
-from odoo import models, api, fields
+from odoo import fields, models
 
 
 class ProjectProject(models.Model):
 
-    _inherit = 'project.project'
+    _inherit = "project.project"
 
     code_generated = fields.Boolean(
-        string='Code generated',
-        help='Helper for sequence generator',
+        string="Code generated",
+        help="Helper for sequence generator",
         default=False,
         readonly=True,
         copy=False,
@@ -17,7 +16,7 @@ class ProjectProject(models.Model):
     def action_sequence_to_name(self):
         self.ensure_one()
 
-        IrSequence = self.env['ir.sequence']
-        sequence = IrSequence.next_by_code('project.project')
-        self.name = '%s %s' % (sequence, self.name)
+        IrSequence = self.env["ir.sequence"]
+        sequence = IrSequence.next_by_code("project.project")
+        self.name = "%s %s" % (sequence, self.name)
         self.code_generated = True

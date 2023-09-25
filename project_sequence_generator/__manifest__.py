@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,20 +19,20 @@
 ##############################################################################
 
 {
-    'name': 'Add a sequence for project by pressing a button',
-    'summary': 'Add a sequence for project by pressing a button',
-    'version': '14.1.0.0.0',
-    'category': 'Project Management',
-    'website': 'https://github.com/Tawasta/project',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'project',
+    "name": "Add a sequence for project by pressing a button",
+    "summary": "Add a sequence for project by pressing a button",
+    "version": "14.0.1.0.0",
+    "category": "Project Management",
+    "website": "https://gitlab.com/tawasta/odoo/project",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "project",
     ],
-    'data': [
-        'data/project_sequence.xml',
-        'views/project_project.xml',
-    ]
+    "data": [
+        "data/project_sequence.xml",
+        "views/project_project.xml",
+    ],
 }

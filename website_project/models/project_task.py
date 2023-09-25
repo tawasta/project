@@ -37,7 +37,7 @@ class Task(models.Model):
     _inherit = "project.task"
 
     # 2. Fields declaration
-    show_in_portal = fields.Boolean(string='Show in portal', default=False)
+    show_in_portal = fields.Boolean(string="Show in portal", default=False)
 
     # 3. Default methods
 

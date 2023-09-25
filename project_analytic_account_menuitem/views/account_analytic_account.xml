@@ -1,7 +1,9 @@
 <odoo>
-    <menuitem id="account_analytic_account_menu" 
-      parent="project.menu_main_pm"
-      action="analytic.action_account_analytic_account_form"
-      groups="analytic.group_analytic_accounting"
-      sequence="50"/>
+    <menuitem
+        id="account_analytic_account_menu"
+        parent="project.menu_main_pm"
+        action="analytic.action_account_analytic_account_form"
+        groups="analytic.group_analytic_accounting"
+        sequence="50"
+    />
 </odoo>
