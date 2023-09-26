@@ -21,7 +21,7 @@
                                     <div class="col-md-12">
                                         <div class="o_kanban_record card">
                                             <div class="card-header">
-                                                <a t-attf-href="/web#id={{task.id}}&amp;model=helpdesk.ticket&amp;view_type=form" target="_blank">
+                                                <a t-attf-href="/web#id={{task.id}}&amp;model=project.task&amp;view_type=form" target="_blank">
                                                     <t t-esc="task.name"/>
                                                 </a>
                                             </div>
