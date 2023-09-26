@@ -10,7 +10,7 @@ odoo.define('project_task_sidebar.Sidebar', function (require) {
         events: {
             'click .o_sidebar_toggle': '_toggleSidebar',
             'click .o_sidebar_close_button': '_closeSidebar',
-            'click .o_sidebar_close_icon': '_onCloseIconClick',
+            'click .o_toggle_list': '_onToggleListClick',
         },
         willStart: function() {
             var self = this;
@@ -30,14 +30,18 @@ odoo.define('project_task_sidebar.Sidebar', function (require) {
         _closeSidebar: function () {
             this.$el.removeClass('o_open');
         },
-        /**
-         * Handles the clicking of the close icon.
-         *
-         * @private
-         */
-        _onCloseIconClick: function (event) {
-            var $taskList = $(event.currentTarget).closest('.o_task_list');
-            $taskList.animate({width: 'toggle'}, 350); // 350ms animaatio
+        _onToggleListClick: function (event) {
+            var $list = $(event.currentTarget).parent().siblings('.o_task_list');
+            console.log($list);
+            if ($list.is(':visible')) {
+                console.log("NAYTA");
+                $list.slideUp();
+                $(event.currentTarget).find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+            } else {
+                $list.slideDown();
+                console.log("PIILOTA");
+                $(event.currentTarget).find('i').removeClass('fa-chevron-down').addClass('fa-chevron-up');
+            }
         },
     });
 
