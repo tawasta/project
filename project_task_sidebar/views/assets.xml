@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template
+        id="assets_backend"
+        name="sidebar buttons assets"
+        inherit_id="web.assets_backend"
+    >
+        <xpath expr="." position="inside">
+            <script
+                type="text/javascript"
+                src="/project_task_sidebar/static/src/js/sidebar.js"
+            />
+            <link rel="stylesheet" href="/project_task_sidebar/static/src/css/sidebar_button.css"/>
+        </xpath>
+    </template>
+</odoo>

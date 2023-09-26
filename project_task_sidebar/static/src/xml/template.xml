@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="systray.ProjectTaskSidebar">
+        <div id="sidebar" class="o_sidebar">
+            <!-- Sidebar Content -->
+            <div class="o_sidebar_header">
+                <button class="o_sidebar_close_button" title="Close Sidebar">×</button>
+            </div>
+            <div class="o_sidebar_content">
+                <!-- Project tasks will be inserted here -->
+            </div>
+        </div>
+    </t>
+</templates>

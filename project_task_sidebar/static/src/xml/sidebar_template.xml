@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates>
+    <t t-name="systray.ProjectTaskSidebarButton">
+        <div>
+            <button class="o_sidebar_button">
+                <i class="fa fa-tasks"></i>  <!-- Icon for the button -->
+            </button>
+        </div>
+    </t>
+</templates>
