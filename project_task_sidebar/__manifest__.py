@@ -32,7 +32,7 @@
     "data": ["security/ir.model.access.csv", "views/assets.xml"],
     "qweb": [
         "static/src/xml/sidebar_template.xml",
-        "static/src/xml/template.xml",
+        #"static/src/xml/template.xml",
     ],
     "demo": [],
 }

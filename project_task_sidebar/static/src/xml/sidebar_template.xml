@@ -1,10 +1,66 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <templates>
-    <t t-name="systray.ProjectTaskSidebarButton">
-        <div>
-            <button class="o_sidebar_button">
-                <i class="fa fa-tasks"></i>  <!-- Icon for the button -->
-            </button>
-        </div>
+    <t t-name="my_module.Sidebar">
+        <li class="nav-item">
+            <a href="#" class="o_sidebar_toggle nav-link">
+                <i class="fa fa-tasks"/>
+            </a>
+            <div class="o_sidebar">
+                <button class="o_sidebar_close_button">X</button>
+                <div class="o_task_lists">
+                    <div class="o_task_list" id="helpdesk_tasks_list">
+                        <div class="o_task_list_header">
+                            <span>Helpdesk Tasks</span>
+                            <i class="fa fa-times o_sidebar_close_icon"></i> <!-- Sulkemisikoni -->
+                        </div>
+                        <div class="row">
+                            <t t-foreach="widget.tasks.helpdesk_tasks" t-as="task">
+                                <div class="col-md-12">
+                                    <div class="o_kanban_record card">
+                                        <div class="card-header">
+                                            <a t-attf-href="/web#id={{task.id}}&amp;model=helpdesk.ticket&amp;view_type=form" target="_blank">
+                                                <t t-esc="task.name"/>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            Deadline: <t t-esc="task.deadline"/>
+                                            <br/>
+                                            Status: <t t-esc="task.status"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+
+                    <div class="o_task_list" id="project_tasks_list">
+                        <div class="o_task_list_header">
+                            <span>Project Tasks</span>
+                            <i class="fa fa-times o_sidebar_close_icon"></i> <!-- Sulkemisikoni -->
+                        </div>
+                        <div class="row">
+                            <t t-foreach="widget.tasks.project_tasks" t-as="task">
+                                <div class="col-md-12">
+                                    <div class="o_kanban_record card">
+                                        <div class="card-header">
+                                            <a t-attf-href="/web#id={{task.id}}&amp;model=project.task&amp;view_type=form" target="_blank">
+                                                <t t-esc="task.name"/>
+                                            </a>
+                                        </div>
+                                        <div class="card-body">
+                                            Deadline: <t t-esc="task.deadline"/>
+                                            <br/>
+                                            Status: <t t-esc="task.status"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </t>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
     </t>
 </templates>
+
+

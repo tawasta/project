@@ -1,12 +1,58 @@
 .o_sidebar {
     position: fixed;
-    top: 0;
     right: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #f9f9f9;
-    border-left: 1px solid #ddd;
-    display: none;
+    top: 0;
+    bottom: 0;
+    width: 300px;
+    background-color: #f8f9fa;
     overflow-y: auto;
-    z-index: 1000;
+    transition: transform 0.3s;
+    transform: translateX(100%);
+    z-index: 1050; /* Asettaa korkean z-index-arvon */
+    height: 100vh; /* Asettaa korkeuden 100% näytön korkeudesta */
+}
+
+.o_open .o_sidebar {
+    transform: translateX(0);
+}
+
+.o_sidebar_close_button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+/* Voit halutessasi lisätä muita tyylejä, kuten varjo sivupalkin ulkopuolella */
+.o_open .o_sidebar {
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+
+.o_sidebar .o_task_lists .card {
+    margin-bottom: 10px;  /* Lisää tilaa korttien välille */
+    border: 2px solid #ddd;  /* Lisää rajaus korttien ympärille */
+    border-radius: 4px;  /* Pyöristää kulmat */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Lisää varjon */
+}
+
+.o_sidebar .o_task_lists .card-header {
+    background-color: #f0f0f0;  /* Muuttaa kortin otsikon taustavärin */
+}
+
+.o_sidebar .o_task_lists .card-body {
+    background-color: #ffffff;  /* Muuttaa kortin rungon taustavärin */
+}
+
+.o_task_list_header {
+    color: #000;
+}
+.o_sidebar .o_task_list_header .o_sidebar_close_icon {
+    cursor: pointer; /* Kursori muuttuu sormeksi, kun se on ikonin päällä */
+    margin-left: 10px; /* Lisää hieman tilaa ikonin ja otsikon välille */
+}
+
+/* Varmistaa, että animaatio toimii oikein */
+.o_sidebar .o_task_list {
+    display: inline-block;
 }

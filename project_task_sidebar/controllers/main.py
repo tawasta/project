@@ -1,34 +1,34 @@
 from odoo import http
 from odoo.http import request
+import logging
 
-class ProjectTaskSidebar(http.Controller):
+class TaskController(http.Controller):
 
-    @http.route('/project_task_sidebar/tasks', type='json', auth='user')
+    @http.route('/get_tasks', type='json', auth='user')
     def get_tasks(self):
-        # Fetch project tasks
-        projects = request.env['project.project'].search([('id', '=', '1')])
-        project_data = []
-        for project in projects:
-            tasks = request.env['project.task'].search([('project_id', '=', project.id), ('user_id', '=', request.uid)])
-            task_data = [{'name': task.name, 'id': task.id} for task in tasks]
-            project_data.append({
-                'name': project.name,
-                'id': project.id,
-                'tasks': task_data
-            })
-
-        helpdesk_projects = request.env['project.project'].search([('id', '=', '2')])
-        helpdesk_data = []
-        for hp in helpdesk_projects:
-            helpdesk_tasks = request.env['project.task'].search([('project_id', '=', hp.id), ('user_id', '=', request.uid)])
-            help_task_data = [{'name': ht.name, 'id': ht.id} for ht in helpdesk_tasks]
-            helpdesk_data.append({
-                'name': project.name,
-                'id': project.id,
-                'tasks': help_task_data
-            })
-
-        return {
-            'project_tasks': project_data,
-            'helpdesk_tasks': helpdesk_data,
+        logging.info("===========================================");
+        logging.info("===========================================");
+        logging.info("===========================================");
+        logging.info("===========================================");
+        helpdesk_tasks = request.env['project.task'].sudo().search([])
+        logging.info(helpdesk_tasks);
+        project_tasks = request.env['project.task'].sudo().search([])
+        logging.info(project_tasks);
+        tasks_data = {
+            'helpdesk_tasks': self._prepare_tasks_data(helpdesk_tasks),
+            'project_tasks': self._prepare_tasks_data(project_tasks),
         }
+        logging.info(tasks_data);
+        return tasks_data
+
+    def _prepare_tasks_data(self, tasks):
+        tasks_data = []
+        for task in tasks:
+            logging.info(task.stage_id.name);
+            tasks_data.append({
+                'id': task.id,
+                'name': task.name,
+                'deadline': task.date_deadline or "",
+                'status': task.stage_id.name,
+            })
+        return tasks_data
