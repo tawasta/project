@@ -27,6 +27,6 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["project"],
-    "data": ["security/ir.model.access.csv", "views/project_views.xml"],
+    "depends": ["project", "project_template"],
+    "data": ["security/ir.model.access.csv", "views/project_views.xml", "views/res_config_settings.xml"],
 }
