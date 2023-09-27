@@ -14,6 +14,7 @@ addon | version | maintainers | summary
 [project_analytic_account_auto_close](project_analytic_account_auto_close/) | 14.0.0.1.0 |  | Auto-close analytic account when closing project
 [project_analytic_account_menuitem](project_analytic_account_menuitem/) | 14.0.1.0.0 |  | Adds a link pointing to the analytic account list
 [project_analytic_tags](project_analytic_tags/) | 14.0.1.0.0 |  | Show analytic tags on projects
+[project_calendar_date_start_to_end](project_calendar_date_start_to_end/) | 14.0.1.0.0 |  | Changes the default calendar dates to support a range
 [project_calendar_view](project_calendar_view/) | 14.0.1.0.0 |  | Calendar view for projects
 [project_disable_create_project_on_task](project_disable_create_project_on_task/) | 14.0.1.0.0 |  | Can't create a new project from task.
 [project_kanban_disable_quick_create](project_kanban_disable_quick_create/) | 14.0.1.0.0 |  | Disable quick create from task kanban
@@ -26,6 +27,7 @@ addon | version | maintainers | summary
 [project_task_auto_assign](project_task_auto_assign/) | 14.0.1.0.0 |  | Assign unassigned task when stage is changed
 [project_task_auto_color](project_task_auto_color/) | 14.0.1.1.1 |  | Set task colors automatically, based on rules
 [project_task_billing_enabled](project_task_billing_enabled/) | 14.0.1.1.0 |  | Billing enabled boolean field for project task
+[project_task_name_width](project_task_name_width/) | 14.0.1.0.0 |  | Project Task Name Width
 [project_task_notes](project_task_notes/) | 14.0.1.0.1 |  | Add Task Notes to project task
 [project_task_opportunity](project_task_opportunity/) | 14.0.1.0.0 |  | Create an opportunity from a task
 [project_task_planned_hours_to_header](project_task_planned_hours_to_header/) | 14.0.1.0.0 |  | Move planned hours to project task header
