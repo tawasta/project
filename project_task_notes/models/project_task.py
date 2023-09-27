@@ -41,6 +41,7 @@ class Task(models.Model):
         "project.task.note", "project_task_id", string="Task Notes"
     )
 
+
 class ProjectProject(models.Model):
     # 1. Private attributes
     _inherit = "project.project"
@@ -62,10 +63,13 @@ class ProjectProject(models.Model):
             for old_task_record in self.task_ids:
                 if new_task_record.name == old_task_record.name:
                     new_task_record.date_end = old_task_record.date_end
-                if self.env['ir.config_parameter'].sudo().get_param('project_task_note.allow_task_notes_copy'):
+                if (
+                    self.env["ir.config_parameter"]
+                    .sudo()
+                    .get_param("project_task_note.allow_task_notes_copy")
+                ):
                     for task_note in old_task_record.task_note_ids:
-                        task_note.copy(default={'project_task_id': new_task_record.id})
-
+                        task_note.copy(default={"project_task_id": new_task_record.id})
 
         # OPEN THE NEWLY CREATED PROJECT FORM
         return {
