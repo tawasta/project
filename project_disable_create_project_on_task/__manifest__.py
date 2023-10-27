@@ -17,20 +17,21 @@
 #    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
 #
 ##############################################################################
+
 {
-    "name": "Project Task Notes",
-    "version": "14.0.1.0.1",
+    "name": "Project Disable Create Project on Task",
+    "summary": "Can't create a new project from task.",
+    "version": "14.0.1.0.0",
     "category": "Project",
-    "summary": "Add Task Notes to project task",
     "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["project", "project_template"],
+    "depends": [
+        "project",
+    ],
     "data": [
-        "security/ir.model.access.csv",
         "views/project_views.xml",
-        "views/res_config_settings.xml",
     ],
 }

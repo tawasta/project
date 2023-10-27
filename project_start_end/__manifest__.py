@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2021- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -17,20 +17,18 @@
 #    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
 #
 ##############################################################################
+
 {
-    "name": "Project Task Notes",
-    "version": "14.0.1.0.1",
-    "category": "Project",
-    "summary": "Add Task Notes to project task",
+    "name": "Project start and end dates",
+    "summary": "Shows project start and end date in form and tree views",
+    "version": "14.0.1.0.0",
+    "category": "Project Management",
     "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",
     "license": "AGPL-3",
-    "application": False,
-    "installable": True,
-    "depends": ["project", "project_template"],
+    "depends": ["project"],
     "data": [
-        "security/ir.model.access.csv",
-        "views/project_views.xml",
-        "views/res_config_settings.xml",
+        "views/project_form.xml",
     ],
+    "installable": True,
 }

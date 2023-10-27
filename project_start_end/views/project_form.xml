@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form.dates</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+
+            <page name="settings" position="inside">
+                <group col="4" name="project-dates">
+                    <field name="date_start" />
+                    <field name="date" string="End date" />
+                </group>
+            </page>
+
+        </field>
+    </record>
+
+    <record id="project_project_view_tree" model="ir.ui.view">
+        <field name="name">project.project.view.tree</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="date_start" />
+                <field name="date" string="End date" />
+            </field>
+        </field>
+    </record>
+</odoo>

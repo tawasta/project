@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2021- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2022- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -17,20 +17,36 @@
 #    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
 #
 ##############################################################################
-{
-    "name": "Project Task Notes",
-    "version": "14.0.1.0.1",
-    "category": "Project",
-    "summary": "Add Task Notes to project task",
-    "website": "https://gitlab.com/tawasta/odoo/project",
-    "author": "Tawasta",
-    "license": "AGPL-3",
-    "application": False,
-    "installable": True,
-    "depends": ["project", "project_template"],
-    "data": [
-        "security/ir.model.access.csv",
-        "views/project_views.xml",
-        "views/res_config_settings.xml",
-    ],
-}
+
+# 1. Standard library imports:
+
+# 2. Known third party imports:
+
+# 3. Odoo imports (openerp):
+from odoo import fields, models
+
+# 4. Imports from Odoo modules:
+
+# 5. Local imports in the relative form:
+
+# 6. Unknown third party imports:
+
+
+class Task(models.Model):
+    # 1. Private attributes
+    _inherit = "project.task"
+
+    # 2. Fields declaration
+    show_in_portal = fields.Boolean(string="Show in portal", default=False)
+
+    # 3. Default methods
+
+    # 4. Compute and search fields, in the same order that fields declaration
+
+    # 5. Constraints and onchanges
+
+    # 6. CRUD methods
+
+    # 7. Action methods
+
+    # 8. Business methods

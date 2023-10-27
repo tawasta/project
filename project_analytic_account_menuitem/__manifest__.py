@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2021- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -17,20 +17,21 @@
 #    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
 #
 ##############################################################################
+
 {
-    "name": "Project Task Notes",
-    "version": "14.0.1.0.1",
+    "name": "Access Analytic Accounts from Project Menu",
+    "summary": "Adds a link pointing to the analytic account list",
     "category": "Project",
-    "summary": "Add Task Notes to project task",
+    "version": "14.0.1.0.0",
     "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["project", "project_template"],
+    "depends": [
+        "sale",
+    ],
     "data": [
-        "security/ir.model.access.csv",
-        "views/project_views.xml",
-        "views/res_config_settings.xml",
+        "views/account_analytic_account.xml",
     ],
 }
