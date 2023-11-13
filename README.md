@@ -26,6 +26,7 @@ addon | version | maintainers | summary
 [project_start_end](project_start_end/) | 14.0.1.0.0 |  | Shows project start and end date in form and tree views
 [project_task_auto_assign](project_task_auto_assign/) | 14.0.1.0.0 |  | Assign unassigned task when stage is changed
 [project_task_auto_color](project_task_auto_color/) | 14.0.1.1.1 |  | Set task colors automatically, based on rules
+[project_task_auto_end](project_task_auto_end/) | 14.0.1.0.0 |  | Set tasks as ended, when stage changes to a closed stage
 [project_task_billing_enabled](project_task_billing_enabled/) | 14.0.1.1.0 |  | Billing enabled boolean field for project task
 [project_task_mass_create](project_task_mass_create/) | 14.0.1.0.0 |  | Mass create tasks from a text
 [project_task_name_width](project_task_name_width/) | 14.0.1.0.0 |  | Project Task Name Width
