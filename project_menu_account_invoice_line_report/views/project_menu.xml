@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<odoo>
-    <menuitem
-        id="menu_account_invoice_line_report"
-        action="account_invoice_line_report.action_account_invoice_line_report"
-        parent="project.menu_project_report"
-        sequence="15"
-    />
-</odoo>

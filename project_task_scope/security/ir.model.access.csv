@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_project_scope_all,project.project_scope_all,model_project_scope,,1,0,0,0
-access_project_scope_manager,project.project_scope_manager,model_project_scope,project.group_project_manager,1,1,1,1
-access_project_scope_portal,project_scope_portal,model_project_scope,base.group_portal,1,0,0,0

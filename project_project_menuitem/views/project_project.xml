@@ -1,9 +1,0 @@
-<odoo>
-    <menuitem
-        id="project_project_menu"
-        parent="project.menu_project_management"
-        action="project.open_view_project_all_config"
-        groups="project.group_project_user"
-        sequence="3"
-    />
-</odoo>
