@@ -25,11 +25,11 @@ class ProjectProject(models.Model):
         return super(ProjectProject, self).unlink()
 
     def check_locked(self):
-        if self.locked:
-            # Helper to prevent redundant code and errors
-            msg = _("Project '%s' is locked." % self.name)
-            msg += "\n"
-            msg += _("Please unlock the project before editing.")
-            raise UserError(msg)
-
+        for project in self:
+            if project.locked:
+                # Helper to prevent redundant code and errors
+                msg = _("Project '%s' is locked." % project.name)
+                msg += "\n"
+                msg += _("Please unlock the project before editing.")
+                raise UserError(msg)
         return

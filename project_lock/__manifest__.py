@@ -21,7 +21,7 @@
 {
     "name": "Project locking (templates)",
     "summary": "Adds a possibility to lock project editing",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Project Management",
     "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",
