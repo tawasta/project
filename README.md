@@ -18,7 +18,7 @@ addon | version | maintainers | summary
 [project_calendar_view](project_calendar_view/) | 14.0.1.0.0 |  | Calendar view for projects
 [project_disable_create_project_on_task](project_disable_create_project_on_task/) | 14.0.1.0.0 |  | Can't create a new project from task.
 [project_kanban_disable_quick_create](project_kanban_disable_quick_create/) | 14.0.1.0.0 |  | Disable quick create from task kanban
-[project_lock](project_lock/) | 14.0.1.0.0 |  | Adds a possibility to lock project editing
+[project_lock](project_lock/) | 14.0.1.0.1 |  | Adds a possibility to lock project editing
 [project_menu_account_invoice_line_report](project_menu_account_invoice_line_report/) | 14.0.0.0.0 |  | Adds the invoice lines report also to project reporting menu
 [project_milestone_view_improvements](project_milestone_view_improvements/) | 14.0.1.0.0 |  | Improved project milestone views
 [project_project_menuitem](project_project_menuitem/) | 14.0.1.0.0 |  | Menuitem for projects
