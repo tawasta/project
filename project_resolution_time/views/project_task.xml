@@ -6,8 +6,8 @@
         <field name="inherit_id" ref="project.view_task_form2" />
         <field name="arch" type="xml">
             <field name="partner_id" position="after">
-                <field name="resolution_time"/>
-                <field name="number_of_responses"/>
+                <field name="resolution_time" />
+                <field name="number_of_responses" />
             </field>
         </field>
     </record>
@@ -15,13 +15,13 @@
     <record id="view_task_tree" model="ir.ui.view">
         <field name="name">project.task.tree.resolution </field>
         <field name="model">project.task</field>
-        <field name="inherit_id" ref="project.view_task_tree2"/>
+        <field name="inherit_id" ref="project.view_task_tree2" />
         <field name="arch" type="xml">
             <field name="project_id" position="after">
-                <field name="resolution_time"/>
+                <field name="resolution_time" />
             </field>
             <field name="user_id" position="after">
-                <field name="number_of_responses"/>
+                <field name="number_of_responses" />
             </field>
         </field>
     </record>

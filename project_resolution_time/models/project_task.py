@@ -5,9 +5,13 @@ class ProjectTask(models.Model):
 
     _inherit = "project.task"
 
-    resolution_time = fields.Float(string="Resolution time", compute="_compute_resolution_time")
+    resolution_time = fields.Float(
+        string="Resolution time", compute="_compute_resolution_time"
+    )
 
-    number_of_responses = fields.Integer(string="Number of responses", compute="_compute_msg_count")
+    number_of_responses = fields.Integer(
+        string="Number of responses", compute="_compute_msg_count"
+    )
 
     def _compute_resolution_time(self):
         for record in self:
@@ -19,7 +23,7 @@ class ProjectTask(models.Model):
                 record.resolution_time = delay_days
             else:
                 record.resolution_time = False
-    
+
     def _compute_msg_count(self):
         for record in self:
             count = 0
@@ -28,5 +32,3 @@ class ProjectTask(models.Model):
                     if message.message_type == "comment":
                         count += 1
             record.number_of_responses = count
-
-                
