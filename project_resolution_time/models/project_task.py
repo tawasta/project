@@ -1,4 +1,4 @@
-from odoo import fields, models, api
+from odoo import api, fields, models
 
 
 class ProjectTask(models.Model):
@@ -6,14 +6,17 @@ class ProjectTask(models.Model):
     _inherit = "project.task"
 
     resolution_time = fields.Float(
-        string="Resolution time", compute="_compute_resolution_time", store=True, default=None
+        string="Resolution time",
+        compute="_compute_resolution_time",
+        store=True,
+        default=None,
     )
 
     number_of_responses = fields.Integer(
         string="Number of responses", compute="_compute_msg_count", store=True
     )
 
-    @api.depends('stage_id')
+    @api.depends("stage_id")
     def _compute_resolution_time(self):
         # Tänne create date
         for record in self:
