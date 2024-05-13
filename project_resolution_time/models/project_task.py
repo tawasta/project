@@ -6,11 +6,11 @@ class ProjectTask(models.Model):
     _inherit = "project.task"
 
     resolution_time = fields.Float(
-        string="Resolution time", compute="_compute_resolution_time"
+        string="Resolution time", compute="_compute_resolution_time", store=True
     )
 
     number_of_responses = fields.Integer(
-        string="Number of responses", compute="_compute_msg_count"
+        string="Number of responses", compute="_compute_msg_count", store=True
     )
 
     def _compute_resolution_time(self):
