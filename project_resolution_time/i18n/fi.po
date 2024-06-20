@@ -1,0 +1,53 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_resolution_time
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20230925\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-20 12:04+0000\n"
+"PO-Revision-Date: 2024-06-20 12:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_resolution_time
+#: model:ir.model.fields,field_description:project_resolution_time.field_project_task__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: project_resolution_time
+#: model:ir.model.fields,field_description:project_resolution_time.field_project_task__id
+msgid "ID"
+msgstr "TUNNISTE (ID)"
+
+#. module: project_resolution_time
+#: model:ir.model.fields,field_description:project_resolution_time.field_project_task____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: project_resolution_time
+#: model:ir.model.fields,field_description:project_resolution_time.field_project_task__number_of_responses
+msgid "Number of responses"
+msgstr "Vastausten lukumäärä"
+
+#. module: project_resolution_time
+#: model:ir.model.fields,field_description:project_resolution_time.field_project_task__resolution_time
+msgid "Resolution Time (h)"
+msgstr "Ratkaisuun kulunut aika (h)"
+
+#. module: project_resolution_time
+#: model:ir.model,name:project_resolution_time.model_project_task
+msgid "Task"
+msgstr "Tehtävä"
+
+#. module: project_resolution_time
+#: model:ir.model.fields,help:project_resolution_time.field_project_task__resolution_time
+msgid ""
+"Time in hours from the creation of the task to its last moving to a closed "
+"stage"
+msgstr "Aika tunneista tehtävän luonnista siihen, kun tehtävä siirrettiin suljettuun vaiheeseen."
