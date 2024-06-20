@@ -22,7 +22,7 @@
     "name": "Project resolution time",
     "summary": "Adds resolution time and message amount fields",
     "category": "Project",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",
     "license": "AGPL-3",

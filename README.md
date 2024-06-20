@@ -22,7 +22,7 @@ addon | version | maintainers | summary
 [project_menu_account_invoice_line_report](project_menu_account_invoice_line_report/) | 14.0.0.0.0 |  | Adds the invoice lines report also to project reporting menu
 [project_milestone_view_improvements](project_milestone_view_improvements/) | 14.0.1.0.0 |  | Improved project milestone views
 [project_project_menuitem](project_project_menuitem/) | 14.0.1.0.0 |  | Menuitem for projects
-[project_resolution_time](project_resolution_time/) | 14.0.1.0.0 |  | Adds resolution time and message amount fields
+[project_resolution_time](project_resolution_time/) | 14.0.1.0.1 |  | Adds resolution time and message amount fields
 [project_sequence_generator](project_sequence_generator/) | 14.0.1.0.0 |  | Add a sequence for project by pressing a button
 [project_start_end](project_start_end/) | 14.0.1.0.0 |  | Shows project start and end date in form and tree views
 [project_task_auto_assign](project_task_auto_assign/) | 14.0.1.0.0 |  | Assign unassigned task when stage is changed
