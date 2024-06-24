@@ -2,22 +2,21 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=============================
-Project Task: Resolution Time
-=============================
+=================================
+Project Task: Number of Responses
+=================================
 
-* Resolution time is calculated when task is moved to a closing stage.
-  Calculation is based on the difference between task creation date and 
-  latest stage update.
-
+* Keeps track of the Number of Responses sent to the customer
+* Looks at mail.message records and keeps track of outbound messaging
 
 Configuration
 =============
-* Configure all relevant stages (done, settled, rejected etc.) with "Is closing stage" checkbox checked.
+* None needed
 
 Usage
 =====
-\-
+* Just open a task that has already had some messaging with the customer to view
+  the new number field.
 
 Known issues / Roadmap
 ======================
@@ -29,8 +28,8 @@ Credits
 Contributors
 ------------
 
-* Kalle Rantalainen <kalle.rantalainen@tawasta.fi>
 * Timo Talvitie <timo.talvitie@tawasta.fi>
+* Kalle Rantalainen <kalle.rantalainen@tawasta.fi>
 
 Maintainer
 ----------

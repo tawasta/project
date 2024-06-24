@@ -18,10 +18,6 @@ class ProjectTask(models.Model):
         "to a closed stage",
     )
 
-    number_of_responses = fields.Integer(
-        string="Number of responses", compute="_compute_msg_count", store=True
-    )
-
     @api.depends("stage_id")
     def _compute_resolution_time(self):
         for record in self:
@@ -36,12 +32,3 @@ class ProjectTask(models.Model):
                 record.resolution_time = delay_days
             else:
                 record.resolution_time = False
-
-    def _compute_msg_count(self):
-        for record in self:
-            count = 0
-            if record.website_message_ids:
-                for message in record.message_ids:
-                    if message.message_type == "comment":
-                        count += 1
-            record.number_of_responses = count
