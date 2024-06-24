@@ -19,10 +19,10 @@
 ##############################################################################
 
 {
-    "name": "Project Task: Resolution Time",
-    "summary": "Tracks the time from task creation to closing",
+    "name": "Project Task: Number of Responses",
+    "summary": "Keep track of the Number of Responses sent to the customer",
     "category": "Project",
-    "version": "14.0.1.0.2",
+    "version": "14.0.1.0.0",
     "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",
     "license": "AGPL-3",

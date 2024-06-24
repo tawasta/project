@@ -10,16 +10,12 @@ class ProjectTask(models.Model):
     _inherit = "project.task"
 
     resolution_time = fields.Float(
-        string="Resolution Time (h)",
+        string="Resolution Time (days)",
         compute="_compute_resolution_time",
         store=True,
         default=None,
-        help="Time in hours from the creation of the task to its last moving "
+        help="Time in days from the creation of the task to its last moving "
         "to a closed stage",
-    )
-
-    number_of_responses = fields.Integer(
-        string="Number of responses", compute="_compute_msg_count", store=True
     )
 
     @api.depends("stage_id")
@@ -36,12 +32,3 @@ class ProjectTask(models.Model):
                 record.resolution_time = delay_days
             else:
                 record.resolution_time = False
-
-    def _compute_msg_count(self):
-        for record in self:
-            count = 0
-            if record.website_message_ids:
-                for message in record.message_ids:
-                    if message.message_type == "comment":
-                        count += 1
-            record.number_of_responses = count

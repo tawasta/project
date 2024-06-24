@@ -22,7 +22,7 @@ addon | version | maintainers | summary
 [project_menu_account_invoice_line_report](project_menu_account_invoice_line_report/) | 14.0.0.0.0 |  | Adds the invoice lines report also to project reporting menu
 [project_milestone_view_improvements](project_milestone_view_improvements/) | 14.0.1.0.0 |  | Improved project milestone views
 [project_project_menuitem](project_project_menuitem/) | 14.0.1.0.0 |  | Menuitem for projects
-[project_resolution_time](project_resolution_time/) | 14.0.1.0.1 |  | Adds resolution time and message amount fields
+[project_resolution_time](project_resolution_time/) | 14.0.1.0.2 |  | Tracks the time from task creation to closing
 [project_sequence_generator](project_sequence_generator/) | 14.0.1.0.0 |  | Add a sequence for project by pressing a button
 [project_start_end](project_start_end/) | 14.0.1.0.0 |  | Shows project start and end date in form and tree views
 [project_task_auto_assign](project_task_auto_assign/) | 14.0.1.0.0 |  | Assign unassigned task when stage is changed
@@ -33,6 +33,7 @@ addon | version | maintainers | summary
 [project_task_name_priorities_with_p](project_task_name_priorities_with_p/) | 14.0.1.0.0 |  | Renamed three star priorities with P0, P1, P2 and P3
 [project_task_name_width](project_task_name_width/) | 14.0.1.0.0 |  | Project Task Name Width
 [project_task_notes](project_task_notes/) | 14.0.1.0.1 |  | Add Task Notes to project task
+[project_task_number_of_responses](project_task_number_of_responses/) | 14.0.1.0.0 |  | Keep track of the Number of Responses sent to the customer
 [project_task_opportunity](project_task_opportunity/) | 14.0.1.0.0 |  | Create an opportunity from a task
 [project_task_planned_hours_to_header](project_task_planned_hours_to_header/) | 14.0.1.0.0 |  | Move planned hours to project task header
 [project_task_priority](project_task_priority/) | 14.0.1.0.0 |  | Compute project task priorities based on scope and SLA
