@@ -10,11 +10,11 @@ class ProjectTask(models.Model):
     _inherit = "project.task"
 
     resolution_time = fields.Float(
-        string="Resolution Time (h)",
+        string="Resolution Time (days)",
         compute="_compute_resolution_time",
         store=True,
         default=None,
-        help="Time in hours from the creation of the task to its last moving "
+        help="Time in days from the creation of the task to its last moving "
         "to a closed stage",
     )
 

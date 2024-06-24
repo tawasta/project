@@ -22,7 +22,7 @@
     "name": "Project Task: Resolution Time",
     "summary": "Tracks the time from task creation to closing",
     "category": "Project",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",
     "license": "AGPL-3",
