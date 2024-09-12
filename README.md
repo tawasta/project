@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [project_task_auto_color](project_task_auto_color/) | 14.0.1.1.1 |  | Set task colors automatically, based on rules
 [project_task_auto_end](project_task_auto_end/) | 14.0.1.0.0 |  | Set tasks as ended, when stage changes to a closed stage
 [project_task_billing_enabled](project_task_billing_enabled/) | 14.0.1.1.0 |  | Billing enabled boolean field for project task
+[project_task_dependency_show_code](project_task_dependency_show_code/) | 14.0.1.0.0 |  | Project Task dependencies - Show code in tree view
 [project_task_mass_create](project_task_mass_create/) | 14.0.1.0.0 |  | Mass create tasks from a text
 [project_task_name_priorities_with_p](project_task_name_priorities_with_p/) | 14.0.1.0.0 |  | Renamed three star priorities with P0, P1, P2 and P3
 [project_task_name_width](project_task_name_width/) | 14.0.1.0.0 |  | Project Task Name Width
