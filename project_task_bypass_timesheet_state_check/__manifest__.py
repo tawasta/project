@@ -20,7 +20,7 @@
 
 {
     "name": "Project Task: Bypass Timesheet State Check",
-    "summary": "Allows moving a task under another project also after "
+    "summary": "Allows Project Managers to move a task under another project also after "
     "having confirmed timesheets",
     "version": "14.0.1.0.0",
     "category": "Project",

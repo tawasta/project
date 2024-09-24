@@ -6,7 +6,8 @@
 Project Task: Bypass Timesheet State Check
 ==========================================
 
-* Allows moving a task under another project also after having confirmed timesheets
+* Allows moving a task under another project also after having confirmed timesheets,
+  as long as the user has Project Manager access rights
 
 Configuration
 =============
