@@ -2,7 +2,6 @@ from odoo import api, fields, models
 
 
 class MassCreateTasks(models.TransientModel):
-
     _name = "mass.create.tasks"
     _description = "Mass create tasks"
 
