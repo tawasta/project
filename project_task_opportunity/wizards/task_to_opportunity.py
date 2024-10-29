@@ -3,7 +3,6 @@ from odoo.tools import html2plaintext
 
 
 class TaskToOpportunity(models.TransientModel):
-
     _name = "task.to.opportunity"
 
     partner_id = fields.Many2one(
