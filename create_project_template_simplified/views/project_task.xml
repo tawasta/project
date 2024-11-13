@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="project_project_view_form_simplified" model="ir.ui.view">
+        <field name="name">project.project.view.form.simplified</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="project_template_id" string="Template"/>
+            </xpath>
+            <xpath expr="//group" position="after">
+                <footer>
+                    <button string="Create Project from Template" name="action_create_project_from_template"
+                            type="object" class="btn-primary o_open_tasks" data-hotkey="l"/>
+                    <button string="Create" name="action_view_tasks" type="object" class="btn-primary o_open_tasks"
+                            data-hotkey="q"/>
+                    <button string="Discard" class="btn-secondary" special="cancel" data-hotkey="z"/>
+                </footer>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
