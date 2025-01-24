@@ -10,6 +10,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[project_kanban_disable_quick_create](project_kanban_disable_quick_create/) | 17.0.1.0.0 |  | Disable quick create from task kanban
 [project_task_billing_enabled](project_task_billing_enabled/) | 17.0.1.1.0 |  | Billing enabled boolean field for project task
 [project_task_mass_create](project_task_mass_create/) | 17.0.1.0.0 |  | Mass create tasks from a text
 [project_task_notes](project_task_notes/) | 17.0.1.0.0 |  | Add Task Notes to project task
