@@ -8,7 +8,7 @@
             <field name="description" position="after">
                 <label for="task_note_ids" class="col-form-label">Task Notes</label>
                 <field name="task_note_ids">
-                    <tree string="Task Notes" editable="bottom">
+                    <tree editable="bottom">
                         <field name="title" />
                         <field name="description" />
                         <field name="user_id" />
