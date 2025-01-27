@@ -19,7 +19,7 @@
 ##############################################################################
 {
     "name": "Project Milestone View Improvements",
-    "version": "14.0.1.0.0",
+    "version": "17.0.1.0.0",
     "category": "Project Management",
     "summary": "Improved project milestone views",
     "website": "https://gitlab.com/tawasta/odoo/project",
@@ -27,6 +27,6 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["project_milestone"],
+    "depends": ["project"],
     "data": ["views/project_task.xml"],
 }
