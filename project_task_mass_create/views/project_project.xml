@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="project_mass_create_action" model="ir.actions.act_window">
+        <field name="name">Mass create tasks</field>
+        <field name="res_model">mass.create.tasks</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="project.model_project_project" />
+        <field name="binding_view_types">form</field>
+    </record>
+
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form.task.mass.create</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button
+                    name="%(project_mass_create_action)d"
+                    string="Create tasks"
+                    type="action"
+                    class="oe_read_only"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

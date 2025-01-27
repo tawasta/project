@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+mass_create_tasks_perm,user_mass_create_tasks_perm,model_mass_create_tasks,project.group_project_user,1,1,1,1
+mass_create_tasks_perm_manager,manager_mass_create_tasks_perm,model_mass_create_tasks,project.group_project_manager,1,1,1,1
