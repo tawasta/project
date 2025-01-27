@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="project_task_view_tree_main_base">
+        <field name="name">project.task.milestone.tree.show</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.project_task_view_tree_main_base" />
+        <field name="arch" type="xml">
+            <field name="milestone_id" position="attributes">
+                <attribute name="optional">show</attribute>
+            </field>
+        </field>
+    </record>
+</odoo>
