@@ -16,7 +16,8 @@
                 <page
                     name="task_autocolor"
                     string="Task colors"
-                    invisible="not task_autocolor">
+                    invisible="not task_autocolor"
+                >
                     <group>
                         <group>
                             <field name="task_autocolor_days_fresh" />
