@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class Project(models.Model):
-
     _inherit = "project.project"
 
     def action_cron_compute_task_colors(self):
