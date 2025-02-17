@@ -2,7 +2,6 @@ from odoo import api, fields, models
 
 
 class ProjectTask(models.Model):
-
     _inherit = "project.task"
 
     def _compute_task_color(self):
