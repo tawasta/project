@@ -11,6 +11,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [project_kanban_disable_quick_create](project_kanban_disable_quick_create/) | 17.0.1.0.0 |  | Disable quick create from task kanban
+[project_keep_and_show_customer](project_keep_and_show_customer/) | 17.0.1.0.0 |  | Keep project Customer and use project customer on tasks. Always show customer on projects
 [project_milestone_view_improvements](project_milestone_view_improvements/) | 17.0.1.0.0 |  | Improved project milestone views
 [project_task_auto_assign](project_task_auto_assign/) | 17.0.1.0.0 |  | Assign unassigned task when stage is changed
 [project_task_auto_color](project_task_auto_color/) | 17.0.1.0.0 |  | Set task colors automatically, based on rules
