@@ -21,5 +21,6 @@ addon | version | maintainers | summary
 [project_task_number_of_responses](project_task_number_of_responses/) | 17.0.1.0.0 |  | Keep track of the Number of Responses sent to the customer
 [project_task_opportunity](project_task_opportunity/) | 17.0.1.0.0 |  | Create an opportunity from a task
 [project_task_timesheet_suggestion](project_task_timesheet_suggestion/) | 17.0.1.0.0 |  | Suggest a timesheet description based on the task
+[project_task_user_ids_limit_to_one](project_task_user_ids_limit_to_one/) | 17.0.1.0.0 |  | Prevent setting more than one assignee for a task
 
 [//]: # (end addons)
