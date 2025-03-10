@@ -6,6 +6,9 @@
 Project Task: Single Assignee Only
 ==================================
 * Prevent setting more than one assignee for a task
+* Also adds a helper field user_id that can be used when
+  e.g. Ninja reports require accessing a m2o field instead
+  of a m2m
 
 Configuration
 =============
