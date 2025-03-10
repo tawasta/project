@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20241118\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-10 08:23+0000\n"
-"PO-Revision-Date: 2025-03-10 08:23+0000\n"
+"POT-Creation-Date: 2025-03-10 09:41+0000\n"
+"PO-Revision-Date: 2025-03-10 09:41+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,12 +16,22 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: project_task_user_ids_limit_to_one
+#: model:ir.model.fields,field_description:project_task_user_ids_limit_to_one.field_project_task__user_id
+msgid "Assignee"
+msgstr "Vastuuhenkilö"
+
+#. module: project_task_user_ids_limit_to_one
 #. odoo-python
 #: code:addons/project_task_user_ids_limit_to_one/models/project_task.py:0
 #: code:addons/project_task_user_ids_limit_to_one/models/project_task.py:0
 #, python-format
 msgid "Setting more than one assignee is not allowed."
 msgstr "Tehtävälle saa asettaa maksimissaan yhden vastuuhenkilön."
+
+#. module: project_task_user_ids_limit_to_one
+#: model:ir.model.fields,help:project_task_user_ids_limit_to_one.field_project_task__user_id
+msgid "Single assignee of the task, computed from the 'Assignees' field."
+msgstr "Tehtävän ainoa vastuuhenkilö, laskettu 'Vastuuhenkilöt' -kentästä"
 
 #. module: project_task_user_ids_limit_to_one
 #: model:ir.model,name:project_task_user_ids_limit_to_one.model_project_task
