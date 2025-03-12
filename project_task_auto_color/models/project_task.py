@@ -37,6 +37,6 @@ class ProjectTask(models.Model):
         )
 
         # Recompute color
-        self._compute_task_color()
+        self.sudo()._compute_task_color()
 
         return res
