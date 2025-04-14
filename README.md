@@ -16,7 +16,7 @@ addon | version | maintainers | summary
 [project_stage_is_closed](project_stage_is_closed/) | 17.0.1.0.0 |  | Boolean field for identifying closed projects even if they are not archived
 [project_task_auto_assign](project_task_auto_assign/) | 17.0.1.0.0 |  | Assign unassigned task when stage is changed
 [project_task_auto_color](project_task_auto_color/) | 17.0.1.0.1 |  | Set task colors automatically, based on rules
-[project_task_billing_enabled](project_task_billing_enabled/) | 17.0.1.1.0 |  | Billing enabled boolean field for project task
+[project_task_billing_enabled](project_task_billing_enabled/) | 17.0.1.1.1 |  | Billing enabled boolean field for project task
 [project_task_mass_create](project_task_mass_create/) | 17.0.1.0.0 |  | Mass create tasks from a text
 [project_task_notes](project_task_notes/) | 17.0.1.0.1 |  | Add Task Notes to project task
 [project_task_number_of_responses](project_task_number_of_responses/) | 17.0.1.0.0 |  | Keep track of the Number of Responses sent to the customer

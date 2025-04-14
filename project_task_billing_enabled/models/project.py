@@ -38,7 +38,9 @@ class Task(models.Model):
 
     # 2. Fields declaration
     billing_enabled = fields.Boolean(
-        "Billing", help="Enable this field if task is billable."
+        "Billing",
+        help="Enable this field if task is billable.",
+        tracking=True,
     )
     sale_order_ref = fields.Char(
         string="Sale order ref",
