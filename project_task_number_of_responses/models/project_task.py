@@ -21,10 +21,12 @@ class ProjectTask(models.Model):
 
         for record in self:
             # Subtype is "Discussions" AND either
-            # - Message type is Email and the task's partner is in the list of recipients, OR
+            # - Message type is Email and the task's partner
+            #   is in the list of recipients, OR
             # - Message type is Comment
             record.number_of_responses = len(
                 record.message_ids.filtered(
+                    # flake8: noqa: B023
                     lambda msg: (
                         msg.subtype_id.id == mt_comment_subtype_id.id
                         and (

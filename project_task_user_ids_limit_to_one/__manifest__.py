@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2025- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2025- Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,8 +22,8 @@
     "version": "17.0.1.0.1",
     "category": "Project",
     "summary": "Prevent setting more than one assignee for a task",
-    "website": "https://gitlab.com/tawasta/odoo/project",
-    "author": "Tawasta",
+    "website": "https://github.com/tawasta/project",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,

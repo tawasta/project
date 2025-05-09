@@ -11,4 +11,4 @@ class ProjectTask(models.Model):
                     # Päivitetään käyttäjä Many2many-kenttään oikein
                     vals["user_ids"] = [(4, self.env.user.id)]
 
-        return super(ProjectTask, self).write(vals)
+        return super().write(vals)
