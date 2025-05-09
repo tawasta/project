@@ -4,6 +4,8 @@
 Project
 =======
 
+Project and task related addons
+
 [//]: # (addons)
 
 Available addons

@@ -21,7 +21,7 @@
     "name": "Project Stage: 'Is Closed?' Field",
     "version": "17.0.1.0.0",
     "category": "Project",
-    "summary": "Boolean field for identifying closed projects even if they are not archived",
+    "summary": "Field for identifying closed projects even if they are not archived",
     "website": "https://github.com/tawasta/project",
     "author": "Futural",
     "license": "AGPL-3",

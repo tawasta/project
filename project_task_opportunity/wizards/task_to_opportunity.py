@@ -28,11 +28,7 @@ class TaskToOpportunity(models.TransientModel):
 
         active_id = self._context["active_id"]
         task = self.env["project.task"].browse([active_id])
-        name = (
-            "%s - %s" % (task.partner_id.name, task.name)
-            if task.partner_id
-            else task.name
-        )
+        name = f"{task.partner_id.name} - {task.name}" if task.partner_id else task.name
 
         description = html2plaintext(task.description)
         res.update(
