@@ -11,10 +11,8 @@ class TaskToOpportunity(models.TransientModel):
         required=True,
         help="Related partner to this opportunity",
     )
-    name = fields.Char(string="Name", required=True, help="Opportunity's name")
-    description = fields.Text(
-        string="Description", help="Opportunity's description in plain text"
-    )
+    name = fields.Char(required=True, help="Opportunity's name")
+    description = fields.Text(help="Opportunity's description in plain text")
     user_id = fields.Many2one(
         comodel_name="res.users",
         string="Salesperson",

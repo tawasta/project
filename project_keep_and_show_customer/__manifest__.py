@@ -24,7 +24,7 @@
                   Always show customer on projects""",
     "version": "17.0.1.0.0",
     "category": "Project",
-    "website": "https://gitlab.com/tawasta/odoo/project",
+    "website": "https://github.com/OCA/project",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
