@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2022- Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -23,8 +23,8 @@
     "summary": "Suggest a timesheet description based on the task",
     "version": "17.0.1.0.0",
     "category": "Project",
-    "website": "https://gitlab.com/tawasta/odoo/project",
-    "author": "Tawasta",
+    "website": "https://github.com/OCA/project",
+    "author": "Futural",
     "license": "AGPL-3",
     "depends": [
         "project",

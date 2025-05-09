@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2022- Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -23,7 +23,7 @@
     "summary": "Disable quick create from task kanban",
     "version": "17.0.1.0.0",
     "category": "Project",
-    "website": "https://gitlab.com/tawasta/odoo/project",
+    "website": "https://github.com/OCA/project",
     "author": "Futural",
     "license": "AGPL-3",
     "depends": [
