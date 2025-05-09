@@ -23,7 +23,7 @@
     "summary": "Create an opportunity from a task",
     "version": "17.0.1.0.0",
     "category": "Project",
-    "website": "https://github.com/OCA/project",
+    "website": "https://github.com/tawasta/project",
     "author": "Futural",
     "license": "AGPL-3",
     "depends": [
