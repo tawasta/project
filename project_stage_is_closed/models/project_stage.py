@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+from odoo import models, fields
+
+>>>>>>> 66cf81174fc43d54f1bd640c3fd4dddb94715ec0
 import logging
 
 from odoo import fields, models

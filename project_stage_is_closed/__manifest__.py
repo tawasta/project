@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Futural Oy
-#    Copyright 2025- Futural Oy (https://futural.fi)
+#    Author: Oy Tawasta OS Technologies Ltd.
+#    Copyright 2025- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
