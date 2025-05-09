@@ -22,7 +22,7 @@
     "version": "17.0.1.1.1",
     "category": "Project",
     "summary": "Billing enabled boolean field for project task",
-    "website": "https://github.com/OCA/project",
+    "website": "https://github.com/tawasta/project",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

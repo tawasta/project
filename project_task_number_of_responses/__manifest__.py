@@ -23,7 +23,7 @@
     "summary": "Keep track of the Number of Responses sent to the customer",
     "category": "Project",
     "version": "17.0.1.0.0",
-    "website": "https://github.com/OCA/project",
+    "website": "https://github.com/tawasta/project",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
