@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Add filters for task priorities -->
+    <record id="view_task_search_form_inherit_sla_scope_priority" model="ir.ui.view">
+        <field name="name">project.task.search.form.inherit.sla.scope.priority</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form" />
+        <field name="arch" type="xml">
+            <search position="inside">
+                <separator />
+                <filter
+                    string="Highest Priority"
+                    name="highest_priority"
+                    domain="[('priority', '=', 3)]"
+                />
+                <filter
+                    string="Very High Priority"
+                    name="very_high_priority"
+                    domain="[('priority', '=', 2)]"
+                />
+                <filter
+                    string="High Priority"
+                    name="high_priority"
+                    domain="[('priority', '=', 1)]"
+                />
+                <filter
+                    string="Normal Priority"
+                    name="normal_priority"
+                    domain="[('priority', '=', 0)]"
+                />
+                <separator />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Priority"
+                        name="group_by_priority"
+                        domain="[]"
+                        context="{'group_by': 'priority'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>
