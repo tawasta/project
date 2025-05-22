@@ -2,10 +2,11 @@
         :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
         :alt: License: AGPL-3
 
-=================================
-Project Stage: 'Is Closed?' Field
-=================================
-* Boolean field for identifying closed projects even if they are not archived
+==============================
+Project: Manual Code for Tasks
+==============================
+
+* Adds a simple, manually managed, optional task code field
 
 Configuration
 =============
@@ -13,7 +14,7 @@ Configuration
 
 Usage
 =====
-* Set the boolean field via Project -> Configuration -> Project Stages
+* Codes can be added manually for tasks in form view
 
 Known issues / Roadmap
 ======================

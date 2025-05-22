@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2024 Futural Oy (https://futural.fi)
+#    Copyright 2025- Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -17,19 +17,18 @@
 #    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
 #
 ##############################################################################
-
 {
-    "name": "Project Task: Number of Responses",
-    "summary": "Keep track of the Number of Responses sent to the customer",
+    "name": "Project: Manual Code for Tasks",
+    "version": "17.0.1.0.1",
     "category": "Project",
-    "version": "17.0.1.0.0",
+    "summary": "Manually managed, optional task code field",
     "website": "https://github.com/tawasta/project",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "project",
+    "depends": ["project"],
+    "data": [
+        "views/project_task_views.xml",
     ],
-    "data": ["views/project_task.xml"],
 }

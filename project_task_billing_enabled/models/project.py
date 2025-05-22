@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2022- Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -38,7 +38,9 @@ class Task(models.Model):
 
     # 2. Fields declaration
     billing_enabled = fields.Boolean(
-        "Billing", help="Enable this field if task is billable."
+        "Billing",
+        help="Enable this field if task is billable.",
+        tracking=True,
     )
     sale_order_ref = fields.Char(
         string="Sale order ref",
