@@ -21,7 +21,7 @@
 {
     "name": "Automatic color coding for project tasks",
     "summary": "Set task colors automatically, based on rules",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.1.1",
     "category": "Project",
     "website": "https://github.com/tawasta/project",
     "author": "Futural",

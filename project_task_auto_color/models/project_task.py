@@ -16,18 +16,26 @@ class ProjectTask(models.Model):
                 latest_message_age_days = latest_message_age.days
                 project = record.project_id
 
+                set_color = None
+
                 if latest_message_age_days <= project.task_autocolor_days_fresh:
                     # Freshly updated tasks
-                    record.color = project.task_autocolor_color_fresh
+                    set_color = project.task_autocolor_color_fresh
                 elif latest_message_age_days <= project.task_autocolor_days_recent:
                     # Tasks updated recently
-                    record.color = project.task_autocolor_color_recent
+                    set_color = project.task_autocolor_color_recent
                 elif latest_message_age_days <= project.task_autocolor_days_aged:
                     # Aged tasks
-                    record.color = project.task_autocolor_color_aged
+                    set_color = project.task_autocolor_color_aged
                 else:
                     # Stale tasks
-                    record.color = 1
+                    set_color = 1
+
+                # SQL command does not update write_date
+                self.env.cr.execute(
+                    "UPDATE project_task SET color = %s WHERE id = %s",
+                    (set_color, record.id),
+                )  # noqa: UP031
 
     @api.returns("mail.message", lambda value: value.id)
     def message_post(self, *args, **kwargs):
