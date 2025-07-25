@@ -30,7 +30,7 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["project_task_code", "project_sequence"],
+    "depends": ["project_task_code_manual", "project_sequence"],
     "data": [
         "views/project_project.xml",
     ],
