@@ -1,0 +1,36 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* project_task_code_manual_default_from_project_sequence
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250428\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-25 07:43+0000\n"
+"PO-Revision-Date: 2025-07-25 07:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: project_task_code_manual_default_from_project_sequence
+#: model:ir.model.fields,field_description:project_task_code_manual_default_from_project_sequence.field_project_project__number_next_task
+msgid "Next Task Number"
+msgstr "Seuraavan tehtävän numero"
+
+#. module: project_task_code_manual_default_from_project_sequence
+#: model:ir.model,name:project_task_code_manual_default_from_project_sequence.model_project_project
+msgid "Project"
+msgstr "Projektit"
+
+#. module: project_task_code_manual_default_from_project_sequence
+#: model:ir.model.fields,help:project_task_code_manual_default_from_project_sequence.field_project_project__number_next_task
+msgid "Suffix number to be given to the next task's code"
+msgstr "Numeerinen pääte, joka asetetaan seuraavan tehtävän numeron loppuosaksi"
+
+#. module: project_task_code_manual_default_from_project_sequence
+#: model:ir.model,name:project_task_code_manual_default_from_project_sequence.model_project_task
+msgid "Task"
+msgstr "Tehtävä"

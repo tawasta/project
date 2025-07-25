@@ -15,7 +15,6 @@ class ProjectTask(models.Model):
         compute="_compute_priority",
         store=True,
         readonly=False,
-        string="Priority",
         help="Task priority based on SLA and Scope levels. Can be manually overridden.",
     )
 
