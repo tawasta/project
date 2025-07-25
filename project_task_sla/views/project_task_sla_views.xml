@@ -1,0 +1,93 @@
+<odoo>
+    <record id="view_project_task_sla_tree" model="ir.ui.view">
+        <field name="name">project.task.sla.tree</field>
+        <field name="model">project.task.sla</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="criticality" />
+                <field name="response_time" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_project_task_sla_form" model="ir.ui.view">
+        <field name="name">project.task.sla.form</field>
+        <field name="model">project.task.sla</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="criticality" />
+                        <field name="response_time" />
+                        <field name="description" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_project_task_sla" model="ir.actions.act_window">
+        <field name="name">SLA</field>
+        <field name="res_model">project.task.sla</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_project_task_sla_root"
+        name="Task SLA"
+        parent="project.menu_main_pm"
+        sequence="25"
+    />
+    <menuitem
+        id="menu_project_task_sla"
+        name="SLA Definitions"
+        parent="project.menu_project_config"
+        action="action_project_task_sla"
+    />
+
+    <record id="view_task_form_inherit_sla" model="ir.ui.view">
+        <field name="name">project.task.form.inherit.sla</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="SLA" name="sla">
+                    <group>
+                        <field name="project_task_sla_id" />
+                        <field name="sla_met" />
+                        <field name="sla_diff_hours" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_task_search_form_inherit_sla" model="ir.ui.view">
+        <field name="name">project.task.search.form.inherit.sla</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form" />
+        <field name="arch" type="xml">
+            <search position="inside">
+                <filter
+                    string="SLA Met"
+                    name="sla_met"
+                    domain="[('sla_met', '=', True)]"
+                />
+                <filter
+                    string="SLA Not Met"
+                    name="sla_not_met"
+                    domain="[('sla_met', '=', False)]"
+                />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="SLA"
+                        name="group_by_sla"
+                        context="{'group_by': 'project_task_sla_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

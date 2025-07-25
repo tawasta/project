@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_project_task_scope_tree" model="ir.ui.view">
+        <field name="name">project.task.scope.tree</field>
+        <field name="model">project.task.scope</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="level" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_project_task_scope_form" model="ir.ui.view">
+        <field name="name">project.task.scope.form</field>
+        <field name="model">project.task.scope</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="level" />
+                        <field name="description" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_project_task_scope" model="ir.actions.act_window">
+        <field name="name">Scope Definitions</field>
+        <field name="res_model">project.task.scope</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_project_task_scope_root"
+        name="Task Scope"
+        parent="project.menu_main_pm"
+        sequence="25"
+    />
+    <menuitem
+        id="menu_project_task_scope"
+        name="Scope Definitions"
+        parent="project.menu_project_config"
+        action="action_project_task_scope"
+    />
+
+    <record id="view_task_form_inherit_scope" model="ir.ui.view">
+        <field name="name">project.task.form.inherit.scope</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Scope" name="scope">
+                    <group>
+                        <field name="project_task_scope_id" />
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_task_search_form_inherit_scope" model="ir.ui.view">
+        <field name="name">project.task.search.form.inherit.scope</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form" />
+        <field name="arch" type="xml">
+            <search position="inside">
+                <field name="project_task_scope_id" />
+                <filter
+                    string="Easy Tasks"
+                    name="easy_scope"
+                    domain="[('project_task_scope_id.level', '=', '1')]"
+                />
+                <filter
+                    string="Hard Tasks"
+                    name="hard_scope"
+                    domain="[('project_task_scope_id.level', '=', '3')]"
+                />
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Scope"
+                        name="group_by_scope"
+                        context="{'group_by': 'project_task_scope_id'}"
+                    />
+                </group>
+            </search>
+        </field>
+    </record>
+</odoo>

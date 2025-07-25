@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="edit_project_inherit" model="ir.ui.view">
+        <field
+            name="name"
+        >project.project.form.inherit.manual.code.default.from.project.sequence</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//group[@name='extra_settings']" position="inside">
+                <field name="number_next_task" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
