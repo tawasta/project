@@ -23,6 +23,8 @@
     "category": "Project",
     "summary": "Autofills the manual code field from project sequence "
     "and task running number",
+    # Alpha to match project_sequence and not trigger precommit failure
+    "development_status": "Alpha",
     "website": "https://github.com/tawasta/project",
     "author": "Futural",
     "license": "AGPL-3",
