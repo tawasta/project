@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <!-- Smart button -->
+  <record id="installation_form_inherit_checklist" model="ir.ui.view">
+    <field name="name">software_knowledge_base.installation.form.checklist</field>
+    <field name="model">software_knowledge_base.installation</field>
+    <field name="inherit_id" ref="software_knowledge_base.installation_form_view"/>
+    <field name="arch" type="xml">
+      <xpath expr="//sheet/notebook" position="inside">
+        <page string="Checklist">
+          <group>
+            <field name="checklist_progress" widget="progressbar"/>
+            <field name="checklist_done" readonly="1"/>
+            <field name="checklist_total" readonly="1"/>
+          </group>
+          <field name="checklist_item_ids" context="{'default_installation_id': active_id}"
+                 widget="one2many_list" mode="tree,form">
+            <tree editable="bottom">
+              <field name="sequence" widget="handle"/>
+              <field name="name" readonly="1"/>
+              <field name="module_id" readonly="1"/>
+              <field name="is_mandatory" readonly="1"/>
+              <field name="validation_status" readonly="1"/>
+              <field name="is_done"/>
+              <field name="done_by"/>
+              <field name="done_at"/>
+            </tree>
+          </field>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>
