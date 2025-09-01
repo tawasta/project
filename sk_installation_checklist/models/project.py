@@ -1,6 +1,6 @@
-# -*- coding: utf-8 -*-
-from odoo import api, fields, models, _
+from odoo import _, fields, models
 from odoo.exceptions import UserError
+
 
 class ProjectProject(models.Model):
     _inherit = "project.project"
@@ -8,7 +8,7 @@ class ProjectProject(models.Model):
     installation_id = fields.Many2one(
         "software_knowledge_base.installation",
         string="Installation",
-        help="Linkitä projektin käyttöönotto suoraan asennukseen ja sen checklistiin."
+        help="Linkitä projektin käyttöönotto suoraan asennukseen ja sen checklistiin.",
     )
 
     def action_open_installation_checklist(self):

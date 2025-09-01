@@ -3,19 +3,23 @@
   <record id="project_project_form_inherit_installation" model="ir.ui.view">
     <field name="name">project.project.form.installation.link</field>
     <field name="model">project.project</field>
-    <field name="inherit_id" ref="project.edit_project"/>
+    <field name="inherit_id" ref="project.edit_project" />
     <field name="arch" type="xml">
       <field name="tag_ids" position="after">
-        <field name="installation_id"
-               placeholder="Link to Installation (for onboarding/checklist)"/>
+        <field
+                    name="installation_id"
+                    placeholder="Link to Installation (for onboarding/checklist)"
+                />
       </field>
       <xpath expr="//div[@name='button_box']" position="inside">
-        <button type="object"
-                name="action_open_installation_checklist"
-                class="oe_stat_button"
-                icon="fa-check-square-o"
-                string="Checklist"
-                invisible="not installation_id" />
+        <button
+                    type="object"
+                    name="action_open_installation_checklist"
+                    class="oe_stat_button"
+                    icon="fa-check-square-o"
+                    string="Checklist"
+                    invisible="not installation_id"
+                />
       </xpath>
     </field>
   </record>

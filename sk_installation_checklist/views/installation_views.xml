@@ -4,32 +4,38 @@
   <record id="installation_form_inherit_checklist" model="ir.ui.view">
     <field name="name">software_knowledge_base.installation.form.checklist</field>
     <field name="model">software_knowledge_base.installation</field>
-    <field name="inherit_id" ref="software_knowledge_base.installation_form_view"/>
+    <field name="inherit_id" ref="software_knowledge_base.installation_form_view" />
     <field name="arch" type="xml">
       <xpath expr="//form/header" position="inside">
-        <button name="action_open_checklist_wizard"
-                type="object"
-                string="Checklist"
-                class="oe_highlight"/>
+        <button
+                    name="action_open_checklist_wizard"
+                    type="object"
+                    string="Checklist"
+                    class="oe_highlight"
+                />
       </xpath>
       <xpath expr="//sheet/notebook" position="inside">
         <page string="Checklist">
           <group>
-            <field name="checklist_progress" widget="progressbar"/>
-            <field name="checklist_done" readonly="1"/>
-            <field name="checklist_total" readonly="1"/>
+            <field name="checklist_progress" widget="progressbar" />
+            <field name="checklist_done" readonly="1" />
+            <field name="checklist_total" readonly="1" />
           </group>
-          <field name="checklist_item_ids" context="{'default_installation_id': active_id}"
-                 widget="one2many_list" mode="tree,form">
+          <field
+                        name="checklist_item_ids"
+                        context="{'default_installation_id': active_id}"
+                        widget="one2many_list"
+                        mode="tree,form"
+                    >
             <tree editable="bottom">
-              <field name="sequence" widget="handle"/>
-              <field name="name" readonly="1"/>
-              <field name="module_id" readonly="1"/>
-              <field name="is_mandatory" readonly="1"/>
-              <field name="validation_status" readonly="1"/>
-              <field name="is_done"/>
-              <field name="done_by"/>
-              <field name="done_at"/>
+              <field name="sequence" widget="handle" />
+              <field name="name" readonly="1" />
+              <field name="module_id" readonly="1" />
+              <field name="is_mandatory" readonly="1" />
+              <field name="validation_status" readonly="1" />
+              <field name="is_done" />
+              <field name="done_by" />
+              <field name="done_at" />
             </tree>
           </field>
         </page>
@@ -38,20 +44,28 @@
   </record>
 
   <record id="installation_search_view_inherit_checklist" model="ir.ui.view">
-    <field name="name">software_knowledge_base.installation.search.checklist_filters</field>
+    <field
+            name="name"
+        >software_knowledge_base.installation.search.checklist_filters</field>
     <field name="model">software_knowledge_base.installation</field>
-    <field name="inherit_id" ref="software_knowledge_base.installation_search_view"/>
+    <field name="inherit_id" ref="software_knowledge_base.installation_search_view" />
     <field name="arch" type="xml">
         <field name="server_id" position="after">
-            <filter string="Checklist Complete"
+            <filter
+                    string="Checklist Complete"
                     name="f_checklist_complete"
-                    domain="[('checklist_simple_status','=','complete')]"/>
-            <filter string="Checklist In Progress"
+                    domain="[('checklist_simple_status','=','complete')]"
+                />
+            <filter
+                    string="Checklist In Progress"
                     name="f_checklist_in_progress"
-                    domain="[('checklist_simple_status','=','in_progress')]"/>
-            <filter string="Checklist Not Started"
+                    domain="[('checklist_simple_status','=','in_progress')]"
+                />
+            <filter
+                    string="Checklist Not Started"
                     name="f_checklist_not_started"
-                    domain="[('checklist_simple_status','=','not_started')]"/>
+                    domain="[('checklist_simple_status','=','not_started')]"
+                />
         </field>
     </field>
 </record>

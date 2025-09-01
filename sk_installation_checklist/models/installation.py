@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
-from odoo import api, fields, models, _
-from odoo.exceptions import ValidationError
-from markupsafe import Markup
+from markupsafe import Markup, escape
+
+from odoo import _, api, fields, models
 
 
 class Installation(models.Model):
@@ -13,7 +12,10 @@ class Installation(models.Model):
     checklist_total = fields.Integer(compute="_compute_progress", store=True)
     checklist_done = fields.Integer(compute="_compute_progress", store=True)
     checklist_progress = fields.Float(
-        string="Checklist %", compute="_compute_progress", store=True, group_operator="avg"
+        string="Checklist %",
+        compute="_compute_progress",
+        store=True,
+        group_operator="avg",
     )
 
     checklist_simple_status = fields.Selection(
@@ -32,7 +34,9 @@ class Installation(models.Model):
     def _compute_progress(self):
         for rec in self:
             total = len(rec.checklist_item_ids.filtered(lambda i: i.is_mandatory))
-            done = len(rec.checklist_item_ids.filtered(lambda i: i.is_mandatory and i.is_done))
+            done = len(
+                rec.checklist_item_ids.filtered(lambda i: i.is_mandatory and i.is_done)
+            )
             rec.checklist_total = total
             rec.checklist_done = done
             rec.checklist_progress = (done * 100.0 / total) if total else 0.0
@@ -53,13 +57,18 @@ class Installation(models.Model):
     def _templates_for_modules(self):
         self.ensure_one()
         Template = self.env["installation.checklist.template"]
-        return Template.search([
-            ("module_id", "in", self.module_ids.ids),
-            ("active", "=", True),
-        ])
+        return Template.search(
+            [
+                ("module_id", "in", self.module_ids.ids),
+                ("active", "=", True),
+            ]
+        )
 
     def action_sync_checklist(self):
-        """Generoi puuttuvat checklist itemit valituista moduuleista ja poistaa vanhat moduulit."""
+        """
+        Generoi puuttuvat checklist-itemit valituista moduuleista
+        ja poistaa vanhat moduulit.
+        """
         for rec in self:
             templates = rec._templates_for_modules()
             existing_by_tmpl = {
@@ -71,13 +80,15 @@ class Installation(models.Model):
             for tmpl in templates:
                 if tmpl.id in existing_by_tmpl:
                     continue
-                to_create.append({
-                    "installation_id": rec.id,
-                    "template_id": tmpl.id,
-                    "name": tmpl.name,
-                    "description": tmpl.description,
-                    "sequence": tmpl.sequence,
-                })
+                to_create.append(
+                    {
+                        "installation_id": rec.id,
+                        "template_id": tmpl.id,
+                        "name": tmpl.name,
+                        "description": tmpl.description,
+                        "sequence": tmpl.sequence,
+                    }
+                )
             if to_create:
                 self.env["installation.checklist.item"].create(to_create)
 
@@ -119,22 +130,29 @@ class Installation(models.Model):
                         lambda i: i.is_mandatory and not i.is_done
                     )
                     if missing:
-                        missing_list_html = "<ul>"
-                        for name in missing.mapped("name"):
-                            missing_list_html += "<li>%s</li>" % name
-                        missing_list_html += "</ul>"
+                        items = missing.mapped("name")
+                        missing_list_html = "<ul>%s</ul>" % "".join(
+                            "<li>%s</li>" % escape(name) for name in items
+                        )
 
-                        message = _(
-                            "Installation '%s' status changed to <b>Ready</b>.<br/><br/>"
-                            "However, the following mandatory checklist items are still missing:<br/>%s<br/>"
-                            "Please review these items to ensure full configuration."
-                        ) % (rec.name or rec.id, missing_list_html)
+                        # Käytä nimettyjä placeholder-avaimia
+                        msg_tmpl = _(
+                            "Installation '%(name)s' status changed to "
+                            "<b>Ready</b>.<br/><br/>"
+                            "However, the following mandatory checklist items "
+                            "are still missing:<br/>"
+                            "%(list_html)s<br/>"
+                            "Please review these items to ensure full "
+                            "configuration."
+                        )
+                        message = msg_tmpl % {
+                            "name": escape(rec.name or rec.id),
+                            "list_html": Markup(missing_list_html),
+                        }
+
                         rec.message_post(
                             body=Markup(message),
-                            subtype_id=self.env.ref('mail.mt_comment').id
+                            subtype_id=self.env.ref("mail.mt_comment").id,
                         )
 
         return res
-
-
-
