@@ -57,4 +57,12 @@
     <field name="context">{}</field>
     <field name="domain">[]</field>
   </record>
+
+  <menuitem id="checklist_menu" name="Checklist" parent="software_knowledge_base.root_menu" sequence="20" />
+    <menuitem
+        id="checklist_items_menu"
+        parent="checklist_menu"
+        action="action_installation_checklist_items"
+        sequence="10"
+    />
 </odoo>

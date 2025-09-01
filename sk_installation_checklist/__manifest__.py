@@ -38,6 +38,7 @@
         "views/installation_views.xml",
         "views/module_views.xml",
         "views/project_views.xml",
+        "wizard/installation_checklist_wizard_views.xml",
     ],
     "demo": [],
     "application": False,

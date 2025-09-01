@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
+from markupsafe import Markup
 
 
 class Installation(models.Model):
@@ -15,6 +16,18 @@ class Installation(models.Model):
         string="Checklist %", compute="_compute_progress", store=True, group_operator="avg"
     )
 
+    checklist_simple_status = fields.Selection(
+        [
+            ("not_started", "Ei aloitettu"),
+            ("in_progress", "Kesken"),
+            ("complete", "Valmis"),
+        ],
+        string="Checklist status (simple)",
+        compute="_compute_progress",
+        store=True,
+        index=True,
+    )
+
     @api.depends("checklist_item_ids.is_done")
     def _compute_progress(self):
         for rec in self:
@@ -23,6 +36,19 @@ class Installation(models.Model):
             rec.checklist_total = total
             rec.checklist_done = done
             rec.checklist_progress = (done * 100.0 / total) if total else 0.0
+
+            # Simple status:
+            # - 0 pakollista -> "Ei aloitettu" (ei checklistiä vielä)
+            # - 0 < done < total -> "Kesken"
+            # - done == total (ja total > 0) -> "Valmis"
+            if total == 0:
+                rec.checklist_simple_status = "not_started"
+            elif done == 0:
+                rec.checklist_simple_status = "not_started"
+            elif done < total:
+                rec.checklist_simple_status = "in_progress"
+            else:
+                rec.checklist_simple_status = "complete"
 
     def _templates_for_modules(self):
         self.ensure_one()
@@ -61,6 +87,16 @@ class Installation(models.Model):
                 if item.template_id and item.template_id.id not in active_tmpl_ids:
                     item.unlink()
 
+    def action_open_checklist_wizard(self):
+        self.ensure_one()
+        return {
+            "type": "ir.actions.act_window",
+            "res_model": "installation.checklist.wizard",
+            "view_mode": "form",
+            "target": "new",
+            "context": {"default_installation_id": self.id},
+        }
+
     @api.model
     def create(self, vals):
         rec = super().create(vals)
@@ -83,14 +119,18 @@ class Installation(models.Model):
                         lambda i: i.is_mandatory and not i.is_done
                     )
                     if missing:
-                        missing_names = "\n".join(missing.mapped("name"))
+                        missing_list_html = "<ul>"
+                        for name in missing.mapped("name"):
+                            missing_list_html += "<li>%s</li>" % name
+                        missing_list_html += "</ul>"
+
                         message = _(
-                            "Installation '%s' status changed to *Ready*.\n\n"
-                            "However, the following mandatory checklist items are still missing:\n%s\n\n"
+                            "Installation '%s' status changed to <b>Ready</b>.<br/><br/>"
+                            "However, the following mandatory checklist items are still missing:<br/>%s<br/>"
                             "Please review these items to ensure full configuration."
-                        ) % (rec.name or rec.id, missing_names)
+                        ) % (rec.name or rec.id, missing_list_html)
                         rec.message_post(
-                            body=message,
+                            body=Markup(message),
                             subtype_id=self.env.ref('mail.mt_comment').id
                         )
 
