@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <record id="software_module_form_inherit_checklist" model="ir.ui.view">
+    <field name="name">software_knowledge_base.module.form.checklist</field>
+    <field name="model">software_knowledge_base.module</field>
+    <field name="inherit_id" ref="software_knowledge_base.module_form_view" />
+    <field name="arch" type="xml">
+      <xpath expr="//sheet/notebook" position="inside">
+        <page string="Checklist Templates">
+          <field
+                        name="checklist_item_template_ids"
+                        context="{'default_module_id': active_id}"
+                    >
+            <tree editable="bottom">
+              <field name="sequence" widget="handle" />
+              <field name="name" />
+              <field name="is_mandatory" />
+              <field name="active" />
+            </tree>
+            <form>
+              <sheet>
+                <group>
+                  <field name="name" />
+                  <field name="is_mandatory" />
+                  <field name="sequence" />
+                  <field name="active" />
+                </group>
+                <group>
+                  <field name="description" nolabel="1" />
+                </group>
+              </sheet>
+            </form>
+          </field>
+        </page>
+      </xpath>
+    </field>
+  </record>
+</odoo>
