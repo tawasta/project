@@ -72,8 +72,11 @@ class InstallationChecklistItem(models.Model):
 
         if rec.installation_id:
             project = self.env["project.project"].search(
-                [("installation_id", "=", rec.installation_id.id)], limit=1
-            )  # haetaan viimeisin projekti eli uusin
+                [("installation_id", "=", rec.installation_id.id)],
+                order="id desc",
+                limit=1,
+            )
+
             if project:
                 module_name = rec.module_id.name if rec.module_id else _("(No module)")
 
@@ -98,6 +101,13 @@ class InstallationChecklistItem(models.Model):
                         "name": "[Checklist] %s" % rec.name,
                         "project_id": project.id,
                         "description": description,
+                        "installation_id": rec.installation_id.id,
+                        "module_ids": [(4, rec.module_id.id)] if rec.module_id else [],
+                        "user_ids": [
+                            (4, rec.installation_id.technical_responsible_person_id.id)
+                        ]
+                        if rec.installation_id.technical_responsible_person_id
+                        else [],
                     }
                 )
 
