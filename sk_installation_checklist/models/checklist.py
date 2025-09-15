@@ -1,5 +1,6 @@
-from odoo import api, fields, models, _
 from markupsafe import Markup, escape
+
+from odoo import _, api, fields, models
 
 
 class InstallationChecklistTemplate(models.Model):
@@ -53,7 +54,9 @@ class InstallationChecklistItem(models.Model):
         tracking=True,
     )
 
-    task_id = fields.Many2one('project.task', string='Project Task', readonly=True, copy=False, index=True)
+    task_id = fields.Many2one(
+        "project.task", string="Project Task", readonly=True, copy=False, index=True
+    )
 
     _sql_constraints = [
         (
@@ -68,9 +71,8 @@ class InstallationChecklistItem(models.Model):
         rec = super().create(vals)
 
         if rec.installation_id:
-            project = self.env['project.project'].search(
-                [('installation_id', '=', rec.installation_id.id)],
-                limit=1
+            project = self.env["project.project"].search(
+                [("installation_id", "=", rec.installation_id.id)], limit=1
             )  # haetaan viimeisin projekti eli uusin
             if project:
                 module_name = rec.module_id.name if rec.module_id else _("(No module)")
@@ -80,32 +82,41 @@ class InstallationChecklistItem(models.Model):
                 if rec.description:
                     description_parts.append(escape(rec.description))
 
-                description_parts.append("Installation: %s" % escape(rec.installation_id.display_name))
+                description_parts.append(
+                    "Installation: %s" % escape(rec.installation_id.display_name)
+                )
                 if rec.module_id:
-                    description_parts.append("Module: %s" % escape(rec.module_id.display_name))
+                    description_parts.append(
+                        "Module: %s" % escape(rec.module_id.display_name)
+                    )
 
                 # Muodostetaan kappaleet HTML:llä
                 description = "<br/><br/>".join(description_parts)
 
-                task = self.env['project.task'].create({
-                    'name': "[Checklist] %s" % rec.name,
-                    'project_id': project.id,
-                    'description': description,
-                })
+                task = self.env["project.task"].create(
+                    {
+                        "name": "[Checklist] %s" % rec.name,
+                        "project_id": project.id,
+                        "description": description,
+                    }
+                )
 
                 rec.task_id = task.id
 
                 # Chatter-viestiin myös moduulitieto
                 item_display = rec.name or ("#%s" % rec.id)
                 item_link = Markup(
-                    "<a href='#' data-oe-model='installation.checklist.item' data-oe-id='%d'>%s</a>"
+                    "<a href='#' data-oe-model='installation.checklist.item' "
+                    "data-oe-id='%d'>%s</a>"
                 ) % (rec.id, escape(item_display))
 
                 task.message_post(
                     body=Markup(
-                        _("Linked checklist item: %s<br/>Module: %s") % (
-                            item_link, escape(module_name)
-                        )
+                        _("Linked checklist item: %(item)s<br/>Module: %(module)s")
+                        % {
+                            "item": item_link,
+                            "module": escape(module_name),
+                        }
                     ),
                     subtype_xmlid="mail.mt_comment",
                 )
