@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <!-- Lisää sarake tuntirivien listanäkymään -->
     <record id="view_hr_timesheet_line_tree_inherit_billing" model="ir.ui.view">
         <field name="name">account.analytic.line.tree.inherit.billing</field>
         <field name="model">account.analytic.line</field>
-        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree"/>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree" />
         <field name="arch" type="xml">
             <!-- Lisää kenttä heti tehtävän jälkeen jos mahdollista -->
             <xpath expr="//tree/field[@name='task_id']" position="after">
-                <field name="billing_enabled"/>
+                <field name="billing_enabled" />
             </xpath>
         </field>
     </record>
@@ -17,11 +17,11 @@
     <record id="view_hr_timesheet_line_form_inherit_billing" model="ir.ui.view">
         <field name="name">account.analytic.line.form.inherit.billing</field>
         <field name="model">account.analytic.line</field>
-        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_form"/>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_form" />
         <field name="arch" type="xml">
             <!-- Aseta tehtävän viereen/alle -->
             <xpath expr="//field[@name='task_id']" position="after">
-                <field name="billing_enabled" readonly="1"/>
+                <field name="billing_enabled" readonly="1" />
             </xpath>
         </field>
     </record>
@@ -30,13 +30,19 @@
     <record id="view_hr_timesheet_line_search_inherit_billing" model="ir.ui.view">
         <field name="name">account.analytic.line.search.inherit.billing</field>
         <field name="model">account.analytic.line</field>
-        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_search"/>
+        <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_search" />
         <field name="arch" type="xml">
             <xpath expr="//search" position="inside">
-                <filter name="billing_enabled_true" string="Billable"
-                        domain="[('billing_enabled','=',True)]"/>
-                <filter name="billing_enabled_false" string="Non-billable"
-                        domain="[('billing_enabled','=',False)]"/>
+                <filter
+                    name="billing_enabled_true"
+                    string="Billable"
+                    domain="[('billing_enabled','=',True)]"
+                />
+                <filter
+                    name="billing_enabled_false"
+                    string="Non-billable"
+                    domain="[('billing_enabled','=',False)]"
+                />
             </xpath>
         </field>
     </record>

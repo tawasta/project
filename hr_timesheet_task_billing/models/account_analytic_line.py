@@ -37,7 +37,6 @@ class AccountAnalyticLine(models.Model):
         help="Billable flag copied from the related task.",
     )
 
-
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
