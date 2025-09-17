@@ -31,6 +31,7 @@
               <field name="sequence" widget="handle" />
               <field name="name" readonly="1" />
               <field name="module_id" readonly="1" />
+              <field name="description" readonly="1" />
               <field name="is_mandatory" readonly="1" />
               <field name="validation_status" readonly="1" />
               <field name="is_done" />
