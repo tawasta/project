@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Access rule for the wizard, restricted to Project Managers -->
+    <record id="access_sale_create_line_from_task_wizard" model="ir.model.access">
+        <field name="name">sale.create.line.from.task.wizard</field>
+        <field name="model_id" ref="model_sale_create_line_from_task_wizard" />
+        <field name="group_id" ref="project.group_project_manager" />
+        <field name="perm_read" eval="1" />
+        <field name="perm_write" eval="1" />
+        <field name="perm_create" eval="1" />
+        <field name="perm_unlink" eval="0" />
+    </record>
+</odoo>

@@ -1,0 +1,149 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_project_create_sale_line_from_task
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250428\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-29 10:24+0000\n"
+"PO-Revision-Date: 2025-09-29 10:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_project_create_sale_line_from_task
+#: model_terms:ir.ui.view,arch_db:sale_project_create_sale_line_from_task.res_config_settings_view_form
+msgid ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Values set here are company-"
+"specific.\" role=\"img\" aria-label=\"Values set here are company-"
+"specific.\" groups=\"base.group_multi_company\"/>"
+msgstr ""
+"<span class=\"fa fa-lg fa-building-o\" title=\"Tässä asetetut arvot "
+"ovatyrityskohtaisia.\" role=\"img\" aria-label=\"Tässä asetetut arvot "
+"ovatyrityskohtaisia.\" groups=\"base.group_multi_company\"/>"
+
+#. module: sale_project_create_sale_line_from_task
+#: model_terms:ir.ui.view,arch_db:sale_project_create_sale_line_from_task.view_sale_create_line_from_task_wizard_form
+msgid "Cancel"
+msgstr "Peruuta"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model,name:sale_project_create_sale_line_from_task.model_res_company
+msgid "Companies"
+msgstr "Yritykset"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model,name:sale_project_create_sale_line_from_task.model_res_config_settings
+msgid "Config Settings"
+msgstr "Konfiguraatioasetukset"
+
+#. module: sale_project_create_sale_line_from_task
+#: model_terms:ir.ui.view,arch_db:sale_project_create_sale_line_from_task.view_sale_create_line_from_task_wizard_form
+msgid "Create"
+msgstr "Luo"
+
+#. module: sale_project_create_sale_line_from_task
+#: model_terms:ir.ui.view,arch_db:sale_project_create_sale_line_from_task.view_task_form2_inherit
+msgid "Create New Sale Order Line"
+msgstr "Luo uusi myyntitilausrivi"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.actions.act_window,name:sale_project_create_sale_line_from_task.action_sale_create_line_from_task_wizard
+#: model_terms:ir.ui.view,arch_db:sale_project_create_sale_line_from_task.view_sale_create_line_from_task_wizard_form
+msgid "Create Sale Order Line from Task"
+msgstr "Luo myyntitilausrivi tehtävältä"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: sale_project_create_sale_line_from_task
+#: model_terms:ir.ui.view,arch_db:sale_project_create_sale_line_from_task.res_config_settings_view_form
+msgid "Default Product When Creating SO Line from Task"
+msgstr "Oletustuote luodessa myyntitilausriviä tehtävältä"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_res_company__task_to_sale_line_default_product_id
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_res_config_settings__task_to_sale_line_default_product_id
+msgid "Default Product for Task to Sale Line"
+msgstr "Oletustuote luodessa myyntitilausriviä tehtävältä"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: sale_project_create_sale_line_from_task
+#. odoo-python
+#: code:addons/sale_project_create_sale_line_from_task/wizards/create_sale_line_wizard.py:0
+#, python-format
+msgid ""
+"New Sale Order Line created for %(name)s with %(hours)s allocated hours"
+msgstr ""
+"Luotiin myyntitilausrivi myynnille %(name)s, alunperin suunnitellut tunnit: %(hours)s"
+
+#. module: sale_project_create_sale_line_from_task
+#. odoo-python
+#: code:addons/sale_project_create_sale_line_from_task/wizards/create_sale_line_wizard.py:0
+#, python-format
+msgid "New Sale Order Line created from project task %(code)s - %(name)s"
+msgstr "Myyntitilausrivi luotiin projektitehtävältä %(code)s - %(name)s"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,help:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__sale_order_id
+msgid ""
+"Parent order for the new sale order line. If you do not select one, a new "
+"sale order will be created"
+msgstr ""
+"Uusi myyntitilausrivi luodaan tämän tilauksen alle. Jätä tyhjäksi, jos "
+"haluat että luodaan uusi tilaus."
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__partner_id
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__product_id
+msgid "Product"
+msgstr "Tuote"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__sale_order_id
+msgid "Sale Order"
+msgstr "Myyntitilaus"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__task_id
+msgid "Task"
+msgstr "Tehtävä"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model,name:sale_project_create_sale_line_from_task.model_sale_create_line_from_task_wizard
+msgid "Wizard to create sale order line from task"
+msgstr "Wizard myyntitilausrivin luomiseen tehtävältä"
