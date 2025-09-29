@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field
+            name="name"
+        >res.config.settings.view.form.inherit.sale.line.from.task</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="project.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+
+
+            <xpath expr="//setting[@id='project_milestone']" position="after">
+                    <setting
+                    id="setting_project_task_to_sale_default_product"
+                    help="Default Product When Creating SO Line from Task"
+                >
+                        <label for="task_to_sale_line_default_product_id" />
+                        <span
+                        class="fa fa-lg fa-building-o"
+                        title="Values set here are company-specific."
+                        role="img"
+                        aria-label="Values set here are company-specific."
+                        groups="base.group_multi_company"
+                    />
+                        <div class="text-muted">
+                            <field
+                            name="task_to_sale_line_default_product_id"
+                            domain="[('detailed_type', '=', 'service')]"
+                        />
+                        </div>
+                    </setting>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
