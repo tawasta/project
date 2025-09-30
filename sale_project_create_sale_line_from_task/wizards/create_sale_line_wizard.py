@@ -17,6 +17,11 @@ class SaleCreateLineFromTaskWizard(models.TransientModel):
         help="Parent order for the new sale order line. If you do not select one, a "
         "new sale order will be created",
     )
+
+    sale_order_header_text = fields.Char(
+        related="sale_order_id.header_text", readonly=1
+    )
+
     product_id = fields.Many2one("product.product", string="Product", required=True)
 
     def _prepare_sale_order_values(self):
