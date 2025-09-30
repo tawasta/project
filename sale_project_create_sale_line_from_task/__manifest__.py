@@ -27,7 +27,13 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["sale_project", "project", "project_task_code", "product"],
+    "depends": [
+        "sale_project",
+        "sale_order_header_text",
+        "project",
+        "project_task_code",
+        "product",
+    ],
     "data": [
         "wizards/create_sale_line_wizard_views.xml",
         "views/project_task.xml",

@@ -11,8 +11,12 @@
                         <field name="partner_id" readonly="1" />
                         <field
                             name="sale_order_id"
-                            domain="[('commercial_partner_id.id', 'parent_of', partner_id), ('state', '=', 'sale')]"
+                            domain="[('commercial_partner_id.id', 'parent_of', partner_id), ('state', '=', 'sale'), ('invoice_status', '!=', 'invoiced')]"
                             options="{'no_create': True, 'no_edit': True,'no_open': True}"
+                        />
+                        <field
+                            name="sale_order_header_text"
+                            invisible="not sale_order_id"
                         />
                         <field
                             name="product_id"

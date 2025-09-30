@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20250428\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-29 10:24+0000\n"
-"PO-Revision-Date: 2025-09-29 10:24+0000\n"
+"POT-Creation-Date: 2025-09-30 09:31+0000\n"
+"PO-Revision-Date: 2025-09-30 09:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -84,6 +84,16 @@ msgid "Display Name"
 msgstr "Näyttönimi"
 
 #. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__sale_order_header_text
+msgid "Header"
+msgstr "Otsikko"
+
+#. module: sale_project_create_sale_line_from_task
+#: model:ir.model.fields,help:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__sale_order_header_text
+msgid "Header or title of the Sale"
+msgstr "Myyntitilauksen otsikko"
+
+#. module: sale_project_create_sale_line_from_task
 #: model:ir.model.fields,field_description:sale_project_create_sale_line_from_task.field_sale_create_line_from_task_wizard__id
 msgid "ID"
 msgstr ""
@@ -105,7 +115,8 @@ msgstr "Viimeksi päivitetty"
 msgid ""
 "New Sale Order Line created for %(name)s with %(hours)s allocated hours"
 msgstr ""
-"Luotiin myyntitilausrivi myynnille %(name)s, alunperin suunnitellut tunnit: %(hours)s"
+"Luotiin myyntitilausrivi myynnille %(name)s, alunperin suunnitellut tunnit: "
+"%(hours)s"
 
 #. module: sale_project_create_sale_line_from_task
 #. odoo-python
