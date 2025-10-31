@@ -1,9 +1,9 @@
-# -*- coding: utf-8 -*-
 import logging
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
-from odoo.tools import str2bool
+
 import pytz
+
+from odoo import api, fields, models
+from odoo.tools import str2bool
 
 _logger = logging.getLogger(__name__)
 
@@ -42,19 +42,40 @@ class AccountAnalyticLine(models.Model):
             "enabled": str2bool(icp.get_param("ts_cutoff.enabled", "False")),
             "hour": int(icp.get_param("ts_cutoff.hour", "18") or 18),
             "minute": int(icp.get_param("ts_cutoff.minute", "0") or 0),
-            "block_start": str2bool(icp.get_param("ts_cutoff.block_start_after_cutoff", "False")),
+            "block_start": str2bool(
+                icp.get_param("ts_cutoff.block_start_after_cutoff", "False")
+            ),
         }
 
     def _get_emp_cutoff(self, employee):
-        """Return employee-specific cutoff if override enabled, else global configuration."""
+        """
+        Return employee-specific cutoff if
+        override enabled, else global configuration.
+        """
         conf = self._get_global_cutoff()
         if employee and getattr(employee, "ts_cutoff_override", False):
-            conf.update({
-                "enabled": bool(getattr(employee, "ts_cutoff_enabled_emp", conf["enabled"])),
-                "hour": int(getattr(employee, "ts_cutoff_hour_emp", conf["hour"]) or conf["hour"]),
-                "minute": int(getattr(employee, "ts_cutoff_minute_emp", conf["minute"]) or conf["minute"]),
-                "block_start": bool(getattr(employee, "ts_block_start_after_cutoff_emp", conf["block_start"])),
-            })
+            conf.update(
+                {
+                    "enabled": bool(
+                        getattr(employee, "ts_cutoff_enabled_emp", conf["enabled"])
+                    ),
+                    "hour": int(
+                        getattr(employee, "ts_cutoff_hour_emp", conf["hour"])
+                        or conf["hour"]
+                    ),
+                    "minute": int(
+                        getattr(employee, "ts_cutoff_minute_emp", conf["minute"])
+                        or conf["minute"]
+                    ),
+                    "block_start": bool(
+                        getattr(
+                            employee,
+                            "ts_block_start_after_cutoff_emp",
+                            conf["block_start"],
+                        )
+                    ),
+                }
+            )
         return conf
 
     def _today_cutoff_utc(self, user, employee):
@@ -62,7 +83,9 @@ class AccountAnalyticLine(models.Model):
         conf = self._get_emp_cutoff(employee)
         tzname = self._user_tz_name(user)
         tz = pytz.timezone(tzname)
-        now_local = fields.Datetime.context_timestamp(self.with_context(tz=tzname), fields.Datetime.now())
+        now_local = fields.Datetime.context_timestamp(
+            self.with_context(tz=tzname), fields.Datetime.now()
+        )
         if now_local.tzinfo is None:
             now_local = tz.localize(now_local)
 
@@ -103,7 +126,9 @@ class AccountAnalyticLine(models.Model):
             if not conf.get("enabled") or now_utc < cutoff_utc or not line.date_time:
                 continue
 
-            start_dt_utc = self._to_utc_aware(fields.Datetime.to_datetime(line.date_time))
+            start_dt_utc = self._to_utc_aware(
+                fields.Datetime.to_datetime(line.date_time)
+            )
             if start_dt_utc >= cutoff_utc:
                 continue
 

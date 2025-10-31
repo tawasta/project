@@ -20,7 +20,8 @@
 
 {
     "name": "Timesheet Auto Stop at Cutoff",
-    "summary": "Auto-stop running timesheet timers at a daily cutoff (global + per-employee)",
+    "summary": """
+    Auto-stop running timesheet timers at a daily cutoff (global + per-employee)""",
     "version": "17.0.1.0.0",
     "category": "Project",
     "website": "https://github.com/tawasta/project",

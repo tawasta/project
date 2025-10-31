@@ -4,18 +4,10 @@ from odoo import fields, models
 class HrEmployee(models.Model):
     _inherit = "hr.employee"
 
-    ts_cutoff_override = fields.Boolean(
-        string="Override global cutoff"
-    )
-    ts_cutoff_enabled_emp = fields.Boolean(
-        string="Enable cutoff for this employee"
-    )
-    ts_cutoff_hour_emp = fields.Integer(
-        string="Cutoff hour (0–23)"
-    )
-    ts_cutoff_minute_emp = fields.Integer(
-        string="Cutoff minute (0–59)"
-    )
+    ts_cutoff_override = fields.Boolean(string="Override global cutoff")
+    ts_cutoff_enabled_emp = fields.Boolean(string="Enable cutoff for this employee")
+    ts_cutoff_hour_emp = fields.Integer(string="Cutoff hour (0–23)")
+    ts_cutoff_minute_emp = fields.Integer(string="Cutoff minute (0–59)")
     ts_block_start_after_cutoff_emp = fields.Boolean(
         string="Block starting a timer after cutoff"
     )
