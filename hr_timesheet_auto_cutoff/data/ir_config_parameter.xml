@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+  <record id="param_ts_cutoff_enabled" model="ir.config_parameter">
+    <field name="key">ts_cutoff.enabled</field>
+    <field name="value">False</field>
+  </record>
+  <record id="param_ts_cutoff_hour" model="ir.config_parameter">
+    <field name="key">ts_cutoff.hour</field>
+    <field name="value">18</field>
+  </record>
+  <record id="param_ts_cutoff_minute" model="ir.config_parameter">
+    <field name="key">ts_cutoff.minute</field>
+    <field name="value">0</field>
+  </record>
+  <record id="param_ts_cutoff_block" model="ir.config_parameter">
+    <field name="key">ts_cutoff.block_start_after_cutoff</field>
+    <field name="value">False</field>
+  </record>
+</odoo>
