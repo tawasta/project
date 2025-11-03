@@ -44,7 +44,9 @@ class AccountAnalyticLine(models.Model):
             "enabled": bool(getattr(calendar, "ts_cutoff_enabled", False)),
             "hour": int(getattr(calendar, "ts_cutoff_hour", 18) or 18),
             "minute": int(getattr(calendar, "ts_cutoff_minute", 0) or 0),
-            "block_start": bool(getattr(calendar, "ts_block_start_after_cutoff", False)),
+            "block_start": bool(
+                getattr(calendar, "ts_block_start_after_cutoff", False)
+            ),
         }
 
     def _get_emp_cutoff(self, employee):
