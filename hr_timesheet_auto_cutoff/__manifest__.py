@@ -30,9 +30,9 @@
     "depends": [
         "hr_timesheet",
         "project_timesheet_time_control",
+        "resource",
     ],
     "data": [
-        "data/ir_config_parameter.xml",
         "data/ir_cron.xml",
         "views/hr_employee_views.xml",
     ],

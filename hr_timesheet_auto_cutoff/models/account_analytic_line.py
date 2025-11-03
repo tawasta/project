@@ -3,7 +3,6 @@ import logging
 import pytz
 
 from odoo import api, fields, models
-from odoo.tools import str2bool
 
 _logger = logging.getLogger(__name__)
 
@@ -35,24 +34,27 @@ class AccountAnalyticLine(models.Model):
             return pytz.UTC.localize(dt)
         return dt.astimezone(pytz.UTC)
 
-    def _get_global_cutoff(self):
-        """Return global cutoff configuration."""
-        icp = self.env["ir.config_parameter"].sudo()
+    def _get_calendar_cutoff(self, employee):
+        """Return cutoff configuration from resource calendar (employee or company)."""
+        calendar = None
+        if employee and getattr(employee, "resource_calendar_id", False):
+            calendar = employee.resource_calendar_id
+        if not calendar:
+            calendar = self.env.company.resource_calendar_id
+
         return {
-            "enabled": str2bool(icp.get_param("ts_cutoff.enabled", "False")),
-            "hour": int(icp.get_param("ts_cutoff.hour", "18") or 18),
-            "minute": int(icp.get_param("ts_cutoff.minute", "0") or 0),
-            "block_start": str2bool(
-                icp.get_param("ts_cutoff.block_start_after_cutoff", "False")
-            ),
+            "enabled": bool(getattr(calendar, "ts_cutoff_enabled", False)),
+            "hour": int(getattr(calendar, "ts_cutoff_hour", 18) or 18),
+            "minute": int(getattr(calendar, "ts_cutoff_minute", 0) or 0),
+            "block_start": bool(getattr(calendar, "ts_block_start_after_cutoff", False)),
         }
 
     def _get_emp_cutoff(self, employee):
         """
         Return employee-specific cutoff if
-        override enabled, else global configuration.
+        override enabled, else calendar configuration.
         """
-        conf = self._get_global_cutoff()
+        conf = self._get_calendar_cutoff(employee)
         if employee and getattr(employee, "ts_cutoff_override", False):
             conf.update(
                 {
