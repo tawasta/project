@@ -35,12 +35,10 @@ class AccountAnalyticLine(models.Model):
         return dt.astimezone(pytz.UTC)
 
     def _get_calendar_cutoff(self, employee):
-        """Return cutoff configuration from resource calendar (employee or company)."""
+        """Return cutoff configuration from resource calendar (employee)."""
         calendar = None
         if employee and getattr(employee, "resource_calendar_id", False):
             calendar = employee.resource_calendar_id
-        if not calendar:
-            calendar = self.env.company.resource_calendar_id
 
         return {
             "enabled": bool(getattr(calendar, "ts_cutoff_enabled", False)),

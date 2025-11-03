@@ -5,36 +5,61 @@
 =============================
 Timesheet Auto Stop at Cutoff
 =============================
-This module automatically stops running timesheet entries at a configured
-daily cutoff time. The cutoff is calculated per user based on their local
-timezone, ensuring correct handling across multiple timezones.
 
-The module also provides optional employee-level overrides for individual
-cutoff settings.
+This module automatically stops running timesheet entries based on a daily
+cutoff time configured on the resource calendar.
+
+Cutoff is calculated per user using their timezone. If the user has an
+associated employee record, the employee’s resource calendar will be used.
+
+Employee-specific overrides remain available when calendar configuration
+needs to be refined per individual.
+
+
+Features
+========
+
+* Automatically stops active timesheet timers after cutoff time
+* Cutoff defined in *Resource Calendar*:
+  * Enabled/disabled flag
+  * Hour (0–23)
+  * Minute (0–59)
+  * Option to prevent starting timers after cutoff
+* Optional employee-level override settings
+* Handles users in different timezones correctly
+* Cron job runs every 5 minutes to enforce cutoff
+
 
 Configuration
 =============
-Global configuration (default values applied at installation):
 
-* ``ts_cutoff.enabled`` → Enable/disable automatic cutoff (default: False)
-* ``ts_cutoff.hour`` → Hour of cutoff in local time (default: 18)
-* ``ts_cutoff.minute`` → Minute of cutoff in local time (default: 0)
-* ``ts_cutoff.block_start_after_cutoff`` → Prevent starting a timer after cutoff (default: False)
+In **Settings → Technical → Resource Calendars**:
 
-Employee-specific overrides:
+* ``Enable timesheet cutoff`` → Toggle automatic cutoff
+* ``Cutoff hour`` → Time of day cutoff starts (local to calendar timezone)
+* ``Cutoff minute`` → Minute of cutoff hour
+* ``Block starting a timer after cutoff`` → Prevent new timers after cutoff
 
-* Enable override per employee
-* Configure custom hour/minute for cutoff
+Per-employee override settings are available in **Employee form**:
 
-A cron task runs every 5 minutes:
+* ``Override global cutoff`` → Enable override
+* Custom cutoff hour/minute and blocking rules
+
+
+Cron Job
+========
+
+A scheduled action enforces cutoff:
 
 ``Timesheet auto-stop at cutoff``  
- → Stops running timers at the cutoff moment by writing a final duration into the entry.
+→ Runs every 5 minutes, updating running timesheets that crossed cutoff time.
 
 
 Known issues / Roadmap
 ======================
-\-
+
+* —
+
 
 Credits
 =======
@@ -51,4 +76,4 @@ Maintainer
    :alt: Futural Oy
    :target: https://futural.fi/
 
-This module is maintained by Futural Oy
+This module is maintained by **Futural Oy**.
