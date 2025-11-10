@@ -12,7 +12,6 @@
             <field name="ts_cutoff_enabled_emp" />
             <field name="ts_cutoff_hour_emp" />
             <field name="ts_cutoff_minute_emp" />
-            <field name="ts_block_start_after_cutoff_emp" />
           </group>
         </group>
       </xpath>
