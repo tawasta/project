@@ -8,9 +8,6 @@ class HrEmployee(models.Model):
     ts_cutoff_enabled_emp = fields.Boolean(string="Enable cutoff for this employee")
     ts_cutoff_hour_emp = fields.Integer(string="Cutoff hour (0–23)")
     ts_cutoff_minute_emp = fields.Integer(string="Cutoff minute (0–59)")
-    ts_block_start_after_cutoff_emp = fields.Boolean(
-        string="Block starting a timer after cutoff"
-    )
 
     def _check_bounds(self, val, low, high, fallback):
         """Ensure value is within numeric bounds, fallback if invalid."""

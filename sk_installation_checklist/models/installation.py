@@ -152,7 +152,7 @@ class Installation(models.Model):
 
                         rec.message_post(
                             body=Markup(message),
-                            subtype_id=self.env.ref("mail.mt_comment").id,
+                            subtype_id=self.env.ref("mail.mt_note").id,
                         )
 
         return res

@@ -71,10 +71,14 @@ class InstallationChecklistItem(models.Model):
         rec = super().create(vals)
 
         if rec.installation_id:
-            project = self.env["project.project"].search(
-                [("installation_id", "=", rec.installation_id.id)],
-                order="id desc",
-                limit=1,
+            project = (
+                self.env["project.project"]
+                .sudo()
+                .search(
+                    [("installation_id", "=", rec.installation_id.id)],
+                    order="id desc",
+                    limit=1,
+                )
             )
 
             if project:
@@ -96,19 +100,28 @@ class InstallationChecklistItem(models.Model):
                 # Muodostetaan kappaleet HTML:llä
                 description = "<br/><br/>".join(description_parts)
 
-                task = self.env["project.task"].create(
-                    {
-                        "name": "[Checklist] %s" % rec.name,
-                        "project_id": project.id,
-                        "description": description,
-                        "installation_id": rec.installation_id.id,
-                        "module_ids": [(4, rec.module_id.id)] if rec.module_id else [],
-                        "user_ids": [
-                            (4, rec.installation_id.technical_responsible_person_id.id)
-                        ]
-                        if rec.installation_id.technical_responsible_person_id
-                        else [],
-                    }
+                task = (
+                    self.env["project.task"]
+                    .sudo()
+                    .create(
+                        {
+                            "name": "[Checklist] %s" % rec.name,
+                            "project_id": project.id,
+                            "description": description,
+                            "installation_id": rec.installation_id.id,
+                            "module_ids": [(4, rec.module_id.id)]
+                            if rec.module_id
+                            else [],
+                            "user_ids": [
+                                (
+                                    4,
+                                    rec.installation_id.technical_responsible_person_id.id,
+                                )
+                            ]
+                            if rec.installation_id.technical_responsible_person_id
+                            else [],
+                        }
+                    )
                 )
 
                 rec.task_id = task.id
@@ -128,7 +141,7 @@ class InstallationChecklistItem(models.Model):
                             "module": escape(module_name),
                         }
                     ),
-                    subtype_xmlid="mail.mt_comment",
+                    subtype_xmlid="mail.mt_note",
                 )
 
         # jos luodessa is_done = True, täytetään kentät
