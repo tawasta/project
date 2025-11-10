@@ -24,7 +24,6 @@ Features
   * Enabled/disabled flag
   * Hour (0–23)
   * Minute (0–59)
-  * Option to prevent starting timers after cutoff
 * Optional employee-level override settings
 * Handles users in different timezones correctly
 * Cron job runs every 5 minutes to enforce cutoff
@@ -38,7 +37,6 @@ In **Settings → Technical → Resource Calendars**:
 * ``Enable timesheet cutoff`` → Toggle automatic cutoff
 * ``Cutoff hour`` → Time of day cutoff starts (local to calendar timezone)
 * ``Cutoff minute`` → Minute of cutoff hour
-* ``Block starting a timer after cutoff`` → Prevent new timers after cutoff
 
 Per-employee override settings are available in **Employee form**:
 
