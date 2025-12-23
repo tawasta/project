@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="project_task_map_view" model="ir.ui.view">
+        <field name="name">Map</field>
+        <field name="type">ProjectTaskMapView</field>
+        <field name="model">project.task</field>
+        <field name="arch" type="xml">
+            <ProjectTaskMapView
+                text="name"
+                latitude="customer_latitude"
+                longitude="customer_longitude"
+            />
+        </field>
+    </record>
+
+    <record id="project.act_project_project_2_project_task_all" model="ir.actions.act_window">
+        <field
+            name="view_mode"
+        >kanban,tree,form,calendar,pivot,graph,activity,ProjectTaskMapView</field>
+    </record>
+
+    <record
+        id="project.action_view_my_task"
+        model="ir.actions.act_window"
+    >
+        <field
+            name="view_mode"
+        >kanban,tree,form,calendar,pivot,graph,activity,ProjectTaskMapView</field>
+    </record>
+
+    <record
+        id="project.action_view_all_task"
+        model="ir.actions.act_window"
+    >
+        <field
+            name="view_mode"
+        >tree,kanban,form,calendar,pivot,graph,activity,ProjectTaskMapView</field>
+    </record>
+
+</odoo>
