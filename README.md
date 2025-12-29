@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [project_task_billing_enabled](project_task_billing_enabled/) | 17.0.1.1.1 |  | Billing enabled boolean field for project task
 [project_task_code_manual](project_task_code_manual/) | 17.0.1.0.1 |  | Manually managed, optional task code field
 [project_task_code_manual_default_from_project_sequence](project_task_code_manual_default_from_project_sequence/) | 17.0.1.0.1 |  | Autofills the manual code field from project sequence and task running number
+[project_task_map_view](project_task_map_view/) | 17.0.1.0.0 |  | Add map view for project tasks
 [project_task_mass_create](project_task_mass_create/) | 17.0.1.0.0 |  | Mass create tasks from a text
 [project_task_no_open_tasks_default_filter](project_task_no_open_tasks_default_filter/) | 17.0.1.0.0 |  | Remove the default filter from My tasks and All tasks
 [project_task_notes](project_task_notes/) | 17.0.1.0.1 |  | Add Task Notes to project task

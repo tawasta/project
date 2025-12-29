@@ -13,14 +13,8 @@
         </field>
     </record>
 
-    <record id="project.act_project_project_2_project_task_all" model="ir.actions.act_window">
-        <field
-            name="view_mode"
-        >kanban,tree,form,calendar,pivot,graph,activity,ProjectTaskMapView</field>
-    </record>
-
     <record
-        id="project.action_view_my_task"
+        id="project.act_project_project_2_project_task_all"
         model="ir.actions.act_window"
     >
         <field
@@ -28,10 +22,13 @@
         >kanban,tree,form,calendar,pivot,graph,activity,ProjectTaskMapView</field>
     </record>
 
-    <record
-        id="project.action_view_all_task"
-        model="ir.actions.act_window"
-    >
+    <record id="project.action_view_my_task" model="ir.actions.act_window">
+        <field
+            name="view_mode"
+        >kanban,tree,form,calendar,pivot,graph,activity,ProjectTaskMapView</field>
+    </record>
+
+    <record id="project.action_view_all_task" model="ir.actions.act_window">
         <field
             name="view_mode"
         >tree,kanban,form,calendar,pivot,graph,activity,ProjectTaskMapView</field>
