@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="task_type_tree" model="ir.ui.view">
+        <field name="name">project.task.type.list.auto.state</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_tree" />
+        <field name="arch" type="xml">
+            <field name="fold" position="after">
+                <field name="task_auto_state" optional="show" />
+            </field>
+        </field>
+    </record>
+
+    <record id="task_type_edit" model="ir.ui.view">
+        <field name="name">project.task.type.form.auto.state</field>
+        <field name="model">project.task.type</field>
+        <field name="inherit_id" ref="project.task_type_edit" />
+        <field name="arch" type="xml">
+            <field name="fold" position="after">
+                <field name="task_auto_state" />
+                <label for="action_update_task_states" string="Update task states" />
+                <button
+                    name="action_update_task_states"
+                    type="object"
+                    string="Update"
+                    class="oe_highlight"
+                    invisible="not task_auto_state"
+                    confirm="Are you sure you want to update states for all tasks in this stage?"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
