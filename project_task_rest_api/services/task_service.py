@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import logging
 from datetime import datetime
 
@@ -44,6 +46,9 @@ class ProjectTaskService(Component):
     @restapi.method(
         [(["/report"], "GET")],
         input_param=restapi.CerberusValidator(schema="_validator_report"),
+        output_param=restapi.CerberusValidator(
+            schema="_validator_report_response"
+        ),
     )
     def report(self, start, end=None, project_id=None, all_projects=False):
         """
@@ -74,7 +79,9 @@ class ProjectTaskService(Component):
             if effective_project_id:
                 domain.append(("project_id", "=", effective_project_id))
 
-        tasks = self.env["project.task"].search(domain, order="project_id asc, id asc")
+        tasks = self.env["project.task"].search(
+            domain, order="project_id asc, id asc"
+        )
         _logger.info("Found %s tasks", len(tasks))
 
         rows = []
@@ -97,12 +104,12 @@ class ProjectTaskService(Component):
                     ),
                     "response_count": len(responses),
                     "resolution_days": self._get_resolution_time_days(task),
-                    "created_datetime": task.create_date
-                    and task.create_date.isoformat()
-                    or "",
-                    "updated_datetime": task.write_date
-                    and task.write_date.isoformat()
-                    or "",
+                    "created_datetime": (
+                        task.create_date and task.create_date.isoformat() or ""
+                    ),
+                    "updated_datetime": (
+                        task.write_date and task.write_date.isoformat() or ""
+                    ),
                     "contact_name": customer_data.get("contact_name", ""),
                     "customer_id": customer_data.get("customer_id", 0),
                     "country_name": customer_data.get("country_name", ""),
@@ -114,7 +121,9 @@ class ProjectTaskService(Component):
         result = {
             "count": len(rows),
             "project_filter": {
-                "default_project_id": default_project.id if default_project else False,
+                "default_project_id": (
+                    default_project.id if default_project else False
+                ),
                 "effective_project_id": effective_project_id,
                 "all_projects": bool(all_projects),
             },
@@ -148,6 +157,172 @@ class ProjectTaskService(Component):
                 "nullable": True,
                 "required": False,
                 "coerce": to_bool,
+            },
+        }
+
+    def _validator_report_response(self):
+        return {
+            "count": {
+                "type": "integer",
+                "required": True,
+            },
+            "project_filter": {
+                "type": "dict",
+                "required": True,
+                "schema": {
+                    "default_project_id": {
+                        "type": ["integer", "boolean"],
+                        "required": True,
+                    },
+                    "effective_project_id": {
+                        "type": ["integer", "boolean"],
+                        "required": True,
+                    },
+                    "all_projects": {
+                        "type": "boolean",
+                        "required": True,
+                    },
+                },
+            },
+            "rows": {
+                "type": "list",
+                "required": True,
+                "schema": {
+                    "type": "dict",
+                    "schema": self._validator_report_row(),
+                },
+            },
+        }
+
+    def _validator_report_row(self):
+        return {
+            "ticket_id": {
+                "type": "integer",
+                "required": True,
+            },
+            "title": {
+                "type": "string",
+                "required": True,
+                "nullable": True,
+            },
+            "description": {
+                "type": "string",
+                "required": True,
+                "nullable": True,
+            },
+            "customer_name": {
+                "type": "string",
+                "required": True,
+                "nullable": True,
+            },
+            "assigned_user": {
+                "type": "string",
+                "required": True,
+                "nullable": True,
+            },
+            "status_name": {
+                "type": "string",
+                "required": True,
+                "nullable": True,
+            },
+            "tag_list": {
+                "type": "list",
+                "required": True,
+                "schema": {
+                    "type": "dict",
+                    "schema": {
+                        "id": {
+                            "type": "integer",
+                            "required": True,
+                        },
+                        "name": {
+                            "type": "string",
+                            "required": True,
+                            "nullable": True,
+                        },
+                    },
+                },
+            },
+            "commercial_entity_name": {
+                "type": "string",
+                "required": True,
+                "nullable": True,
+            },
+            "response_count": {
+                "type": "integer",
+                "required": True,
+            },
+            "resolution_days": {
+                "type": "float",
+                "required": True,
+            },
+            "created_datetime": {
+                "type": "string",
+                "required": True,
+                "nullable": True,
+            },
+            "updated_datetime": {
+                "type": "string",
+                "required": True,
+                "nullable": True,
+            },
+            "contact_name": {
+                "type": "string",
+                "required": True,
+                "nullable": True,
+            },
+            "customer_id": {
+                "type": "integer",
+                "required": True,
+            },
+            "country_name": {
+                "type": "string",
+                "required": True,
+                "nullable": True,
+            },
+            "project_info": {
+                "type": "dict",
+                "required": True,
+                "schema": {
+                    "project_id": {
+                        "type": "integer",
+                        "required": True,
+                    },
+                    "project_name": {
+                        "type": "string",
+                        "required": True,
+                        "nullable": True,
+                    },
+                },
+            },
+            "communication_history": {
+                "type": "list",
+                "required": True,
+                "schema": {
+                    "type": "dict",
+                    "schema": {
+                        "timestamp": {
+                            "type": "string",
+                            "required": True,
+                            "nullable": True,
+                        },
+                        "author_name": {
+                            "type": "string",
+                            "required": True,
+                            "nullable": True,
+                        },
+                        "message_body": {
+                            "type": "string",
+                            "required": True,
+                            "nullable": True,
+                        },
+                        "message_type": {
+                            "type": "string",
+                            "required": True,
+                            "nullable": True,
+                        },
+                    },
+                },
             },
         }
 
@@ -193,7 +368,7 @@ class ProjectTaskService(Component):
 
     def _get_resolution_time_days(self, task):
         if not task.create_date:
-            return 0
+            return 0.0
 
         end_dt = False
 
@@ -203,7 +378,7 @@ class ProjectTaskService(Component):
             end_dt = task.write_date or False
 
         if not end_dt:
-            return 0
+            return 0.0
 
         delta = end_dt - task.create_date
         return round(delta.total_seconds() / 86400.0, 2)
@@ -276,9 +451,11 @@ class ProjectTaskService(Component):
             body = self._html_to_text(activity.note) or activity.summary or ""
             rows.append(
                 {
-                    "timestamp": activity.create_date
-                    and activity.create_date.isoformat()
-                    or "",
+                    "timestamp": (
+                        activity.create_date
+                        and activity.create_date.isoformat()
+                        or ""
+                    ),
                     "author_name": activity.user_id.name or "",
                     "message_body": body,
                     "message_type": "activity",
