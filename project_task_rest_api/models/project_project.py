@@ -1,6 +1,4 @@
-# -*- coding: utf-8 -*-
-
-from odoo import api, fields, models
+from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
 
@@ -9,7 +7,10 @@ class ProjectProject(models.Model):
 
     default_rest_api_project = fields.Boolean(
         string="Default REST API project",
-        help="If enabled, this project is used as the default project in the Project Task REST API when no project_id is given.",
+        help=(
+            "If enabled, this project is used as the default project "
+            "in the Project Task REST API when no project_id is given."
+        ),
     )
 
     @api.constrains("default_rest_api_project")
@@ -24,5 +25,8 @@ class ProjectProject(models.Model):
             )
             if existing:
                 raise ValidationError(
-                    "Only one project can be marked as the default REST API project."
+                    _(
+                        "Only one project can be marked as the default "
+                        "REST API project."
+                    )
                 )

@@ -23,12 +23,10 @@
     "summary": "REST API for project task data and communication history",
     "version": "14.0.1.0.0",
     "category": "Reporting",
-    "website": "https://github.com/tawasta/odoo/project",
+    "website": "https://gitlab.com/tawasta/odoo/project",
     "author": "Tawasta",
     "license": "AGPL-3",
-    "data": [
-        "views/project.xml"
-    ],
+    "data": ["views/project.xml"],
     "depends": [
         "project",
         "mail",

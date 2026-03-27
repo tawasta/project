@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
-
 import logging
 from datetime import datetime
 
-from odoo import fields
+from odoo.tools import html2plaintext
+
 from odoo.addons.base_rest import restapi
 from odoo.addons.component.core import Component
-from odoo.tools import html2plaintext
 
 _logger = logging.getLogger(__name__)
 
@@ -70,7 +68,9 @@ class ProjectTaskService(Component):
         effective_project_id = False
 
         if not all_projects:
-            effective_project_id = project_id or (default_project.id if default_project else False)
+            effective_project_id = project_id or (
+                default_project.id if default_project else False
+            )
             if effective_project_id:
                 domain.append(("project_id", "=", effective_project_id))
 
@@ -92,11 +92,17 @@ class ProjectTaskService(Component):
                     "assigned_user": task.user_id.name or "",
                     "status_name": task.stage_id.name or "",
                     "tag_list": self._get_tag_data(task),
-                    "commercial_entity_name": customer_data.get("commercial_entity_name", ""),
+                    "commercial_entity_name": customer_data.get(
+                        "commercial_entity_name", ""
+                    ),
                     "response_count": len(responses),
                     "resolution_days": self._get_resolution_time_days(task),
-                    "created_datetime": task.create_date and task.create_date.isoformat() or "",
-                    "updated_datetime": task.write_date and task.write_date.isoformat() or "",
+                    "created_datetime": task.create_date
+                    and task.create_date.isoformat()
+                    or "",
+                    "updated_datetime": task.write_date
+                    and task.write_date.isoformat()
+                    or "",
                     "contact_name": customer_data.get("contact_name", ""),
                     "customer_id": customer_data.get("customer_id", 0),
                     "country_name": customer_data.get("country_name", ""),
@@ -210,12 +216,16 @@ class ProjectTaskService(Component):
         ]
 
     def _get_task_messages(self, task):
-        messages = self.env["mail.message"].sudo().search(
-            [
-                ("model", "=", "project.task"),
-                ("res_id", "=", task.id),
-            ],
-            order="date asc, id asc",
+        messages = (
+            self.env["mail.message"]
+            .sudo()
+            .search(
+                [
+                    ("model", "=", "project.task"),
+                    ("res_id", "=", task.id),
+                ],
+                order="date asc, id asc",
+            )
         )
 
         rows = []
@@ -249,12 +259,16 @@ class ProjectTaskService(Component):
         return message.message_type or ""
 
     def _get_task_activities(self, task):
-        activities = self.env["mail.activity"].sudo().search(
-            [
-                ("res_model", "=", "project.task"),
-                ("res_id", "=", task.id),
-            ],
-            order="create_date asc, id asc",
+        activities = (
+            self.env["mail.activity"]
+            .sudo()
+            .search(
+                [
+                    ("res_model", "=", "project.task"),
+                    ("res_id", "=", task.id),
+                ],
+                order="create_date asc, id asc",
+            )
         )
 
         rows = []
@@ -262,7 +276,9 @@ class ProjectTaskService(Component):
             body = self._html_to_text(activity.note) or activity.summary or ""
             rows.append(
                 {
-                    "timestamp": activity.create_date and activity.create_date.isoformat() or "",
+                    "timestamp": activity.create_date
+                    and activity.create_date.isoformat()
+                    or "",
                     "author_name": activity.user_id.name or "",
                     "message_body": body,
                     "message_type": "activity",
