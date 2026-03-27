@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 import logging
 from datetime import datetime
 
@@ -46,9 +44,7 @@ class ProjectTaskService(Component):
     @restapi.method(
         [(["/report"], "GET")],
         input_param=restapi.CerberusValidator(schema="_validator_report"),
-        output_param=restapi.CerberusValidator(
-            schema="_validator_report_response"
-        ),
+        output_param=restapi.CerberusValidator(schema="_validator_report_response"),
     )
     def report(self, start, end=None, project_id=None, all_projects=False):
         """
@@ -79,9 +75,7 @@ class ProjectTaskService(Component):
             if effective_project_id:
                 domain.append(("project_id", "=", effective_project_id))
 
-        tasks = self.env["project.task"].search(
-            domain, order="project_id asc, id asc"
-        )
+        tasks = self.env["project.task"].search(domain, order="project_id asc, id asc")
         _logger.info("Found %s tasks", len(tasks))
 
         rows = []
@@ -452,9 +446,7 @@ class ProjectTaskService(Component):
             rows.append(
                 {
                     "timestamp": (
-                        activity.create_date
-                        and activity.create_date.isoformat()
-                        or ""
+                        activity.create_date and activity.create_date.isoformat() or ""
                     ),
                     "author_name": activity.user_id.name or "",
                     "message_body": body,
