@@ -5,7 +5,7 @@
 Project
 =======
 
-Project and task related addons
+Project and task related addons.
 
 [//]: # (addons)
 
