@@ -4,9 +4,9 @@
         <field name="model">project.task.sla</field>
         <field name="arch" type="xml">
             <list>
-                <field name="name"/>
-                <field name="criticality"/>
-                <field name="response_time"/>
+                <field name="name" />
+                <field name="criticality" />
+                <field name="response_time" />
             </list>
         </field>
     </record>
@@ -67,7 +67,7 @@
     <record id="view_task_search_form_inherit_sla" model="ir.ui.view">
         <field name="name">project.task.search.form.inherit.sla</field>
         <field name="model">project.task</field>
-        <field name="inherit_id" ref="project.view_task_search_form"/>
+        <field name="inherit_id" ref="project.view_task_search_form" />
         <field name="arch" type="xml">
             <xpath expr="//search" position="inside">
                 <filter
@@ -80,7 +80,7 @@
                     name="sla_not_met"
                     domain="[('sla_met', '=', False)]"
                 />
-                <separator/>
+                <separator />
                 <filter
                     string="SLA"
                     name="group_by_sla"
