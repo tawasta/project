@@ -26,7 +26,7 @@
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
-    "installable": True,
+    "installable": False,
     "depends": [
         "sale_project",
         "sale_order_header_text",

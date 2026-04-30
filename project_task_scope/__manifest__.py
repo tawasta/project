@@ -32,6 +32,6 @@
         "security/ir_model_access.xml",
         "views/project_task_scope_views.xml",
     ],
-    "installable": True,
+    "installable": False,
     "application": False,
 }
