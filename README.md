@@ -9,6 +9,13 @@ Project and task related addons
 
 [//]: # (addons)
 
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[project_stage_mail_once](project_stage_mail_once/) | 19.0.1.0.0 |  | Send project task stage email templates only once per task
+
+
 Unported addons
 ---------------
 addon | version | maintainers | summary

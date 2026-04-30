@@ -15,10 +15,7 @@ class ProjectTask(models.Model):
         task = self[0]
         stage = task.stage_id
 
-        if (
-            "stage_id" in res
-            and stage.mail_template_send_once
-        ):
+        if "stage_id" in res and stage.mail_template_send_once:
             if task.mail_template_once_sent:
                 res.pop("stage_id")
             else:
