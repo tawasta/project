@@ -33,5 +33,5 @@
     "data": ["views/project_task.xml"],
     "demo": [],
     "application": False,
-    "installable": True,
+    "installable": False,
 }

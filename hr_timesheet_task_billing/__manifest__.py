@@ -26,7 +26,7 @@
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
-    "installable": True,
+    "installable": False,
     "depends": ["hr_timesheet", "project_task_billing_enabled"],
     "data": ["views/account_analytic_line_views.xml"],
 }
