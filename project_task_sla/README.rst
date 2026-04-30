@@ -34,6 +34,7 @@ Contributors
 ------------
 
 * Patrik Torn <patrik.torn@outlook.com>
+* Valtteri Lattu <valtteri.lattu@futural.fi>
 
 Maintainer
 ----------

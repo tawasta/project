@@ -1,13 +1,13 @@
 <odoo>
-    <record id="view_project_task_sla_tree" model="ir.ui.view">
-        <field name="name">project.task.sla.tree</field>
+    <record id="view_project_task_sla_list" model="ir.ui.view">
+        <field name="name">project.task.sla.list</field>
         <field name="model">project.task.sla</field>
         <field name="arch" type="xml">
-            <tree>
-                <field name="name" />
-                <field name="criticality" />
-                <field name="response_time" />
-            </tree>
+            <list>
+                <field name="name"/>
+                <field name="criticality"/>
+                <field name="response_time"/>
+            </list>
         </field>
     </record>
 
@@ -31,7 +31,7 @@
     <record id="action_project_task_sla" model="ir.actions.act_window">
         <field name="name">SLA</field>
         <field name="res_model">project.task.sla</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <menuitem
@@ -67,9 +67,9 @@
     <record id="view_task_search_form_inherit_sla" model="ir.ui.view">
         <field name="name">project.task.search.form.inherit.sla</field>
         <field name="model">project.task</field>
-        <field name="inherit_id" ref="project.view_task_search_form" />
+        <field name="inherit_id" ref="project.view_task_search_form"/>
         <field name="arch" type="xml">
-            <search position="inside">
+            <xpath expr="//search" position="inside">
                 <filter
                     string="SLA Met"
                     name="sla_met"
@@ -80,14 +80,13 @@
                     name="sla_not_met"
                     domain="[('sla_met', '=', False)]"
                 />
-                <group expand="0" string="Group By">
-                    <filter
-                        string="SLA"
-                        name="group_by_sla"
-                        context="{'group_by': 'project_task_sla_id'}"
-                    />
-                </group>
-            </search>
+                <separator/>
+                <filter
+                    string="SLA"
+                    name="group_by_sla"
+                    context="{'group_by': 'project_task_sla_id'}"
+                />
+            </xpath>
         </field>
     </record>
 </odoo>
