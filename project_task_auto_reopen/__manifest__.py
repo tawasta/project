@@ -23,7 +23,7 @@
     "summary": "Reopen closed tasks when the task receives a new message",
     "version": "19.0.1.0.0",
     "category": "Project",
-    "website": "https://github.com/tawasta/helpdesk",
+    "website": "https://github.com/tawasta/project",
     "author": "Futural",
     "license": "AGPL-3",
     "depends": [

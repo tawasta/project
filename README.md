@@ -9,6 +9,13 @@ Project and task related addons
 
 [//]: # (addons)
 
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[project_task_auto_reopen](project_task_auto_reopen/) | 19.0.1.0.0 |  | Reopen closed tasks when the task receives a new message
+
+
 Unported addons
 ---------------
 addon | version | maintainers | summary
