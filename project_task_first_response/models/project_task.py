@@ -83,7 +83,9 @@ class ProjectTask(models.Model):
             task.working_hours_reply = duration_data["hours"]
             task.working_days_reply = duration_data["days"]
 
-        (self - tasks).update({
-            "working_hours_reply": 0.0,
-            "working_days_reply": 0.0,
-        })
+        (self - tasks).update(
+            {
+                "working_hours_reply": 0.0,
+                "working_days_reply": 0.0,
+            }
+        )

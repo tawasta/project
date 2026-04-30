@@ -18,15 +18,21 @@ class ReportProjectTaskUser(models.Model):
     )
 
     def _select(self):
-        return super()._select() + """
+        return (
+            super()._select()
+            + """
             ,
             t.date_reply as date_reply,
             NULLIF(t.working_days_reply, 0) as working_days_reply
         """
+        )
 
     def _group_by(self):
-        return super()._group_by() + """
+        return (
+            super()._group_by()
+            + """
             ,
             t.date_reply,
             t.working_days_reply
         """
+        )
