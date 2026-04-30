@@ -22,7 +22,7 @@
     "version": "19.0.1.0.0",
     "category": "Project",
     "summary": "Partner / customer field required in project form",
-    "website": "https://github.com/tawasta/helpdesk",
+    "website": "https://github.com/tawasta/project",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

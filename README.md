@@ -9,6 +9,13 @@ Project and task related addons
 
 [//]: # (addons)
 
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[project_task_partner_required](project_task_partner_required/) | 19.0.1.0.0 |  | Partner / customer field required in project form
+
+
 Unported addons
 ---------------
 addon | version | maintainers | summary
