@@ -9,6 +9,14 @@ Project and task related addons
 
 [//]: # (addons)
 
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[project_task_scope](project_task_scope/) | 19.0.1.0.0 |  | Adds scope to project tasks
+[project_task_sla](project_task_sla/) | 19.0.1.0.0 |  | Adds SLA support to project tasks
+
+
 Unported addons
 ---------------
 addon | version | maintainers | summary
@@ -30,8 +38,6 @@ addon | version | maintainers | summary
 [project_task_notes](project_task_notes/) | 17.0.1.0.1 (unported) |  | Add Task Notes to project task
 [project_task_number_of_responses](project_task_number_of_responses/) | 17.0.1.0.0 (unported) |  | Keep track of the Number of Responses sent to the customer
 [project_task_opportunity](project_task_opportunity/) | 17.0.1.0.0 (unported) |  | Create an opportunity from a task
-[project_task_scope](project_task_scope/) | 17.0.1.0.0 (unported) |  | Adds scope to project tasks
-[project_task_sla](project_task_sla/) | 17.0.1.0.0 (unported) |  | Adds SLA support to project tasks
 [project_task_sla_scope_priority](project_task_sla_scope_priority/) | 17.0.1.0.0 (unported) |  | Calculates task priority based on SLA and Scope
 [project_task_timesheet_suggestion](project_task_timesheet_suggestion/) | 17.0.1.0.0 (unported) |  | Suggest a timesheet description based on the task
 [project_task_type_auto_state](project_task_type_auto_state/) | 17.0.1.0.0 (unported) |  | When task reaches a stage, its state is updated automatically

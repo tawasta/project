@@ -18,8 +18,6 @@ exclude: |
   ^project_task_notes/|
   ^project_task_number_of_responses/|
   ^project_task_opportunity/|
-  ^project_task_scope/|
-  ^project_task_sla/|
   ^project_task_sla_scope_priority/|
   ^project_task_timesheet_suggestion/|
   ^project_task_type_auto_state/|

@@ -20,7 +20,7 @@
 
 {
     "name": "Project Task Scope",
-    "version": "17.0.1.0.0",
+    "version": "19.0.1.0.0",
     "summary": "Adds scope to project tasks",
     "category": "Project",
     "website": "https://github.com/tawasta/project",
@@ -32,6 +32,6 @@
         "security/ir_model_access.xml",
         "views/project_task_scope_views.xml",
     ],
-    "installable": False,
+    "installable": True,
     "application": False,
 }

@@ -9,8 +9,13 @@ Project Task Scope
 This module adds task scope classification support for project tasks in Odoo.  
 It allows linking tasks to predefined scope definitions such as difficulty or size.
 
-Each Scope record includes a complexity level (1–4), a name, and a description.  
-The selected scope helps in categorizing tasks based on their effort or size.
+Each Scope record includes:
+- Name
+- Level (Easy, Medium, Hard, Undefined)
+- Description
+
+The selected scope helps categorize tasks based on their effort or complexity.
+Tasks can also be filtered and grouped by scope in the search view.
 
 Configuration
 =============
@@ -18,10 +23,13 @@ No configuration needed.
 
 Usage
 =====
-#. Go to Project → Task Scope
+#. Go to Project → Configuration → Scope Definitions
 #. Create scope levels with name, level, and description
-#. When creating tasks, select a Scope
-#. Use the scope to organize or analyze task workload
+#. Open or create a task and select a Scope
+#. Use search filters:
+   - Easy Tasks
+   - Hard Tasks
+#. Use "Group by Scope" in the search view to analyze workload
 
 Known issues / Roadmap
 ======================
@@ -35,6 +43,7 @@ Contributors
 ------------
 
 * Patrik Torn <patrik.torn@outlook.com>
+* Valtteri Lattu <valtteri.lattu@futural.fi>
 
 Maintainer
 ----------
