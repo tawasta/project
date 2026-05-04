@@ -23,3 +23,10 @@ class ProjectTask(models.Model):
     _inherit = "project.task"
 
     project_task_scope_id = fields.Many2one("project.task.scope", string="Scope")
+
+    project_task_scope_level = fields.Selection(
+        related="project_task_scope_id.level",
+        string="Scope Level",
+        store=True,
+        readonly=True,
+    )

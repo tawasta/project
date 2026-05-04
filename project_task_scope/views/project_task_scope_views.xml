@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <record id="view_project_task_scope_tree" model="ir.ui.view">
-        <field name="name">project.task.scope.tree</field>
+    <record id="view_project_task_scope_list" model="ir.ui.view">
+        <field name="name">project.task.scope.list</field>
         <field name="model">project.task.scope</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="name" />
                 <field name="level" />
-            </tree>
+            </list>
         </field>
     </record>
 
@@ -30,7 +30,7 @@
     <record id="action_project_task_scope" model="ir.actions.act_window">
         <field name="name">Scope Definitions</field>
         <field name="res_model">project.task.scope</field>
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <menuitem
@@ -66,26 +66,27 @@
         <field name="model">project.task</field>
         <field name="inherit_id" ref="project.view_task_search_form" />
         <field name="arch" type="xml">
-            <search position="inside">
+            <xpath expr="//search" position="inside">
                 <field name="project_task_scope_id" />
+
                 <filter
                     string="Easy Tasks"
                     name="easy_scope"
-                    domain="[('project_task_scope_id.level', '=', '1')]"
+                    domain="[('project_task_scope_level', '=', '1')]"
                 />
+
                 <filter
                     string="Hard Tasks"
                     name="hard_scope"
-                    domain="[('project_task_scope_id.level', '=', '3')]"
+                    domain="[('project_task_scope_level', '=', '3')]"
                 />
-                <group expand="0" string="Group By">
-                    <filter
-                        string="Scope"
-                        name="group_by_scope"
-                        context="{'group_by': 'project_task_scope_id'}"
-                    />
-                </group>
-            </search>
+
+                <filter
+                    string="Scope"
+                    name="group_by_scope"
+                    context="{'group_by': 'project_task_scope_id'}"
+                />
+            </xpath>
         </field>
     </record>
 </odoo>
