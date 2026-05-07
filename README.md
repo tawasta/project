@@ -13,6 +13,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[project_task_first_response](project_task_first_response/) | 19.0.1.0.0 |  | Log the time for first task response
 [project_task_stage_ensure_partner](project_task_stage_ensure_partner/) | 19.0.1.0.0 |  | Ensure partner is set before allowing stage changes
 
 
