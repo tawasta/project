@@ -9,6 +9,13 @@ Project and task related addons
 
 [//]: # (addons)
 
+Available addons
+----------------
+addon | version | maintainers | summary
+--- | --- | --- | ---
+[project_task_first_response](project_task_first_response/) | 19.0.1.0.0 |  | Log the time for first task response
+
+
 Unported addons
 ---------------
 addon | version | maintainers | summary
