@@ -14,6 +14,10 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [project_stage_mail_once](project_stage_mail_once/) | 19.0.1.0.0 |  | Send project task stage email templates only once per task
+[project_task_auto_reopen](project_task_auto_reopen/) | 19.0.1.0.0 |  | Reopen closed tasks when the task receives a new message
+[project_task_first_response](project_task_first_response/) | 19.0.1.0.0 |  | Log the time for first task response
+[project_task_partner_required](project_task_partner_required/) | 19.0.1.0.0 |  | Partner / customer field required in project form
+[project_task_stage_ensure_partner](project_task_stage_ensure_partner/) | 19.0.1.0.0 |  | Ensure partner is set before allowing stage changes
 
 
 Unported addons
