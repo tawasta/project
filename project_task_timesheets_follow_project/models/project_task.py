@@ -37,15 +37,21 @@ class ProjectTask(models.Model):
 
         AnalyticLine = self.env["account.analytic.line"]
 
-        for (old_project_id, new_project_id, analytic_account_id), task_ids in updates.items():
+        for (
+            old_project_id,
+            new_project_id,
+            analytic_account_id,
+        ), task_ids in updates.items():
             values = {"project_id": new_project_id}
 
             if analytic_account_id:
                 values["account_id"] = analytic_account_id
 
-            AnalyticLine.search([
-                ("task_id", "in", task_ids),
-                ("project_id", "=", old_project_id),
-            ]).write(values)
+            AnalyticLine.search(
+                [
+                    ("task_id", "in", task_ids),
+                    ("project_id", "=", old_project_id),
+                ]
+            ).write(values)
 
         return res
