@@ -97,7 +97,6 @@ class MassCreateTasks(models.TransientModel):
 
         tasks = self.tasks_string.splitlines()
         for task in tasks:
-
             task_values = values.copy()
             task_values["name"] = self._get_task_name(task)
             self.env["project.task"].create(task_values)
