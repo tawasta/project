@@ -1,0 +1,9 @@
+<odoo noupdate="1">
+    <record id="group_billing_sale_line_change_filter" model="res.groups">
+        <field name="name">Billing / Sale Order Item Change Filter</field>
+        <field name="category_id" ref="base.module_category_hidden" />
+        <field
+            name="comment"
+        >Näkee "Billing / Sale Order Item Changed" -pikasuodattimet tehtävien Kaikki tehtävät -näkymässä</field>
+    </record>
+</odoo>
