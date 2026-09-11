@@ -22,6 +22,7 @@ addon | version | maintainers | summary
 [project_task_auto_assign](project_task_auto_assign/) | 17.0.1.0.0 |  | Assign unassigned task when stage is changed
 [project_task_auto_color](project_task_auto_color/) | 17.0.1.1.1 |  | Set task colors automatically, based on rules
 [project_task_billing_enabled](project_task_billing_enabled/) | 17.0.1.1.1 |  | Billing enabled boolean field for project task
+[project_task_billing_sale_line_change_filter](project_task_billing_sale_line_change_filter/) | 17.0.1.0.0 |  | Quick filters for tasks where Billing or Sale Order Item changed recently
 [project_task_code_manual](project_task_code_manual/) | 17.0.1.0.1 |  | Manually managed, optional task code field
 [project_task_code_manual_default_from_project_sequence](project_task_code_manual_default_from_project_sequence/) | 17.0.1.0.1 |  | Autofills the manual code field from project sequence and task running number
 [project_task_map_view](project_task_map_view/) | 17.0.1.0.0 |  | Add map view for project tasks

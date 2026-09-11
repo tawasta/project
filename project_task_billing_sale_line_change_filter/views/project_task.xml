@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_task_search_form_billing_sale_line_change" model="ir.ui.view">
+        <field name="name">project.task.search.form.billing.sale.line.change</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_search_form" />
+        <field name="arch" type="xml">
+            <filter name="private_tasks" position="after">
+                <filter
+                    string="Billing/SO Item Changed: Today"
+                    name="billing_sale_line_changed_today"
+                    domain="[('billing_sale_line_change_date', '>=', context_today().strftime('%Y-%m-%d 00:00:00'))]"
+                    groups="project_task_billing_sale_line_change_filter.group_billing_sale_line_change_filter"
+                />
+                <filter
+                    string="Billing/SO Item Changed: Last 2 Days"
+                    name="billing_sale_line_changed_2_days"
+                    domain="[('billing_sale_line_change_date', '>=', (context_today() - relativedelta(days=2)).strftime('%Y-%m-%d 00:00:00'))]"
+                    groups="project_task_billing_sale_line_change_filter.group_billing_sale_line_change_filter"
+                />
+                <filter
+                    string="Billing/SO Item Changed: Last 3 Days"
+                    name="billing_sale_line_changed_3_days"
+                    domain="[('billing_sale_line_change_date', '>=', (context_today() - relativedelta(days=3)).strftime('%Y-%m-%d 00:00:00'))]"
+                    groups="project_task_billing_sale_line_change_filter.group_billing_sale_line_change_filter"
+                />
+                <filter
+                    string="Billing/SO Item Changed: Last 4 Days"
+                    name="billing_sale_line_changed_4_days"
+                    domain="[('billing_sale_line_change_date', '>=', (context_today() - relativedelta(days=4)).strftime('%Y-%m-%d 00:00:00'))]"
+                    groups="project_task_billing_sale_line_change_filter.group_billing_sale_line_change_filter"
+                />
+                <filter
+                    string="Billing/SO Item Changed: Last 5 Days"
+                    name="billing_sale_line_changed_5_days"
+                    domain="[('billing_sale_line_change_date', '>=', (context_today() - relativedelta(days=5)).strftime('%Y-%m-%d 00:00:00'))]"
+                    groups="project_task_billing_sale_line_change_filter.group_billing_sale_line_change_filter"
+                />
+            </filter>
+        </field>
+    </record>
+</odoo>
