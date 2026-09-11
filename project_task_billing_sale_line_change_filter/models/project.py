@@ -23,7 +23,7 @@
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from odoo import _, fields, models
+from odoo import _, api, fields, models
 from odoo.exceptions import UserError
 
 # 4. Imports from Odoo modules:
@@ -84,6 +84,26 @@ class Task(models.Model):
     # 5. Constraints and onchanges
 
     # 6. CRUD methods
+    @api.model_create_multi
+    def create(self, vals_list):
+        tasks = super().create(vals_list)
+        # mail.thread only creates mail.tracking.value records for fields
+        # changed by write(); a field already set at creation time never
+        # gets tracked, so it would never match this module's date filter.
+        # Track those tasks here the same way write() would, using "unset"
+        # as the initial value.
+        newly_billable = tasks.filtered(
+            lambda task: any(task[fname] for fname in self._TRACKED_BILLING_FIELDS)
+        )
+        if newly_billable:
+            initial_values = {
+                task.id: dict.fromkeys(self._TRACKED_BILLING_FIELDS, False)
+                for task in newly_billable
+            }
+            newly_billable.sudo()._message_track(
+                self._TRACKED_BILLING_FIELDS, initial_values
+            )
+        return tasks
 
     # 7. Action methods
 
