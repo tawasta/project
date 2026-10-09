@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_project_kanban_hide_key" model="ir.ui.view">
+        <field name="name">project.project.kanban.hide.key</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project_key.view_project_kanban_details" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//span[@t-att-title='record.display_name.value']"
+                position="attributes"
+            >
+                <attribute name="t-out">record.display_name.value</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

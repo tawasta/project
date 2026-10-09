@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [hr_timesheet_auto_cutoff](hr_timesheet_auto_cutoff/) | 17.0.1.0.0 |  | Auto-stop running timesheet timers at a daily cutoff (global + per-employee)
 [hr_timesheet_task_billing](hr_timesheet_task_billing/) | 17.0.1.0.0 |  | Expose project.task billing flag on analytic lines
 [project_kanban_disable_quick_create](project_kanban_disable_quick_create/) | 17.0.1.0.0 |  | Disable quick create from task kanban
+[project_kanban_hide_key](project_kanban_hide_key/) | 17.0.1.0.0 |  | Hides the duplicate key on the kanban view of projects
 [project_keep_and_show_customer](project_keep_and_show_customer/) | 17.0.1.0.0 |  | Keep project Customer and use project customer on tasks. Always show customer on projects
 [project_milestone_view_improvements](project_milestone_view_improvements/) | 17.0.1.0.0 |  | Improved project milestone views
 [project_stage_is_closed](project_stage_is_closed/) | 17.0.1.0.0 |  | Field for identifying closed projects even if they are not archived
