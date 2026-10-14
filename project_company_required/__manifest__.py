@@ -21,7 +21,7 @@
 {
     "name": "Project: Company required",
     "summary": "Requires a company for projects, except for project templates",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Project",
     "website": "https://github.com/tawasta/project",
     "author": "Futural",

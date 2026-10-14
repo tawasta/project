@@ -28,6 +28,19 @@ class ProjectProject(models.Model):
                 project.company_id = default_company
         return res
 
+    @api.model_create_multi
+    def create(self, vals_list):
+        # A project copied from a template gets the empty company of the template
+        # as a value, and a given value is not computed. Dropping the empty value
+        # lets the company be computed.
+        for vals in vals_list:
+            is_template = vals.get(
+                "is_template", self.env.context.get("default_is_template")
+            )
+            if "company_id" in vals and not vals["company_id"] and not is_template:
+                del vals["company_id"]
+        return super().create(vals_list)
+
     @api.constrains("company_id", "is_template")
     def _check_company_required(self):
         projects = self.filtered(
