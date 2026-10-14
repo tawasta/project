@@ -21,11 +21,12 @@ class ProjectProject(models.Model):
         # The core sets the company of the account or the partner. Only a
         # project that would still be left without a company gets the default.
         # A template stays without a company, so it is visible to everyone.
-        super()._compute_company_id()
+        res = super()._compute_company_id()
         default_company = self._get_default_company()
         for project in self:
             if not project.company_id and not project.is_template:
                 project.company_id = default_company
+        return res
 
     @api.constrains("company_id", "is_template")
     def _check_company_required(self):
