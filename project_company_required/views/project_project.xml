@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="edit_project" model="ir.ui.view">
+        <field name="name">project.project.form.company.required</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='company_id'][@groups='base.group_multi_company']"
+                position="attributes"
+            >
+                <attribute name="required">not is_template</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
